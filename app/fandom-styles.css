@@ -819,10 +819,12 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-anime button.bg-white * {
 [data-fandom-theme="anime"] #multimedia h1,
 [data-fandom-theme="anime"] #multimedia h2,
 [data-fandom-theme="anime"] #multimedia h3,
+[data-fandom-theme="anime"] #multimedia h4,
 [data-fandom-theme="anime"] #multimedia p,
 .fandom-theme-anime #multimedia h1,
 .fandom-theme-anime #multimedia h2,
 .fandom-theme-anime #multimedia h3,
+.fandom-theme-anime #multimedia h4,
 .fandom-theme-anime #multimedia p {
   color: #ffffff !important;
 }
@@ -837,6 +839,46 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-anime button.bg-white * {
   color: #ffffff !important;
   border: 2px solid #a3e635 !important;
   box-shadow: 4px 4px 0px #a3e635 !important;
+}
+[data-fandom-theme="anime"] #multimedia .text-black,
+[data-fandom-theme="anime"] #multimedia .text-neutral-900,
+[data-fandom-theme="anime"] #multimedia .text-neutral-800,
+[data-fandom-theme="anime"] #multimedia .text-neutral-700,
+.fandom-theme-anime #multimedia .text-black,
+.fandom-theme-anime #multimedia .text-neutral-900,
+.fandom-theme-anime #multimedia .text-neutral-800,
+.fandom-theme-anime #multimedia .text-neutral-700 {
+  color: #f8fafc !important;
+}
+[data-fandom-theme="anime"] #multimedia .text-neutral-500,
+[data-fandom-theme="anime"] #multimedia .text-neutral-600,
+.fandom-theme-anime #multimedia .text-neutral-500,
+.fandom-theme-anime #multimedia .text-neutral-600 {
+  color: #94a3b8 !important;
+}
+[data-fandom-theme="anime"] #multimedia button.bg-white,
+[data-fandom-theme="anime"] #multimedia button[class~="bg-white"],
+.fandom-theme-anime #multimedia button.bg-white,
+.fandom-theme-anime #multimedia button[class~="bg-white"] {
+  background-color: #18181b !important;
+  color: #f8fafc !important;
+  border: 2px solid #a3e635 !important;
+  box-shadow: 2px 2px 0px #a3e635 !important;
+}
+[data-fandom-theme="anime"] #multimedia button.bg-white *,
+[data-fandom-theme="anime"] #multimedia button[class~="bg-white"] *,
+.fandom-theme-anime #multimedia button.bg-white *,
+.fandom-theme-anime #multimedia button[class~="bg-white"] * {
+  color: #f8fafc !important;
+}
+[data-fandom-theme="anime"] #multimedia button.bg-white:hover,
+.fandom-theme-anime #multimedia button.bg-white:hover {
+  background-color: #27272a !important;
+  color: #ffffff !important;
+}
+[data-fandom-theme="anime"] #multimedia button.bg-white:hover *,
+.fandom-theme-anime #multimedia button.bg-white:hover * {
+  color: #ffffff !important;
 }
 
 /* World Tour & Con Showcase: Acid Lime & Black */
@@ -3107,5 +3149,218 @@ html [data-fandom-theme="gaming"] nav.fandom-nav-dock button:not([data-active="t
   display: block !important;
   position: relative !important;
 }
+
+/* =========================================================================
+   DARK MODE HEADER & MULTIMEDIA HIGH CONTRAST MASTER OVERRIDES
+   ========================================================================= */
+html.dark .header-root,
+html[data-theme="dark"] .header-root,
+.dark .header-root,
+[data-theme="dark"] .header-root,
+header.dark-header,
+header[data-theme="dark"],
+.dark .fandom-header-kpop,
+[data-theme="dark"] .fandom-header-kpop,
+.dark .fandom-header-anime,
+[data-theme="dark"] .fandom-header-anime,
+.dark .fandom-header-cosplay,
+[data-theme="dark"] .fandom-header-cosplay,
+.dark .fandom-header-gaming,
+[data-theme="dark"] .fandom-header-gaming,
+.dark .fandom-header-cinema,
+[data-theme="dark"] .fandom-header-cinema,
+.dark .fandom-header-manga,
+[data-theme="dark"] .fandom-header-manga,
+.dark .fandom-header-tv,
+[data-theme="dark"] .fandom-header-tv,
+.dark .fandom-header-comics,
+[data-theme="dark"] .fandom-header-comics {
+  background-color: #090d16 !important;
+  background: #090d16 !important;
+  border-bottom: 2px solid #2a364f !important;
+  box-shadow: none !important;
+}
+
+html.dark .header-inner,
+html[data-theme="dark"] .header-inner,
+.dark .header-inner,
+[data-theme="dark"] .header-inner,
+header.dark-header .header-inner,
+header[data-theme="dark"] .header-inner {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+html.dark .header-search-bar,
+html[data-theme="dark"] .header-search-bar,
+.dark .header-search-bar,
+[data-theme="dark"] .header-search-bar,
+header.dark-header .header-search-bar,
+header[data-theme="dark"] .header-search-bar {
+  background-color: #0f172a !important;
+  background: #0f172a !important;
+  border-color: #334155 !important;
+  box-shadow: none !important;
+}
+
+html.dark .header-search-input,
+html[data-theme="dark"] .header-search-input,
+.dark .header-search-input,
+[data-theme="dark"] .header-search-input,
+header.dark-header .header-search-input,
+header[data-theme="dark"] .header-search-input {
+  color: #f8fafc !important;
+}
+
+html.dark .header-search-input::placeholder,
+html[data-theme="dark"] .header-search-input::placeholder,
+.dark .header-search-input::placeholder,
+[data-theme="dark"] .header-search-input::placeholder {
+  color: #94a3b8 !important;
+}
+
+html.dark .header-subnav,
+html[data-theme="dark"] .header-subnav,
+html.dark .desktop-subnav,
+html[data-theme="dark"] .desktop-subnav,
+.dark .header-subnav,
+[data-theme="dark"] .header-subnav,
+.dark .desktop-subnav,
+[data-theme="dark"] .desktop-subnav,
+header.dark-header .header-subnav,
+header.dark-header .desktop-subnav {
+  background-color: #090d16 !important;
+  background: #090d16 !important;
+  border-top-color: #2a364f !important;
+  border-bottom-color: #2a364f !important;
+}
+
+html.dark .header-nav-link,
+html[data-theme="dark"] .header-nav-link,
+.dark .header-nav-link,
+[data-theme="dark"] .header-nav-link,
+header.dark-header .header-nav-link {
+  color: #cbd5e1 !important;
+}
+
+html.dark .header-nav-link:hover,
+html[data-theme="dark"] .header-nav-link:hover,
+.dark .header-nav-link:hover,
+[data-theme="dark"] .header-nav-link:hover,
+header.dark-header .header-nav-link:hover {
+  color: #ffffff !important;
+}
+
+html.dark .header-action-btn,
+html[data-theme="dark"] .header-action-btn,
+.dark .header-action-btn,
+[data-theme="dark"] .header-action-btn,
+header.dark-header .header-action-btn {
+  border-color: #334155 !important;
+}
+
+/* Multimedia Dark Mode High Contrast Text & Elements */
+html.dark #multimedia,
+html[data-theme="dark"] #multimedia,
+.dark #multimedia,
+[data-theme="dark"] #multimedia {
+  background-color: #090d16 !important;
+  color: #f8fafc !important;
+  border-bottom-color: #2a364f !important;
+}
+
+html.dark #multimedia h1,
+html.dark #multimedia h2,
+html.dark #multimedia h3,
+html.dark #multimedia h4,
+html.dark #multimedia h5,
+html.dark #multimedia p,
+html[data-theme="dark"] #multimedia h1,
+html[data-theme="dark"] #multimedia h2,
+html[data-theme="dark"] #multimedia h3,
+html[data-theme="dark"] #multimedia h4,
+html[data-theme="dark"] #multimedia h5,
+html[data-theme="dark"] #multimedia p,
+.dark #multimedia h1,
+.dark #multimedia h2,
+.dark #multimedia h3,
+.dark #multimedia h4,
+.dark #multimedia h5,
+.dark #multimedia p,
+[data-theme="dark"] #multimedia h1,
+[data-theme="dark"] #multimedia h2,
+[data-theme="dark"] #multimedia h3,
+[data-theme="dark"] #multimedia h4,
+[data-theme="dark"] #multimedia h5,
+[data-theme="dark"] #multimedia p {
+  color: #f8fafc !important;
+}
+
+html.dark #multimedia .text-black,
+html.dark #multimedia .text-neutral-900,
+html.dark #multimedia .text-neutral-800,
+html.dark #multimedia .text-neutral-700,
+html[data-theme="dark"] #multimedia .text-black,
+html[data-theme="dark"] #multimedia .text-neutral-900,
+html[data-theme="dark"] #multimedia .text-neutral-800,
+html[data-theme="dark"] #multimedia .text-neutral-700,
+.dark #multimedia .text-black,
+.dark #multimedia .text-neutral-900,
+.dark #multimedia .text-neutral-800,
+.dark #multimedia .text-neutral-700,
+[data-theme="dark"] #multimedia .text-black,
+[data-theme="dark"] #multimedia .text-neutral-900,
+[data-theme="dark"] #multimedia .text-neutral-800,
+[data-theme="dark"] #multimedia .text-neutral-700 {
+  color: #f8fafc !important;
+}
+
+html.dark #multimedia .text-neutral-500,
+html.dark #multimedia .text-neutral-600,
+html[data-theme="dark"] #multimedia .text-neutral-500,
+html[data-theme="dark"] #multimedia .text-neutral-600,
+.dark #multimedia .text-neutral-500,
+.dark #multimedia .text-neutral-600,
+[data-theme="dark"] #multimedia .text-neutral-500,
+[data-theme="dark"] #multimedia .text-neutral-600 {
+  color: #94a3b8 !important;
+}
+
+html.dark #multimedia button.bg-white,
+html.dark #multimedia button[class~="bg-white"],
+html[data-theme="dark"] #multimedia button.bg-white,
+html[data-theme="dark"] #multimedia button[class~="bg-white"],
+.dark #multimedia button.bg-white,
+.dark #multimedia button[class~="bg-white"],
+[data-theme="dark"] #multimedia button.bg-white,
+[data-theme="dark"] #multimedia button[class~="bg-white"] {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+html.dark #multimedia button.bg-white *,
+html.dark #multimedia button[class~="bg-white"] *,
+html[data-theme="dark"] #multimedia button.bg-white *,
+html[data-theme="dark"] #multimedia button[class~="bg-white"] *,
+.dark #multimedia button.bg-white *,
+.dark #multimedia button[class~="bg-white"] *,
+[data-theme="dark"] #multimedia button.bg-white *,
+[data-theme="dark"] #multimedia button[class~="bg-white"] * {
+  color: #f8fafc !important;
+}
+
+html.dark #multimedia button.bg-white:hover,
+html.dark #multimedia button[class~="bg-white"]:hover,
+html[data-theme="dark"] #multimedia button.bg-white:hover,
+html[data-theme="dark"] #multimedia button[class~="bg-white"]:hover,
+.dark #multimedia button.bg-white:hover,
+.dark #multimedia button[class~="bg-white"]:hover,
+[data-theme="dark"] #multimedia button.bg-white:hover,
+[data-theme="dark"] #multimedia button[class~="bg-white"]:hover {
+  background-color: #334155 !important;
+  color: #ffffff !important;
+}
+
 
 

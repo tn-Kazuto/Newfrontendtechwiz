@@ -16,7 +16,7 @@ export const MultimediaHeader: React.FC<MultimediaHeaderProps> = ({
   return (
     <div 
       className={`flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b-2 transition-colors duration-200 ${
-        isCinemaMode ? 'border-neutral-800' : 'border-black'
+        isCinemaMode ? 'border-neutral-800' : 'border-black dark:border-[#2a364f]'
       }`}
     >
       <div>
@@ -27,7 +27,7 @@ export const MultimediaHeader: React.FC<MultimediaHeaderProps> = ({
           <div className="w-3 h-3 bg-[#ffd60a] border-2 border-black" />
           <span 
             className={`font-mono text-xs font-bold uppercase tracking-widest ml-2 ${
-              isCinemaMode ? 'text-neutral-400' : 'text-neutral-700'
+              isCinemaMode ? 'text-neutral-400' : 'text-neutral-700 dark:text-neutral-300'
             }`}
           >
             SECTION 04 // AUDIO-VISUAL ARCHIVE &amp; BROADCAST
@@ -35,7 +35,7 @@ export const MultimediaHeader: React.FC<MultimediaHeaderProps> = ({
         </div>
 
         {/* Section Heading with Playfair Display & Hot Pink Accent */}
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight">
+        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-black dark:text-white">
           Cinematheque &amp;{' '}
           <em className="font-serif italic font-normal text-[#ff2e93] drop-shadow-[1px_1px_0px_#000000]">
             Sound Lab
@@ -45,7 +45,7 @@ export const MultimediaHeader: React.FC<MultimediaHeaderProps> = ({
         {/* Subtitle / Description */}
         <p 
           className={`font-serif text-xs sm:text-sm max-w-2xl mt-2 leading-relaxed ${
-            isCinemaMode ? 'text-neutral-400' : 'text-neutral-600'
+            isCinemaMode ? 'text-neutral-400' : 'text-neutral-600 dark:text-neutral-300'
           }`}
         >
           Official cinematic trailers, lossless 24-bit sound recordings, studio podcasts, and live broadcast feeds from authorized creators.

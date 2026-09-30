@@ -216,10 +216,10 @@ export const MultimediaFilterBar: React.FC<MultimediaFilterBarProps> = ({
                 onClick={() => scrollCategoryDir('left')}
                 disabled={!canScrollLeft}
                 aria-label="Cuộn danh mục sang trái"
-                className={`p-1.5 border-2 border-black transition-all cursor-pointer ${
+                className={`p-1.5 border-2 border-black dark:border-[#334155] transition-all cursor-pointer ${
                   canScrollLeft
-                    ? 'bg-white hover:bg-[#ffd60a] text-black shadow-[2px_2px_0px_#000000] active:translate-x-0.5'
-                    : 'bg-neutral-200 text-neutral-400 border-neutral-400 opacity-40 cursor-not-allowed'
+                    ? 'bg-white hover:bg-[#ffd60a] text-black dark:bg-[#1e293b] dark:text-white dark:hover:bg-[#ffd60a] dark:hover:text-black shadow-[2px_2px_0px_#000000] active:translate-x-0.5'
+                    : 'bg-neutral-200 dark:bg-neutral-800 text-neutral-400 dark:text-neutral-600 border-neutral-400 dark:border-neutral-700 opacity-40 cursor-not-allowed'
                 }`}
               >
                 <ChevronLeft className="w-3.5 h-3.5" />
@@ -229,10 +229,10 @@ export const MultimediaFilterBar: React.FC<MultimediaFilterBarProps> = ({
                 onClick={() => scrollCategoryDir('right')}
                 disabled={!canScrollRight}
                 aria-label="Cuộn danh mục sang phải"
-                className={`p-1.5 border-2 border-black transition-all cursor-pointer ${
+                className={`p-1.5 border-2 border-black dark:border-[#334155] transition-all cursor-pointer ${
                   canScrollRight
-                    ? 'bg-white hover:bg-[#ffd60a] text-black shadow-[2px_2px_0px_#000000] active:translate-x-0.5'
-                    : 'bg-neutral-200 text-neutral-400 border-neutral-400 opacity-40 cursor-not-allowed'
+                    ? 'bg-white hover:bg-[#ffd60a] text-black dark:bg-[#1e293b] dark:text-white dark:hover:bg-[#ffd60a] dark:hover:text-black shadow-[2px_2px_0px_#000000] active:translate-x-0.5'
+                    : 'bg-neutral-200 dark:bg-neutral-800 text-neutral-400 dark:text-neutral-600 border-neutral-400 dark:border-neutral-700 opacity-40 cursor-not-allowed'
                 }`}
               >
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -361,14 +361,14 @@ export const MultimediaFilterBar: React.FC<MultimediaFilterBarProps> = ({
                 style={{ borderRadius: '0px' }}
                 className={`px-3 py-1.5 font-mono text-[11px] font-black uppercase tracking-wider cursor-pointer border-2 transition-all whitespace-nowrap flex items-center gap-1.5 shrink-0 ${
                   isSelected
-                    ? 'bg-black text-[#ccff00] border-black shadow-[2px_2px_0px_#000000] dark:bg-[#ccff00] dark:text-black'
-                    : 'bg-white text-black border-black/60 hover:border-black hover:bg-[#fefce8] dark:bg-[#1e293b] dark:text-[#f8fafc] shadow-[1px_1px_0px_#000000]'
+                    ? 'bg-black text-[#ccff00] border-black shadow-[2px_2px_0px_#000000] dark:bg-[#ccff00] dark:text-black dark:border-[#ccff00]'
+                    : 'bg-white text-black border-black/60 hover:border-black hover:bg-[#fefce8] dark:bg-[#1e293b] dark:text-[#f8fafc] dark:border-[#334155] dark:hover:bg-[#2a364f] shadow-[1px_1px_0px_#000000]'
                 }`}
               >
                 <span>{artist.label}</span>
                 <span
                   className={`text-[10px] font-mono font-bold ${
-                    isSelected ? 'text-[#ccff00]/80 dark:text-black/70' : 'text-neutral-500 dark:text-neutral-400'
+                    isSelected ? 'text-[#ccff00]/80 dark:text-black/70' : 'text-neutral-500 dark:text-neutral-300'
                   }`}
                 >
                   ({matchingCount})
@@ -399,14 +399,14 @@ export const MultimediaFilterBar: React.FC<MultimediaFilterBarProps> = ({
                 style={{ borderRadius: '0px' }}
                 className={`px-3.5 py-2 font-mono text-xs font-black uppercase tracking-wider whitespace-nowrap transition-all cursor-pointer border-2 border-black dark:border-[#334155] flex items-center gap-1.5 ${
                   isActive
-                    ? 'bg-black text-[#ffd60a] shadow-[2px_2px_0px_#000000] -translate-y-0.5'
-                    : 'bg-white text-black hover:bg-[#fefce8] dark:bg-[#1e293b] dark:text-[#f8fafc] shadow-[1px_1px_0px_#000000]'
+                    ? 'bg-black text-[#ffd60a] shadow-[2px_2px_0px_#000000] -translate-y-0.5 dark:bg-[#ffd60a] dark:text-black dark:border-[#ffd60a]'
+                    : 'bg-white text-black hover:bg-[#fefce8] dark:bg-[#1e293b] dark:text-[#f8fafc] dark:hover:bg-[#2a364f] shadow-[1px_1px_0px_#000000]'
                 }`}
               >
                 <span>{tab.label}</span>
                 <span
                   className={`text-[11px] font-mono font-bold ${
-                    isActive ? 'text-[#ffd60a]/80' : 'text-neutral-500 dark:text-neutral-400'
+                    isActive ? 'text-[#ffd60a]/80 dark:text-black/80' : 'text-neutral-500 dark:text-neutral-300'
                   }`}
                 >
                   ({tab.count})
@@ -426,7 +426,7 @@ export const MultimediaFilterBar: React.FC<MultimediaFilterBarProps> = ({
               onChange={(e) => onSearchChange(e.target.value)}
               style={{ borderRadius: '0px' }}
               aria-label="Search multimedia archive"
-              className="w-full px-3 py-1.5 border-2 border-black dark:border-[#334155] text-xs font-mono font-bold uppercase bg-white dark:bg-[#0f172a] text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-[#ff2e93] shadow-[2px_2px_0px_#000000]"
+              className="w-full px-3 py-1.5 border-2 border-black dark:border-[#334155] text-xs font-mono font-bold uppercase bg-white dark:bg-[#0f172a] text-black dark:text-white placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#ff2e93] shadow-[2px_2px_0px_#000000]"
             />
           </div>
 
@@ -435,11 +435,11 @@ export const MultimediaFilterBar: React.FC<MultimediaFilterBarProps> = ({
             onChange={(e) => onSortChange(e.target.value as any)}
             style={{ borderRadius: '0px' }}
             aria-label="Sort multimedia clips"
-            className="border-2 border-black dark:border-[#334155] bg-white dark:bg-[#0f172a] text-black dark:text-white px-2.5 py-1.5 text-xs font-mono font-black uppercase cursor-pointer focus:outline-none shadow-[2px_2px_0px_#000000] hover:bg-[#fefce8]"
+            className="border-2 border-black dark:border-[#334155] bg-white dark:bg-[#0f172a] text-black dark:text-white px-2.5 py-1.5 text-xs font-mono font-black uppercase cursor-pointer focus:outline-none shadow-[2px_2px_0px_#000000] hover:bg-[#fefce8] dark:hover:bg-[#1e293b]"
           >
-            <option value="views">LƯỢT XEM CAO</option>
-            <option value="rating">ĐÁNH GIÁ CAO</option>
-            <option value="duration">THỜI LƯỢNG DÀI</option>
+            <option value="views" className="bg-white dark:bg-[#0f172a] text-black dark:text-white">LƯỢT XEM CAO</option>
+            <option value="rating" className="bg-white dark:bg-[#0f172a] text-black dark:text-white">ĐÁNH GIÁ CAO</option>
+            <option value="duration" className="bg-white dark:bg-[#0f172a] text-black dark:text-white">THỜI LƯỢNG DÀI</option>
           </select>
         </div>
       </div>

@@ -92,6 +92,7 @@ export const Header: React.FC<HeaderProps> = ({
   const { cartCount, wishlistCount, setIsCartOpen, setIsWishlistOpen, currency, toggleCurrency } = useCartWishlist();
   const { user, isLoggedIn, loginAs, logout, requestPasswordReset, resetPasswordWithToken } = useAuth();
   const { themeMode, toggleThemeMode } = useDomainTheme();
+  const isDark = themeMode === 'dark';
 
   const [activeFandomTheme, setActiveFandomTheme] = useState(() => getActiveFandomTheme(fandomThemeKey, fandomCategory));
 
@@ -311,6 +312,38 @@ export const Header: React.FC<HeaderProps> = ({
   }, [isManga, isAnime, isComics, isGaming, isCinema, isTvShows]);
 
   const subnavTheme = React.useMemo(() => {
+    if (isDark) {
+      const accentColors: Record<string, string> = {
+        anime: '#a3e635',
+        gaming: '#00ff66',
+        cosplay: '#38bdf8',
+        comics: '#ffd60a',
+        cinema: '#d4af37',
+        tv: '#a78bfa',
+        manga: '#ff4d4d',
+        kpop: '#ff2e93',
+      };
+      const activeAccent = accentColors[effectiveTheme] || '#38bdf8';
+      return {
+        barBg: '#090d16',
+        barBorder: 'border-t border-[#2a364f] border-b border-[#2a364f]',
+        btnBg: activeAccent,
+        btnColor: '#000000',
+        btnBorder: `2px solid ${activeAccent}`,
+        btnRadius: '0px',
+        btnShadow: 'none',
+        btnFont: "'Outfit', sans-serif",
+        btnLabel: `★ ${effectiveTheme.toUpperCase()} MD`,
+        tabFont: "'Outfit', sans-serif",
+        tabColor: '#cbd5e1',
+        tabActiveColor: '#ffffff',
+        tabActiveBorder: `3px solid ${activeAccent}`,
+        tabLetterSpacing: '0.1em',
+        tabFontWeight: 700,
+        tabActiveWeight: 900,
+        fandomQuery: effectiveTheme,
+      };
+    }
     if (isGaming) {
       return {
         barBg: '#ffffff',
@@ -478,7 +511,7 @@ export const Header: React.FC<HeaderProps> = ({
       tabActiveWeight: 800,
       fandomQuery: 'kpop',
     };
-  }, [isGaming, isManga, isAnime, isComics, isCinema, isTvShows, isCosplay]);
+  }, [isGaming, isManga, isAnime, isComics, isCinema, isTvShows, isCosplay, isDark, effectiveTheme]);
 
   const SUBNAV_TABS = React.useMemo(() => [
     { label: 'ARTIST', href: '/artist' },
@@ -614,8 +647,9 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
-      className={`sticky top-0 z-[100] w-full header-root fandom-header-${effectiveTheme} transition-all duration-300${isScrolled ? ' header-scrolled' : ''}`}
+      className={`sticky top-0 z-[100] w-full header-root fandom-header-${effectiveTheme} transition-all duration-300${isScrolled ? ' header-scrolled' : ''}${isDark ? ' dark-header' : ''}`}
       data-fandom-theme={effectiveTheme}
+      data-theme={themeMode}
     >
       {/* Y2K System Status Ribbon */}
       <div className={`w-full ${isGaming ? 'bg-white text-black' : 'bg-black text-white'} px-4 sm:px-8 py-1 font-mono text-[10px] font-bold tracking-widest uppercase flex items-center justify-between border-b border-black select-none`}>
@@ -668,9 +702,9 @@ export const Header: React.FC<HeaderProps> = ({
               width: '100%',
               display: 'flex',
               alignItems: 'center',
-              border: '2px solid #000000',
-              backgroundColor: '#ffffff',
-              boxShadow: isGaming || isCinema ? 'none' : isCosplay ? '4px 4px 0px #121212' : isAnime ? '4px 4px 0px #84cc16' : isComics ? '4px 4px 0px #000000' : '3px 3px 0px #000000',
+              border: isDark ? '2px solid #334155' : '2px solid #000000',
+              backgroundColor: isDark ? '#0f172a' : '#ffffff',
+              boxShadow: isDark ? 'none' : isGaming || isCinema ? 'none' : isCosplay ? '4px 4px 0px #121212' : isAnime ? '4px 4px 0px #84cc16' : isComics ? '4px 4px 0px #000000' : '3px 3px 0px #000000',
               padding: '6px 12px',
               borderRadius: '0px',
             }}
@@ -681,7 +715,7 @@ export const Header: React.FC<HeaderProps> = ({
                 fontFamily: isCosplay ? "var(--font-outfit), 'Outfit', sans-serif" : "var(--font-jetbrains), var(--font-mono), 'JetBrains Mono', monospace",
                 fontSize: '11px',
                 fontWeight: 900,
-                color: isGaming ? '#000000' : isCinema ? '#FF3000' : isCosplay ? '#D02020' : isAnime ? '#65a30d' : isComics ? '#ef4444' : '#d91470',
+                color: isGaming ? (isDark ? '#00ff66' : '#000000') : isCinema ? '#FF3000' : isCosplay ? '#D02020' : isAnime ? (isDark ? '#a3e635' : '#65a30d') : isComics ? '#ef4444' : '#d91470',
                 marginRight: '8px',
                 userSelect: 'none',
               }}
@@ -713,7 +747,7 @@ export const Header: React.FC<HeaderProps> = ({
                 border: 'none',
                 outline: 'none',
                 backgroundColor: 'transparent',
-                color: '#000000',
+                color: isDark ? '#f8fafc' : '#000000',
                 padding: '0px',
                 textTransform: 'uppercase',
               }}
@@ -728,7 +762,7 @@ export const Header: React.FC<HeaderProps> = ({
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer',
-                  color: '#000000',
+                  color: isDark ? '#94a3b8' : '#000000',
                   padding: '2px 6px',
                 }}
                 title="Clear"
@@ -744,7 +778,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Mobile Search Button */}
           <button
             onClick={() => setIsSearchModalOpen(true)}
-            className={`mobile-search-btn header-action-btn px-2.5 py-1.5 min-h-[44px] min-w-[44px] items-center justify-center text-black border-2 border-black hover:bg-neutral-100 hover:text-black cursor-pointer bg-white transition-colors duration-100 font-bold ${isGaming || isCinema ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
+            className={`mobile-search-btn header-action-btn px-2.5 py-1.5 min-h-[44px] min-w-[44px] items-center justify-center ${isDark ? 'text-white border-[#334155] bg-[#1e293b] hover:bg-[#334155]' : 'text-black border-black bg-white hover:bg-neutral-100 hover:text-black'} border-2 cursor-pointer transition-colors duration-100 font-bold ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
             style={{ borderRadius: '0px' }}
             title="Search"
             aria-label="Open search dialog"
@@ -783,7 +817,7 @@ export const Header: React.FC<HeaderProps> = ({
             title="Language: English"
             aria-label="Toggle language between English and Vietnamese"
             type="button"
-            className={`header-lang-btn hidden sm:flex notranslate hover:bg-neutral-100 hover:text-black items-center px-2.5 py-1 text-xs font-mono font-bold border-2 border-black bg-white text-black h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] cursor-pointer transition-colors duration-100 ${isGaming || isCinema ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
+            className={`header-lang-btn hidden sm:flex notranslate ${isDark ? 'bg-[#1e293b] text-white border-[#334155] hover:bg-[#334155]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} items-center px-2.5 py-1 text-xs font-mono font-bold border-2 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] cursor-pointer transition-colors duration-100 ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
             style={{ borderRadius: '0px' }}
           >
             <span>[EN]</span>
@@ -795,7 +829,7 @@ export const Header: React.FC<HeaderProps> = ({
             title={themeMode === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             aria-label={themeMode === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             type="button"
-            className={`header-action-btn hidden sm:flex notranslate hover:bg-neutral-100 hover:text-black px-2.5 py-1 items-center justify-center text-black border-2 border-black bg-white font-bold uppercase cursor-pointer transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-[11px] ${isGaming || isCinema ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
+            className={`header-action-btn hidden sm:flex notranslate ${isDark ? 'bg-[#1e293b] text-white border-[#334155] hover:bg-[#334155]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} px-2.5 py-1 items-center justify-center border-2 font-bold uppercase cursor-pointer transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-[11px] ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
             style={{ borderRadius: '0px' }}
           >
             {themeMode === 'dark' ? '[LIGHT]' : '[DARK]'}
@@ -897,8 +931,8 @@ export const Header: React.FC<HeaderProps> = ({
                     marginTop: '2px',
                     width: '340px',
                     maxWidth: '92vw',
-                    backgroundColor: '#ffffff',
-                    border: '2px solid #000000',
+                    backgroundColor: isDark ? '#0f172a' : '#ffffff',
+                    border: isDark ? '2px solid #334155' : '2px solid #000000',
                     borderRadius: '0px',
                     padding: '14px',
                     boxShadow: 'none',
@@ -908,15 +942,15 @@ export const Header: React.FC<HeaderProps> = ({
                   className="animate-in fade-in-0 duration-100"
                 >
                   {/* Header Title */}
-                  <div className="flex items-center justify-between pb-2.5 mb-2 border-b border-slate-100">
+                  <div className={`flex items-center justify-between pb-2.5 mb-2 border-b ${isDark ? 'border-[#334155]' : 'border-slate-100'}`}>
                     <div className="flex items-center gap-2">
                       <div
                         style={{ borderRadius: '0px' }}
-                        className="w-5 h-5 bg-black text-white flex items-center justify-center"
+                        className={`w-5 h-5 ${isDark ? 'bg-white text-black' : 'bg-black text-white'} flex items-center justify-center`}
                       >
                         <Sparkles className="w-3 h-3" />
                       </div>
-                      <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-black">
+                      <span className={`font-mono text-[11px] font-bold uppercase tracking-widest ${isDark ? 'text-[#f8fafc]' : 'text-black'}`}>
                         CATEGORIES &amp; FUNCTIONS
                       </span>
                     </div>
@@ -924,7 +958,7 @@ export const Header: React.FC<HeaderProps> = ({
                       type="button"
                       onClick={() => setIsAllMdDropdownOpen(false)}
                       style={{ borderRadius: '0px' }}
-                      className="w-6 h-6 border border-black hover:bg-neutral-100 text-black flex items-center justify-center bg-white cursor-pointer transition-colors duration-100"
+                      className={`w-6 h-6 border ${isDark ? 'border-[#334155] hover:bg-[#1e293b] text-white bg-[#0f172a]' : 'border-black hover:bg-neutral-100 text-black bg-white'} flex items-center justify-center cursor-pointer transition-colors duration-100`}
                       title="Close"
                     >
                       <X className="w-3.5 h-3.5" />
@@ -943,29 +977,29 @@ export const Header: React.FC<HeaderProps> = ({
                             item.action();
                           }}
                           style={{ borderRadius: '0px' }}
-                          className="group w-full flex items-center justify-between px-3 py-2 border border-transparent hover:border-black hover:bg-neutral-100 text-black text-left bg-transparent cursor-pointer transition-colors duration-100"
+                          className={`group w-full flex items-center justify-between px-3 py-2 border border-transparent ${isDark ? 'hover:border-[#334155] hover:bg-[#1e293b] text-white' : 'hover:border-black hover:bg-neutral-100 text-black'} text-left bg-transparent cursor-pointer transition-colors duration-100`}
                           type="button"
                         >
                           <div className="flex items-center gap-3">
                             <div
                               style={{ borderRadius: '0px' }}
-                              className="w-6 h-6 border border-black bg-white text-black flex items-center justify-center shrink-0"
+                              className={`w-6 h-6 border ${isDark ? 'border-[#334155] bg-[#1e293b] text-white' : 'border-black bg-white text-black'} flex items-center justify-center shrink-0`}
                             >
                               <ItemIcon className="w-3.5 h-3.5" />
                             </div>
-                            <span className="font-mono text-[12px] font-bold text-black tracking-tight">
+                            <span className={`font-mono text-[12px] font-bold ${isDark ? 'text-[#f8fafc]' : 'text-black'} tracking-tight`}>
                               {item.label}
                             </span>
                           </div>
-                          <ChevronRight className="w-3.5 h-3.5 text-neutral-400 group-hover:text-black shrink-0" />
+                          <ChevronRight className="w-3.5 h-3.5 text-neutral-400 group-hover:text-black dark:group-hover:text-white shrink-0" />
                         </button>
                       );
                     })}
                   </div>
 
                   {/* Quick Sections shortcut */}
-                  <div className="pt-3 mt-3 border-t border-black">
-                    <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-neutral-500 block mb-2 px-1">
+                  <div className={`pt-3 mt-3 border-t ${isDark ? 'border-[#334155]' : 'border-black'}`}>
+                    <span className={`font-mono text-[10px] font-bold uppercase tracking-widest ${isDark ? 'text-neutral-400' : 'text-neutral-500'} block mb-2 px-1`}>
                       QUICK SHORTCUTS
                     </span>
                     <div className="grid grid-cols-2 gap-2">
@@ -976,15 +1010,15 @@ export const Header: React.FC<HeaderProps> = ({
                           scrollToSection('albums');
                         }}
                         style={{ borderRadius: '0px' }}
-                        className="group flex items-center gap-2 p-2 bg-white hover:bg-neutral-100 border border-black text-xs font-mono font-bold text-black cursor-pointer transition-colors duration-100"
+                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1e293b] hover:bg-[#2a364f] border-[#334155] text-white' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
                       >
                         <div
                           style={{ borderRadius: '0px' }}
-                          className="w-5 h-5 border border-black bg-black text-white flex items-center justify-center shrink-0"
+                          className={`w-5 h-5 border ${isDark ? 'border-[#334155] bg-white text-black' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
                         >
                           <Disc className="w-3 h-3" />
                         </div>
-                        <span className="truncate text-black">Album Drops</span>
+                        <span className={`truncate ${isDark ? 'text-white' : 'text-black'}`}>Album Drops</span>
                       </button>
 
                       <button
@@ -994,15 +1028,15 @@ export const Header: React.FC<HeaderProps> = ({
                           scrollToSection('artists');
                         }}
                         style={{ borderRadius: '0px' }}
-                        className="group flex items-center gap-2 p-2 bg-white hover:bg-neutral-100 border border-black text-xs font-mono font-bold text-black cursor-pointer transition-colors duration-100"
+                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1e293b] hover:bg-[#2a364f] border-[#334155] text-white' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
                       >
                         <div
                           style={{ borderRadius: '0px' }}
-                          className="w-5 h-5 border border-black bg-black text-white flex items-center justify-center shrink-0"
+                          className={`w-5 h-5 border ${isDark ? 'border-[#334155] bg-white text-black' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
                         >
                           <Users className="w-3 h-3" />
                         </div>
-                        <span className="truncate text-black">Idol Profiles</span>
+                        <span className={`truncate ${isDark ? 'text-white' : 'text-black'}`}>Idol Profiles</span>
                       </button>
 
                       <button
@@ -1012,15 +1046,15 @@ export const Header: React.FC<HeaderProps> = ({
                           scrollToSection('tours');
                         }}
                         style={{ borderRadius: '0px' }}
-                        className="group flex items-center gap-2 p-2 bg-white hover:bg-neutral-100 border border-black text-xs font-mono font-bold text-black cursor-pointer transition-colors duration-100"
+                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1e293b] hover:bg-[#2a364f] border-[#334155] text-white' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
                       >
                         <div
                           style={{ borderRadius: '0px' }}
-                          className="w-5 h-5 border border-black bg-black text-white flex items-center justify-center shrink-0"
+                          className={`w-5 h-5 border ${isDark ? 'border-[#334155] bg-white text-black' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
                         >
                           <Calendar className="w-3 h-3" />
                         </div>
-                        <span className="truncate text-black">World Tour</span>
+                        <span className={`truncate ${isDark ? 'text-white' : 'text-black'}`}>World Tour</span>
                       </button>
 
                       <button
@@ -1030,15 +1064,15 @@ export const Header: React.FC<HeaderProps> = ({
                           scrollToSection('community');
                         }}
                         style={{ borderRadius: '0px' }}
-                        className="group flex items-center gap-2 p-2 bg-white hover:bg-neutral-100 border border-black text-xs font-mono font-bold text-black cursor-pointer transition-colors duration-100"
+                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1e293b] hover:bg-[#2a364f] border-[#334155] text-white' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
                       >
                         <div
                           style={{ borderRadius: '0px' }}
-                          className="w-5 h-5 border border-black bg-black text-white flex items-center justify-center shrink-0"
+                          className={`w-5 h-5 border ${isDark ? 'border-[#334155] bg-white text-black' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
                         >
                           <MessageSquare className="w-3 h-3" />
                         </div>
-                        <span className="truncate text-black">Fandom Feed</span>
+                        <span className={`truncate ${isDark ? 'text-white' : 'text-black'}`}>Fandom Feed</span>
                       </button>
                     </div>
                   </div>

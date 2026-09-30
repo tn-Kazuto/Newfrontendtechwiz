@@ -226,18 +226,18 @@ export const MultimediaLiveChat: React.FC<MultimediaLiveChatProps> = ({
       {/* 2. Interactive Teletext Live Chat & Virtual Gifting (4 columns) */}
       <div 
         className={`lg:col-span-4 flex flex-col font-mono text-xs ${
-          isCinemaMode ? 'bg-[#0a0a0a] text-white' : 'bg-white text-black'
+          isCinemaMode ? 'bg-[#0a0a0a] text-white' : 'bg-white dark:bg-[#0f172a] text-black dark:text-white'
         }`}
       >
         <div className="flex-1 flex flex-col h-full min-h-[480px]">
           {/* Chat Header with Wallet Balance */}
-          <div className="p-3 border-b-2 border-black flex items-center justify-between bg-[#fefce8] text-black">
+          <div className="p-3 border-b-2 border-black dark:border-[#2a364f] flex items-center justify-between bg-[#fefce8] dark:bg-[#1e293b] text-black dark:text-white">
             <div>
-              <h4 className="font-mono font-black text-xs uppercase tracking-wider text-black m-0 flex items-center gap-1.5">
+              <h4 className="font-mono font-black text-xs uppercase tracking-wider text-black dark:text-white m-0 flex items-center gap-1.5">
                 <MessageSquare size={13} className="text-[#ff2e93]" />
                 <span>LIVE CHAT TELETEXT (WEBSOCKET)</span>
               </h4>
-              <span className="text-[10px] text-neutral-600 font-bold">
+              <span className="text-[10px] text-neutral-600 dark:text-neutral-400 font-bold">
                 REALTIME FAN BROADCAST • {liveChatList.length} MESSAGES
               </span>
             </div>
@@ -302,7 +302,7 @@ export const MultimediaLiveChat: React.FC<MultimediaLiveChatProps> = ({
           </div>
 
           {/* Virtual Gifting Bar */}
-          <div className="px-3 py-2 border-t-2 border-black bg-[#fef08a] text-black">
+          <div className="px-3 py-2 border-t-2 border-black dark:border-[#2a364f] bg-[#fef08a] dark:bg-[#1e293b] text-black dark:text-white">
             <div className="flex items-center justify-between mb-1.5">
               <span className="text-[10px] font-black uppercase flex items-center gap-1">
                 <Gift size={12} className="text-[#ff2e93]" />
@@ -311,7 +311,7 @@ export const MultimediaLiveChat: React.FC<MultimediaLiveChatProps> = ({
               <button
                 type="button"
                 onClick={() => setIsGiftDrawerOpen(!isGiftDrawerOpen)}
-                className="text-[10px] font-black text-blue-700 underline cursor-pointer"
+                className="text-[10px] font-black text-blue-700 dark:text-cyan-400 underline cursor-pointer"
               >
                 {isGiftDrawerOpen ? 'Collapse ▲' : 'View Gifts ▼'}
               </button>
@@ -324,7 +324,7 @@ export const MultimediaLiveChat: React.FC<MultimediaLiveChatProps> = ({
                   key={g.id}
                   type="button"
                   onClick={() => handleSendVirtualGift(g)}
-                  className="p-1 bg-white hover:bg-black hover:text-white text-black border border-black text-center cursor-pointer transition-colors shadow-[1px_1px_0px_#000]"
+                  className="p-1 bg-white dark:bg-[#0f172a] hover:bg-black dark:hover:bg-[#ff2e93] hover:text-white text-black dark:text-white border border-black dark:border-[#334155] text-center cursor-pointer transition-colors shadow-[1px_1px_0px_#000]"
                 >
                   <div className="text-base leading-none mb-0.5">{g.icon}</div>
                   <div className="text-[9px] font-bold truncate">{g.name.split(' ')[0]}</div>
@@ -335,15 +335,15 @@ export const MultimediaLiveChat: React.FC<MultimediaLiveChatProps> = ({
           </div>
 
           {/* Quick Floating Reaction Emojis & Comment Chips Bar */}
-          <div className="px-3 py-1.5 border-t border-black flex flex-wrap items-center justify-between gap-1 text-[11px] font-mono font-black bg-[#ecfeff]">
+          <div className="px-3 py-1.5 border-t border-black dark:border-[#2a364f] flex flex-wrap items-center justify-between gap-1 text-[11px] font-mono font-black bg-[#ecfeff] dark:bg-[#0f172a] text-black dark:text-white">
             <div className="flex items-center gap-1">
-              <span className="text-[10px] text-neutral-500">REACT:</span>
+              <span className="text-[10px] text-neutral-500 dark:text-neutral-400">REACT:</span>
               {['❤️', '🔥', '⭐', '⚡', '🎉'].map((txt) => (
                 <button
                   key={txt}
                   type="button"
                   onClick={() => onTriggerReaction(txt)}
-                  className="px-1.5 py-0.5 bg-white hover:bg-[#ffd60a] text-black border border-black text-xs cursor-pointer shadow-[1px_1px_0px_#000] transition-colors"
+                  className="px-1.5 py-0.5 bg-white dark:bg-[#1e293b] hover:bg-[#ffd60a] text-black dark:text-white border border-black dark:border-[#334155] text-xs cursor-pointer shadow-[1px_1px_0px_#000] transition-colors"
                 >
                   {txt}
                 </button>
@@ -355,14 +355,14 @@ export const MultimediaLiveChat: React.FC<MultimediaLiveChatProps> = ({
               <button
                 type="button"
                 onClick={() => handleQuickComment('🔥 STAGE ON FIRE!!')}
-                className="px-1.5 py-0.5 bg-white hover:bg-neutral-200 text-black border border-black text-[9px] cursor-pointer"
+                className="px-1.5 py-0.5 bg-white dark:bg-[#1e293b] hover:bg-neutral-200 dark:hover:bg-[#2a364f] text-black dark:text-white border border-black dark:border-[#334155] text-[9px] cursor-pointer"
               >
                 + "🔥 FIRE!!"
               </button>
               <button
                 type="button"
                 onClick={() => handleQuickComment('💎 VIETNAM LOVES YOU!! ❤️')}
-                className="px-1.5 py-0.5 bg-white hover:bg-neutral-200 text-black border border-black text-[9px] cursor-pointer"
+                className="px-1.5 py-0.5 bg-white dark:bg-[#1e293b] hover:bg-neutral-200 dark:hover:bg-[#2a364f] text-black dark:text-white border border-black dark:border-[#334155] text-[9px] cursor-pointer"
               >
                 + "🇻🇳 VN LOVES U"
               </button>
@@ -372,7 +372,7 @@ export const MultimediaLiveChat: React.FC<MultimediaLiveChatProps> = ({
           {/* Chat Message Input Form */}
           <form 
             onSubmit={onSendChatMessage} 
-            className="p-2.5 border-t-2 border-black flex items-center gap-2 bg-neutral-100 dark:bg-neutral-900"
+            className="p-2.5 border-t-2 border-black dark:border-[#2a364f] flex items-center gap-2 bg-neutral-100 dark:bg-neutral-900"
           >
             <input
               type="text"
@@ -380,7 +380,7 @@ export const MultimediaLiveChat: React.FC<MultimediaLiveChatProps> = ({
               value={newChatMessage}
               onChange={(e) => onNewChatMessageChange(e.target.value)}
               style={{ borderRadius: '0px' }}
-              className="flex-1 px-3 py-2 text-xs border-2 border-black bg-white dark:bg-black font-mono focus:outline-none focus:ring-2 focus:ring-[#ff2e93]"
+              className="flex-1 px-3 py-2 text-xs border-2 border-black dark:border-[#334155] bg-white dark:bg-[#0f172a] text-black dark:text-white placeholder:text-neutral-400 font-mono focus:outline-none focus:ring-2 focus:ring-[#ff2e93]"
             />
             <button
               type="submit"

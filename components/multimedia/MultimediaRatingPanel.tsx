@@ -33,7 +33,7 @@ export const MultimediaRatingPanel: React.FC<MultimediaRatingPanelProps> = ({
   return (
     <div 
       className={`border-t-2 border-black flex flex-col font-mono text-xs transition-colors duration-200 ${
-        isCinemaMode ? 'bg-[#111111] text-white border-neutral-800' : 'bg-[#fdfbf7] text-black border-black'
+        isCinemaMode ? 'bg-[#111111] text-white border-neutral-800' : 'bg-[#fdfbf7] dark:bg-[#0f172a] text-black dark:text-white border-black dark:border-[#2a364f]'
       }`}
     >
       {/* Accent Color Strip */}
@@ -84,7 +84,7 @@ export const MultimediaRatingPanel: React.FC<MultimediaRatingPanelProps> = ({
               </div>
 
               {/* Audit Logs Count & Breakdown Trigger */}
-              <div className="flex items-center gap-2 mt-1 text-[10px] text-neutral-500 font-bold">
+              <div className="flex items-center gap-2 mt-1 text-[10px] text-neutral-500 dark:text-neutral-400 font-bold">
                 <span>{activeMedia.rating.count.toLocaleString()} AUDIT LOGS</span>
                 <button
                   type="button"
@@ -106,8 +106,8 @@ export const MultimediaRatingPanel: React.FC<MultimediaRatingPanelProps> = ({
             style={{ borderRadius: '0px' }}
             className={`px-4 py-2 border-2 border-black font-mono font-black uppercase tracking-wider cursor-pointer transition-all shadow-[2px_2px_0px_#000000] active:translate-y-0.5 ${
               activeMedia.rating.userVote === 'up'
-                ? 'bg-[#10b981] text-white'
-                : 'bg-white hover:bg-[#ffd60a] text-black'
+                ? 'bg-[#10b981] text-white border-[#10b981]'
+                : 'bg-white hover:bg-[#ffd60a] text-black dark:bg-[#1e293b] dark:text-white dark:border-[#334155] dark:hover:bg-[#10b981]'
             }`}
           >
             [RECOMMEND // {activeMedia.rating.thumbsUp.toLocaleString()}]
@@ -119,8 +119,8 @@ export const MultimediaRatingPanel: React.FC<MultimediaRatingPanelProps> = ({
             style={{ borderRadius: '0px' }}
             className={`px-4 py-2 border-2 border-black font-mono font-black uppercase tracking-wider cursor-pointer transition-all shadow-[2px_2px_0px_#000000] active:translate-y-0.5 ${
               activeMedia.rating.userVote === 'down'
-                ? 'bg-[#ef4444] text-white'
-                : 'bg-white hover:bg-neutral-200 text-black'
+                ? 'bg-[#ef4444] text-white border-[#ef4444]'
+                : 'bg-white hover:bg-neutral-200 text-black dark:bg-[#1e293b] dark:text-white dark:border-[#334155] dark:hover:bg-[#ef4444]'
             }`}
           >
             [SKIP // {activeMedia.rating.thumbsDown.toLocaleString()}]
@@ -136,7 +136,7 @@ export const MultimediaRatingPanel: React.FC<MultimediaRatingPanelProps> = ({
             className={`px-4 py-2 border-2 border-black font-mono font-black uppercase tracking-wider cursor-pointer transition-all shadow-[2px_2px_0px_#000000] active:translate-y-0.5 ${
               isBookmarked
                 ? 'bg-[#00f0ff] text-black'
-                : 'bg-white hover:bg-[#ecfeff] text-black'
+                : 'bg-white hover:bg-[#ecfeff] text-black dark:bg-[#1e293b] dark:text-white dark:border-[#334155] dark:hover:bg-[#00f0ff] dark:hover:text-black'
             }`}
           >
             {isBookmarked ? '★ [ARCHIVED]' : '[+ ARCHIVE]'}
@@ -146,7 +146,7 @@ export const MultimediaRatingPanel: React.FC<MultimediaRatingPanelProps> = ({
             type="button"
             onClick={onShare}
             style={{ borderRadius: '0px' }}
-            className="px-4 py-2 border-2 border-black font-mono font-black uppercase tracking-wider cursor-pointer bg-white hover:bg-[#ff2e93] hover:text-white text-black transition-all shadow-[2px_2px_0px_#000000] active:translate-y-0.5"
+            className="px-4 py-2 border-2 border-black font-mono font-black uppercase tracking-wider cursor-pointer bg-white hover:bg-[#ff2e93] hover:text-white text-black dark:bg-[#1e293b] dark:text-white dark:border-[#334155] dark:hover:bg-[#ff2e93] transition-all shadow-[2px_2px_0px_#000000] active:translate-y-0.5"
           >
             [SHARE ⎘]
           </button>

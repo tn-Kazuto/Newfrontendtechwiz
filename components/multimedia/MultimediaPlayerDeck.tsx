@@ -68,29 +68,29 @@ export const MultimediaPlayerDeck: React.FC<MultimediaPlayerDeckProps> = ({
       {/* 2. Metadata, Chapter Index & Tags Sidebar (4 columns) */}
       <div 
         className={`lg:col-span-4 flex flex-col font-mono text-xs p-5 sm:p-6 space-y-4 overflow-y-auto max-h-[500px] ${
-          isCinemaMode ? 'bg-[#0a0a0a] text-white' : 'bg-white text-black'
+          isCinemaMode ? 'bg-[#0a0a0a] text-white' : 'bg-white dark:bg-[#0f172a] text-black dark:text-white'
         }`}
       >
         {/* Category Header Row */}
-        <div className="flex items-center justify-between pb-3 border-b-2 border-black">
-          <span className="font-mono font-black uppercase tracking-widest text-[11px] text-[#ff2e93] bg-[#fdf2f8] px-2 py-0.5 border border-black shadow-[1px_1px_0px_#000]">
+        <div className="flex items-center justify-between pb-3 border-b-2 border-black dark:border-[#2a364f]">
+          <span className="font-mono font-black uppercase tracking-widest text-[11px] text-[#ff2e93] bg-[#fdf2f8] dark:bg-[#27272a] px-2 py-0.5 border border-black dark:border-[#3f3f46] shadow-[1px_1px_0px_#000]">
             {getFormatLabel(activeMedia.type)}
           </span>
-          <span className="font-mono font-black text-[10px] bg-[#fefce8] text-black px-2 py-0.5 border border-black shadow-[1px_1px_0px_#000]">
+          <span className="font-mono font-black text-[10px] bg-[#fefce8] dark:bg-[#1e293b] text-black dark:text-white px-2 py-0.5 border border-black dark:border-[#334155] shadow-[1px_1px_0px_#000]">
             RUN: {activeMedia.duration}
           </span>
         </div>
 
         {/* Title & Artist */}
         <div>
-          <h3 className="font-serif text-xl sm:text-2xl font-bold italic leading-snug mb-1">
+          <h3 className="font-serif text-xl sm:text-2xl font-bold italic leading-snug mb-1 text-black dark:text-white">
             {activeMedia.title}
           </h3>
-          <p className="text-xs font-black uppercase tracking-wider text-[#0284c7]">
+          <p className="text-xs font-black uppercase tracking-wider text-[#0284c7] dark:text-[#38bdf8]">
             ARTIST // PRODUCER: {activeMedia.artist}
           </p>
           {activeMedia.agency && (
-            <p className="text-[10px] font-semibold text-neutral-500 mt-0.5">
+            <p className="text-[10px] font-semibold text-neutral-500 dark:text-neutral-400 mt-0.5">
               LABEL // DISTRIBUTOR: {activeMedia.agency}
             </p>
           )}
@@ -98,14 +98,14 @@ export const MultimediaPlayerDeck: React.FC<MultimediaPlayerDeckProps> = ({
 
         {/* Description */}
         <p className={`font-serif text-xs leading-relaxed ${
-          isCinemaMode ? 'text-neutral-300' : 'text-neutral-700'
+          isCinemaMode ? 'text-neutral-300' : 'text-neutral-700 dark:text-neutral-300'
         }`}>
           {activeMedia.description}
         </p>
 
         {/* Chapters / Chronology List */}
         {activeMedia.chapters && activeMedia.chapters.length > 0 && (
-          <div className="pt-3 border-t-2 border-black space-y-2">
+          <div className="pt-3 border-t-2 border-black dark:border-[#2a364f] space-y-2">
             <span className="text-[10px] font-black uppercase tracking-widest block text-[#ff2e93]">
               TRACK CHRONOLOGY // INDEX:
             </span>
@@ -115,11 +115,11 @@ export const MultimediaPlayerDeck: React.FC<MultimediaPlayerDeckProps> = ({
                   key={idx}
                   type="button"
                   style={{ borderRadius: '0px' }}
-                  className="w-full flex items-center justify-between p-2 border-2 border-black bg-neutral-50 hover:bg-[#ffd60a] text-black hover:text-black transition-all cursor-pointer text-[11px] shadow-[2px_2px_0px_#000] text-left"
+                  className="w-full flex items-center justify-between p-2 border-2 border-black dark:border-[#334155] bg-neutral-50 dark:bg-[#1e293b] hover:bg-[#ffd60a] text-black dark:text-white dark:hover:text-black transition-all cursor-pointer text-[11px] shadow-[2px_2px_0px_#000] text-left"
                   onClick={() => onSelectChapter && onSelectChapter(chap.seconds)}
                 >
                   <span className="font-bold truncate max-w-[80%]">{chap.title}</span>
-                  <span className="font-mono text-[10px] ml-2 shrink-0 font-black bg-white px-1.5 py-0.5 border border-black">
+                  <span className="font-mono text-[10px] ml-2 shrink-0 font-black bg-white dark:bg-[#0f172a] text-black dark:text-white px-1.5 py-0.5 border border-black dark:border-[#334155]">
                     {chap.time}
                   </span>
                 </button>
@@ -129,12 +129,12 @@ export const MultimediaPlayerDeck: React.FC<MultimediaPlayerDeckProps> = ({
         )}
 
         {/* Hashtags Pills */}
-        <div className="pt-3 border-t-2 border-black flex flex-wrap gap-1.5">
+        <div className="pt-3 border-t-2 border-black dark:border-[#2a364f] flex flex-wrap gap-1.5">
           {activeMedia.tags.map((tag, idx) => (
             <span
               key={idx}
               style={{ borderRadius: '0px' }}
-              className="px-2 py-0.5 bg-[#fefce8] text-black border border-black text-[9px] uppercase font-mono font-black shadow-[1px_1px_0px_#000]"
+              className="px-2 py-0.5 bg-[#fefce8] dark:bg-[#1e293b] text-black dark:text-white border border-black dark:border-[#334155] text-[9px] uppercase font-mono font-black shadow-[1px_1px_0px_#000]"
             >
               #{tag}
             </span>

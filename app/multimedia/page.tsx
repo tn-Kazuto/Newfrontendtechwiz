@@ -46,7 +46,7 @@ export default function MultimediaPage() {
 
       <main className="flex-1">
         {/* Unified Breadcrumbs Navigation */}
-        <div className="bg-white border-b-2 border-black">
+        <div className="bg-white dark:bg-[#0b0f19] border-b-2 border-black dark:border-[#2a364f]">
           <Breadcrumbs 
             items={[
               { label: 'Cinematheque & Sound Lab (Multimedia Streaming Hub)', isActive: true }
@@ -282,16 +282,16 @@ export default function MultimediaPage() {
         })()}
 
         {/* Fandom Hub / Live Space Navigation Tabs */}
-        <div className="bg-[#fefce8] border-b-2 border-black sticky top-[60px] z-30 px-4 sm:px-8 py-2.5">
+        <div className="bg-[#fefce8] dark:bg-[#0b0f19] border-b-2 border-black dark:border-[#2a364f] sticky top-[60px] z-30 px-4 sm:px-8 py-2.5">
           <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => setActiveMainTab('live')}
-                className={`px-4 py-2 text-xs font-black uppercase tracking-wider font-mono border-2 border-black transition-all cursor-pointer ${
+                className={`px-4 py-2 text-xs font-black uppercase tracking-wider font-mono border-2 border-black dark:border-[#334155] transition-all cursor-pointer ${
                   activeMainTab === 'live'
                     ? 'bg-[#ff2e93] text-white shadow-[2px_2px_0px_#000]'
-                    : 'bg-white text-black hover:bg-neutral-100'
+                    : 'bg-white dark:bg-[#1e293b] text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-[#334155]'
                 }`}
               >
                 ★ IDOL LIVE STREAM (LIVE SPACE)
@@ -300,17 +300,17 @@ export default function MultimediaPage() {
               <button
                 type="button"
                 onClick={() => setActiveMainTab('feed')}
-                className={`px-4 py-2 text-xs font-black uppercase tracking-wider font-mono border-2 border-black transition-all cursor-pointer ${
+                className={`px-4 py-2 text-xs font-black uppercase tracking-wider font-mono border-2 border-black dark:border-[#334155] transition-all cursor-pointer ${
                   activeMainTab === 'feed'
                     ? 'bg-[#00f0ff] text-black shadow-[2px_2px_0px_#000]'
-                    : 'bg-white text-black hover:bg-neutral-100'
+                    : 'bg-white dark:bg-[#1e293b] text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-[#334155]'
                 }`}
               >
                 ✦ FANDOM COMMUNITY FEED
               </button>
             </div>
 
-            <span className="hidden sm:inline font-mono text-[11px] text-neutral-600 font-bold">
+            <span className="hidden sm:inline font-mono text-[11px] text-neutral-600 dark:text-neutral-400 font-bold">
               WEBSOCKET SYNCHRONIZED STREAM &amp; SOCIAL FEED
             </span>
           </div>
