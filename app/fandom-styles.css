@@ -1439,7 +1439,7 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
   font-family: var(--font-jetbrains), var(--font-mono), monospace !important;
 }
 
-/* Architectural Flat Cards with 100ms Hover Inversion */
+/* Architectural Flat Cards - Giữ nền trắng rõ ràng khi hover, không biến thành màu đen */
 .fandom-theme-gaming .fandom-card,
 .fandom-theme-gaming .kpop-game-card,
 .fandom-theme-gaming .domain-card,
@@ -1448,10 +1448,10 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
 .fandom-theme-gaming #artists .group {
   background-color: #FFFFFF !important;
   color: #000000 !important;
-  border: 1.5px solid #000000 !important;
-  box-shadow: none !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
   border-radius: 0px !important;
-  transition: background-color 100ms ease, color 100ms ease, border-color 100ms ease !important;
+  transition: all 0.15s ease !important;
 }
 
 .fandom-theme-gaming .fandom-card:hover,
@@ -1460,19 +1460,11 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
 .fandom-theme-gaming .kpop-styled-card:hover,
 .fandom-theme-gaming article:hover,
 .fandom-theme-gaming #artists .group:hover {
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
   border-color: #000000 !important;
-  box-shadow: none !important;
-}
-
-.fandom-theme-gaming .fandom-card:hover *,
-.fandom-theme-gaming .kpop-game-card:hover *,
-.fandom-theme-gaming .domain-card:hover *,
-.fandom-theme-gaming .kpop-styled-card:hover *,
-.fandom-theme-gaming article:hover *,
-.fandom-theme-gaming #artists .group:hover * {
-  color: #FFFFFF !important;
+  box-shadow: 4px 4px 0px #00f0ff !important;
+  transform: none !important;
 }
 
 /* Editorial Grayscale Image Treatment with 300ms hover saturation & scale */
@@ -1609,23 +1601,6 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-
   color: #FFFFFF !important;
 }
 
-/* Ensure nested bg-white elements invert on card hover */
-.fandom-theme-gaming .fandom-card:hover .bg-white,
-.fandom-theme-gaming .domain-card:hover .bg-white,
-.fandom-theme-gaming article:hover .bg-white,
-.fandom-theme-gaming #artists .group:hover .bg-white,
-.fandom-theme-gaming .kpop-styled-card:hover .bg-white {
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
-  border-color: #FFFFFF !important;
-}
-.fandom-theme-gaming .fandom-card:hover .bg-white *,
-.fandom-theme-gaming .domain-card:hover .bg-white *,
-.fandom-theme-gaming article:hover .bg-white *,
-.fandom-theme-gaming #artists .group:hover .bg-white *,
-.fandom-theme-gaming .kpop-styled-card:hover .bg-white * {
-  color: #FFFFFF !important;
-}
 
 
 /* Light muted tints become #F5F5F5 in light mode */
@@ -1702,11 +1677,7 @@ html:not(.dark) .fandom-theme-gaming [class*="text-cyan-"] {
 .fandom-theme-gaming .bg-black [class*="text-"],
 .fandom-theme-gaming button.bg-black [class*="text-"],
 .fandom-theme-gaming [class*="bg-[#000000]"] [class*="text-"],
-.fandom-theme-gaming footer [class*="text-"],
-.fandom-theme-gaming .fandom-card:hover [class*="text-"],
-.fandom-theme-gaming .domain-card:hover [class*="text-"],
-.fandom-theme-gaming article:hover [class*="text-"],
-.fandom-theme-gaming #artists .group:hover [class*="text-"] {
+.fandom-theme-gaming footer [class*="text-"] {
   color: #FFFFFF !important;
 }
 
