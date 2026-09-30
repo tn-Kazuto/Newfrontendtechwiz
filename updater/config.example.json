@@ -1,0 +1,17 @@
+{
+  "secret_key": "techwiz2026@secure",
+  "github_repo": "manhconne/techwiz-frontend",
+  "github_token": "YOUR_GITHUB_TOKEN_HERE",
+  "target_dir": "/www/wwwroot/techwiz-frontend",
+  "backup_dir": "/www/wwwroot/techwiz-frontend_backups",
+  "preserve_files": [
+    ".env",
+    ".env.local",
+    ".env.production",
+    "updater"
+  ],
+  "build_command": "npm install && npm run build",
+  "pm2_process_name": "techwiz-frontend",
+  "auto_restart_pm2": true,
+  "max_backups": 3
+}

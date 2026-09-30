@@ -1,0 +1,752 @@
+/* ==========================================================================
+   DOMAIN THEME STYLELIST — v2 Professional
+   — K-Pop Gallery White  (class: .theme-kpop)   — inspired by Weverse, Hanteo
+   — Anime Dark Premium   (class: .theme-anime)  — inspired by Crunchyroll Store
+   — Gaming Neon Dark     (class: .theme-gaming) — unchanged, keep project style
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SHARED TRANSITIONS
+   -------------------------------------------------------------------------- */
+.theme-kpop, .theme-anime {
+  transition:
+    background 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   K-POP — GALLERY WHITE (Weverse / Hanteo aesthetic)
+   Philosophy: Content-first. Clean white gallery frames the
+   artist. Bold typographic accent in rose-pink. Minimal UI,
+   maximum impact on the music and imagery.
+   Palette:
+     - Background:  #ffffff / #fafafa
+     - Surface:     #f7f7f9 (ultra-light cool white)
+     - Accent:      #ff2d7e  (vivid rose-pink — Hanteo pink)
+     - Accent-2:    #1a1a2e  (near-black navy for text)
+     - Muted:       #8c8ca1
+     - Border:      #ebebf0
+   ============================================================ */
+
+.theme-kpop {
+  --kpop-accent:        #ff2e93;
+  --kpop-accent-hover:  #ff007f;
+  --kpop-accent-soft:   rgba(255, 46, 147, 0.12);
+  --kpop-accent-mid:    rgba(255, 46, 147, 0.22);
+  --kpop-bg:            transparent;
+  --kpop-surface:       #ffffff;
+  --kpop-text:          #000000;
+  --kpop-text-sub:      #1f2937;
+  --kpop-text-muted:    #6b7280;
+  --kpop-border:        #000000;
+  --kpop-border-accent: #ff2e93;
+  --kpop-font:          var(--font-sans), 'Plus Jakarta Sans', sans-serif;
+  --kpop-shadow-card:   4px 4px 0px #000000;
+  --kpop-shadow-hover:  6px 6px 0px #ff2e93;
+}
+
+/* Section wrapper — transparent to let global theme through */
+.theme-kpop.domain-section {
+  background: transparent !important;
+  color: var(--kpop-text) !important;
+  position: relative;
+  overflow: visible;
+}
+
+/* Section title — bold serif with pink italic accent */
+.theme-kpop .domain-section-title {
+  font-family: var(--font-serif), 'Playfair Display', Georgia, serif !important;
+  color: var(--kpop-text) !important;
+  -webkit-text-fill-color: var(--kpop-text) !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  letter-spacing: -0.02em;
+  font-weight: 700 !important;
+}
+
+.theme-kpop .domain-section-title em {
+  color: #ff2e93 !important;
+  -webkit-text-fill-color: #ff2e93 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Eyebrow */
+.theme-kpop .domain-eyebrow-bar {
+  background-color: #000000 !important;
+}
+.theme-kpop .domain-eyebrow-text {
+  color: #000000 !important;
+  font-family: var(--font-mono), monospace !important;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+}
+
+/* Subcategory tabs */
+.theme-kpop .domain-subcategory-tab {
+  color: #64748b !important;
+  font-family: var(--font-mono), monospace !important;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.theme-kpop .domain-subcategory-tab.active {
+  color: #000000 !important;
+  border-bottom: 2px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* Filter bar */
+.theme-kpop .domain-filter-bar {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* Active filter button */
+.theme-kpop .domain-filter-btn-active {
+  background: #ff2e93 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  border-radius: 0px !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+
+/* Result count */
+.theme-kpop .domain-result-count strong {
+  color: #000000 !important;
+}
+
+/* ---- PRODUCT CARDS (NEO-BRUTALIST / Y2K POP STYLE) ---- */
+.theme-kpop .domain-card {
+  background: #ffffff !important;
+  border: 2px solid #000000 !important;
+  border-radius: 0px !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  transition: all 0.15s ease !important;
+}
+
+.theme-kpop .domain-card:hover {
+  transform: translate(-1px, -1px) !important;
+  box-shadow: 6px 6px 0px #ff2e93 !important;
+  border-color: #000000 !important;
+}
+
+/* Card CTA button */
+.theme-kpop .domain-card-btn-primary {
+  background: #ffd60a !important;
+  border: 2px solid #000000 !important;
+  color: #000000 !important;
+  border-radius: 0px !important;
+  font-family: var(--font-mono), monospace !important;
+  font-weight: 900 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  transition: all 0.15s ease !important;
+}
+
+.theme-kpop .domain-card-btn-primary:hover {
+  background: #ff2e93 !important;
+  color: #ffffff !important;
+  transform: translate(-1px, -1px) !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+}
+
+/* ---- HERO BANNER ---- */
+.theme-kpop .domain-hero-banner {
+  background: #ffffff !important;
+  border-color: rgba(219, 234, 254, 0.9) !important;
+  border-top: 2px solid var(--kpop-accent) !important;
+}
+
+/* Hero badge — pill outline style */
+.theme-kpop .domain-hero-badge {
+  background: var(--kpop-accent-soft) !important;
+  color: var(--kpop-accent) !important;
+  border: 1px solid rgba(37, 99, 235, 0.3) !important;
+  border-radius: 9999px !important;
+  box-shadow: none !important;
+  font-family: var(--kpop-font) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em;
+}
+
+/* Hero title */
+.theme-kpop .domain-hero-title {
+  color: var(--kpop-text) !important;
+  -webkit-text-fill-color: var(--kpop-text) !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  font-family: var(--kpop-font) !important;
+  letter-spacing: -0.035em !important;
+  font-style: italic !important;
+}
+
+/* Hero buttons */
+.theme-kpop .domain-hero-btn-primary {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  font-family: var(--kpop-font) !important;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+}
+
+.theme-kpop .domain-hero-btn-secondary {
+  border-color: rgba(226, 232, 240, 0.9) !important;
+  color: var(--kpop-text-sub) !important;
+  border-radius: 12px !important;
+  font-family: var(--kpop-font) !important;
+}
+
+/* Pagination dots */
+.theme-kpop .domain-dot-active {
+  background: var(--kpop-accent) !important;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5) !important;
+}
+
+/* Wishlist active */
+.theme-kpop .domain-wishlist-active { color: var(--kpop-accent) !important; }
+
+/* Sparkle decoration */
+.theme-kpop .domain-hero-sparkle {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  font-size: 16px;
+  color: var(--kpop-accent);
+  opacity: 0.35;
+  letter-spacing: 10px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Subtle animated shimmer on cards hover */
+@keyframes kpop-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Dark mode K-Pop */
+[data-theme="dark"] .theme-kpop.domain-section {
+  background: #0f0f17 !important;
+  color: #f0f0f5 !important;
+}
+[data-theme="dark"] .theme-kpop .domain-filter-bar {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+[data-theme="dark"] .theme-kpop .domain-card {
+  background: #13131e !important;
+  border-color: #2a2a3f !important;
+}
+[data-theme="dark"] .theme-kpop .domain-hero-banner {
+  background: #0f0f17 !important;
+  border-color: #2a2a3f !important;
+}
+[data-theme="dark"] .theme-kpop .domain-section-title {
+  color: #f0f0f5 !important;
+  -webkit-text-fill-color: #f0f0f5 !important;
+}
+
+
+
+/* ============================================================
+   ANIME — VIBRANT UNIVERSE (Japanese Anime & Manga Energy)
+   Aesthetic: Dynamic Japanese anime energy — vibrant gradient background,
+   bold action orange-red and deep indigo contrast. Light, colorful,
+   highly engaging and professional.
+   Palette:
+     - Background:  linear-gradient(135deg, #ede9fe 0%, #fff7ed 50%, #e0f2fe 100%)
+     - Surface:     #ffffff  (clean white card)
+     - Accent:      #ff5722  (vibrant action orange-red)
+     - Accent-2:    #3f51b5  (deep anime indigo / violet-blue)
+     - Accent-gold: #ff9800  (warm golden sunset)
+     - Text:        #1a1a2e  (deep navy-black ink)
+     - Text-sub:    #475569  (slate dark)
+     - Text-muted:  #5c6bc0  (indigo-muted)
+     - Border:      rgba(63, 81, 181, 0.14)
+   ============================================================ */
+
+.theme-anime {
+  --anime-accent:       #ff5722;
+  --anime-accent-hover: #e64a19;
+  --anime-accent-soft:  rgba(255, 87, 34, 0.1);
+  --anime-indigo:       #3f51b5;
+  --anime-indigo-soft:  rgba(63, 81, 181, 0.1);
+  --anime-bg:           linear-gradient(135deg, #ede9fe 0%, #fff7ed 50%, #e0f2fe 100%);
+  --anime-surface:      #ffffff;
+  --anime-text:         #1a1a2e;
+  --anime-text-sub:     #475569;
+  --anime-text-muted:   #5c6bc0;
+  --anime-border:       rgba(63, 81, 181, 0.14);
+  --anime-border-accent:rgba(255, 87, 34, 0.35);
+  --anime-font:         'Plus Jakarta Sans', sans-serif;
+  --anime-shadow-card:  0 4px 18px rgba(63, 81, 181, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --anime-shadow-hover: 0 14px 34px rgba(255, 87, 34, 0.18), 0 0 0 1.5px rgba(255, 87, 34, 0.35);
+}
+
+/* Section wrapper — vibrant anime gradient */
+.theme-anime.domain-section {
+  background: var(--anime-bg) !important;
+  color: var(--anime-text) !important;
+  position: relative;
+}
+
+/* Top accent stripe: Anime orange to indigo energy gradient */
+.theme-anime.domain-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #ff5722 0%, #ff9800 50%, #3f51b5 100%);
+  z-index: 2;
+}
+
+/* Ambient glow */
+.theme-anime.domain-section::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 87, 34, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Section title */
+.theme-anime .domain-section-title {
+  color: var(--anime-text) !important;
+  -webkit-text-fill-color: var(--anime-text) !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  font-family: var(--anime-font) !important;
+  letter-spacing: -0.025em;
+  font-weight: 800 !important;
+}
+
+.theme-anime .domain-section-title em {
+  font-style: italic;
+  color: var(--anime-accent) !important;
+  -webkit-text-fill-color: var(--anime-accent) !important;
+  font-weight: 900;
+}
+
+/* Eyebrow badge */
+.theme-anime .domain-eyebrow-bar {
+  background: linear-gradient(90deg, #ff5722 0%, #ff9800 100%) !important;
+  width: 24px !important;
+  height: 3px !important;
+  border-radius: 2px !important;
+}
+.theme-anime .domain-eyebrow-text {
+  color: #ff5722 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.15em !important;
+}
+
+/* Subcategory tabs */
+.theme-anime .domain-subcategory-tab {
+  color: #4b5563 !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+.theme-anime .domain-subcategory-tab:hover {
+  color: var(--anime-accent) !important;
+}
+.theme-anime .domain-subcategory-tab.active {
+  color: var(--anime-accent) !important;
+  border-bottom-color: var(--anime-accent) !important;
+  font-weight: 800 !important;
+}
+
+/* Filter bar */
+.theme-anime .domain-filter-bar {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--anime-border) !important;
+  box-shadow: 0 2px 12px rgba(63, 81, 181, 0.06) !important;
+}
+.theme-anime .domain-filter-btn-active {
+  background-color: var(--anime-accent) !important;
+  color: #ffffff !important;
+  border-color: var(--anime-accent) !important;
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.3) !important;
+}
+
+/* Result count */
+.theme-anime .domain-result-count {
+  color: #6b7280 !important;
+}
+.theme-anime .domain-result-count strong {
+  color: var(--anime-accent) !important;
+}
+
+/* Product cards */
+.theme-anime .domain-card {
+  background: #ffffff !important;
+  border: 1px solid var(--anime-border) !important;
+  box-shadow: var(--anime-shadow-card) !important;
+  border-radius: 18px !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+.theme-anime .domain-card:hover {
+  border-color: rgba(255, 87, 34, 0.45) !important;
+  box-shadow: var(--anime-shadow-hover) !important;
+  transform: translateY(-5px) !important;
+}
+
+/* Card titles and text */
+.theme-anime .domain-card h4,
+.theme-anime .domain-card .text-slate-900 {
+  color: #1a1a2e !important;
+  font-weight: 700 !important;
+}
+.theme-anime .domain-card:hover h4 {
+  color: var(--anime-accent) !important;
+}
+.theme-anime .domain-card .text-slate-400.uppercase {
+  color: var(--anime-indigo) !important;
+  font-weight: 700 !important;
+  opacity: 0.9;
+}
+.theme-anime .domain-card .text-slate-500 {
+  color: #6b7280 !important;
+}
+.theme-anime .domain-card .border-slate-100 {
+  border-color: rgba(63, 81, 181, 0.1) !important;
+}
+
+/* In-stock badge */
+.theme-anime .domain-card .text-emerald-600 {
+  color: #059669 !important;
+}
+
+/* Card CTA button */
+.theme-anime .domain-card-btn-primary {
+  background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(255, 87, 34, 0.35) !important;
+  border: none !important;
+  font-weight: 800 !important;
+  transition: all 0.2s ease !important;
+}
+.theme-anime .domain-card-btn-primary:hover {
+  box-shadow: 0 5px 16px rgba(255, 87, 34, 0.5) !important;
+  transform: translateY(-1px) scale(1.02) !important;
+}
+
+/* Price tag in cards */
+.theme-anime .domain-card span[style*="fontWeight: 800"],
+.theme-anime .domain-card span[style*="font-weight: 800"] {
+  color: #1a1a2e !important;
+}
+
+/* Hero banner */
+.theme-anime.domain-hero-banner {
+  background: linear-gradient(135deg, #ede9fe 0%, #fff7ed 50%, #e0f2fe 100%) !important;
+  position: relative;
+}
+.theme-anime .domain-hero-badge {
+  background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(255, 87, 34, 0.35) !important;
+  border: none !important;
+}
+.theme-anime .domain-hero-title {
+  color: #1a1a2e !important;
+  -webkit-text-fill-color: #1a1a2e !important;
+  background: none !important;
+  font-weight: 900 !important;
+}
+.theme-anime .domain-hero-btn-primary {
+  background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.4) !important;
+  border: none !important;
+}
+.theme-anime .domain-hero-btn-primary:hover {
+  background: linear-gradient(135deg, #e64a19 0%, #f4511e 100%) !important;
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.55) !important;
+}
+.theme-anime .domain-hero-btn-secondary {
+  background: #ffffff !important;
+  color: #3f51b5 !important;
+  border: 1.5px solid rgba(63, 81, 181, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(63, 81, 181, 0.08) !important;
+}
+.theme-anime .domain-hero-btn-secondary:hover {
+  background: #f0f2fe !important;
+  border-color: #3f51b5 !important;
+  color: #303f9f !important;
+}
+.theme-anime .domain-dot-active {
+  background-color: #ff5722 !important;
+  box-shadow: 0 0 6px rgba(255, 87, 34, 0.5) !important;
+}
+.theme-anime .domain-wishlist-active {
+  color: #ff5722 !important;
+}
+
+/* ============================================================
+   GAMING NEON CYBER THEME — UNCHANGED (project existing style)
+   Only critical class hooks maintained for consistency.
+   ============================================================ */
+
+.theme-gaming {
+  --gaming-primary: #00e5ff;
+  --gaming-secondary: #7c4dff;
+  --gaming-accent: #69ff47;
+  --gaming-bg: #0d0d1a;
+  --gaming-bg-panel: #111130;
+  --gaming-bg-card: #16162a;
+  --gaming-text: #e0e0ff;
+  --gaming-text-muted: #6b6ba0;
+  --gaming-border: rgba(0,229,255,0.2);
+  --gaming-glow: 0 0 20px rgba(0,229,255,0.25), 0 0 40px rgba(0,229,255,0.1);
+  --gaming-gradient: linear-gradient(135deg, #0d0d1a 0%, #111130 60%, #0a0a20 100%);
+  --gaming-font: 'Fira Code', 'Courier New', monospace;
+}
+
+.theme-gaming.domain-section {
+  background: var(--gaming-gradient) !important;
+  color: var(--gaming-text) !important;
+  position: relative;
+}
+
+.theme-gaming.domain-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(0,229,255,0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(124,77,255,0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.theme-gaming.domain-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,229,255,0.015) 2px, rgba(0,229,255,0.015) 4px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.theme-gaming .domain-section-title {
+  color: var(--gaming-text) !important;
+  -webkit-text-fill-color: unset !important;
+  text-shadow: 0 0 20px rgba(0,229,255,0.3);
+  font-family: var(--gaming-font) !important;
+  letter-spacing: 0.02em;
+}
+
+.theme-gaming .domain-section-title em {
+  font-style: normal !important;
+  color: var(--gaming-primary) !important;
+  -webkit-text-fill-color: unset !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  text-shadow: 0 0 12px rgba(0,229,255,0.6);
+}
+
+.theme-gaming .domain-subcategory-tab { color: var(--gaming-text-muted) !important; font-family: var(--gaming-font) !important; letter-spacing: 0.1em; }
+.theme-gaming .domain-subcategory-tab.active { color: var(--gaming-primary) !important; border-bottom-color: var(--gaming-primary) !important; text-shadow: 0 0 8px rgba(0,229,255,0.6); }
+
+.theme-gaming .domain-filter-bar {
+  background: rgba(17,17,48,0.95) !important;
+  border-color: var(--gaming-border) !important;
+  box-shadow: var(--gaming-glow) !important;
+}
+
+.theme-gaming .domain-filter-btn-active {
+  background: var(--gaming-bg-panel) !important;
+  color: var(--gaming-primary) !important;
+  border-color: var(--gaming-primary) !important;
+  box-shadow: 0 0 10px rgba(0,229,255,0.4) !important;
+}
+
+.theme-gaming .domain-card {
+  background: var(--gaming-bg-card) !important;
+  border-color: var(--gaming-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+
+.theme-gaming .domain-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: var(--gaming-primary) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 16px rgba(0,229,255,0.2) !important;
+}
+
+.theme-gaming .domain-card-btn-primary {
+  background: transparent !important;
+  border-color: var(--gaming-primary) !important;
+  color: var(--gaming-primary) !important;
+  box-shadow: 0 0 10px rgba(0,229,255,0.2) !important;
+}
+
+.theme-gaming .domain-hero-banner {
+  background: var(--gaming-gradient) !important;
+  border-color: var(--gaming-border) !important;
+  box-shadow: var(--gaming-glow) !important;
+}
+
+.theme-gaming .domain-hero-badge {
+  background: transparent !important;
+  color: var(--gaming-primary) !important;
+  border: 1px solid var(--gaming-primary) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 8px rgba(0,229,255,0.4) !important;
+  letter-spacing: 0.15em;
+  font-family: var(--gaming-font) !important;
+}
+
+.theme-gaming .domain-hero-title {
+  color: var(--gaming-text) !important;
+  -webkit-text-fill-color: unset !important;
+  font-family: var(--gaming-font) !important;
+  text-shadow: 0 0 24px rgba(0,229,255,0.2);
+  letter-spacing: 0.02em;
+  font-style: normal !important;
+}
+
+.theme-gaming .domain-hero-btn-primary {
+  background: var(--gaming-primary) !important;
+  border-color: transparent !important;
+  color: #0d0d1a !important;
+  border-radius: 6px !important;
+  font-family: var(--gaming-font) !important;
+  box-shadow: 0 4px 20px rgba(0,229,255,0.4) !important;
+}
+
+.theme-gaming .domain-hero-btn-secondary {
+  border-color: var(--gaming-secondary) !important;
+  color: var(--gaming-secondary) !important;
+  border-radius: 6px !important;
+  font-family: var(--gaming-font) !important;
+}
+
+@keyframes gaming-scan {
+  0% { top: -4px; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.theme-gaming .domain-hero-scanline {
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,229,255,0.5), transparent);
+  animation: gaming-scan 4s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.theme-gaming .domain-eyebrow-bar { background-color: var(--gaming-primary) !important; box-shadow: 0 0 8px rgba(0,229,255,0.5); }
+.theme-gaming .domain-eyebrow-text { color: var(--gaming-primary) !important; font-family: var(--gaming-font) !important; text-shadow: 0 0 6px rgba(0,229,255,0.4); }
+.theme-gaming .domain-result-count strong { color: var(--gaming-primary) !important; text-shadow: 0 0 8px rgba(0,229,255,0.4); }
+.theme-gaming .domain-dot-active { background: var(--gaming-primary) !important; box-shadow: 0 0 10px rgba(0,229,255,0.6) !important; }
+.theme-gaming .domain-wishlist-active { color: var(--gaming-secondary) !important; }
+
+[data-theme="dark"] .theme-gaming.domain-section { background: linear-gradient(135deg, #060610 0%, #080818 60%, #040410 100%) !important; }
+
+
+/* ==========================================================================
+   CARD INNER TEXT OVERRIDES & COMPONENT STYLING
+   ========================================================================== */
+
+/* ---- Gaming: Card inner text (cyberpunk dark cards) ---- */
+.theme-gaming .domain-card h4,
+.theme-gaming .domain-card .text-slate-900 {
+  color: #e0e0ff !important;
+}
+
+.theme-gaming .domain-card .text-slate-400,
+.theme-gaming .domain-card .text-slate-500 {
+  color: #6b6ba0 !important;
+}
+
+.theme-gaming .domain-card .border-slate-100 {
+  border-color: rgba(0, 229, 255, 0.1) !important;
+}
+
+.theme-gaming .domain-card .bg-slate-100 {
+  background-color: #111130 !important;
+}
+
+.theme-gaming .domain-card .text-emerald-600 {
+  color: #69ff47 !important;
+}
+
+/* ---- K-Pop: Specific overrides for gallery white professionalism ---- */
+.theme-kpop .domain-card .text-slate-400.uppercase {
+  color: #ff2d7e !important;
+  opacity: 0.75;
+}
+
+.theme-kpop .domain-card .text-emerald-600 {
+  color: #059669 !important;
+}
+
+.theme-kpop .domain-section .bg-black {
+  background-color: #ff2d7e !important;
+}
+
+.theme-kpop .domain-section .border-b,
+.theme-kpop .domain-section [style*="border-bottom: 1px solid #f1f5f9"] {
+  border-bottom-color: #ebebf0 !important;
+}
+
+/* ---- Anime: Specific overrides for vibrant anime universe ---- */
+.theme-anime .domain-card .text-slate-400.uppercase {
+  color: #ff5722 !important;
+  opacity: 0.85;
+}
+
+.theme-anime .domain-card .text-emerald-600 {
+  color: #059669 !important;
+}
+
+.theme-anime .domain-section .bg-black {
+  background-color: #ff5722 !important;
+}
+
+.theme-anime .domain-section .border-b,
+.theme-anime .domain-section [style*="border-bottom: 1px solid #f1f5f9"] {
+  border-bottom-color: rgba(63, 81, 181, 0.12) !important;
+}
+
+/* ==========================================================================
+   GAMING ONLY: FILTER TOOLBAR INNER BUTTONS ON DARK BACKGROUND
+   ========================================================================== */
+.theme-gaming .domain-section [style*="borderBottom"],
+.theme-gaming .domain-section [style*="border-bottom"] {
+  border-bottom-color: rgba(0, 229, 255, 0.12) !important;
+}
+
+.theme-gaming .domain-filter-bar button[style*="color: '#64748b'"],
+.theme-gaming .domain-filter-bar [style*="color: #64748b"] {
+  color: #6b6ba0 !important;
+}
+
+.theme-gaming .domain-filter-bar [style*="backgroundColor: '#e2e8f0'"] {
+  background-color: rgba(0, 229, 255, 0.15) !important;
+}

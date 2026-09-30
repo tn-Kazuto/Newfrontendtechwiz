@@ -1,0 +1,472 @@
+/* Fan Hub Plus - Admin Dedicated CSS System (Bulletproof Specificity & Color Palette) */
+
+.admin-typography {
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
+
+/* Sidebar Explicit Styles - Overrides any global background utility */
+aside.admin-sidebar,
+.admin-sidebar {
+  background: linear-gradient(180deg, #0b0f19 0%, #0f172a 40%, #1e1b4b 100%) !important;
+  color: #ffffff !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Hide scrollbars visually while maintaining scroll functionality */
+.admin-sidebar-scroll::-webkit-scrollbar,
+.admin-sidebar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.admin-sidebar-scroll,
+.admin-sidebar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.bg-danger {
+  background-color: #e11d48;
+}
+
+@media (min-width: 768px) {
+
+  aside.admin-sidebar.sidebar-open,
+  .admin-sidebar.sidebar-open {
+    width: 250px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+  }
+
+  aside.admin-sidebar.sidebar-closed,
+  .admin-sidebar.sidebar-closed {
+    width: 80px !important;
+    min-width: 80px !important;
+    max-width: 80px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  aside.admin-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 50 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
+  }
+
+  aside.admin-sidebar.sidebar-open,
+  .admin-sidebar.sidebar-open {
+    width: 250px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  aside.admin-sidebar.sidebar-closed,
+  .admin-sidebar.sidebar-closed {
+    width: 250px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+    transform: translateX(-100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+/* Mobile Backdrop: Strictly hidden on PC/Desktop (>= 768px), only visible on mobile */
+.admin-mobile-backdrop {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .admin-mobile-backdrop {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    z-index: 40 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .admin-hide-on-mobile {
+    display: none !important;
+  }
+}
+
+.admin-sidebar * {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+/* Active Nav Item - Vibrant Indigo/Cyan Gradient with Glow */
+.admin-active-nav,
+button.admin-active-nav {
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  box-shadow: 0 6px 20px 0 rgba(99, 102, 241, 0.45) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.admin-active-nav span,
+.admin-active-nav svg {
+  color: #ffffff !important;
+}
+
+/* Inactive Nav Item */
+.admin-inactive-nav,
+button.admin-inactive-nav {
+  border-radius: 12px !important;
+  background: transparent !important;
+  color: #94a3b8 !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.admin-inactive-nav:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+.admin-inactive-nav svg {
+  color: #94a3b8 !important;
+}
+
+.admin-inactive-nav:hover svg {
+  color: #ffffff !important;
+}
+
+/* Header Styling */
+header.admin-header,
+.admin-header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+/* Badges & Filter Pills */
+.admin-badge-live {
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%) !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.25rem 0.75rem !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.admin-pill-active,
+button.admin-pill-active {
+  background: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35) !important;
+  border: none !important;
+}
+
+.admin-pill-inactive,
+button.admin-pill-inactive {
+  background: transparent !important;
+  color: #64748b !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  border: none !important;
+}
+
+.dark .admin-pill-inactive,
+.dark button.admin-pill-inactive {
+  color: #94a3b8 !important;
+}
+
+.admin-pill-inactive:hover {
+  color: #0f172a !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+.dark .admin-pill-inactive:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Chart Bars & Legend Dots */
+.admin-chart-bar-active {
+  background: linear-gradient(180deg, #0284c7 0%, #4f46e5 100%) !important;
+  border-radius: 6px 6px 0 0 !important;
+}
+
+.admin-chart-bar {
+  background: #334155 !important;
+  border-radius: 6px 6px 0 0 !important;
+}
+
+.dark .admin-chart-bar {
+  background: #e2e8f0 !important;
+}
+
+.admin-legend-dot-active {
+  background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%) !important;
+  border-radius: 8px !important;
+  display: inline-block !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.admin-legend-dot {
+  background: #334155 !important;
+  border-radius: 8px !important;
+  display: inline-block !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.dark .admin-legend-dot {
+  background: #e2e8f0 !important;
+}
+
+.dark header.admin-header,
+.dark .admin-header {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-bottom-color: #1e293b !important;
+}
+
+/* KPI Icons Vibrant Gradients */
+.admin-kpi-icon-revenue {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35) !important;
+  border-radius: 8px !important;
+}
+
+.admin-kpi-icon-orders {
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35) !important;
+  border-radius: 8px !important;
+}
+
+.admin-kpi-icon-fandom {
+  background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.35) !important;
+  border-radius: 8px !important;
+}
+
+.admin-kpi-icon-albums {
+  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35) !important;
+  border-radius: 8px !important;
+}
+
+.admin-kpi-icon-ai {
+  background: linear-gradient(135deg, #ec4899 0%, #e11d48 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.35) !important;
+  border-radius: 8px !important;
+}
+
+.admin-kpi-icon-revenue svg,
+.admin-kpi-icon-orders svg,
+.admin-kpi-icon-fandom svg,
+.admin-kpi-icon-albums svg,
+.admin-kpi-icon-ai svg {
+  color: #ffffff !important;
+}
+
+/* Card Styling - Radius 8px & Soft Elevation */
+.admin-card {
+  border-radius: 8px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.admin-card:hover {
+  box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.09) !important;
+}
+
+.dark .admin-card {
+  border-color: #1e293b !important;
+  background: #0f172a !important;
+}
+
+/* Primary Vibrant Button */
+.admin-btn-primary,
+button.admin-btn-primary {
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35) !important;
+  border: none !important;
+}
+
+.admin-btn-primary:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%) !important;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.45) !important;
+  transform: translateY(-1px);
+}
+
+.admin-btn-primary svg,
+.admin-btn-primary span {
+  color: #ffffff !important;
+}
+
+/* Status Badges */
+.admin-status-paid {
+  border-radius: 8px !important;
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0 !important;
+  font-weight: 700 !important;
+}
+
+.admin-status-processing {
+  border-radius: 8px !important;
+  background: #fffbeb !important;
+  color: #b45309 !important;
+  border: 1px solid #fde68a !important;
+  font-weight: 700 !important;
+}
+
+.admin-status-shipped {
+  border-radius: 8px !important;
+  background: #f0f9ff !important;
+  color: #0369a1 !important;
+  border: 1px solid #bae6fd !important;
+  font-weight: 700 !important;
+}
+
+.admin-status-cancelled {
+  border-radius: 8px !important;
+  background: #fff1f2 !important;
+  color: #be123c !important;
+  border: 1px solid #fecdd3 !important;
+  font-weight: 700 !important;
+}
+
+/* Custom Table Scrollbar */
+.admin-custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.admin-custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.admin-custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   GLOBAL 12PX BORDER RADIUS & MARGIN SPACING FOR ALL ADMIN PAGES & CARDS
+   ========================================================================== */
+
+/* Force 12px border-radius on all admin cards, stat blocks, toolbars, tables, inputs, buttons */
+.admin-card,
+.admin-stat-card,
+.admin-filter-bar,
+.admin-content-card,
+.admin-item-card,
+.admin-header,
+aside.admin-sidebar,
+div[class*="border"],
+div[class*="bg-white"],
+div[class*="bg-slate-900"],
+div[class*="bg-slate-800"],
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="datetime-local"],
+select,
+textarea,
+button {
+  border-radius: 12px !important;
+  border: 1px solid #e5e5e5;
+  margin: 5px 0px;
+}
+
+/* Ensure image thumbnails and card headers fit cleanly inside 12px rounded containers */
+.group>div>div>img,
+.group img,
+div[class*="overflow-hidden"] {
+  border-radius: 12px !important;
+}
+
+/* Keep full round circles for avatars, indicators, and status dots ONLY */
+.rounded-full,
+div.rounded-full,
+span.rounded-full,
+img.rounded-full {
+  border-radius: 9999px !important;
+}
+
+/* Vertical Spacing (Margin Top & Margin Bottom) for cards and sections so elements don't touch */
+.grid>div,
+.admin-card,
+.admin-stat-card,
+.admin-filter-bar,
+.admin-item-card,
+.space-y-6>*+*,
+.space-y-4>*+* {
+  margin-top: 0.5rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+/* Ensure grid gap spacing is generous */
+.grid {
+  gap: 1.25rem !important;
+}
+
+/* Outer layout margins for main content containers */
+main {
+  padding-top: 1.5rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Fix Input Field Icon Overlap (Ensure icon never clobbers placeholder text) */
+.relative>svg~input,
+.relative>svg+input,
+div.relative>input[type="text"],
+div.relative>input[type="search"],
+input[class*="pl-"],
+input.pl-8,
+input.pl-9,
+input.pl-10 {
+  padding-left: 2.75rem !important;
+  /* 44px left padding so icon (left-3) has ample breathing room */
+}
+
+/* Ensure left icons in input wrappers stay correctly positioned and layered */
+.relative>svg:first-child,
+.relative>svg.left-3,
+.relative>svg.left-3\.5 {
+  pointer-events: none !important;
+  z-index: 10 !important;
+  left: 0.875rem !important;
+  /* 14px from left */
+}

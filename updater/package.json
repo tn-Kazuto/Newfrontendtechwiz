@@ -1,0 +1,12 @@
+{
+  "name": "techwiz-updater",
+  "version": "1.0.0",
+  "description": "Standalone GitHub Release Updater Dashboard for aaPanel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["aapanel", "updater", "github-releases", "nextjs"],
+  "author": "manhconne",
+  "license": "MIT"
+}

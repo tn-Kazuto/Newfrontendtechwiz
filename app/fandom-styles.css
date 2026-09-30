@@ -1,0 +1,3140 @@
+/* ==========================================================================
+   FANDOM UNIVERSES — CUSTOM SIGNATURE STYLES
+   Exact styles based on user design references:
+   - Style 1: K-Pop (Y2K Game Boy / Retro Pixel Blue Idol Poster)
+   - Style 2: Anime & Cosplay (Acid Lime & Black Manga Halftone Streetwear)
+   - Style 3: Gaming (Electric Cyberpunk Graffiti / Violet + Lime Lightning Bolt)
+   - Style 4: Comics (Pop-Art Ben-Day Dots & Bold Action Comic Panels)
+   - Style 5: Manga (ESTATICA Monochrome Ink & Torn Paper Edge Screentone)
+   - Style 6: Movies & TV Shows (Sleek Cinematic Dark / Golden Spotlight)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. K-POP STYLE: SIGNATURE NEO-BRUTALIST / Y2K POP AESTHETIC
+   -------------------------------------------------------------------------- */
+.fandom-card-kpop {
+  --kpop-pixel-border: #000000;
+  --kpop-pixel-bg: #ffffff;
+  --kpop-pixel-card: #ffffff;
+  --kpop-pixel-accent: #ff2e93;
+  --kpop-pixel-yellow: #ffd60a;
+
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  border-radius: 0px !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.15s ease;
+}
+
+.fandom-card-kpop:hover {
+  transform: none;
+  border-color: #000000;
+  box-shadow: 4px 4px 0px #ff2e93;
+}
+
+.pixel-font {
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+}
+
+.pixel-grid-pattern {
+  background: transparent;
+}
+
+.pixel-badge {
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  background-color: #ff2e93;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  color: #ffffff;
+  border-radius: 0px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pixel-note-box {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 0px !important;
+  box-shadow: 3px 3px 0px #000000;
+  position: relative;
+}
+
+/* Polished & Professional Neo-Brutalist K-Pop Cards */
+.kpop-game-card {
+  background-color: #ffffff;
+  border: 2px solid #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  border-radius: 0px !important;
+  transition: all 0.15s ease !important;
+}
+.kpop-game-card:hover {
+  transform: none !important;
+  border-color: #000000 !important;
+  box-shadow: 4px 4px 0px #ff2e93 !important;
+}
+.kpop-pixel-btn {
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+  font-weight: 800;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+  border-radius: 0px !important;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.kpop-pixel-btn:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 3px 3px 0px #ff2e93 !important;
+  transform: none;
+}
+.kpop-pixel-btn:active {
+  transform: none;
+  box-shadow: 1px 1px 0px #000000 !important;
+}
+.kpop-pill-badge {
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  background-color: #ffd60a;
+  border: 2px solid #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+  border-radius: 0px !important;
+  color: #000000;
+  padding: 4px 10px;
+}
+
+/* Modern Headline & Window */
+.kpop-arcade-heading {
+  font-family: var(--font-serif), 'Playfair Display', Georgia, serif;
+  color: #000000;
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+  letter-spacing: -0.02em;
+}
+
+.kpop-window-box {
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  border-radius: 0px !important;
+  position: relative;
+}
+
+.kpop-inclusions-card {
+  position: relative;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 0px !important;
+  box-shadow: 3px 3px 0px #000000;
+  padding: 16px 18px;
+}
+.kpop-inclusions-card .notes-header-tab {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #ff2e93;
+  border: 2px solid #000000;
+  border-radius: 0px !important;
+  padding: 2px 10px;
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  box-shadow: 2px 2px 0px #000000;
+  white-space: nowrap;
+}
+
+.kpop-pixel-button {
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  border-radius: 0px !important;
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 800;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  padding: 6px 14px;
+}
+.kpop-pixel-button:hover {
+  transform: translate(-1px, -1px);
+  border-color: #000000;
+  color: #000000;
+  background-color: #ffd60a;
+  box-shadow: 4px 4px 0px #000000;
+}
+.kpop-pixel-button.primary {
+  background: #ff2e93;
+  color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+}
+.kpop-pixel-button.primary:hover {
+  background: #ff007f;
+  box-shadow: 5px 5px 0px #000000;
+}
+
+/* K-Pop Filter Bar */
+.theme-kpop .domain-filter-bar,
+.fandom-theme-kpop .domain-filter-bar {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. ANIME STYLE: ACID LIME MANGA HALFTONE STREETWEAR
+   -------------------------------------------------------------------------- */
+.fandom-card-anime {
+  --anime-lime: #a3e635;
+  --anime-neon: #39ff14;
+  --anime-dark: #09090b;
+
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 5px 5px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fandom-card-anime:hover {
+  transform: none;
+  box-shadow: 5px 5px 0px #a3e635;
+  border-color: #000000;
+}
+
+/* --------------------------------------------------------------------------
+   3. COSPLAY STYLE: BAUHAUS CONSTRUCTIVIST MODERNISM
+   -------------------------------------------------------------------------- */
+.fandom-card-cosplay {
+  background-color: #ffffff !important;
+  border: 4px solid #121212 !important;
+  box-shadow: 8px 8px 0px 0px #121212 !important;
+  position: relative;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out !important;
+}
+
+.fandom-card-cosplay:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 10px 10px 0px 0px #121212 !important;
+}
+
+.halftone-lime-pattern {
+  background-image: radial-gradient(#a3e635 20%, transparent 22%);
+  background-size: 10px 10px;
+}
+
+.halftone-dark-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.25) 18%, transparent 20%);
+  background-size: 8px 8px;
+}
+
+.streetwear-tag {
+  background: #a3e635;
+  color: #000000;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  padding: 4px 10px;
+  display: inline-block;
+  transform: rotate(-1.5deg);
+}
+
+.street-graffiti-font {
+  font-family: 'Permanent Marker', cursive, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   3. GAMING STYLE: CYBERPUNK ELECTRO-GRAFFITI ARENA
+   -------------------------------------------------------------------------- */
+.fandom-card-gaming {
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  border-radius: 0px !important;
+  position: relative;
+  overflow: hidden;
+  color: #000000;
+  transition: all 0.15s ease;
+}
+
+.fandom-card-gaming:hover {
+  transform: none;
+  border-color: #000000;
+  box-shadow: 4px 4px 0px #a855f7;
+}
+
+.cyber-lightning-accent {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.15;
+  filter: drop-shadow(0 0 10px #22c55e);
+}
+
+.gaming-hud-badge {
+  background: #a855f7;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  color: #ffffff;
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 0px !important;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* --------------------------------------------------------------------------
+   4. COMICS STYLE: POP-ART BEN-DAY DOTS & ACTION PANELS
+   -------------------------------------------------------------------------- */
+.fandom-card-comics {
+  background: #fffbeb;
+  border: 3.5px solid #000000;
+  box-shadow: 6px 6px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fandom-card-comics:hover {
+  transform: none;
+  box-shadow: 6px 6px 0px #ef4444;
+}
+
+.bangers-font {
+  font-family: 'Bangers', cursive, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.bended-dots-pattern {
+  background-image: radial-gradient(#ef4444 18%, transparent 20%);
+  background-size: 8px 8px;
+}
+
+.comic-burst-tag {
+  font-family: 'Bangers', cursive, sans-serif;
+  font-size: 14px;
+  background: #facc15;
+  color: #000000;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  transform: rotate(2deg);
+}
+
+/* --------------------------------------------------------------------------
+   5. MANGA STYLE: SLEEK TOKYO INK & MONOCHROME SCREENTONE
+   -------------------------------------------------------------------------- */
+.fandom-card-manga {
+  background: #ffffff;
+  border: 1.5px solid #0f172a;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fandom-card-manga:hover {
+  transform: none;
+  border-color: #e11d48;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.12);
+}
+
+.screentone-dot-pattern {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1.2px, transparent 1.2px);
+  background-size: 16px 16px;
+}
+
+.manga-tag {
+  background: #0f172a;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   6. MOVIES & TV SHOWS: SLEEK CINEMATIC DARK
+   -------------------------------------------------------------------------- */
+.fandom-card-cinema {
+  background: linear-gradient(145deg, #0f172a 0%, #0b0f19 60%, #1e293b 100%);
+  border: 1.5px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.5), 0 0 15px rgba(245, 158, 11, 0.12);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fandom-card-cinema:hover {
+  transform: none;
+  border-color: #f59e0b;
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.5), 0 0 15px rgba(245, 158, 11, 0.2);
+}
+
+.cinema-badge {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   GLOBAL FULL-PAGE THEME MORPHING
+   "Khi ấn vào danh mục nào thì cả trang đều phải thay đổi theo style đó"
+   ========================================================================== */
+
+/* 1. K-POP: Signature Neo-Brutalist / Y2K Style Layout (Preserves current look & feel) */
+[data-fandom-theme="kpop"], .fandom-theme-kpop {
+  --bg-body: #fdfbf7;
+  --bg-card: #ffffff;
+  --border-color: #000000;
+  --text-primary: #000000;
+  --color-primary: #ff2e93;
+  background-color: #fdfbf7 !important;
+  color: #000000 !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.fandom-theme-kpop main {
+  background-color: #fdfbf7 !important;
+  background-image: none !important;
+}
+.fandom-theme-kpop section {
+  background-color: transparent !important;
+}
+.fandom-theme-kpop .bg-slate-50,
+.fandom-theme-kpop .bg-slate-50\/70,
+.fandom-theme-kpop .bg-body {
+  background-color: #fdfbf7 !important;
+}
+
+/* Sharp Neo-Brutalist Cards across all sections (AlbumGrid, IdolProfiles, Articles, Feed) */
+.fandom-theme-kpop .domain-card,
+.fandom-theme-kpop .fandom-card,
+.fandom-theme-kpop .kpop-game-card,
+.fandom-theme-kpop .kpop-styled-card,
+.fandom-theme-kpop article,
+.fandom-theme-kpop #artists .group,
+.fandom-theme-kpop #community article {
+  background-color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  border-radius: 0px !important;
+  transition: all 0.15s ease !important;
+}
+.fandom-theme-kpop .domain-card:hover,
+.fandom-theme-kpop .fandom-card:hover,
+.fandom-theme-kpop .kpop-game-card:hover,
+.fandom-theme-kpop .kpop-styled-card:hover,
+.fandom-theme-kpop article:hover,
+.fandom-theme-kpop #artists .group:hover,
+.fandom-theme-kpop #community article:hover {
+  transform: none !important;
+  border-color: #000000 !important;
+  box-shadow: 4px 4px 0px #ff2e93 !important;
+}
+
+/* Sharp Neo-Brutalist Buttons in K-Pop mode */
+.fandom-theme-kpop button.bg-black,
+.fandom-theme-kpop .btn-primary,
+.fandom-theme-kpop .domain-card-btn-primary,
+.fandom-theme-kpop #artists button.hover\:bg-slate-800 {
+  background: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  border-radius: 0px !important;
+  transition: all 0.15s ease !important;
+}
+.fandom-theme-kpop button.bg-black:hover,
+.fandom-theme-kpop .btn-primary:hover,
+.fandom-theme-kpop .domain-card-btn-primary:hover,
+.fandom-theme-kpop #artists button.hover\:bg-slate-800:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 3px 3px 0px #ff2e93 !important;
+  transform: none !important;
+}
+.fandom-theme-kpop button.bg-black:active,
+.fandom-theme-kpop .btn-primary:active,
+.fandom-theme-kpop .domain-card-btn-primary:active,
+.fandom-theme-kpop #artists button.hover\:bg-slate-800:active {
+  transform: none !important;
+  box-shadow: 1px 1px 0px #000000 !important;
+}
+
+/* Secondary Button in IdolProfiles and Modal */
+.fandom-theme-kpop #artists button.hover\:bg-neutral-100 {
+  background-color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  border-radius: 0px !important;
+  transition: all 0.15s ease !important;
+}
+.fandom-theme-kpop #artists button.hover\:bg-neutral-100:hover {
+  border-color: #000000 !important;
+  color: #000000 !important;
+  background-color: #ffd60a !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+}
+
+/* Community Feed Composer */
+.fandom-theme-kpop #community [style*="maxWidth: '880px'"],
+.fandom-theme-kpop #community form {
+  border: 2px solid #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  border-radius: 0px !important;
+  overflow: hidden;
+}
+
+/* Header in K-Pop Theme - Pure Clean Monochrome with Neo-Brutalist Accents */
+[data-fandom-theme="kpop"] .header-root,
+.fandom-header-kpop {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  border-bottom: 2px solid #000000 !important;
+  box-shadow: none !important;
+}
+[data-fandom-theme="kpop"] .header-subnav,
+[data-fandom-theme="kpop"] .desktop-subnav {
+  background: #ffffff !important;
+  border-top: 1px solid #000000 !important;
+  border-bottom: 4px solid #000000 !important;
+}
+[data-fandom-theme="kpop"] .header-search-bar {
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+}
+
+/* Footer in K-Pop Theme — keep same as main site (cream/white neo-brutalist) */
+.fandom-theme-kpop footer {
+  background-color: #fdfbf7 !important;
+  color: #000000 !important;
+  border-top: 4px solid #000000 !important;
+  box-shadow: none !important;
+}
+.fandom-theme-kpop footer a,
+.fandom-theme-kpop footer p,
+.fandom-theme-kpop footer span,
+.fandom-theme-kpop footer li {
+  color: inherit !important;
+}
+
+.fandom-theme-kpop .underline.decoration-amber-400 {
+  text-decoration-color: #ffd60a !important;
+}
+
+/* =========================================================================
+   2. ANIME: ACID LIME & BLACK MANGA HALFTONE STREETWEAR DESIGN SYSTEM
+   Harajuku Techwear · Screentone Dot-Matrix · Pedido Street Shonen Aesthetics
+   Acid Lime #A3E635 · Deep Lime #84CC16 · High-Contrast Black #000000 · White #FFFFFF
+   3.5px Solid Black Borders · 5px/6px Offset Shadows · Halftone Background Canvas
+   ========================================================================= */
+
+[data-fandom-theme="anime"], .fandom-theme-anime {
+  --background: #f7fee7;
+  --foreground: #09090b;
+  --primary-lime: #a3e635;
+  --primary-lime-deep: #84cc16;
+  --primary-black: #000000;
+  --border: #000000;
+  --card: #ffffff;
+
+  --bg-body: #f7fee7;
+  --bg-card: #ffffff;
+  --border-color: #000000;
+  --text-primary: #09090b;
+  --color-primary: #a3e635;
+
+  background-color: #f7fee7 !important;
+  color: #09090b !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 0px Sharp Radius Across Anime Theme */
+[data-fandom-theme="anime"] *:not(.anime-neo-brutal-root):not(.anime-neo-brutal-root *):not(.rounded-full):not([class*="rounded-full"]):not([class*="rounded-[9999px]"]),
+.fandom-theme-anime *:not(.anime-neo-brutal-root):not(.anime-neo-brutal-root *):not(.rounded-full):not([class*="rounded-full"]):not([class*="rounded-[9999px]"]) {
+  border-radius: 0px !important;
+}
+
+/* Manga Halftone Screentone Canvas Pattern */
+[data-fandom-theme="anime"] main,
+.fandom-theme-anime main {
+  background-color: #f7fee7 !important;
+  background-image: radial-gradient(#84cc16 18%, transparent 20%) !important;
+  background-size: 14px 14px !important;
+}
+
+/* Heavy 3.5px Black Section Dividers */
+[data-fandom-theme="anime"] section:not(.anime-neo-brutal-root *),
+.fandom-theme-anime section:not(.anime-neo-brutal-root *) {
+  background-color: transparent !important;
+  border-bottom: 3.5px solid #000000 !important;
+}
+
+/* Shonen Manga Typography */
+[data-fandom-theme="anime"] h1,
+[data-fandom-theme="anime"] h2,
+[data-fandom-theme="anime"] h3,
+[data-fandom-theme="anime"] h4,
+[data-fandom-theme="anime"] h5,
+[data-fandom-theme="anime"] h6,
+.fandom-theme-anime h1,
+.fandom-theme-anime h2,
+.fandom-theme-anime h3,
+.fandom-theme-anime h4,
+.fandom-theme-anime h5,
+.fandom-theme-anime h6 {
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.025em !important;
+  color: #000000 !important;
+}
+
+[data-fandom-theme="anime"] h2 em,
+.fandom-theme-anime h2 em {
+  color: #65a30d !important;
+  text-shadow: 1px 1px 0px #000000 !important;
+}
+
+/* Cards: White background, 3.5px Black border, 6px Acid Lime shadow */
+.fandom-theme-anime .fandom-card,
+.fandom-theme-anime .fandom-card-anime,
+.fandom-theme-anime .kpop-game-card,
+.fandom-theme-anime .domain-card,
+.fandom-theme-anime .kpop-styled-card,
+.fandom-theme-anime article,
+.fandom-theme-anime #artists .group,
+.fandom-theme-anime [class*="group/card"],
+[data-fandom-theme="anime"] .fandom-card,
+[data-fandom-theme="anime"] article {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+  border: 3.5px solid #000000 !important;
+  box-shadow: 6px 6px 0px 0px #a3e635 !important;
+  position: relative;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out !important;
+}
+
+.fandom-theme-anime .fandom-card:hover,
+.fandom-theme-anime .fandom-card-anime:hover,
+.fandom-theme-anime .kpop-game-card:hover,
+.fandom-theme-anime .domain-card:hover,
+.fandom-theme-anime .kpop-styled-card:hover,
+.fandom-theme-anime article:hover,
+.fandom-theme-anime #artists .group:hover,
+.fandom-theme-anime [class*="group/card"]:hover,
+[data-fandom-theme="anime"] .fandom-card:hover,
+[data-fandom-theme="anime"] article:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 8px 8px 0px 0px #000000 !important;
+}
+
+/* Buttons: Bold Manga Streetwear, 2px border, 4px shadow, mechanical press */
+[data-fandom-theme="anime"] button:not(.anime-neo-brutal-root *),
+.fandom-theme-anime button:not(.anime-neo-brutal-root *) {
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px 0px #000000 !important;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, background-color 0.1s ease-out !important;
+}
+
+[data-fandom-theme="anime"] button:active,
+.fandom-theme-anime button:active {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 0px 0px 0px 0px #000000 !important;
+}
+
+/* Black Streetwear Buttons */
+[data-fandom-theme="anime"] button.bg-black,
+[data-fandom-theme="anime"] button[class~="bg-black"],
+[data-fandom-theme="anime"] button[class~="bg-neutral-900"],
+.fandom-theme-anime button.bg-black,
+.fandom-theme-anime button[class~="bg-black"] {
+  background-color: #000000 !important;
+  color: #a3e635 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px 0px #a3e635 !important;
+}
+[data-fandom-theme="anime"] button.bg-black *,
+[data-fandom-theme="anime"] button[class~="bg-black"] *,
+.fandom-theme-anime button.bg-black *,
+.fandom-theme-anime button[class~="bg-black"] * {
+  color: #a3e635 !important;
+}
+
+/* Acid Lime Accent Buttons */
+[data-fandom-theme="anime"] button[class~="bg-[#a3e635]"],
+[data-fandom-theme="anime"] button[class~="bg-lime-400"],
+[data-fandom-theme="anime"] button[class~="bg-[#ff2e93]"],
+.fandom-theme-anime button[class~="bg-[#a3e635]"],
+.fandom-theme-anime button[class~="bg-[#ff2e93]"] {
+  background-color: #a3e635 !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px 0px #000000 !important;
+}
+[data-fandom-theme="anime"] button[class~="bg-[#ff2e93]"] *,
+.fandom-theme-anime button[class~="bg-[#ff2e93]"] *,
+[data-fandom-theme="anime"] button[class~="bg-[#a3e635]"] *,
+.fandom-theme-anime button[class~="bg-[#a3e635]"] * {
+  color: #000000 !important;
+}
+
+/* White Buttons */
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="anime"] button.bg-white,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="anime"] button[class~="bg-white"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-anime button.bg-white {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px 0px #84cc16 !important;
+}
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="anime"] button.bg-white *,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-anime button.bg-white * {
+  color: #000000 !important;
+}
+
+/* Neutral Slate / Canvas replacements */
+.fandom-theme-anime .bg-slate-50,
+.fandom-theme-anime .bg-slate-50\/70,
+.fandom-theme-anime .bg-neutral-50,
+.fandom-theme-anime .bg-body {
+  background-color: #f7fee7 !important;
+}
+
+.fandom-theme-anime .bg-white {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+  border-color: #000000 !important;
+}
+
+.fandom-theme-anime .text-slate-900,
+.fandom-theme-anime .text-slate-800,
+.fandom-theme-anime .text-slate-950,
+.fandom-theme-anime .text-neutral-900,
+.fandom-theme-anime .text-black {
+  color: #09090b !important;
+}
+
+.fandom-theme-anime .text-slate-600,
+.fandom-theme-anime .text-slate-500,
+.fandom-theme-anime .text-neutral-600 {
+  color: #3f3f46 !important;
+}
+
+/* Tickers: Manga Streetwear Neon Lime & Stark Black */
+[data-fandom-theme="anime"] .y2k-ticker-tape:not(.inverted),
+.fandom-theme-anime .y2k-ticker-tape:not(.inverted) {
+  background-color: #a3e635 !important;
+  color: #000000 !important;
+  border-top: 3.5px solid #000000 !important;
+  border-bottom: 3.5px solid #000000 !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+[data-fandom-theme="anime"] .y2k-ticker-tape:not(.inverted) *,
+.fandom-theme-anime .y2k-ticker-tape:not(.inverted) * {
+  color: #000000 !important;
+}
+
+[data-fandom-theme="anime"] .y2k-ticker-tape.inverted,
+.fandom-theme-anime .y2k-ticker-tape.inverted {
+  background-color: #000000 !important;
+  color: #a3e635 !important;
+  border-top: 3.5px solid #000000 !important;
+  border-bottom: 3.5px solid #000000 !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+[data-fandom-theme="anime"] .y2k-ticker-tape.inverted *,
+.fandom-theme-anime .y2k-ticker-tape.inverted * {
+  color: #a3e635 !important;
+}
+
+/* Hero Banner & Dock */
+[data-fandom-theme="anime"] #hero-banner,
+.fandom-theme-anime #hero-banner {
+  background-color: #000000 !important;
+  border-bottom: 4px solid #000000 !important;
+}
+
+/* Albums Catalog Section */
+[data-fandom-theme="anime"] #albums,
+.fandom-theme-anime #albums {
+  background-color: #f7fee7 !important;
+  border-bottom: 3.5px solid #000000 !important;
+}
+
+/* Multimedia Showcase: Tokyo Shibuya Techwear Dark Mode */
+[data-fandom-theme="anime"] #multimedia,
+.fandom-theme-anime #multimedia {
+  background-color: #09090b !important;
+  color: #ffffff !important;
+  border-bottom: 4px solid #000000 !important;
+}
+[data-fandom-theme="anime"] #multimedia h1,
+[data-fandom-theme="anime"] #multimedia h2,
+[data-fandom-theme="anime"] #multimedia h3,
+[data-fandom-theme="anime"] #multimedia p,
+.fandom-theme-anime #multimedia h1,
+.fandom-theme-anime #multimedia h2,
+.fandom-theme-anime #multimedia h3,
+.fandom-theme-anime #multimedia p {
+  color: #ffffff !important;
+}
+[data-fandom-theme="anime"] #multimedia em,
+.fandom-theme-anime #multimedia em {
+  color: #a3e635 !important;
+  text-shadow: 0 0 12px rgba(163, 230, 53, 0.4) !important;
+}
+[data-fandom-theme="anime"] #multimedia .bg-white,
+.fandom-theme-anime #multimedia .bg-white {
+  background-color: #18181b !important;
+  color: #ffffff !important;
+  border: 2px solid #a3e635 !important;
+  box-shadow: 4px 4px 0px #a3e635 !important;
+}
+
+/* World Tour & Con Showcase: Acid Lime & Black */
+[data-fandom-theme="anime"] #tours,
+.fandom-theme-anime #tours {
+  background-color: #f7fee7 !important;
+  color: #000000 !important;
+  border-bottom: 3.5px solid #000000 !important;
+}
+
+/* Community Feed */
+[data-fandom-theme="anime"] #community,
+.fandom-theme-anime #community {
+  background-color: #ecfccb !important;
+  color: #000000 !important;
+  border-bottom: 3.5px solid #000000 !important;
+}
+
+/* Form Controls & Inputs */
+[data-fandom-theme="anime"] input:not(.anime-neo-brutal-root *),
+[data-fandom-theme="anime"] select:not(.anime-neo-brutal-root *),
+[data-fandom-theme="anime"] textarea:not(.anime-neo-brutal-root *),
+.fandom-theme-anime input:not(.anime-neo-brutal-root *),
+.fandom-theme-anime select:not(.anime-neo-brutal-root *),
+.fandom-theme-anime textarea:not(.anime-neo-brutal-root *) {
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px 0px #a3e635 !important;
+  border-radius: 0px !important;
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+/* Underline accent */
+.fandom-theme-anime .underline.decoration-amber-400 {
+  text-decoration-color: #84cc16 !important;
+}
+
+/* =========================================================================
+   DEDICATED ANIME NEO-BRUTALIST VIEW (Manga-style layout with Acid Lime palette)
+   Preserves soft rounded border-radii (10px-18px) and Kalam/Patrick Hand typography
+   ========================================================================= */
+.anime-neo-brutal-root {
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+}
+
+.anime-neo-brutal-root h1,
+.anime-neo-brutal-root h2,
+.anime-neo-brutal-root h3,
+.anime-neo-brutal-root h4 {
+  font-family: 'Kalam', cursive, sans-serif !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.anime-neo-brutal-root section {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+.anime-neo-brutal-root button {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.anime-neo-brutal-root input,
+.anime-neo-brutal-root textarea,
+.anime-neo-brutal-root select {
+  border-radius: 10px !important;
+}
+
+/* =========================================================================
+   3. COSPLAY: BAUHAUS CONSTRUCTIVIST MODERNISM DESIGN SYSTEM
+   "Form follows function" · Pure Geometric Beauty · Primary Color Theory
+   Red #D02020 · Blue #1040C0 · Yellow #F0C020 · Black #121212 · Off-White #F0F0F0
+   Outfit Google Font · Binary Radius (0px or 9999px) · Hard Offset Shadows (4px/8px)
+   ========================================================================= */
+[data-fandom-theme="cosplay"], .fandom-theme-cosplay {
+  --background: #F0F0F0;
+  --foreground: #121212;
+  --primary-red: #D02020;
+  --primary-blue: #1040C0;
+  --primary-yellow: #F0C020;
+  --border: #121212;
+  --muted: #E0E0E0;
+
+  --bg-body: #F0F0F0;
+  --bg-card: #FFFFFF;
+  --border-color: #121212;
+  --text-primary: #121212;
+  --color-primary: #D02020;
+
+  background-color: #F0F0F0 !important;
+  color: #121212 !important;
+  font-family: var(--font-outfit), 'Outfit', system-ui, sans-serif !important;
+  letter-spacing: normal;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out !important;
+}
+
+/* Binary Extremes Radius: strictly 0px for rectangles, 9999px for circles */
+[data-fandom-theme="cosplay"] *:not(.rounded-full):not([class*="rounded-full"]):not([class*="rounded-[9999px]"]),
+.fandom-theme-cosplay *:not(.rounded-full):not([class*="rounded-full"]):not([class*="rounded-[9999px]"]) {
+  border-radius: 0px !important;
+}
+
+/* Main background texture: Bauhaus dot-grid canvas */
+[data-fandom-theme="cosplay"] main,
+.fandom-theme-cosplay main {
+  background-color: #F0F0F0 !important;
+  background-image: radial-gradient(rgba(18, 18, 18, 0.16) 1.5px, transparent 1.5px) !important;
+  background-size: 20px 20px !important;
+}
+
+/* Hard black section dividers: 4px solid #121212 */
+[data-fandom-theme="cosplay"] section,
+.fandom-theme-cosplay section {
+  background-color: transparent !important;
+  border-bottom: 4px solid #121212 !important;
+}
+
+/* Constructivist Typography */
+[data-fandom-theme="cosplay"] h1,
+[data-fandom-theme="cosplay"] h2,
+[data-fandom-theme="cosplay"] h3,
+[data-fandom-theme="cosplay"] h4,
+[data-fandom-theme="cosplay"] h5,
+[data-fandom-theme="cosplay"] h6,
+.fandom-theme-cosplay h1,
+.fandom-theme-cosplay h2,
+.fandom-theme-cosplay h3,
+.fandom-theme-cosplay h4,
+.fandom-theme-cosplay h5,
+.fandom-theme-cosplay h6 {
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.035em !important;
+  color: #121212 !important;
+}
+
+[data-fandom-theme="cosplay"] p,
+[data-fandom-theme="cosplay"] span,
+[data-fandom-theme="cosplay"] div,
+[data-fandom-theme="cosplay"] li,
+.fandom-theme-cosplay p,
+.fandom-theme-cosplay span,
+.fandom-theme-cosplay div,
+.fandom-theme-cosplay li {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+}
+
+[data-fandom-theme="cosplay"] .font-mono,
+.fandom-theme-cosplay .font-mono {
+  font-family: var(--font-outfit), 'Outfit', monospace !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+/* Cards: White background, 4px border, 8px hard offset shadow */
+.fandom-theme-cosplay .fandom-card,
+.fandom-theme-cosplay .fandom-card-cosplay,
+.fandom-theme-cosplay .kpop-game-card,
+.fandom-theme-cosplay .domain-card,
+.fandom-theme-cosplay .kpop-styled-card,
+.fandom-theme-cosplay article,
+.fandom-theme-cosplay #artists .group,
+.fandom-theme-cosplay [class*="group/card"],
+[data-fandom-theme="cosplay"] .fandom-card,
+[data-fandom-theme="cosplay"] article {
+  background-color: #FFFFFF !important;
+  color: #121212 !important;
+  border: 4px solid #121212 !important;
+  box-shadow: 8px 8px 0px 0px #121212 !important;
+  position: relative;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out !important;
+}
+
+.fandom-theme-cosplay .fandom-card:hover,
+.fandom-theme-cosplay .fandom-card-cosplay:hover,
+.fandom-theme-cosplay .kpop-game-card:hover,
+.fandom-theme-cosplay .domain-card:hover,
+.fandom-theme-cosplay .kpop-styled-card:hover,
+.fandom-theme-cosplay article:hover,
+.fandom-theme-cosplay #artists .group:hover,
+.fandom-theme-cosplay [class*="group/card"]:hover,
+[data-fandom-theme="cosplay"] .fandom-card:hover,
+[data-fandom-theme="cosplay"] article:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 10px 10px 0px 0px #121212 !important;
+}
+
+/* Small geometric accent on top-right of cards (Circle, Square, Triangle) */
+.fandom-theme-cosplay article::after,
+.fandom-theme-cosplay .fandom-card::after,
+.fandom-theme-cosplay #artists .group::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  z-index: 25;
+  pointer-events: none;
+  background-color: #D02020;
+  border: 2px solid #121212;
+}
+
+.fandom-theme-cosplay article:nth-of-type(3n+1)::after,
+.fandom-theme-cosplay #artists .group:nth-of-type(3n+1)::after {
+  background-color: #D02020; /* Red square */
+  border-radius: 0px !important;
+}
+
+.fandom-theme-cosplay article:nth-of-type(3n+2)::after,
+.fandom-theme-cosplay #artists .group:nth-of-type(3n+2)::after {
+  background-color: #1040C0; /* Blue circle */
+  border-radius: 9999px !important;
+}
+
+.fandom-theme-cosplay article:nth-of-type(3n)::after,
+.fandom-theme-cosplay #artists .group:nth-of-type(3n)::after {
+  background-color: #F0C020; /* Yellow triangle */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border: none;
+}
+
+/* Bauhaus Image Treatment: Grayscale by default, color on hover */
+[data-fandom-theme="cosplay"] img:not(.header-logo):not([src*="logo"]),
+.fandom-theme-cosplay img:not(.header-logo):not([src*="logo"]) {
+  filter: grayscale(100%) contrast(106%) !important;
+  transition: filter 0.25s ease-out, transform 0.25s ease-out !important;
+}
+
+[data-fandom-theme="cosplay"] img:not(.header-logo):not([src*="logo"]):hover,
+.fandom-theme-cosplay img:not(.header-logo):not([src*="logo"]):hover,
+[data-fandom-theme="cosplay"] .group:hover img:not(.header-logo):not([src*="logo"]),
+.fandom-theme-cosplay .group:hover img:not(.header-logo):not([src*="logo"]),
+[data-fandom-theme="cosplay"] article:hover img:not(.header-logo):not([src*="logo"]),
+.fandom-theme-cosplay article:hover img:not(.header-logo):not([src*="logo"]) {
+  filter: grayscale(0%) contrast(100%) !important;
+}
+
+/* Buttons: Bold geometric, 2px border, 4px hard shadow, mechanical button press */
+[data-fandom-theme="cosplay"] button,
+.fandom-theme-cosplay button {
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 4px 4px 0px 0px #121212 !important;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, background-color 0.1s ease-out !important;
+}
+
+[data-fandom-theme="cosplay"] button:active,
+.fandom-theme-cosplay button:active {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 0px 0px 0px 0px #121212 !important;
+}
+
+/* Primary Red Buttons */
+[data-fandom-theme="cosplay"] button.bg-red-600,
+[data-fandom-theme="cosplay"] button[class~="bg-red-600"],
+[data-fandom-theme="cosplay"] button[class~="bg-[#ff2e93]"],
+[data-fandom-theme="cosplay"] button[class~="bg-rose-600"],
+.fandom-theme-cosplay button[class~="bg-red-600"],
+.fandom-theme-cosplay button[class~="bg-[#ff2e93]"] {
+  background-color: #D02020 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 4px 4px 0px 0px #121212 !important;
+}
+[data-fandom-theme="cosplay"] button[class~="bg-[#ff2e93]"] *,
+.fandom-theme-cosplay button[class~="bg-[#ff2e93]"] * {
+  color: #FFFFFF !important;
+}
+
+/* Secondary Blue Buttons */
+[data-fandom-theme="cosplay"] button.bg-blue-600,
+[data-fandom-theme="cosplay"] button[class~="bg-blue-600"],
+[data-fandom-theme="cosplay"] button[class~="bg-[#00f0ff]"],
+[data-fandom-theme="cosplay"] button[class~="bg-cyan-500"],
+.fandom-theme-cosplay button[class~="bg-blue-600"],
+.fandom-theme-cosplay button[class~="bg-[#00f0ff]"] {
+  background-color: #1040C0 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 4px 4px 0px 0px #121212 !important;
+}
+[data-fandom-theme="cosplay"] button[class~="bg-[#00f0ff]"] *,
+.fandom-theme-cosplay button[class~="bg-[#00f0ff]"] * {
+  color: #FFFFFF !important;
+}
+
+/* Yellow Highlight Buttons */
+[data-fandom-theme="cosplay"] button.bg-yellow-400,
+[data-fandom-theme="cosplay"] button[class~="bg-yellow-400"],
+[data-fandom-theme="cosplay"] button[class~="bg-amber-400"],
+[data-fandom-theme="cosplay"] button[class~="bg-[#ffd60a]"],
+.fandom-theme-cosplay button[class~="bg-yellow-400"],
+.fandom-theme-cosplay button[class~="bg-[#ffd60a]"] {
+  background-color: #F0C020 !important;
+  color: #121212 !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 4px 4px 0px 0px #121212 !important;
+}
+[data-fandom-theme="cosplay"] button[class~="bg-[#ffd60a]"] *,
+.fandom-theme-cosplay button[class~="bg-[#ffd60a]"] * {
+  color: #121212 !important;
+}
+
+/* White Buttons */
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="cosplay"] button.bg-white,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="cosplay"] button[class~="bg-white"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-white {
+  background-color: #FFFFFF !important;
+  color: #121212 !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 4px 4px 0px 0px #121212 !important;
+}
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="cosplay"] button.bg-white *,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-white * {
+  color: #121212 !important;
+}
+
+/* Black Buttons */
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="cosplay"] button.bg-black,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="cosplay"] button[class~="bg-black"],
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="cosplay"] button[class~="bg-neutral-900"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
+  background-color: #121212 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 4px 4px 0px 0px #D02020 !important;
+}
+[data-fandom-theme="cosplay"] button.bg-black *,
+[data-fandom-theme="cosplay"] button[class~="bg-black"] *,
+.fandom-theme-cosplay button.bg-black * {
+  color: #FFFFFF !important;
+}
+
+/* Neutral Slate / Background replacements */
+.fandom-theme-cosplay .bg-slate-50,
+.fandom-theme-cosplay .bg-slate-50\/70,
+.fandom-theme-cosplay .bg-neutral-50,
+.fandom-theme-cosplay .bg-body {
+  background-color: #F0F0F0 !important;
+}
+
+.fandom-theme-cosplay .bg-white {
+  background-color: #FFFFFF !important;
+  color: #121212 !important;
+  border-color: #121212 !important;
+}
+
+.fandom-theme-cosplay .text-slate-900,
+.fandom-theme-cosplay .text-slate-800,
+.fandom-theme-cosplay .text-slate-950,
+.fandom-theme-cosplay .text-neutral-900,
+.fandom-theme-cosplay .text-black {
+  color: #121212 !important;
+}
+
+.fandom-theme-cosplay .text-slate-600,
+.fandom-theme-cosplay .text-slate-500,
+.fandom-theme-cosplay .text-neutral-600 {
+  color: #525252 !important;
+}
+
+/* =========================================================================
+   BAUHAUS SECTION COLOR BLOCKING
+   ========================================================================= */
+
+/* Hero Banner & Dock */
+[data-fandom-theme="cosplay"] #hero-banner,
+.fandom-theme-cosplay #hero-banner {
+  background-color: #121212 !important;
+  border-bottom: 4px solid #121212 !important;
+}
+
+[data-fandom-theme="cosplay"] #hero-banner h1,
+.fandom-theme-cosplay #hero-banner h1 {
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.04em !important;
+  font-style: normal !important;
+  color: #FFFFFF !important;
+}
+
+/* Ticker 01: Bauhaus Yellow Block */
+[data-fandom-theme="cosplay"] .y2k-ticker-tape:not(.inverted),
+.fandom-theme-cosplay .y2k-ticker-tape:not(.inverted) {
+  background-color: #F0C020 !important;
+  color: #121212 !important;
+  border-top: 4px solid #121212 !important;
+  border-bottom: 4px solid #121212 !important;
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+[data-fandom-theme="cosplay"] .y2k-ticker-tape:not(.inverted) *,
+.fandom-theme-cosplay .y2k-ticker-tape:not(.inverted) * {
+  color: #121212 !important;
+}
+
+/* Ticker 02: Bauhaus Blue Block */
+[data-fandom-theme="cosplay"] .y2k-ticker-tape.inverted,
+.fandom-theme-cosplay .y2k-ticker-tape.inverted {
+  background-color: #1040C0 !important;
+  color: #FFFFFF !important;
+  border-top: 4px solid #121212 !important;
+  border-bottom: 4px solid #121212 !important;
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+[data-fandom-theme="cosplay"] .y2k-ticker-tape.inverted *,
+.fandom-theme-cosplay .y2k-ticker-tape.inverted * {
+  color: #FFFFFF !important;
+}
+
+/* Albums Catalog Section */
+[data-fandom-theme="cosplay"] #albums,
+.fandom-theme-cosplay #albums {
+  background-color: #F0F0F0 !important;
+  border-bottom: 4px solid #121212 !important;
+}
+
+/* Multimedia Spotlight: Bauhaus Blue Block */
+[data-fandom-theme="cosplay"] #multimedia,
+.fandom-theme-cosplay #multimedia {
+  background-color: #1040C0 !important;
+  color: #FFFFFF !important;
+  border-bottom: 4px solid #121212 !important;
+}
+[data-fandom-theme="cosplay"] #multimedia h1,
+[data-fandom-theme="cosplay"] #multimedia h2,
+[data-fandom-theme="cosplay"] #multimedia h3,
+[data-fandom-theme="cosplay"] #multimedia p,
+[data-fandom-theme="cosplay"] #multimedia span:not(.badge-text),
+.fandom-theme-cosplay #multimedia h1,
+.fandom-theme-cosplay #multimedia h2,
+.fandom-theme-cosplay #multimedia h3,
+.fandom-theme-cosplay #multimedia p {
+  color: #FFFFFF !important;
+}
+
+/* World Tour Showcase: Bauhaus Red Block */
+[data-fandom-theme="cosplay"] #tours,
+.fandom-theme-cosplay #tours {
+  background-color: #D02020 !important;
+  color: #FFFFFF !important;
+  border-bottom: 4px solid #121212 !important;
+}
+[data-fandom-theme="cosplay"] #tours h1,
+[data-fandom-theme="cosplay"] #tours h2,
+[data-fandom-theme="cosplay"] #tours h3,
+[data-fandom-theme="cosplay"] #tours h4,
+[data-fandom-theme="cosplay"] #tours p,
+.fandom-theme-cosplay #tours h1,
+.fandom-theme-cosplay #tours h2,
+.fandom-theme-cosplay #tours h3,
+.fandom-theme-cosplay #tours p {
+  color: #FFFFFF !important;
+}
+
+/* Fan Community Social Feed: Bauhaus Yellow Block */
+[data-fandom-theme="cosplay"] #community,
+.fandom-theme-cosplay #community {
+  background-color: #F0C020 !important;
+  color: #121212 !important;
+  border-bottom: 4px solid #121212 !important;
+}
+[data-fandom-theme="cosplay"] #community h1,
+[data-fandom-theme="cosplay"] #community h2,
+[data-fandom-theme="cosplay"] #community h3,
+[data-fandom-theme="cosplay"] #community h4,
+[data-fandom-theme="cosplay"] #community p,
+[data-fandom-theme="cosplay"] #community span,
+.fandom-theme-cosplay #community h1,
+.fandom-theme-cosplay #community h2,
+.fandom-theme-cosplay #community p {
+  color: #121212 !important;
+}
+
+/* Form Controls & Inputs */
+[data-fandom-theme="cosplay"] input,
+[data-fandom-theme="cosplay"] select,
+[data-fandom-theme="cosplay"] textarea,
+.fandom-theme-cosplay input,
+.fandom-theme-cosplay select,
+.fandom-theme-cosplay textarea {
+  border: 2px solid #121212 !important;
+  box-shadow: 4px 4px 0px 0px #121212 !important;
+  border-radius: 0px !important;
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  color: #121212 !important;
+  background-color: #FFFFFF !important;
+}
+
+/* Underline accent */
+.fandom-theme-cosplay .underline.decoration-amber-400 {
+  text-decoration-color: #D02020 !important;
+}
+
+/* =========================================================================
+   4. GAMING: MINIMALIST MONOCHROME DESIGN SYSTEM
+   Reduction to Essence: Pure #000000 & #FFFFFF, Playfair Display Serif,
+   Source Serif 4, JetBrains Mono, 0px radius, 0px shadows, 4px heavy rules.
+========================================================================= */
+[data-fandom-theme="gaming"], .fandom-theme-gaming {
+  --background: #FFFFFF;
+  --foreground: #000000;
+  --muted: #F5F5F5;
+  --muted-foreground: #525252;
+  --accent: #000000;
+  --accent-foreground: #FFFFFF;
+  --border: #000000;
+  --border-light: #E5E5E5;
+  --card: #FFFFFF;
+  --card-foreground: #000000;
+  --ring: #000000;
+
+  --bg-body: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --border-color: #000000;
+  --text-primary: #000000;
+  --color-primary: #000000;
+
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif !important;
+  letter-spacing: normal;
+  transition: none !important;
+}
+
+/* Sharp geometric precision: 0px radius everywhere */
+[data-fandom-theme="gaming"] *,
+.fandom-theme-gaming * {
+  border-radius: 0px !important;
+}
+
+/* Remove all glowing dropshadows */
+[data-fandom-theme="gaming"] *:not(.keep-shadow),
+.fandom-theme-gaming *:not(.keep-shadow) {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Primary Pattern: Horizontal Lines (4px) + Noise texture on Main */
+[data-fandom-theme="gaming"] main,
+.fandom-theme-gaming main {
+  background-color: #FFFFFF !important;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.02) 1px,
+      rgba(0, 0, 0, 0.02) 2px
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E") !important;
+  background-size: 100% 4px, 256px 256px !important;
+}
+
+/* Heavy 4px section rules */
+[data-fandom-theme="gaming"] section,
+.fandom-theme-gaming section {
+  background-color: transparent !important;
+  border-bottom: 4px solid #000000 !important;
+}
+
+/* Headings: Playfair Display Serif Hero */
+[data-fandom-theme="gaming"] h1,
+[data-fandom-theme="gaming"] h2,
+[data-fandom-theme="gaming"] h3,
+[data-fandom-theme="gaming"] h4,
+[data-fandom-theme="gaming"] h5,
+[data-fandom-theme="gaming"] h6,
+.fandom-theme-gaming h1,
+.fandom-theme-gaming h2,
+.fandom-theme-gaming h3,
+.fandom-theme-gaming h4,
+.fandom-theme-gaming h5,
+.fandom-theme-gaming h6,
+.fandom-theme-gaming .font-serif {
+  font-family: var(--font-playfair), "Playfair Display", Georgia, serif !important;
+  letter-spacing: -0.025em !important;
+  color: #000000 !important;
+}
+
+/* Code, Badges, Mono, Meta Labels: JetBrains Mono */
+[data-fandom-theme="gaming"] .font-mono,
+.fandom-theme-gaming .font-mono,
+[data-fandom-theme="gaming"] button,
+.fandom-theme-gaming button {
+  font-family: var(--font-jetbrains), var(--font-mono), monospace !important;
+}
+
+/* Architectural Flat Cards with 100ms Hover Inversion */
+.fandom-theme-gaming .fandom-card,
+.fandom-theme-gaming .kpop-game-card,
+.fandom-theme-gaming .domain-card,
+.fandom-theme-gaming .kpop-styled-card,
+.fandom-theme-gaming article,
+.fandom-theme-gaming #artists .group {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  transition: background-color 100ms ease, color 100ms ease, border-color 100ms ease !important;
+}
+
+.fandom-theme-gaming .fandom-card:hover,
+.fandom-theme-gaming .kpop-game-card:hover,
+.fandom-theme-gaming .domain-card:hover,
+.fandom-theme-gaming .kpop-styled-card:hover,
+.fandom-theme-gaming article:hover,
+.fandom-theme-gaming #artists .group:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #000000 !important;
+  box-shadow: none !important;
+}
+
+.fandom-theme-gaming .fandom-card:hover *,
+.fandom-theme-gaming .kpop-game-card:hover *,
+.fandom-theme-gaming .domain-card:hover *,
+.fandom-theme-gaming .kpop-styled-card:hover *,
+.fandom-theme-gaming article:hover *,
+.fandom-theme-gaming #artists .group:hover * {
+  color: #FFFFFF !important;
+}
+
+/* Editorial Grayscale Image Treatment with 300ms hover saturation & scale */
+.fandom-theme-gaming .fandom-card img,
+.fandom-theme-gaming .kpop-game-card img,
+.fandom-theme-gaming .domain-card img,
+.fandom-theme-gaming article img,
+.fandom-theme-gaming #artists .group img {
+  filter: grayscale(1) !important;
+  transition: filter 300ms ease, transform 300ms ease !important;
+}
+
+.fandom-theme-gaming .fandom-card:hover img,
+.fandom-theme-gaming .kpop-game-card:hover img,
+.fandom-theme-gaming .domain-card:hover img,
+.fandom-theme-gaming article:hover img,
+.fandom-theme-gaming #artists .group:hover img {
+  filter: grayscale(0) !important;
+}
+
+/* Monochrome Buttons: Instant binary on/off */
+.fandom-theme-gaming button.bg-black,
+.fandom-theme-gaming .btn-primary,
+.fandom-theme-gaming .domain-card-btn-primary,
+.fandom-theme-gaming button.bg-\[\#ff2e93\],
+.fandom-theme-gaming button.bg-\[\#9333ea\],
+.fandom-theme-gaming button.bg-\[\#ffd60a\],
+.fandom-theme-gaming button.bg-\[\#00f0ff\] {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+  transition: all 100ms ease !important;
+}
+
+.fandom-theme-gaming button.bg-black:hover,
+.fandom-theme-gaming .btn-primary:hover,
+.fandom-theme-gaming .domain-card-btn-primary:hover,
+.fandom-theme-gaming button.bg-\[\#ff2e93\]:hover,
+.fandom-theme-gaming button.bg-\[\#9333ea\]:hover,
+.fandom-theme-gaming button.bg-\[\#ffd60a\]:hover,
+.fandom-theme-gaming button.bg-\[\#00f0ff\]:hover {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+/* Purge all colorful background utilities into pure white monochrome tokens with crisp black borders */
+.fandom-theme-gaming [class*="bg-[#ff2e93]"],
+.fandom-theme-gaming [class*="bg-[#ffd60a]"],
+.fandom-theme-gaming [class*="bg-[#00f0ff]"],
+.fandom-theme-gaming [class*="bg-[#9333ea]"],
+.fandom-theme-gaming [class*="bg-[#c084fc]"],
+.fandom-theme-gaming [class*="bg-[#10b981]"],
+.fandom-theme-gaming [class*="bg-[#ccff00]"],
+.fandom-theme-gaming [class*="bg-[#fb923c]"],
+.fandom-theme-gaming [class*="bg-[#f43f5e]"],
+.fandom-theme-gaming [class*="bg-[#38bdf8]"],
+.fandom-theme-gaming [class*="bg-[#a3e635]"],
+.fandom-theme-gaming [class*="bg-emerald-"],
+.fandom-theme-gaming [class*="bg-pink-"],
+.fandom-theme-gaming [class*="bg-purple-"],
+.fandom-theme-gaming [class*="bg-amber-"],
+.fandom-theme-gaming [class*="bg-yellow-"],
+.fandom-theme-gaming [class*="bg-cyan-"] {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  box-shadow: none !important;
+}
+
+/* Hover inversion on buttons with colorful backgrounds: Instant binary black */
+.fandom-theme-gaming button[class*="bg-[#ff2e93]"]:hover,
+.fandom-theme-gaming button[class*="bg-[#ffd60a]"]:hover,
+.fandom-theme-gaming button[class*="bg-[#00f0ff]"]:hover,
+.fandom-theme-gaming button[class*="bg-[#9333ea]"]:hover,
+.fandom-theme-gaming button[class*="bg-[#c084fc]"]:hover,
+.fandom-theme-gaming button[class*="bg-[#10b981]"]:hover,
+.fandom-theme-gaming button[class*="bg-[#fb923c]"]:hover,
+.fandom-theme-gaming button[class*="bg-[#f43f5e]"]:hover,
+.fandom-theme-gaming button[class*="bg-[#38bdf8]"]:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid #000000 !important;
+}
+
+/* Explicitly force black text on buttons and elements with white background in light mode */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-white,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-white,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-white"] {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+/* Ensure explicitly black elements have white text in light mode */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-black,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-black,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#000000]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#000000]"] {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+.fandom-theme-gaming .bg-black [class*="text-"],
+.fandom-theme-gaming button.bg-black [class*="text-"],
+.fandom-theme-gaming [class*="bg-[#000000]"] [class*="text-"],
+.fandom-theme-gaming button[class*="bg-[#000000]"] [class*="text-"] {
+  color: #FFFFFF !important;
+}
+
+/* Handle nesting: If bg-white is inside bg-black, it should be black text */
+.fandom-theme-gaming .bg-black .bg-white,
+.fandom-theme-gaming .bg-black button.bg-white,
+.fandom-theme-gaming .bg-black .bg-white [class*="text-"],
+.fandom-theme-gaming .bg-black button.bg-white [class*="text-"] {
+  color: #000000 !important;
+}
+
+/* Handle nesting: If bg-black is inside bg-white, it should be white text */
+.fandom-theme-gaming .bg-white .bg-black,
+.fandom-theme-gaming .bg-white button.bg-black,
+.fandom-theme-gaming .bg-white .bg-black [class*="text-"],
+.fandom-theme-gaming .bg-white button.bg-black [class*="text-"] {
+  color: #FFFFFF !important;
+}
+
+/* Ensure hover states on inverted elements are correct */
+.fandom-theme-gaming button.bg-white:hover,
+.fandom-theme-gaming button[class*="bg-white"]:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+.fandom-theme-gaming button.bg-white:hover [class*="text-"],
+.fandom-theme-gaming button[class*="bg-white"]:hover [class*="text-"] {
+  color: #FFFFFF !important;
+}
+
+/* Ensure nested bg-white elements invert on card hover */
+.fandom-theme-gaming .fandom-card:hover .bg-white,
+.fandom-theme-gaming .domain-card:hover .bg-white,
+.fandom-theme-gaming article:hover .bg-white,
+.fandom-theme-gaming #artists .group:hover .bg-white,
+.fandom-theme-gaming .kpop-styled-card:hover .bg-white {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+.fandom-theme-gaming .fandom-card:hover .bg-white *,
+.fandom-theme-gaming .domain-card:hover .bg-white *,
+.fandom-theme-gaming article:hover .bg-white *,
+.fandom-theme-gaming #artists .group:hover .bg-white *,
+.fandom-theme-gaming .kpop-styled-card:hover .bg-white * {
+  color: #FFFFFF !important;
+}
+
+
+/* Light muted tints become #F5F5F5 in light mode */
+html:not(.dark) .fandom-theme-gaming [class*="bg-[#ecfeff]"],
+html:not(.dark) .fandom-theme-gaming [class*="bg-[#fff9db]"],
+html:not(.dark) .fandom-theme-gaming [class*="hover:bg-[#ecfeff]"]:hover,
+html:not(.dark) .fandom-theme-gaming [class*="hover:bg-[#fff9db]"]:hover {
+  background-color: #F5F5F5 !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .fandom-theme-gaming [class*="bg-[#ecfeff]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="bg-[#fff9db]"],
+.dark .fandom-theme-gaming [class*="bg-[#ecfeff]"],
+.dark .fandom-theme-gaming [class*="bg-[#fff9db]"] {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+/* Purge all colorful text utilities into pure black in light mode */
+html:not(.dark) .fandom-theme-gaming [class*="text-[#ff2e93]"],
+html:not(.dark) .fandom-theme-gaming [class*="text-[#ffd60a]"],
+html:not(.dark) .fandom-theme-gaming [class*="text-[#00f0ff]"],
+html:not(.dark) .fandom-theme-gaming [class*="text-[#9333ea]"],
+html:not(.dark) .fandom-theme-gaming [class*="text-[#c084fc]"],
+html:not(.dark) .fandom-theme-gaming [class*="text-[#10b981]"],
+html:not(.dark) .fandom-theme-gaming [class*="text-[#fb923c]"],
+html:not(.dark) .fandom-theme-gaming [class*="text-[#f43f5e]"],
+html:not(.dark) .fandom-theme-gaming [class*="text-[#38bdf8]"],
+html:not(.dark) .fandom-theme-gaming [class*="text-emerald-"],
+html:not(.dark) .fandom-theme-gaming [class*="text-pink-"],
+html:not(.dark) .fandom-theme-gaming [class*="text-purple-"],
+html:not(.dark) .fandom-theme-gaming [class*="text-amber-"],
+html:not(.dark) .fandom-theme-gaming [class*="text-yellow-"],
+html:not(.dark) .fandom-theme-gaming [class*="text-cyan-"] {
+  color: #000000 !important;
+}
+
+/* In dark mode, ensure gaming theme text remains bright & visible */
+[data-theme="dark"] .fandom-theme-gaming [class*="text-[#ff2e93]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-[#ffd60a]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-[#00f0ff]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-[#9333ea]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-[#c084fc]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-[#10b981]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-[#fb923c]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-[#f43f5e]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-[#38bdf8]"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-emerald-"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-pink-"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-purple-"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-amber-"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-yellow-"],
+[data-theme="dark"] .fandom-theme-gaming [class*="text-cyan-"],
+.dark .fandom-theme-gaming [class*="text-[#ff2e93]"],
+.dark .fandom-theme-gaming [class*="text-[#ffd60a]"],
+.dark .fandom-theme-gaming [class*="text-[#00f0ff]"],
+.dark .fandom-theme-gaming [class*="text-[#9333ea]"],
+.dark .fandom-theme-gaming [class*="text-[#c084fc]"],
+.dark .fandom-theme-gaming [class*="text-[#10b981]"],
+.dark .fandom-theme-gaming [class*="text-[#fb923c]"],
+.dark .fandom-theme-gaming [class*="text-[#f43f5e]"],
+.dark .fandom-theme-gaming [class*="text-[#38bdf8]"],
+.dark .fandom-theme-gaming [class*="text-emerald-"],
+.dark .fandom-theme-gaming [class*="text-pink-"],
+.dark .fandom-theme-gaming [class*="text-purple-"],
+.dark .fandom-theme-gaming [class*="text-amber-"],
+.dark .fandom-theme-gaming [class*="text-yellow-"],
+.dark .fandom-theme-gaming [class*="text-cyan-"] {
+  color: #f8fafc !important;
+}
+
+/* Elements inside dark containers or buttons have white text */
+.fandom-theme-gaming .bg-black [class*="text-"],
+.fandom-theme-gaming button.bg-black [class*="text-"],
+.fandom-theme-gaming [class*="bg-[#000000]"] [class*="text-"],
+.fandom-theme-gaming footer [class*="text-"],
+.fandom-theme-gaming .fandom-card:hover [class*="text-"],
+.fandom-theme-gaming .domain-card:hover [class*="text-"],
+.fandom-theme-gaming article:hover [class*="text-"],
+.fandom-theme-gaming #artists .group:hover [class*="text-"] {
+  color: #FFFFFF !important;
+}
+
+/* Purge colorful borders */
+.fandom-theme-gaming [class*="border-[#ff2e93]"],
+.fandom-theme-gaming [class*="border-[#ffd60a]"],
+.fandom-theme-gaming [class*="border-[#00f0ff]"],
+.fandom-theme-gaming [class*="border-[#9333ea]"],
+.fandom-theme-gaming [class*="border-[#c084fc]"],
+.fandom-theme-gaming [class*="border-[#10b981]"] {
+  border-color: #000000 !important;
+}
+
+/* Ticker tape: Inverted Obsidian */
+.fandom-theme-gaming .animate-y2k-ticker,
+.fandom-theme-gaming div:has(> .animate-y2k-ticker) {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-top: 4px solid #000000 !important;
+  border-bottom: 4px solid #000000 !important;
+  box-shadow: none !important;
+}
+
+.fandom-theme-gaming .animate-y2k-ticker span {
+  color: #FFFFFF !important;
+  text-shadow: none !important;
+}
+
+/* 5. COMICS: Pop-Art Ben-Day Dots & Bold Action Panels across entire page */
+[data-fandom-theme="comics"], .fandom-theme-comics {
+  --bg-body: #fef9c3;
+  --bg-card: #ffffff;
+  --border-color: #000000;
+  --text-primary: #000000;
+  --color-primary: #ef4444;
+  background-color: #fef9c3 !important;
+  color: #000000 !important;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.fandom-theme-comics main {
+  background-color: #fef9c3 !important;
+  background-image: radial-gradient(#ef4444 16%, transparent 18%) !important;
+  background-size: 10px 10px !important;
+}
+.fandom-theme-comics section {
+  background-color: transparent !important;
+  border-color: #000000 !important;
+}
+.fandom-theme-comics .bg-slate-50,
+.fandom-theme-comics .bg-slate-50\/70,
+.fandom-theme-comics .bg-body {
+  background-color: #fef9c3 !important;
+}
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-comics .bg-white:not(.comics-pop-art-root *) {
+  background-color: #ffffff !important;
+  border: 3.5px solid #000000 !important;
+  box-shadow: 6px 6px 0px #000000 !important;
+  border-radius: 6px !important;
+}
+.fandom-theme-comics h1:not(.comics-pop-art-root *),
+.fandom-theme-comics h2:not(.comics-pop-art-root *),
+.fandom-theme-comics h3:not(.comics-pop-art-root *) {
+  font-family: 'Bangers', cursive, sans-serif !important;
+  letter-spacing: 0.05em !important;
+}
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-comics button.bg-black:not(.comics-pop-art-root *) {
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+  border: 3px solid #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  font-family: 'Bangers', cursive, sans-serif !important;
+  font-size: 15px !important;
+  letter-spacing: 0.05em !important;
+}
+.fandom-theme-comics .underline.decoration-amber-400 {
+  text-decoration-color: #ef4444 !important;
+}
+
+/* =========================================================================
+   DEDICATED COMICS POP-ART VIEW (Manga/Anime-style layout with Pop-Art palette)
+   Preserves soft rounded border-radii (10px-18px) and Bangers/Patrick Hand typography
+   ========================================================================= */
+.comics-pop-art-root {
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+}
+
+.comics-pop-art-root h1,
+.comics-pop-art-root h2,
+.comics-pop-art-root h3,
+.comics-pop-art-root h4 {
+  font-family: 'Bangers', 'Kalam', cursive, sans-serif !important;
+  letter-spacing: 0.03em !important;
+}
+
+.comics-pop-art-root section {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+.comics-pop-art-root button {
+  letter-spacing: normal !important;
+}
+
+.comics-pop-art-root input,
+.comics-pop-art-root textarea,
+.comics-pop-art-root select {
+  border-radius: 10px !important;
+}
+
+/* 6. MANGA: AUTHENTIC HAND-DRAWN SKETCHBOOK & INK DESIGN SYSTEM */
+[data-fandom-theme="manga"], .fandom-theme-manga {
+  --bg-body: #fdfbf7;
+  --bg-card: #ffffff;
+  --border-color: #2d2d2d;
+  --text-primary: #2d2d2d;
+  --text-secondary: #2d2d2d;
+  --text-muted: #e5e0d8;
+  --color-primary: #ff4d4d;
+  --color-secondary: #2d5da1;
+  --color-postit: #fff9c4;
+
+  background-color: #fdfbf7 !important;
+  color: #2d2d2d !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Authentic Warm Paper & Grain Texture */
+.fandom-theme-manga main,
+[data-fandom-theme="manga"] main,
+.fandom-theme-manga .bg-body,
+[data-fandom-theme="manga"] .bg-body {
+  background-color: #fdfbf7 !important;
+  background-image: radial-gradient(#e5e0d8 1.5px, transparent 1.5px) !important;
+  background-size: 24px 24px !important;
+}
+
+.fandom-theme-manga section,
+[data-fandom-theme="manga"] section {
+  background-color: transparent !important;
+  border-color: #2d2d2d !important;
+}
+
+.fandom-theme-manga .bg-slate-50,
+.fandom-theme-manga .bg-slate-50\/70,
+[data-fandom-theme="manga"] .bg-slate-50,
+[data-fandom-theme="manga"] .bg-slate-50\/70 {
+  background-color: #fdfbf7 !important;
+}
+
+/* Handwritten Typography Hierarchy */
+.fandom-theme-manga h1,
+.fandom-theme-manga h2,
+.fandom-theme-manga h3,
+.fandom-theme-manga h4,
+[data-fandom-theme="manga"] h1,
+[data-fandom-theme="manga"] h2,
+[data-fandom-theme="manga"] h3,
+[data-fandom-theme="manga"] h4 {
+  font-family: 'Kalam', cursive, sans-serif !important;
+  font-weight: 700 !important;
+  color: #2d2d2d !important;
+  letter-spacing: normal !important;
+}
+
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga p,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga span,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga a,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga button,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga input,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga label,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga li,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] p,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] span,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] a,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] button,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] input,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] label,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] li {
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+  color: #2d2d2d;
+}
+
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga .text-slate-900,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga .text-slate-800,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga .text-slate-950,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] .text-slate-900,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] .text-slate-800,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] .text-slate-950 {
+  color: #2d2d2d !important;
+}
+
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga .text-slate-600,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga .text-slate-500,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] .text-slate-600,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] .text-slate-500 {
+  color: #555555 !important;
+}
+
+/* Wavy Correction Marker Underline */
+.fandom-theme-manga .underline.decoration-amber-400,
+[data-fandom-theme="manga"] .underline.decoration-amber-400 {
+  text-decoration: underline wavy !important;
+  text-decoration-color: #ff4d4d !important;
+  text-underline-offset: 6px !important;
+}
+
+/* Cards / Containers with Hard Offset Shadows */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-manga .bg-white,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="manga"] .bg-white {
+  background-color: #ffffff !important;
+  border: 2px solid #2d2d2d !important;
+  border-radius: 255px 25px 225px 25px / 25px 225px 25px 255px !important;
+  box-shadow: 4px 4px 0px 0px #2d2d2d !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+/* NO TILTING OR SHIFTING ON HOVER */
+.fandom-theme-manga .bg-white:hover,
+[data-fandom-theme="manga"] .bg-white:hover {
+  transform: none !important;
+  border-color: #2d2d2d !important;
+  box-shadow: 4px 4px 0px 0px #2d2d2d !important;
+}
+
+/* Hand-Drawn Wobbly Buttons: White bg, #2d2d2d border, hover to Accent Red without moving/tilting */
+.fandom-theme-manga button.bg-black,
+.fandom-theme-manga a.bg-black,
+.fandom-theme-manga button[style*="backgroundColor: #000000"],
+.fandom-theme-manga button[style*="background-color: #000000"],
+.fandom-theme-manga a[style*="backgroundColor: #000000"],
+.fandom-theme-manga a[style*="background-color: #000000"],
+.fandom-theme-manga .kpop-pixel-btn,
+[data-fandom-theme="manga"] button.bg-black,
+[data-fandom-theme="manga"] a.bg-black,
+[data-fandom-theme="manga"] button[style*="backgroundColor: #000000"],
+[data-fandom-theme="manga"] button[style*="background-color: #000000"],
+[data-fandom-theme="manga"] a[style*="backgroundColor: #000000"],
+[data-fandom-theme="manga"] a[style*="background-color: #000000"],
+[data-fandom-theme="manga"] .kpop-pixel-btn {
+  background-color: #ffffff !important;
+  color: #2d2d2d !important;
+  border: 3px solid #2d2d2d !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  box-shadow: 4px 4px 0px 0px #2d2d2d !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease !important;
+  cursor: pointer !important;
+  transform: none !important;
+}
+
+.fandom-theme-manga button.bg-black *,
+.fandom-theme-manga a.bg-black *,
+[data-fandom-theme="manga"] button.bg-black *,
+[data-fandom-theme="manga"] a.bg-black * {
+  color: #2d2d2d !important;
+}
+
+.fandom-theme-manga button.bg-black:hover,
+.fandom-theme-manga a.bg-black:hover,
+[data-fandom-theme="manga"] button.bg-black:hover,
+[data-fandom-theme="manga"] a.bg-black:hover {
+  background-color: #ff4d4d !important;
+  border-color: #2d2d2d !important;
+  color: #ffffff !important;
+  transform: none !important;
+  box-shadow: 4px 4px 0px 0px #2d2d2d !important;
+}
+
+.fandom-theme-manga button.bg-black:hover *,
+.fandom-theme-manga a.bg-black:hover *,
+[data-fandom-theme="manga"] button.bg-black:hover *,
+[data-fandom-theme="manga"] a.bg-black:hover * {
+  color: #ffffff !important;
+}
+
+.fandom-theme-manga button.bg-black:active,
+.fandom-theme-manga a.bg-black:active,
+[data-fandom-theme="manga"] button.bg-black:active,
+[data-fandom-theme="manga"] a.bg-black:active {
+  transform: none !important;
+  box-shadow: 2px 2px 0px 0px #2d2d2d !important;
+}
+
+/* Form Controls & Inputs with Wobbly Borders */
+.fandom-theme-manga input,
+.fandom-theme-manga textarea,
+.fandom-theme-manga select,
+[data-fandom-theme="manga"] input,
+[data-fandom-theme="manga"] textarea,
+[data-fandom-theme="manga"] select {
+  background-color: #ffffff !important;
+  border: 2px solid #2d2d2d !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+  color: #2d2d2d !important;
+  font-size: 16px !important;
+  padding: 8px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+.fandom-theme-manga input:focus,
+.fandom-theme-manga textarea:focus,
+[data-fandom-theme="manga"] input:focus,
+[data-fandom-theme="manga"] textarea:focus {
+  border-color: #2d5da1 !important;
+  box-shadow: 0 0 0 3px rgba(45, 93, 161, 0.2) !important;
+  outline: none !important;
+}
+
+/* 7. CINEMA ARCHIVE: Swiss International (International Typographic Style) */
+[data-fandom-theme="cinema"], .fandom-theme-cinema {
+  --bg-body: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --border-color: #000000;
+  --text-primary: #000000;
+  --color-primary: #FF3000;
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.fandom-theme-cinema main {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+}
+.fandom-theme-cinema section {
+  background-color: transparent !important;
+  border-color: #000000 !important;
+}
+.fandom-theme-cinema .bg-slate-50,
+.fandom-theme-cinema .bg-slate-50\/70,
+.fandom-theme-cinema .bg-body {
+  background-color: #FFFFFF !important;
+}
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-cinema .bg-white {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  box-shadow: none !important;
+}
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-cinema .text-slate-900,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-cinema .text-slate-800,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-cinema .text-slate-950 {
+  color: #000000 !important;
+}
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-cinema .text-slate-600,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-cinema .text-slate-500 {
+  color: #525252 !important;
+}
+.fandom-theme-cinema h1,
+.fandom-theme-cinema h2,
+.fandom-theme-cinema h3,
+.fandom-theme-cinema h4,
+.fandom-theme-cinema h5,
+.fandom-theme-cinema h6 {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Swiss International Texture Patterns (The DNA) */
+.swiss-grid-pattern {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.swiss-dots {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.12) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+.swiss-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.04),
+    rgba(0, 0, 0, 0.04) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+}
+
+.swiss-noise {
+  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0);
+  background-size: 8px 8px;
+}
+
+/* Swiss Universal Flatness & Zero Radius Enforcement */
+.cinema-swiss-root,
+.cinema-swiss-root * {
+  border-radius: 0px !important;
+}
+
+/* 8. TV SHOWS: Y2K Neo-Brutalist Pop Aesthetic (Identical to K-Pop DNA) */
+[data-fandom-theme="tv"], .fandom-theme-tv {
+  --bg-body: #f8f9fa;
+  --bg-card: #ffffff;
+  --border-color: #000000;
+  --text-primary: #000000;
+  --color-primary: #ff2e93;
+  --color-cyan: #00f0ff;
+  --color-yellow: #ffd60a;
+  background-color: #f8f9fa !important;
+  color: #000000 !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.fandom-theme-tv main {
+  background-color: #f8f9fa !important;
+  background-image: none !important;
+}
+.fandom-theme-tv section {
+  background-color: transparent !important;
+  border-color: #000000 !important;
+}
+.fandom-theme-tv .bg-slate-50,
+.fandom-theme-tv .bg-slate-50\/70,
+.fandom-theme-tv .bg-body {
+  background-color: #f8f9fa !important;
+}
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-tv .bg-white {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-tv .text-slate-900,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-tv .text-slate-800,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-tv .text-slate-950 {
+  color: #000000 !important;
+}
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-tv .text-slate-600,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-tv .text-slate-500 {
+  color: #525252 !important;
+}
+
+/* ==========================================================================
+   DYNAMIC HEADER FANDOM THEMES
+   Transforms Header (Root, Subnav, Search Bar, Icons, Logo, Buttons)
+   according to selected fandom category
+   ========================================================================== */
+.header-root {
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.header-inner {
+  transition: background 0.4s ease;
+}
+.header-search-bar {
+  transition: border-color 0.4s ease, border-width 0.2s ease;
+}
+.header-search-input {
+  transition: color 0.4s ease;
+}
+.header-search-icon {
+  transition: color 0.4s ease;
+}
+.header-action-btn {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.header-logo {
+  transition: filter 0.4s ease;
+}
+.header-subnav {
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+.header-nav-link {
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.header-allmd-btn {
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.header-lang-btn {
+  transition: all 0.3s ease;
+}
+.header-badge {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 1. K-POP Header: Pure Neo-Brutalist Monochrome — #ffffff + black borders */
+[data-fandom-theme="kpop"] .header-root,
+.fandom-header-kpop {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  border-bottom: 2px solid #000000 !important;
+  box-shadow: none !important;
+}
+[data-fandom-theme="kpop"] .header-inner {
+  background: transparent !important;
+}
+[data-fandom-theme="kpop"] .header-search-bar {
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+}
+[data-fandom-theme="kpop"] .header-search-icon {
+  color: #ff2e93 !important;
+}
+[data-fandom-theme="kpop"] .header-search-input {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+[data-fandom-theme="kpop"] .header-search-input::placeholder {
+  color: #9ca3af !important;
+}
+[data-fandom-theme="kpop"] .header-action-btn {
+  color: #000000 !important;
+}
+[data-fandom-theme="kpop"] .header-action-btn:hover {
+  background-color: #ffd60a !important;
+  color: #000000 !important;
+}
+[data-fandom-theme="kpop"] .header-lang-btn {
+  background-color: #00f0ff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+  font-weight: 900 !important;
+}
+[data-fandom-theme="kpop"] .header-badge {
+  background-color: #ff2e93 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+[data-fandom-theme="kpop"] .header-subnav,
+[data-fandom-theme="kpop"] .desktop-subnav {
+  background: #ffffff !important;
+  border-top: 1px solid #000000 !important;
+  border-bottom: 4px solid #000000 !important;
+}
+[data-fandom-theme="kpop"] .header-nav-link {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+[data-fandom-theme="kpop"] .header-nav-link:hover {
+  color: #ff2e93 !important;
+}
+[data-fandom-theme="kpop"] .header-allmd-btn {
+  background: #ff2e93 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+}
+
+/* 2. ANIME Header: Acid Lime Manga Halftone Streetwear */
+[data-fandom-theme="anime"] .header-root,
+.fandom-header-anime {
+  background: #f7fee7 !important;
+  border-bottom: 3.5px solid #000000 !important;
+  box-shadow: 0 4px 0px #84cc16 !important;
+}
+[data-fandom-theme="anime"] .header-inner {
+  background: transparent !important;
+}
+[data-fandom-theme="anime"] .header-search-bar {
+  border-bottom-color: #000000 !important;
+  border-bottom-width: 3.5px !important;
+}
+[data-fandom-theme="anime"] .header-search-icon {
+  color: #000000 !important;
+}
+[data-fandom-theme="anime"] .header-search-input {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+[data-fandom-theme="anime"] .header-search-input::placeholder {
+  color: #4d7c0f !important;
+}
+[data-fandom-theme="anime"] .header-action-btn {
+  color: #000000 !important;
+}
+[data-fandom-theme="anime"] .header-action-btn:hover {
+  background-color: #d9f99d !important;
+}
+[data-fandom-theme="anime"] .header-lang-btn {
+  background-color: #a3e635 !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+  font-weight: 900 !important;
+}
+[data-fandom-theme="anime"] .header-badge {
+  background-color: #000000 !important;
+  color: #a3e635 !important;
+  border-color: #a3e635 !important;
+}
+[data-fandom-theme="anime"] .header-subnav,
+[data-fandom-theme="anime"] .desktop-subnav {
+  background: #ecfccb !important;
+  border-top-color: #000000 !important;
+  border-bottom-color: #000000 !important;
+  border-bottom-width: 2px !important;
+}
+[data-fandom-theme="anime"] .header-nav-link {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+[data-fandom-theme="anime"] .header-allmd-btn {
+  background: #000000 !important;
+  color: #a3e635 !important;
+  border: 2px solid #84cc16 !important;
+  box-shadow: 2px 2px 0px #84cc16 !important;
+}
+
+/* =========================================================================
+   3. COSPLAY Header: Bauhaus Constructivist Modernism
+   White Canvas, 4px Black Borders, Hard 4px Shadows, Primary Accents
+   ========================================================================= */
+[data-fandom-theme="cosplay"] .header-root,
+.fandom-header-cosplay {
+  background: #FFFFFF !important;
+  border-bottom: 4px solid #121212 !important;
+  box-shadow: 0 4px 0px 0px #121212 !important;
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+}
+
+[data-fandom-theme="cosplay"] .header-inner {
+  background: #FFFFFF !important;
+}
+
+[data-fandom-theme="cosplay"] .header-logo {
+  filter: contrast(120%) !important;
+}
+
+[data-fandom-theme="cosplay"] .mobile-menu-btn {
+  background-color: #D02020 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 3px 3px 0px 0px #121212 !important;
+  border-radius: 0px !important;
+  font-weight: 900 !important;
+}
+
+[data-fandom-theme="cosplay"] .header-search-bar {
+  background-color: #FFFFFF !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 4px 4px 0px 0px #121212 !important;
+  border-radius: 0px !important;
+}
+
+[data-fandom-theme="cosplay"] .header-search-bar span {
+  color: #D02020 !important;
+  font-weight: 900 !important;
+}
+
+[data-fandom-theme="cosplay"] .header-search-input {
+  color: #121212 !important;
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+[data-fandom-theme="cosplay"] .header-search-input::placeholder {
+  color: #737373 !important;
+}
+
+[data-fandom-theme="cosplay"] .header-action-btn,
+[data-fandom-theme="cosplay"] .header-lang-btn {
+  background-color: #FFFFFF !important;
+  color: #121212 !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 3px 3px 0px 0px #121212 !important;
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  border-radius: 0px !important;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out !important;
+}
+
+[data-fandom-theme="cosplay"] .header-action-btn *,
+[data-fandom-theme="cosplay"] .header-lang-btn * {
+  color: #121212 !important;
+}
+
+[data-fandom-theme="cosplay"] .header-action-btn:hover,
+[data-fandom-theme="cosplay"] .header-lang-btn:hover {
+  background-color: #F0C020 !important;
+  color: #121212 !important;
+}
+
+[data-fandom-theme="cosplay"] .header-action-btn:active,
+[data-fandom-theme="cosplay"] .header-lang-btn:active {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 0px 0px 0px 0px #121212 !important;
+}
+
+[data-fandom-theme="cosplay"] .header-subnav,
+[data-fandom-theme="cosplay"] .desktop-subnav {
+  background: #FFFFFF !important;
+  border-top: 2px solid #121212 !important;
+  border-bottom: 4px solid #121212 !important;
+}
+
+[data-fandom-theme="cosplay"] .header-nav-link {
+  color: #121212 !important;
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+[data-fandom-theme="cosplay"] .header-nav-link:hover {
+  color: #D02020 !important;
+}
+
+[data-fandom-theme="cosplay"] .header-allmd-btn {
+  background-color: #D02020 !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-outfit), 'Outfit', sans-serif !important;
+  font-weight: 900 !important;
+  border: 2px solid #121212 !important;
+  box-shadow: 3px 3px 0px 0px #121212 !important;
+  border-radius: 0px !important;
+}
+
+/* 4. GAMING Header: Pure Minimalist Monochrome */
+[data-fandom-theme="gaming"] .header-root,
+.fandom-header-gaming {
+  background: #FFFFFF !important;
+  border-bottom: 4px solid #000000 !important;
+  box-shadow: none !important;
+}
+[data-fandom-theme="gaming"] .header-inner {
+  background: #FFFFFF !important;
+}
+[data-fandom-theme="gaming"] .header-logo {
+  filter: brightness(0) !important;
+}
+[data-fandom-theme="gaming"] .mobile-menu-btn {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+[data-fandom-theme="gaming"] .mobile-menu-btn:hover {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+[data-fandom-theme="gaming"] .header-search-bar {
+  border: 2px solid #000000 !important;
+  background-color: #FFFFFF !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+[data-fandom-theme="gaming"] .header-search-icon,
+[data-fandom-theme="gaming"] .header-search-bar span {
+  color: #000000 !important;
+}
+[data-fandom-theme="gaming"] .header-search-input {
+  color: #000000 !important;
+  font-family: var(--font-jetbrains), var(--font-mono), monospace !important;
+  font-weight: 700 !important;
+}
+[data-fandom-theme="gaming"] .header-search-input::placeholder {
+  color: #525252 !important;
+  font-style: italic !important;
+}
+[data-fandom-theme="gaming"] .header-action-btn,
+[data-fandom-theme="gaming"] .header-lang-btn {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  font-family: var(--font-jetbrains), monospace !important;
+  transition: all 100ms ease !important;
+}
+[data-fandom-theme="gaming"] .header-action-btn:hover,
+[data-fandom-theme="gaming"] .header-lang-btn:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+[data-fandom-theme="gaming"] .header-badge {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+[data-fandom-theme="gaming"] .header-subnav,
+[data-fandom-theme="gaming"] .desktop-subnav {
+  background: #FFFFFF !important;
+  border-top: 1px solid #E5E5E5 !important;
+  border-bottom: 4px solid #000000 !important;
+}
+[data-fandom-theme="gaming"] .header-nav-link {
+  color: #000000 !important;
+  font-family: var(--font-jetbrains), monospace !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+[data-fandom-theme="gaming"] .header-nav-link:hover {
+  color: #000000 !important;
+  text-decoration: underline !important;
+}
+[data-fandom-theme="gaming"] .header-allmd-btn {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  font-family: var(--font-jetbrains), monospace !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 900 !important;
+  transition: all 100ms ease !important;
+}
+[data-fandom-theme="gaming"] .header-allmd-btn:hover {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+/* ==========================================================================
+   GAMING THEME: AUSTERE MONOCHROME EDITORIAL SUITE (BITSCALETEAM PARITY)
+   ========================================================================== */
+[data-fandom-theme="gaming"] {
+  --fandom-accent: #000000;
+  --fandom-bg: #FFFFFF;
+}
+
+[data-fandom-theme="gaming"] .bg-\[\#ffd60a\],
+[data-fandom-theme="gaming"] .bg-\[\#00f0ff\],
+[data-fandom-theme="gaming"] .bg-\[\#ff2e93\],
+[data-fandom-theme="gaming"] .bg-\[\#fde047\],
+[data-fandom-theme="gaming"] .bg-\[\#facc15\],
+[data-fandom-theme="gaming"] .bg-\[\#38bdf8\] {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+
+[data-fandom-theme="gaming"] .bg-\[\#ffd60a\] *,
+[data-fandom-theme="gaming"] .bg-\[\#00f0ff\] *,
+[data-fandom-theme="gaming"] .bg-\[\#ff2e93\] * {
+  color: #FFFFFF !important;
+}
+
+[data-fandom-theme="gaming"] .text-\[\#ff2e93\],
+[data-fandom-theme="gaming"] .text-\[\#ffd60a\],
+[data-fandom-theme="gaming"] .text-\[\#00f0ff\],
+[data-fandom-theme="gaming"] .text-\[\#ec4899\],
+[data-fandom-theme="gaming"] .text-\[\#ef4444\] {
+  color: #000000 !important;
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+[data-fandom-theme="gaming"] em.text-\[\#ff2e93\] {
+  color: #000000 !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Strip colored drop shadows in Gaming mode */
+[data-fandom-theme="gaming"] [class*="shadow-\["],
+[data-fandom-theme="gaming"] [class*="shadow-"] {
+  box-shadow: none !important;
+}
+
+/* Make sure active format buttons in filter station are solid black */
+[data-fandom-theme="gaming"] .bg-\[\#00f0ff\].text-black,
+[data-fandom-theme="gaming"] button.bg-\[\#00f0ff\] {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+/* Neutralize colored accent bars & decorative dots */
+[data-fandom-theme="gaming"] .w-12.h-\[3px\].bg-\[\#00f0ff\],
+[data-fandom-theme="gaming"] .w-3.h-3.bg-\[\#ff2e93\],
+[data-fandom-theme="gaming"] .w-3.h-3.bg-\[\#ffd60a\] {
+  background-color: #000000 !important;
+}
+
+/* Neutralize cream & light yellow panels to clean white */
+[data-fandom-theme="gaming"] .bg-\[\#fefce8\],
+[data-fandom-theme="gaming"] .bg-\[\#fff9db\],
+[data-fandom-theme="gaming"] .bg-\[\#ecfeff\],
+[data-fandom-theme="gaming"] .bg-\[\#fdf2f8\] {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+}
+
+/* White background cards in Gaming */
+[data-fandom-theme="gaming"] .kpop-game-card,
+[data-fandom-theme="gaming"] .fandom-card {
+  background-color: #FFFFFF !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+}
+
+/* In Gaming mode, action buttons inside release drops */
+[data-fandom-theme="gaming"] #upcoming-releases button.bg-\[\#ffd60a\] {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+[data-fandom-theme="gaming"] #upcoming-releases button.bg-\[\#ffd60a\]:hover {
+  background-color: #333333 !important;
+  color: #FFFFFF !important;
+}
+[data-fandom-theme="gaming"] #upcoming-releases button.bg-\[\#00f0ff\] {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+[data-fandom-theme="gaming"] #upcoming-releases button.bg-\[\#00f0ff\]:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+/* 5. COMIC BOOKS Header: Pop-Art Ben-Day Dots & Bold Action Red */
+[data-fandom-theme="comics"] .header-root,
+.fandom-header-comics {
+  background: #fffbeb !important;
+  border-bottom: 3.5px solid #000000 !important;
+  box-shadow: 0 4px 0px #ef4444 !important;
+}
+[data-fandom-theme="comics"] .header-inner {
+  background: transparent !important;
+}
+[data-fandom-theme="comics"] .header-search-bar {
+  border-bottom-color: #ef4444 !important;
+  border-bottom-width: 3.5px !important;
+}
+[data-fandom-theme="comics"] .header-search-icon {
+  color: #ef4444 !important;
+}
+[data-fandom-theme="comics"] .header-search-input {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+[data-fandom-theme="comics"] .header-search-input::placeholder {
+  color: #b45309 !important;
+}
+[data-fandom-theme="comics"] .header-action-btn {
+  color: #000000 !important;
+}
+[data-fandom-theme="comics"] .header-action-btn:hover {
+  background-color: #fde047 !important;
+}
+[data-fandom-theme="comics"] .header-lang-btn {
+  background-color: #facc15 !important;
+  color: #000000 !important;
+  border: 2.5px solid #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+  font-weight: 900 !important;
+}
+[data-fandom-theme="comics"] .header-badge {
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+[data-fandom-theme="comics"] .header-subnav,
+[data-fandom-theme="comics"] .desktop-subnav {
+  background: #fef9c3 !important;
+  border-top-color: #000000 !important;
+  border-bottom-color: #000000 !important;
+  border-bottom-width: 2.5px !important;
+}
+[data-fandom-theme="comics"] .header-nav-link {
+  font-family: var(--font-bangers), 'Bangers', cursive, sans-serif !important;
+  color: #000000 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  font-size: 15px !important;
+}
+[data-fandom-theme="comics"] .header-nav-link:hover {
+  color: #ef4444 !important;
+  opacity: 0.8 !important;
+}
+[data-fandom-theme="comics"] .header-nav-link.active,
+[data-fandom-theme="comics"] .header-nav-link[data-active="true"] {
+  color: #ef4444 !important;
+  border-bottom: 3.5px solid #ef4444 !important;
+}
+[data-fandom-theme="comics"] .header-allmd-btn {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  border: 2.5px solid #000000 !important;
+  box-shadow: 2.5px 2.5px 0px #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* 6. MANGA Header: Hand-Drawn Warm Paper & Pencil Lead */
+[data-fandom-theme="manga"] .header-root,
+.fandom-header-manga {
+  background: #fdfbf7 !important;
+  border-bottom: 3px solid #2d2d2d !important;
+  box-shadow: 0 4px 0px 0px #2d2d2d !important;
+}
+[data-fandom-theme="manga"] .header-inner {
+  background: transparent !important;
+}
+[data-fandom-theme="manga"] .header-search-bar {
+  border: 2px solid #2d2d2d !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  background-color: #ffffff !important;
+  box-shadow: 3px 3px 0px 0px #2d2d2d !important;
+}
+[data-fandom-theme="manga"] .header-search-icon {
+  color: #2d2d2d !important;
+}
+[data-fandom-theme="manga"] .header-search-input {
+  color: #2d2d2d !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+[data-fandom-theme="manga"] .header-search-input::placeholder {
+  color: rgba(45, 45, 45, 0.45) !important;
+}
+[data-fandom-theme="manga"] .header-action-btn {
+  color: #2d2d2d !important;
+  border: 2px solid #2d2d2d !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  box-shadow: 2px 2px 0px 0px #2d2d2d !important;
+  background-color: #ffffff !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+}
+[data-fandom-theme="manga"] .header-action-btn:hover {
+  background-color: #ff4d4d !important;
+  color: #ffffff !important;
+}
+[data-fandom-theme="manga"] .header-lang-btn {
+  background-color: #fff9c4 !important;
+  color: #2d2d2d !important;
+  border: 2px solid #2d2d2d !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  box-shadow: 2px 2px 0px 0px #2d2d2d !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+  font-weight: 700 !important;
+}
+[data-fandom-theme="manga"] .header-badge {
+  background-color: #ff4d4d !important;
+  color: #ffffff !important;
+  border: 1.5px solid #2d2d2d !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+}
+[data-fandom-theme="manga"] .header-subnav,
+[data-fandom-theme="manga"] .desktop-subnav {
+  background: #fdfbf7 !important;
+  border-top: 1.5px dashed #2d2d2d !important;
+  border-bottom: 3px solid #2d2d2d !important;
+}
+[data-fandom-theme="manga"] .header-nav-link {
+  color: #2d2d2d !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+[data-fandom-theme="manga"] .header-nav-link:hover {
+  color: #ff4d4d !important;
+  text-decoration: underline wavy #ff4d4d !important;
+}
+[data-fandom-theme="manga"] .header-allmd-btn {
+  background: #fff9c4 !important;
+  color: #2d2d2d !important;
+  border: 2.5px solid #2d2d2d !important;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important;
+  box-shadow: 3px 3px 0px 0px #2d2d2d !important;
+  font-family: 'Patrick Hand', cursive, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+[data-fandom-theme="manga"] .header-allmd-btn:hover {
+  background: #ff4d4d !important;
+  color: #ffffff !important;
+  transform: none !important;
+  box-shadow: 3px 3px 0px 0px #2d2d2d !important;
+}
+
+/* 7. CINEMA Header: Swiss International (International Typographic Style) */
+[data-fandom-theme="cinema"] .header-root,
+.fandom-header-cinema {
+  background: #FFFFFF !important;
+  border-bottom: 4px solid #000000 !important;
+  box-shadow: none !important;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+[data-fandom-theme="cinema"] .header-inner {
+  background: #FFFFFF !important;
+}
+[data-fandom-theme="cinema"] .header-logo {
+  filter: brightness(0) !important;
+}
+[data-fandom-theme="cinema"] .mobile-menu-btn {
+  background-color: #FF3000 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+[data-fandom-theme="cinema"] .mobile-menu-btn:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+[data-fandom-theme="cinema"] .header-search-bar {
+  border: 2px solid #000000 !important;
+  background-color: #FFFFFF !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+[data-fandom-theme="cinema"] .header-search-icon,
+[data-fandom-theme="cinema"] .header-search-bar span {
+  color: #FF3000 !important;
+  font-weight: 900 !important;
+}
+[data-fandom-theme="cinema"] .header-search-input {
+  color: #000000 !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 700 !important;
+}
+[data-fandom-theme="cinema"] .header-search-input::placeholder {
+  color: #525252 !important;
+}
+[data-fandom-theme="cinema"] .header-action-btn,
+[data-fandom-theme="cinema"] .header-lang-btn {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  transition: all 100ms ease !important;
+}
+[data-fandom-theme="cinema"] .header-action-btn:hover,
+[data-fandom-theme="cinema"] .header-lang-btn:hover {
+  background-color: #FF3000 !important;
+  color: #FFFFFF !important;
+  border-color: #000000 !important;
+}
+[data-fandom-theme="cinema"] .header-action-btn:hover *,
+[data-fandom-theme="cinema"] .header-lang-btn:hover * {
+  color: #FFFFFF !important;
+}
+[data-fandom-theme="cinema"] .header-badge {
+  background-color: #FF3000 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+[data-fandom-theme="cinema"] .header-subnav,
+[data-fandom-theme="cinema"] .desktop-subnav {
+  background: #FFFFFF !important;
+  border-top: 1px solid #000000 !important;
+  border-bottom: 4px solid #000000 !important;
+}
+[data-fandom-theme="cinema"] .header-nav-link {
+  color: #000000 !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+[data-fandom-theme="cinema"] .header-nav-link:hover {
+  color: #FF3000 !important;
+}
+[data-fandom-theme="cinema"] .header-allmd-btn {
+  background: #FF3000 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 900 !important;
+  transition: all 100ms ease !important;
+}
+[data-fandom-theme="cinema"] .header-allmd-btn:hover {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+/* 8. TV SHOWS Header: Y2K Neo-Brutalist Pop (Identical to K-Pop DNA) */
+[data-fandom-theme="tv"] .header-root,
+.fandom-header-tv {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  border-bottom: 2px solid #000000 !important;
+  box-shadow: none !important;
+}
+[data-fandom-theme="tv"] .header-inner {
+  background: transparent !important;
+}
+[data-fandom-theme="tv"] .header-search-bar {
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+  background-color: #ffffff !important;
+  border-radius: 0px !important;
+}
+[data-fandom-theme="tv"] .header-search-icon,
+[data-fandom-theme="tv"] .header-search-bar span {
+  color: #ff2e93 !important;
+}
+[data-fandom-theme="tv"] .header-search-input {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+[data-fandom-theme="tv"] .header-search-input::placeholder {
+  color: #9ca3af !important;
+}
+[data-fandom-theme="tv"] .header-action-btn {
+  color: #000000 !important;
+}
+[data-fandom-theme="tv"] .header-action-btn:hover {
+  background-color: #ffd60a !important;
+  color: #000000 !important;
+}
+[data-fandom-theme="tv"] .header-lang-btn {
+  background-color: #00f0ff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+  font-weight: 900 !important;
+}
+[data-fandom-theme="tv"] .header-badge {
+  background-color: #ff2e93 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+[data-fandom-theme="tv"] .header-subnav,
+[data-fandom-theme="tv"] .desktop-subnav {
+  background: #ffffff !important;
+  border-top: 1px solid #000000 !important;
+  border-bottom: 4px solid #000000 !important;
+}
+[data-fandom-theme="tv"] .header-nav-link {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+[data-fandom-theme="tv"] .header-nav-link:hover {
+  color: #ff2e93 !important;
+}
+[data-fandom-theme="tv"] .header-allmd-btn {
+  background: #ff2e93 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+}
+
+/* ==========================================================================
+   SCROLL STATE: .header-scrolled
+   Applied when the user scrolls > 20px. Overrides all fandom theme backgrounds
+   with a clean white glass look for better readability.
+   ========================================================================== */
+
+.header-scrolled {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Keep inner elements white-theme friendly when scrolled */
+.header-scrolled .header-inner {
+  background: transparent !important;
+}
+
+.header-scrolled .header-subnav,
+.header-scrolled .desktop-subnav {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-top-color: rgba(0, 0, 0, 0.08) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.header-scrolled .header-search-bar {
+  border-bottom-color: #000000 !important;
+}
+
+.header-scrolled .header-search-icon {
+  color: #0f172a !important;
+}
+
+.header-scrolled .header-search-input {
+  color: #0f172a !important;
+}
+
+.header-scrolled .header-search-input::placeholder {
+  color: #94a3b8 !important;
+}
+
+.header-scrolled .header-action-btn {
+  color: #0f172a !important;
+}
+
+.header-scrolled .header-action-btn:hover {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+.header-scrolled .header-nav-link {
+  color: #0f172a !important;
+}
+
+.header-scrolled .header-nav-link:hover {
+  color: #000000 !important;
+  opacity: 0.6 !important;
+}
+
+.header-scrolled .mobile-menu-btn {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Global Fandom Stationary Hover Enforcement */
+[data-fandom-theme] button:hover,
+[data-fandom-theme] a:hover,
+[data-fandom-theme] article:hover,
+[data-fandom-theme] .fandom-card:hover,
+[data-fandom-theme] .kpop-game-card:hover,
+[data-fandom-theme] .domain-card:hover {
+  transform: none !important;
+}
+
+/* Fix Hero Banner arrows which are bg-white inside bg-black container */
+[data-fandom-theme="gaming"] .bg-black .bg-white,
+[data-fandom-theme="gaming"] .bg-black .bg-white[class*="text-"],
+[data-fandom-theme="gaming"] .bg-black button.bg-white,
+[data-fandom-theme="gaming"] .bg-black button.bg-white[class*="text-"] {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+[data-fandom-theme="gaming"] .bg-black .bg-white *,
+[data-fandom-theme="gaming"] .bg-black button.bg-white * {
+  color: #000000 !important;
+}
+
+/* ==========================================================================
+   FINAL BULLETPROOF FIX FOR GAMING ACTIVE TABS
+   ========================================================================== */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-black,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-black *,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-white button.bg-black,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-white button.bg-black *,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#000000]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#000000]"] *,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] button.bg-black,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] button.bg-black *,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] button[class*="bg-[#000000]"],
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] button[class*="bg-[#000000]"] * {
+  color: #FFFFFF !important;
+}
+
+/* Fix Hero Banner arrows which are bg-white inside bg-black container for Anime */
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="anime"] .bg-black .bg-white,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="anime"] .bg-black .bg-white[class*="text-"],
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="anime"] .bg-black button.bg-white,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="anime"] .bg-black button.bg-white[class*="text-"] {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="anime"] .bg-black .bg-white *,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="anime"] .bg-black button.bg-white * {
+  color: #000000 !important;
+}
+
+/* Bulletproof active tab text color for Anime */
+.fandom-theme-anime button[class*="bg-[#a3e635]"],
+.fandom-theme-anime button[class*="bg-[#a3e635]"] *,
+[data-fandom-theme="anime"] button[class*="bg-[#a3e635]"],
+[data-fandom-theme="anime"] button[class*="bg-[#a3e635]"] * {
+  color: #000000 !important;
+}
+
+/* ==========================================================================
+   FANDOM NAV DOCK & ARTIST HERO BANNER - BULLETPROOF THEMING
+   ========================================================================== */
+.fandom-nav-dock,
+nav.fandom-nav-dock,
+[data-fandom-theme] nav.fandom-nav-dock,
+.fandom-theme-gaming nav.fandom-nav-dock,
+.fandom-theme-gaming [class*="bg-[#000000]"].fandom-nav-dock {
+  background-color: #000000 !important;
+  border-bottom: 4px solid #ffd60a !important;
+}
+
+/* Force 100% visible black text on all buttons and spans in the dock across ALL themes */
+.fandom-nav-dock button,
+.fandom-nav-dock button *,
+.fandom-nav-dock button span,
+nav.fandom-nav-dock button,
+nav.fandom-nav-dock button *,
+html .fandom-theme-gaming nav.fandom-nav-dock button,
+html .fandom-theme-gaming nav.fandom-nav-dock button *,
+html .fandom-theme-gaming [class*="bg-[#000000]"].fandom-nav-dock button,
+html .fandom-theme-gaming [class*="bg-[#000000]"].fandom-nav-dock button *,
+html [data-fandom-theme="gaming"] nav.fandom-nav-dock button,
+html [data-fandom-theme="gaming"] nav.fandom-nav-dock button * {
+  color: #000000 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.fandom-nav-dock button[data-active="true"],
+nav.fandom-nav-dock button[data-active="true"],
+html .fandom-theme-gaming nav.fandom-nav-dock button[data-active="true"],
+html [data-fandom-theme="gaming"] nav.fandom-nav-dock button[data-active="true"] {
+  background-color: #ffd60a !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.fandom-nav-dock button:not([data-active="true"]),
+nav.fandom-nav-dock button:not([data-active="true"]),
+html .fandom-theme-gaming nav.fandom-nav-dock button:not([data-active="true"]),
+html [data-fandom-theme="gaming"] nav.fandom-nav-dock button:not([data-active="true"]) {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+/* Artist Hero Banner: Crisp styling across all fandom themes */
+#artist-hero-banner,
+.artist-hero-banner {
+  opacity: 1 !important;
+  display: block !important;
+  position: relative !important;
+}
+
+
