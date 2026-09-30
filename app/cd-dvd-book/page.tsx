@@ -18,8 +18,11 @@ import { useCartWishlist } from '../../context/CartWishlistContext';
 import { Disc, Award, ShieldCheck, Sparkles, BookOpen, Layers } from 'lucide-react';
 
 import { useActiveFandom } from '../../utils/fandomTheme';
+import { useDomainTheme } from '../../context/DomainContext';
 
 export default function CdDvdBookPage() {
+  const { themeMode } = useDomainTheme();
+  const isDark = themeMode === 'dark';
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedArtistFilter, setSelectedArtistFilter] = useState('all');
@@ -45,7 +48,7 @@ export default function CdDvdBookPage() {
 
       <main className="flex-1">
         {/* Unified Breadcrumbs Navigation */}
-        <div className="bg-slate-50 border-b border-slate-200">
+        <div className={isDark ? "bg-[#0A0A0A] border-b border-[#27272A]" : "bg-slate-50 border-b border-slate-200"}>
           <Breadcrumbs
             items={[
               { label: 'CD / DVD & Books (Physical Media)', isActive: true }

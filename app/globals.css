@@ -3567,3 +3567,292 @@ article:hover,
   }
 }
 
+/* =========================================================================
+   UNIVERSAL DARK MODE HIGH-CONTRAST & ACCESSIBILITY MASTER SYSTEM
+   Ensures complete legibility, visible structure, and crisp contrast
+   across all pages, sections, cards, modals, and input controls.
+   ========================================================================= */
+
+/* 1. Global Dark Mode Canvas */
+html.dark,
+body.dark,
+[data-theme="dark"] {
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
+}
+
+/* 2. Global Headings & Typography */
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6,
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6,
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6,
+html.dark .font-heading,
+body.dark .font-heading,
+[data-theme="dark"] .font-heading,
+html.dark .font-display,
+body.dark .font-display,
+[data-theme="dark"] .font-display {
+  color: #FFFFFF !important;
+}
+
+/* 3. Global Visible Borders (Replace invisible pure-black borders in dark mode) */
+html.dark .border-black,
+body.dark .border-black,
+[data-theme="dark"] .border-black,
+html.dark [class*="border-black"],
+body.dark [class*="border-black"],
+[data-theme="dark"] [class*="border-black"] {
+  border-color: #3F3F46 !important;
+}
+
+/* 4. Main Homepage Sections Dark Background Overrides */
+html.dark #albums,
+body.dark #albums,
+[data-theme="dark"] #albums,
+html.dark #multimedia-teaser,
+body.dark #multimedia-teaser,
+[data-theme="dark"] #multimedia-teaser,
+html.dark #upcoming-releases,
+body.dark #upcoming-releases,
+[data-theme="dark"] #upcoming-releases,
+html.dark #tours,
+body.dark #tours,
+[data-theme="dark"] #tours,
+html.dark #community,
+body.dark #community,
+[data-theme="dark"] #community,
+html.dark .bg-\[\#fdfbf7\],
+body.dark .bg-\[\#fdfbf7\],
+[data-theme="dark"] .bg-\[\#fdfbf7\],
+html.dark .bg-\[\#fffdf0\],
+body.dark .bg-\[\#fffdf0\],
+[data-theme="dark"] .bg-\[\#fffdf0\] {
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
+  border-color: #27272A !important;
+}
+
+/* 5. Cards & Elevated Containers across All Sections */
+html.dark #albums .bg-white,
+body.dark #albums .bg-white,
+[data-theme="dark"] #albums .bg-white,
+html.dark #artists .bg-white,
+body.dark #artists .bg-white,
+[data-theme="dark"] #artists .bg-white,
+html.dark #multimedia-teaser .bg-white,
+body.dark #multimedia-teaser .bg-white,
+[data-theme="dark"] #multimedia-teaser .bg-white,
+html.dark #upcoming-releases .bg-white,
+body.dark #upcoming-releases .bg-white,
+[data-theme="dark"] #upcoming-releases .bg-white,
+html.dark #tours .bg-white,
+body.dark #tours .bg-white,
+[data-theme="dark"] #tours .bg-white,
+html.dark #community .bg-white,
+body.dark #community .bg-white,
+[data-theme="dark"] #community .bg-white,
+html.dark .domain-card,
+body.dark .domain-card,
+[data-theme="dark"] .domain-card {
+  background-color: #121214 !important;
+  border-color: #3F3F46 !important;
+  color: #FAFAFA !important;
+}
+
+/* 6. Text Contrast in Dark Mode (Convert hardcoded black/slate text to crisp white & light slate) */
+html.dark .text-black,
+body.dark .text-black,
+[data-theme="dark"] .text-black,
+html.dark .text-neutral-800,
+body.dark .text-neutral-800,
+[data-theme="dark"] .text-neutral-800,
+html.dark .text-neutral-900,
+body.dark .text-neutral-900,
+[data-theme="dark"] .text-neutral-900,
+html.dark .text-slate-900,
+body.dark .text-slate-900,
+[data-theme="dark"] .text-slate-900,
+html.dark .text-slate-950,
+body.dark .text-slate-950,
+[data-theme="dark"] .text-slate-950,
+html.dark [class*="text-[#000000]"],
+body.dark [class*="text-[#000000]"],
+[data-theme="dark"] [class*="text-[#000000]"],
+html.dark [class*="text-[#2d2d2d]"],
+body.dark [class*="text-[#2d2d2d]"],
+[data-theme="dark"] [class*="text-[#2d2d2d]"],
+html.dark [class*="text-[#09090b]"],
+body.dark [class*="text-[#09090b]"],
+[data-theme="dark"] [class*="text-[#09090b]"],
+html.dark [class*="text-[#0f172a]"],
+body.dark [class*="text-[#0f172a]"],
+[data-theme="dark"] [class*="text-[#0f172a]"] {
+  color: #FFFFFF !important;
+}
+
+html.dark .text-neutral-700,
+body.dark .text-neutral-700,
+[data-theme="dark"] .text-neutral-700,
+html.dark .text-neutral-600,
+body.dark .text-neutral-600,
+[data-theme="dark"] .text-neutral-600,
+html.dark .text-slate-700,
+body.dark .text-slate-700,
+[data-theme="dark"] .text-slate-700,
+html.dark .text-slate-600,
+body.dark .text-slate-600,
+[data-theme="dark"] .text-slate-600,
+html.dark .text-slate-500,
+body.dark .text-slate-500,
+[data-theme="dark"] .text-slate-500 {
+  color: #CBD5E1 !important;
+}
+
+/* 7. Section #artists (IdolProfiles / Character Dossiers) Special Overrides */
+html.dark #artists,
+body.dark #artists,
+[data-theme="dark"] #artists {
+  color: #FAFAFA !important;
+  border-color: #27272A !important;
+}
+
+html.dark #artists [style*="backgroundColor: #ffffff"],
+html.dark #artists [style*="background-color: #ffffff"],
+html.dark #artists [style*="backgroundColor: rgb(255, 255, 255)"],
+html.dark #artists [style*="background-color: rgb(255, 255, 255)"],
+[data-theme="dark"] #artists [style*="backgroundColor: #ffffff"],
+[data-theme="dark"] #artists [style*="background-color: #ffffff"],
+[data-theme="dark"] #artists [style*="backgroundColor: rgb(255, 255, 255)"],
+[data-theme="dark"] #artists [style*="background-color: rgb(255, 255, 255)"] {
+  background-color: #121214 !important;
+  border-color: #3F3F46 !important;
+  color: #FAFAFA !important;
+}
+
+html.dark #artists [style*="backgroundColor: #fefce8"],
+html.dark #artists [style*="background-color: #fefce8"],
+[data-theme="dark"] #artists [style*="backgroundColor: #fefce8"],
+[data-theme="dark"] #artists [style*="background-color: #fefce8"] {
+  background-color: #181710 !important;
+  border-color: #3F3F46 !important;
+  color: #fef08a !important;
+}
+
+html.dark #artists [style*="backgroundColor: #ecfeff"],
+html.dark #artists [style*="background-color: #ecfeff"],
+[data-theme="dark"] #artists [style*="backgroundColor: #ecfeff"],
+[data-theme="dark"] #artists [style*="background-color: #ecfeff"] {
+  background-color: #0c1a24 !important;
+  border-color: #3F3F46 !important;
+  color: #38bdf8 !important;
+}
+
+html.dark #artists [style*="color: #000000"],
+html.dark #artists [style*="color: rgb(0, 0, 0)"],
+[data-theme="dark"] #artists [style*="color: #000000"],
+[data-theme="dark"] #artists [style*="color: rgb(0, 0, 0)"] {
+  color: #FFFFFF !important;
+}
+
+/* 8. Global Form Controls (Inputs, Selects, Textareas) in Dark Mode */
+html.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]),
+body.dark input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]),
+[data-theme="dark"] input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]),
+html.dark select,
+body.dark select,
+[data-theme="dark"] select,
+html.dark textarea,
+body.dark textarea,
+[data-theme="dark"] textarea {
+  background-color: #18181B !important;
+  color: #FFFFFF !important;
+  border-color: #52525B !important;
+}
+
+html.dark select option,
+body.dark select option,
+[data-theme="dark"] select option {
+  background-color: #18181B !important;
+  color: #FFFFFF !important;
+}
+
+/* 9. High-Contrast Protective Rules for Vibrant Colored Elements (Yellow, Cyan, Lime) */
+/* These buttons/badges MUST retain pure #000000 text for accessibility! */
+html.dark [class*="bg-[#ffd60a]"],
+body.dark [class*="bg-[#ffd60a]"],
+[data-theme="dark"] [class*="bg-[#ffd60a]"],
+html.dark [class*="bg-[#00f0ff]"],
+body.dark [class*="bg-[#00f0ff]"],
+[data-theme="dark"] [class*="bg-[#00f0ff]"],
+html.dark [class*="bg-[#ccff00]"],
+body.dark [class*="bg-[#ccff00]"],
+[data-theme="dark"] [class*="bg-[#ccff00]"],
+html.dark [class*="bg-yellow-400"],
+body.dark [class*="bg-yellow-400"],
+[data-theme="dark"] [class*="bg-yellow-400"],
+html.dark [class*="bg-lime-400"],
+body.dark [class*="bg-lime-400"],
+[data-theme="dark"] [class*="bg-lime-400"],
+html.dark [style*="backgroundColor: #ffd60a"],
+html.dark [style*="background-color: #ffd60a"],
+[data-theme="dark"] [style*="backgroundColor: #ffd60a"],
+[data-theme="dark"] [style*="background-color: #ffd60a"] {
+  color: #000000 !important;
+}
+
+html.dark [class*="bg-[#ffd60a]"] *,
+body.dark [class*="bg-[#ffd60a]"] *,
+[data-theme="dark"] [class*="bg-[#ffd60a]"] *,
+html.dark [class*="bg-[#00f0ff]"] *,
+body.dark [class*="bg-[#00f0ff]"] *,
+[data-theme="dark"] [class*="bg-[#00f0ff]"] *,
+html.dark [class*="bg-[#ccff00]"] *,
+body.dark [class*="bg-[#ccff00]"] *,
+[data-theme="dark"] [class*="bg-[#ccff00]"] * {
+  color: #000000 !important;
+}
+
+/* 10. Album Detail Modal & Interactive Drawers Dark Mode */
+html.dark .rounded-kpop.bg-white,
+[data-theme="dark"] .rounded-kpop.bg-white,
+html.dark .bg-white.max-w-4xl,
+[data-theme="dark"] .bg-white.max-w-4xl {
+  background-color: #121214 !important;
+  border-color: #3F3F46 !important;
+  color: #FAFAFA !important;
+}
+
+html.dark .bg-white.max-w-4xl .bg-slate-50,
+[data-theme="dark"] .bg-white.max-w-4xl .bg-slate-50,
+html.dark .bg-white.max-w-4xl [style*="background-color: #fafafa"],
+html.dark .bg-white.max-w-4xl [style*="backgroundColor: #fafafa"],
+[data-theme="dark"] .bg-white.max-w-4xl [style*="background-color: #fafafa"],
+[data-theme="dark"] .bg-white.max-w-4xl [style*="backgroundColor: #fafafa"] {
+  background-color: #18181B !important;
+  border-color: #3F3F46 !important;
+  color: #FAFAFA !important;
+}
+
+html.dark .bg-white.max-w-4xl [style*="color: #000000"],
+html.dark .bg-white.max-w-4xl [style*="color: #1c1c1c"],
+[data-theme="dark"] .bg-white.max-w-4xl [style*="color: #000000"],
+[data-theme="dark"] .bg-white.max-w-4xl [style*="color: #1c1c1c"] {
+  color: #FFFFFF !important;
+}
+
+html.dark .bg-white.max-w-4xl .text-slate-900,
+[data-theme="dark"] .bg-white.max-w-4xl .text-slate-900,
+html.dark .bg-white.max-w-4xl .text-slate-800,
+[data-theme="dark"] .bg-white.max-w-4xl .text-slate-800 {
+  color: #FFFFFF !important;
+}
+
+html.dark .bg-white.max-w-4xl .text-slate-600,
+[data-theme="dark"] .bg-white.max-w-4xl .text-slate-600,
+html.dark .bg-white.max-w-4xl .text-slate-500,
+[data-theme="dark"] .bg-white.max-w-4xl .text-slate-500,
+html.dark .bg-white.max-w-4xl .text-slate-700,
+[data-theme="dark"] .bg-white.max-w-4xl .text-slate-700 {
+  color: #CBD5E1 !important;
+}
+
+

@@ -13,6 +13,7 @@ import { Breadcrumbs } from '../../components/Breadcrumbs';
 import { Footer } from '../../components/Footer';
 import { useCartWishlist } from '../../context/CartWishlistContext';
 import { useActiveFandom } from '../../utils/fandomTheme';
+import { useDomainTheme } from '../../context/DomainContext';
 import { 
   Building2, 
   ShieldCheck, 
@@ -31,6 +32,8 @@ import {
 } from 'lucide-react';
 
 export default function B2bPage() {
+  const { themeMode } = useDomainTheme();
+  const isDark = themeMode === 'dark';
   const [searchQuery, setSearchQuery] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(false);
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
@@ -93,7 +96,7 @@ export default function B2bPage() {
 
       <main className="flex-1">
         {/* Unified Breadcrumbs Navigation */}
-        <div className="bg-slate-50 border-b border-slate-200">
+        <div className={isDark ? 'bg-[#0A0A0A] border-b border-[#27272A]' : 'bg-slate-50 border-b border-slate-200'}>
           <Breadcrumbs
             items={[
               { label: 'B2B Distribution & Bulk Orders (Wholesale & Fan Club)', isActive: true }
@@ -297,25 +300,35 @@ export default function B2bPage() {
               <span style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', color: '#94a3b8' }}>
                 VOLUME TIERS
               </span>
-              <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '28px', fontWeight: 800, color: '#0f172a', margin: '8px 0 0 0' }}>
+              <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '28px', fontWeight: 800, color: isDark ? '#ffffff' : '#0f172a', margin: '8px 0 0 0' }}>
                 Tiered Wholesale Volume Pricing
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {/* Tier 1 */}
-              <div style={{ backgroundColor: '#ffffff', border: '1.5px solid #e2e8f0', padding: '28px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }} className="hover:border-black transition-all">
+              <div 
+                style={{ 
+                  backgroundColor: isDark ? '#121214' : '#ffffff', 
+                  border: isDark ? '1.5px solid #3F3F46' : '1.5px solid #e2e8f0', 
+                  padding: '28px 24px', 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  justifyContent: 'space-between' 
+                }} 
+                className="hover:border-black dark:hover:border-white transition-all"
+              >
                 <div>
-                  <span style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', backgroundColor: '#f1f5f9', color: '#0f172a', padding: '3px 8px', display: 'inline-block', marginBottom: '12px' }}>
+                  <span style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', backgroundColor: isDark ? '#1e293b' : '#f1f5f9', color: isDark ? '#38bdf8' : '#0f172a', padding: '3px 8px', display: 'inline-block', marginBottom: '12px' }}>
                     TIER 1 · COMMUNITY & STARTER
                   </span>
-                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '22px', fontWeight: 800, margin: '0 0 8px 0' }}>
+                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '22px', fontWeight: 800, margin: '0 0 8px 0', color: isDark ? '#ffffff' : '#0f172a' }}>
                     10 – 50 Units
                   </h3>
-                  <div style={{ fontSize: '32px', fontWeight: 900, fontFamily: 'monospace', color: '#0f172a', margin: '12px 0' }}>
-                    15% <span style={{ fontSize: '14px', fontWeight: 500, color: '#64748b' }}>OFF MSRP</span>
+                  <div style={{ fontSize: '32px', fontWeight: 900, fontFamily: 'monospace', color: isDark ? '#ffffff' : '#0f172a', margin: '12px 0' }}>
+                    15% <span style={{ fontSize: '14px', fontWeight: 500, color: isDark ? '#94a3b8' : '#64748b' }}>OFF MSRP</span>
                   </div>
-                  <ul style={{ margin: '16px 0 0 0', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '12px', color: '#475569' }}>
+                  <ul style={{ margin: '16px 0 0 0', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '12px', color: isDark ? '#cbd5e1' : '#475569' }}>
                     <li style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={14} style={{ color: '#10b981' }} /> Official Hanteo Certified Sales</li>
                     <li style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={14} style={{ color: '#10b981' }} /> Standard Export Carton Packing</li>
                     <li style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={14} style={{ color: '#10b981' }} /> Pre-order Benefits Guaranteed</li>
@@ -324,7 +337,19 @@ export default function B2bPage() {
               </div>
 
               {/* Tier 2 */}
-              <div style={{ backgroundColor: '#000000', color: '#ffffff', border: '2px solid #000000', padding: '28px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', position: 'relative' }} className="shadow-xl">
+              <div 
+                style={{ 
+                  backgroundColor: isDark ? '#18181B' : '#000000', 
+                  color: '#ffffff', 
+                  border: isDark ? '2px solid #3F3F46' : '2px solid #000000', 
+                  padding: '28px 24px', 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  justifyContent: 'space-between', 
+                  position: 'relative' 
+                }} 
+                className="shadow-xl"
+              >
                 <span style={{ position: 'absolute', top: '-10px', right: '16px', backgroundColor: '#38bdf8', color: '#000000', fontSize: '9px', fontFamily: 'monospace', fontWeight: 800, padding: '2px 8px', textTransform: 'uppercase' }}>
                   MOST POPULAR FOR FANCLUBS
                 </span>
@@ -348,18 +373,28 @@ export default function B2bPage() {
               </div>
 
               {/* Tier 3 */}
-              <div style={{ backgroundColor: '#ffffff', border: '1.5px solid #e2e8f0', padding: '28px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }} className="hover:border-black transition-all">
+              <div 
+                style={{ 
+                  backgroundColor: isDark ? '#121214' : '#ffffff', 
+                  border: isDark ? '1.5px solid #3F3F46' : '1.5px solid #e2e8f0', 
+                  padding: '28px 24px', 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  justifyContent: 'space-between' 
+                }} 
+                className="hover:border-black dark:hover:border-white transition-all"
+              >
                 <div>
-                  <span style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', backgroundColor: '#f1f5f9', color: '#0f172a', padding: '3px 8px', display: 'inline-block', marginBottom: '12px' }}>
+                  <span style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', backgroundColor: isDark ? '#1e293b' : '#f1f5f9', color: isDark ? '#38bdf8' : '#0f172a', padding: '3px 8px', display: 'inline-block', marginBottom: '12px' }}>
                     TIER 3 · ENTERPRISE DISTRIBUTOR
                   </span>
-                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '22px', fontWeight: 800, margin: '0 0 8px 0' }}>
+                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '22px', fontWeight: 800, margin: '0 0 8px 0', color: isDark ? '#ffffff' : '#0f172a' }}>
                     201+ Units
                   </h3>
-                  <div style={{ fontSize: '32px', fontWeight: 900, fontFamily: 'monospace', color: '#0f172a', margin: '12px 0' }}>
-                    35% <span style={{ fontSize: '14px', fontWeight: 500, color: '#64748b' }}>OFF MSRP</span>
+                  <div style={{ fontSize: '32px', fontWeight: 900, fontFamily: 'monospace', color: isDark ? '#ffffff' : '#0f172a', margin: '12px 0' }}>
+                    35% <span style={{ fontSize: '14px', fontWeight: 500, color: isDark ? '#94a3b8' : '#64748b' }}>OFF MSRP</span>
                   </div>
-                  <ul style={{ margin: '16px 0 0 0', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '12px', color: '#475569' }}>
+                  <ul style={{ margin: '16px 0 0 0', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '12px', color: isDark ? '#cbd5e1' : '#475569' }}>
                     <li style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={14} style={{ color: '#10b981' }} /> All Tier 2 Benefits Included</li>
                     <li style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={14} style={{ color: '#10b981' }} /> Dedicated 1-on-1 Account Manager</li>
                     <li style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={14} style={{ color: '#10b981' }} /> Direct Pallet Air / Sea Freight</li>
@@ -371,10 +406,18 @@ export default function B2bPage() {
           </div>
 
           {/* Quote Calculator & Request Form */}
-          <div style={{ maxWidth: '880px', margin: '0 auto', backgroundColor: '#ffffff', border: '2px solid #000000', boxShadow: '0 10px 30px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
-            
+          <div 
+            style={{ 
+              maxWidth: '880px', 
+              margin: '0 auto', 
+              backgroundColor: isDark ? '#121214' : '#ffffff', 
+              border: isDark ? '2px solid #3F3F46' : '2px solid #000000', 
+              boxShadow: isDark ? '0 10px 30px rgba(0,0,0,0.5)' : '0 10px 30px rgba(0,0,0,0.06)', 
+              overflow: 'hidden' 
+            }}
+          >
             {/* Header bar */}
-            <div style={{ backgroundColor: '#000000', color: '#ffffff', padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div style={{ backgroundColor: isDark ? '#18181B' : '#000000', color: '#ffffff', padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: isDark ? '1px solid #3F3F46' : 'none' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <FileText size={16} style={{ color: '#38bdf8' }} />
                 <span style={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
@@ -391,20 +434,20 @@ export default function B2bPage() {
                 <div style={{ width: '56px', height: '56px', borderRadius: '50%', backgroundColor: '#10b981', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
                   <Check size={28} />
                 </div>
-                <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '24px', fontWeight: 800, color: '#0f172a', margin: '0 0 8px 0' }}>
+                <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '24px', fontWeight: 800, color: isDark ? '#ffffff' : '#0f172a', margin: '0 0 8px 0' }}>
                   Wholesale Inquiry Successfully Dispatched!
                 </h3>
-                <p style={{ fontSize: '13px', color: '#64748b', maxWidth: '480px', margin: '0 auto 20px auto', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '13px', color: isDark ? '#cbd5e1' : '#64748b', maxWidth: '480px', margin: '0 auto 20px auto', lineHeight: 1.6 }}>
                   Thank you, <strong>{contactName || orgName}</strong>. Our dedicated B2B Wholesale account manager has received your inquiry for <strong>{quantity} units</strong> ({discountRate}% volume discount applied).
                 </p>
-                <div style={{ display: 'inline-block', backgroundColor: '#f8fafc', border: '1px solid #e2e8f0', padding: '8px 16px', fontSize: '12px', fontFamily: 'monospace', fontWeight: 800, color: '#0f172a', marginBottom: '24px' }}>
+                <div style={{ display: 'inline-block', backgroundColor: isDark ? '#18181B' : '#f8fafc', border: isDark ? '1px solid #3F3F46' : '1px solid #e2e8f0', padding: '8px 16px', fontSize: '12px', fontFamily: 'monospace', fontWeight: 800, color: isDark ? '#ffffff' : '#0f172a', marginBottom: '24px' }}>
                   REFERENCE QUOTE ID: #{submittedQuoteId}
                 </div>
                 <div>
                   <button
                     type="button"
                     onClick={() => setSubmittedQuoteId(null)}
-                    style={{ padding: '10px 24px', backgroundColor: '#000000', color: '#ffffff', border: 'none', fontSize: '11px', fontWeight: 800, fontFamily: 'monospace', textTransform: 'uppercase', cursor: 'pointer' }}
+                    style={{ padding: '10px 24px', backgroundColor: isDark ? '#ffffff' : '#000000', color: isDark ? '#000000' : '#ffffff', border: 'none', fontSize: '11px', fontWeight: 800, fontFamily: 'monospace', textTransform: 'uppercase', cursor: 'pointer' }}
                   >
                     Submit Another Inquiry
                   </button>
@@ -414,7 +457,7 @@ export default function B2bPage() {
               <form onSubmit={handleSubmitQuote} style={{ padding: '28px' }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: '#0f172a', display: 'block', marginBottom: '4px' }}>
+                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: isDark ? '#cbd5e1' : '#0f172a', display: 'block', marginBottom: '4px' }}>
                       ORGANIZATION / STORE / FANCLUB NAME *
                     </label>
                     <input
@@ -423,12 +466,21 @@ export default function B2bPage() {
                       placeholder="e.g. Seoul Pop Goods Ltd. / Vietnam Tokki Fan Club"
                       value={orgName}
                       onChange={(e) => setOrgName(e.target.value)}
-                      style={{ width: '100%', height: '40px', padding: '0 12px', fontSize: '12px', border: '1.5px solid #000000', outline: 'none' }}
+                      style={{ 
+                        width: '100%', 
+                        height: '40px', 
+                        padding: '0 12px', 
+                        fontSize: '12px', 
+                        backgroundColor: isDark ? '#18181B' : '#ffffff',
+                        color: isDark ? '#ffffff' : '#000000',
+                        border: isDark ? '1.5px solid #52525B' : '1.5px solid #000000', 
+                        outline: 'none' 
+                      }}
                     />
                   </div>
 
                   <div>
-                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: '#0f172a', display: 'block', marginBottom: '4px' }}>
+                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: isDark ? '#cbd5e1' : '#0f172a', display: 'block', marginBottom: '4px' }}>
                       CONTACT PERSON *
                     </label>
                     <input
@@ -437,14 +489,23 @@ export default function B2bPage() {
                       placeholder="e.g. Nguyen Minh Anh"
                       value={contactName}
                       onChange={(e) => setContactName(e.target.value)}
-                      style={{ width: '100%', height: '40px', padding: '0 12px', fontSize: '12px', border: '1.5px solid #000000', outline: 'none' }}
+                      style={{ 
+                        width: '100%', 
+                        height: '40px', 
+                        padding: '0 12px', 
+                        fontSize: '12px', 
+                        backgroundColor: isDark ? '#18181B' : '#ffffff',
+                        color: isDark ? '#ffffff' : '#000000',
+                        border: isDark ? '1.5px solid #52525B' : '1.5px solid #000000', 
+                        outline: 'none' 
+                      }}
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                   <div>
-                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: '#0f172a', display: 'block', marginBottom: '4px' }}>
+                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: isDark ? '#cbd5e1' : '#0f172a', display: 'block', marginBottom: '4px' }}>
                       BUSINESS EMAIL *
                     </label>
                     <input
@@ -453,12 +514,21 @@ export default function B2bPage() {
                       placeholder="partner@fandomstore.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      style={{ width: '100%', height: '40px', padding: '0 12px', fontSize: '12px', border: '1.5px solid #000000', outline: 'none' }}
+                      style={{ 
+                        width: '100%', 
+                        height: '40px', 
+                        padding: '0 12px', 
+                        fontSize: '12px', 
+                        backgroundColor: isDark ? '#18181B' : '#ffffff',
+                        color: isDark ? '#ffffff' : '#000000',
+                        border: isDark ? '1.5px solid #52525B' : '1.5px solid #000000', 
+                        outline: 'none' 
+                      }}
                     />
                   </div>
 
                   <div>
-                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: '#0f172a', display: 'block', marginBottom: '4px' }}>
+                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: isDark ? '#cbd5e1' : '#0f172a', display: 'block', marginBottom: '4px' }}>
                       PHONE / WHATSAPP / ZALO
                     </label>
                     <input
@@ -466,19 +536,37 @@ export default function B2bPage() {
                       placeholder="+84 90 123 4567"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      style={{ width: '100%', height: '40px', padding: '0 12px', fontSize: '12px', border: '1.5px solid #000000', outline: 'none' }}
+                      style={{ 
+                        width: '100%', 
+                        height: '40px', 
+                        padding: '0 12px', 
+                        fontSize: '12px', 
+                        backgroundColor: isDark ? '#18181B' : '#ffffff',
+                        color: isDark ? '#ffffff' : '#000000',
+                        border: isDark ? '1.5px solid #52525B' : '1.5px solid #000000', 
+                        outline: 'none' 
+                      }}
                     />
                   </div>
 
                   <div>
-                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: '#0f172a', display: 'block', marginBottom: '4px' }}>
+                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: isDark ? '#cbd5e1' : '#0f172a', display: 'block', marginBottom: '4px' }}>
                       DESTINATION COUNTRY
                     </label>
                     <input
                       type="text"
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
-                      style={{ width: '100%', height: '40px', padding: '0 12px', fontSize: '12px', border: '1.5px solid #000000', outline: 'none' }}
+                      style={{ 
+                        width: '100%', 
+                        height: '40px', 
+                        padding: '0 12px', 
+                        fontSize: '12px', 
+                        backgroundColor: isDark ? '#18181B' : '#ffffff',
+                        color: isDark ? '#ffffff' : '#000000',
+                        border: isDark ? '1.5px solid #52525B' : '1.5px solid #000000', 
+                        outline: 'none' 
+                      }}
                     />
                   </div>
                 </div>
@@ -486,13 +574,22 @@ export default function B2bPage() {
                 {/* Target Category & Quantity Slider */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div>
-                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: '#0f172a', display: 'block', marginBottom: '4px' }}>
+                    <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: isDark ? '#cbd5e1' : '#0f172a', display: 'block', marginBottom: '4px' }}>
                       TARGET INVENTORY CATEGORY
                     </label>
                     <select
                       value={targetCategory}
                       onChange={(e) => setTargetCategory(e.target.value)}
-                      style={{ width: '100%', height: '40px', padding: '0 12px', fontSize: '12px', border: '1.5px solid #000000', outline: 'none', backgroundColor: '#ffffff' }}
+                      style={{ 
+                        width: '100%', 
+                        height: '40px', 
+                        padding: '0 12px', 
+                        fontSize: '12px', 
+                        border: isDark ? '1.5px solid #52525B' : '1.5px solid #000000', 
+                        outline: 'none', 
+                        backgroundColor: isDark ? '#18181B' : '#ffffff',
+                        color: isDark ? '#ffffff' : '#000000'
+                      }}
                     >
                       <option value="Gaming Arena Gear & Peripheral Wholesale">Gaming Arena Gear & Peripheral Wholesale</option>
                       <option value="Manga Tankōbon & Boxsets Distribution">Manga Tankōbon & Boxsets Distribution</option>
@@ -508,10 +605,10 @@ export default function B2bPage() {
 
                   <div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                      <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: '#0f172a' }}>
+                      <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: isDark ? '#cbd5e1' : '#0f172a' }}>
                         ESTIMATED ORDER VOLUME
                       </label>
-                      <span style={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: 800, color: '#000000' }}>
+                      <span style={{ fontSize: '11px', fontFamily: 'monospace', fontWeight: 800, color: isDark ? '#38bdf8' : '#000000' }}>
                         {quantity} UNITS ({discountRate}% OFF)
                       </span>
                     </div>
@@ -522,14 +619,14 @@ export default function B2bPage() {
                       step={5}
                       value={quantity}
                       onChange={(e) => setQuantity(Number(e.target.value))}
-                      style={{ width: '100%', accentColor: '#000000', height: '40px' }}
+                      style={{ width: '100%', accentColor: isDark ? '#38bdf8' : '#000000', height: '40px' }}
                     />
                   </div>
                 </div>
 
                 {/* Special Instructions */}
                 <div style={{ marginBottom: '20px' }}>
-                  <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: '#0f172a', display: 'block', marginBottom: '4px' }}>
+                  <label style={{ fontSize: '10px', fontFamily: 'monospace', fontWeight: 800, textTransform: 'uppercase', color: isDark ? '#cbd5e1' : '#0f172a', display: 'block', marginBottom: '4px' }}>
                     SPECIFIC ARTISTS, TITLES, OR CUSTOM PACKAGING REQUIREMENTS
                   </label>
                   <textarea
@@ -537,7 +634,16 @@ export default function B2bPage() {
                     placeholder="e.g. Looking for 30 copies of NewJeans 'Get Up' Bunny Beach Bag ver. and 20 aespa 'Armageddon' CDP..."
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
-                    style={{ width: '100%', padding: '10px 12px', fontSize: '12px', border: '1.5px solid #000000', outline: 'none', resize: 'vertical' }}
+                    style={{ 
+                      width: '100%', 
+                      padding: '10px 12px', 
+                      fontSize: '12px', 
+                      backgroundColor: isDark ? '#18181B' : '#ffffff',
+                      color: isDark ? '#ffffff' : '#000000',
+                      border: isDark ? '1.5px solid #52525B' : '1.5px solid #000000', 
+                      outline: 'none', 
+                      resize: 'vertical' 
+                    }}
                   />
                 </div>
 
@@ -547,8 +653,8 @@ export default function B2bPage() {
                   style={{
                     width: '100%',
                     height: '46px',
-                    backgroundColor: '#000000',
-                    color: '#ffffff',
+                    backgroundColor: isDark ? '#ffffff' : '#000000',
+                    color: isDark ? '#000000' : '#ffffff',
                     border: 'none',
                     fontSize: '11px',
                     fontWeight: 800,
@@ -561,7 +667,7 @@ export default function B2bPage() {
                     justifyContent: 'center',
                     gap: '8px',
                   }}
-                  className="hover:bg-neutral-800"
+                  className={isDark ? "hover:bg-neutral-200" : "hover:bg-neutral-800"}
                 >
                   <Send size={14} />
                   <span>Request Wholesale Quotation & Chart Verification</span>

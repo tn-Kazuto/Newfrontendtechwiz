@@ -426,7 +426,11 @@ const mockMerchList: MerchItem[] = [
   }
 ];
 
+import { useDomainTheme } from '../../context/DomainContext';
+
 export default function MdPage() {
+  const { themeMode } = useDomainTheme();
+  const isDark = themeMode === 'dark';
   const { formatPrice, addToCart, setIsCartOpen } = useCartWishlist();
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -519,7 +523,7 @@ export default function MdPage() {
 
       <main className="flex-1">
         {/* Unified Breadcrumbs Navigation */}
-        <div className="bg-slate-50 border-b border-slate-200">
+        <div className={isDark ? "bg-[#0A0A0A] border-b border-[#27272A]" : "bg-slate-50 border-b border-slate-200"}>
           <Breadcrumbs
             items={[
               { label: 'Official Merch & Collectibles (MD & Merch)', isActive: true }
@@ -725,7 +729,7 @@ export default function MdPage() {
         {/* MD Content Section */}
         <section className="py-14 px-4 sm:px-7 max-w-[1440px] mx-auto">
           {/* Header & Filter row */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '20px', borderBottom: '1px solid #f1f5f9', marginBottom: '28px', gap: '20px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '20px', borderBottom: isDark ? '1px solid #27272A' : '1px solid #f1f5f9', marginBottom: '28px', gap: '20px', flexWrap: 'wrap' }}>
             
             {/* Category tabs */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '24px', overflowX: 'auto' }}>
@@ -742,10 +746,10 @@ export default function MdPage() {
                       fontWeight: isActive ? 800 : 600,
                       letterSpacing: '0.12em',
                       textTransform: 'uppercase',
-                      color: isActive ? '#0f172a' : '#94a3b8',
+                      color: isActive ? (isDark ? '#38bdf8' : '#0f172a') : '#94a3b8',
                       background: 'none',
                       border: 'none',
-                      borderBottom: isActive ? '2px solid #0f172a' : '2px solid transparent',
+                      borderBottom: isActive ? (isDark ? '2px solid #38bdf8' : '2px solid #0f172a') : '2px solid transparent',
                       cursor: 'pointer',
                       whiteSpace: 'nowrap',
                       display: 'flex',
@@ -754,7 +758,7 @@ export default function MdPage() {
                     }}
                   >
                     <span>{c.label}</span>
-                    <span style={{ fontSize: '10px', fontFamily: 'monospace', color: isActive ? '#000000' : '#cbd5e1', fontWeight: 700 }}>
+                    <span style={{ fontSize: '10px', fontFamily: 'monospace', color: isActive ? (isDark ? '#ffffff' : '#000000') : '#cbd5e1', fontWeight: 700 }}>
                       ({c.count})
                     </span>
                   </button>
@@ -777,9 +781,10 @@ export default function MdPage() {
                   paddingRight: '12px',
                   fontSize: '11px',
                   fontFamily: 'inherit',
-                  border: '1.5px solid #000000',
+                  border: isDark ? '1.5px solid #52525B' : '1.5px solid #000000',
                   outline: 'none',
-                  backgroundColor: '#ffffff',
+                  backgroundColor: isDark ? '#18181B' : '#ffffff',
+                  color: isDark ? '#ffffff' : '#000000',
                 }}
               />
             </div>
@@ -794,8 +799,8 @@ export default function MdPage() {
                 <div
                   key={item.id}
                   style={{
-                    backgroundColor: '#ffffff',
-                    border: '1.5px solid #e2e8f0',
+                    backgroundColor: isDark ? '#121214' : '#ffffff',
+                    border: isDark ? '1.5px solid #3F3F46' : '1.5px solid #e2e8f0',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
@@ -803,7 +808,7 @@ export default function MdPage() {
                     position: 'relative',
                     overflow: 'hidden',
                   }}
-                  className="hover:border-black hover:shadow-xl group"
+                  className="hover:border-black dark:hover:border-white hover:shadow-xl group"
                 >
                   <div>
                     {/* Image Box */}
@@ -840,17 +845,17 @@ export default function MdPage() {
                       <span style={{ fontSize: '9px', fontFamily: 'monospace', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 800, display: 'block', marginBottom: '2px' }}>
                         OFFICIAL MD · {item.category}
                       </span>
-                      <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '15px', fontWeight: 800, color: '#0f172a', margin: '0 0 8px 0', lineHeight: 1.3 }}>
+                      <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '15px', fontWeight: 800, color: isDark ? '#ffffff' : '#0f172a', margin: '0 0 8px 0', lineHeight: 1.3 }}>
                         {item.name}
                       </h3>
-                      <p style={{ fontSize: '11px', color: '#64748b', lineHeight: 1.5, margin: '0 0 10px 0' }} className="line-clamp-2">
+                      <p style={{ fontSize: '11px', color: isDark ? '#cbd5e1' : '#64748b', lineHeight: 1.5, margin: '0 0 10px 0' }} className="line-clamp-2">
                         {item.description}
                       </p>
 
                       {/* Features bullets */}
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginBottom: '8px' }}>
                         {item.features.slice(0, 2).map((f, i) => (
-                          <span key={i} style={{ fontSize: '9px', fontFamily: 'monospace', backgroundColor: '#f8fafc', border: '1px solid #e2e8f0', padding: '2px 5px', color: '#475569' }}>
+                          <span key={i} style={{ fontSize: '9px', fontFamily: 'monospace', backgroundColor: isDark ? '#1e293b' : '#f8fafc', border: isDark ? '1px solid #334155' : '1px solid #e2e8f0', padding: '2px 5px', color: isDark ? '#cbd5e1' : '#475569' }}>
                             ✦ {f}
                           </span>
                         ))}
@@ -859,10 +864,10 @@ export default function MdPage() {
                   </div>
 
                   {/* Price & Action Footer */}
-                  <div style={{ padding: '12px 18px', borderTop: '1px solid #f1f5f9', backgroundColor: '#fafafa', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ padding: '12px 18px', borderTop: isDark ? '1px solid #3F3F46' : '1px solid #f1f5f9', backgroundColor: isDark ? '#18181B' : '#fafafa', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div>
                       <span style={{ fontSize: '8px', fontFamily: 'monospace', color: '#94a3b8', textTransform: 'uppercase', display: 'block' }}>OFFICIAL PRICE</span>
-                      <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '17px', fontWeight: 800, color: '#0f172a' }}>
+                      <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '17px', fontWeight: 800, color: isDark ? '#ffffff' : '#0f172a' }}>
                         {formatPrice(item.priceUSD, item.priceVND)}
                       </span>
                     </div>
@@ -873,10 +878,10 @@ export default function MdPage() {
                       style={{
                         height: '36px',
                         padding: '0 14px',
-                        backgroundColor: isItemAdded ? '#10b981' : '#000000',
-                        color: '#ffffff',
+                        backgroundColor: isItemAdded ? '#10b981' : (isDark ? '#ffffff' : '#000000'),
+                        color: isItemAdded ? '#ffffff' : (isDark ? '#000000' : '#ffffff'),
                         border: '1.5px solid',
-                        borderColor: isItemAdded ? '#10b981' : '#000000',
+                        borderColor: isItemAdded ? '#10b981' : (isDark ? '#ffffff' : '#000000'),
                         fontSize: '11px',
                         fontWeight: 800,
                         fontFamily: 'monospace',
@@ -888,7 +893,7 @@ export default function MdPage() {
                         gap: '6px',
                         transition: 'all 0.2s ease',
                       }}
-                      className="hover:bg-neutral-800"
+                      className={isDark ? "hover:bg-neutral-200" : "hover:bg-neutral-800"}
                     >
                       {isItemAdded ? (
                         <>

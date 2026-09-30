@@ -18,6 +18,7 @@ import { useCartWishlist } from '../../context/CartWishlistContext';
 import { Sparkles, Users, ArrowRight, ShieldCheck, Disc } from 'lucide-react';
 
 import { useActiveFandom, persistFandomTheme } from '../../utils/fandomTheme';
+import { useDomainTheme } from '../../context/DomainContext';
 
 const FANDOM_DOCK_TABS = [
   { id: 'all', label: 'ALL FANDOMS', theme: 'all', category: 'All Fandoms' },
@@ -32,6 +33,8 @@ const FANDOM_DOCK_TABS = [
 ];
 
 export default function ArtistPage() {
+  const { themeMode } = useDomainTheme();
+  const isDark = themeMode === 'dark';
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(false);
@@ -122,15 +125,15 @@ export default function ArtistPage() {
                     alignItems: 'center', 
                     gap: '6px', 
                     padding: '4px 10px', 
-                    backgroundColor: isCinema ? '#27272a' : isGaming ? '#000000' : isAnime ? '#000000' : isCosplay ? '#121212' : '#ffffff', 
-                    color: isCinema ? '#d4af37' : isGaming ? '#00f0ff' : isAnime ? '#a3e635' : isCosplay ? '#ffffff' : isManga ? '#e11d48' : '#d91470', 
+                    backgroundColor: isDark ? '#18181b' : (isCinema ? '#27272a' : isGaming ? '#000000' : isAnime ? '#000000' : isCosplay ? '#121212' : '#ffffff'), 
+                    color: isCinema ? '#d4af37' : isGaming ? '#00f0ff' : isAnime ? '#a3e635' : isCosplay ? '#ffffff' : isManga ? '#e11d48' : isDark ? '#ffffff' : '#d91470', 
                     fontSize: '10px', 
                     fontFamily: isGaming ? 'var(--font-mono)' : 'monospace', 
                     fontWeight: 800, 
                     textTransform: 'uppercase', 
                     marginBottom: '12px', 
-                    border: `1.5px solid ${isCinema ? '#d4af37' : isGaming ? '#00f0ff' : isAnime ? '#000000' : isCosplay ? '#D02020' : isManga ? '#e11d48' : '#000000'}`,
-                    boxShadow: isKpop ? '2px 2px 0px #000000' : 'none',
+                    border: `1.5px solid ${isDark ? '#3F3F46' : (isCinema ? '#d4af37' : isGaming ? '#00f0ff' : isAnime ? '#000000' : isCosplay ? '#D02020' : isManga ? '#e11d48' : '#000000')}`,
+                    boxShadow: isKpop && !isDark ? '2px 2px 0px #000000' : 'none',
                   }}
                 >
                   <Users style={{ width: '12px', height: '12px' }} />
@@ -144,7 +147,7 @@ export default function ArtistPage() {
                     lineHeight: 1.1,
                     letterSpacing: isManga ? '0.02em' : '-0.02em',
                     margin: '0 0 12px 0',
-                    color: (isCinema || isTv) ? '#ffffff' : '#000000',
+                    color: isDark ? '#ffffff' : ((isCinema || isTv) ? '#ffffff' : '#000000'),
                   }}
                 >
                   {isGaming ? (
@@ -167,7 +170,7 @@ export default function ArtistPage() {
                     <>All Artists, Groups <em style={{ fontWeight: 400, color: '#ffd60a', fontStyle: 'italic' }}>&amp; Canonical Character Lore</em></>
                   )}
                 </h1>
-                <p style={{ fontSize: '14px', color: (isCinema || isTv) ? '#94a3b8' : '#475569', lineHeight: 1.6, margin: 0, fontWeight: 400 }}>
+                <p style={{ fontSize: '14px', color: isDark ? '#cbd5e1' : ((isCinema || isTv) ? '#94a3b8' : '#475569'), lineHeight: 1.6, margin: 0, fontWeight: 400 }}>
                   {isGaming 
                     ? 'Dive into comprehensive dossiers of legendary League of Legends World Champions (T1 & Faker), HoYo-MiX orchestral composers, and Elden Ring dark fantasy demigods.'
                     : isManga
@@ -190,13 +193,13 @@ export default function ArtistPage() {
 
               {/* Quick Stat Badges */}
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <div style={{ padding: '14px 20px', backgroundColor: isCinema ? '#18181b' : '#ffffff', border: `2px solid ${isCinema ? '#d4af37' : '#000000'}`, boxShadow: (isCinema || isTv) ? 'none' : '3px 3px 0px #000000', minWidth: '140px' }}>
-                  <span style={{ fontSize: '9px', fontFamily: 'monospace', color: isCinema ? '#94a3b8' : '#64748b', textTransform: 'uppercase', display: 'block', fontWeight: 700 }}>CATEGORY</span>
+                <div style={{ padding: '14px 20px', backgroundColor: isDark ? '#18181b' : (isCinema ? '#18181b' : '#ffffff'), border: `2px solid ${isDark ? '#3F3F46' : (isCinema ? '#d4af37' : '#000000')}`, boxShadow: (isCinema || isTv || isDark) ? 'none' : '3px 3px 0px #000000', minWidth: '140px' }}>
+                  <span style={{ fontSize: '9px', fontFamily: 'monospace', color: isDark ? '#94a3b8' : (isCinema ? '#94a3b8' : '#64748b'), textTransform: 'uppercase', display: 'block', fontWeight: 700 }}>CATEGORY</span>
                   <span style={{ fontSize: '20px', fontWeight: 900, fontFamily: 'monospace', color: isGaming ? '#0891b2' : isManga ? '#e11d48' : isAnime ? '#4d7c0f' : isCosplay ? '#D02020' : isComics ? '#dc2626' : isCinema ? '#d4af37' : isTv ? '#c084fc' : '#d91470' }}>{category.toUpperCase()}</span>
                 </div>
-                <div style={{ padding: '14px 20px', backgroundColor: isCinema ? '#18181b' : '#ffffff', border: `2px solid ${isCinema ? '#d4af37' : '#000000'}`, boxShadow: (isCinema || isTv) ? 'none' : '3px 3px 0px #000000', minWidth: '140px' }}>
-                  <span style={{ fontSize: '9px', fontFamily: 'monospace', color: isCinema ? '#94a3b8' : '#64748b', textTransform: 'uppercase', display: 'block', fontWeight: 700 }}>DOSSIERS</span>
-                  <span style={{ fontSize: '20px', fontWeight: 900, fontFamily: 'monospace', color: isCinema ? '#ffffff' : '#000000' }}>100% CANON</span>
+                <div style={{ padding: '14px 20px', backgroundColor: isDark ? '#18181b' : (isCinema ? '#18181b' : '#ffffff'), border: `2px solid ${isDark ? '#3F3F46' : (isCinema ? '#d4af37' : '#000000')}`, boxShadow: (isCinema || isTv || isDark) ? 'none' : '3px 3px 0px #000000', minWidth: '140px' }}>
+                  <span style={{ fontSize: '9px', fontFamily: 'monospace', color: isDark ? '#94a3b8' : (isCinema ? '#94a3b8' : '#64748b'), textTransform: 'uppercase', display: 'block', fontWeight: 700 }}>DOSSIERS</span>
+                  <span style={{ fontSize: '20px', fontWeight: 900, fontFamily: 'monospace', color: isDark ? '#ffffff' : (isCinema ? '#ffffff' : '#000000') }}>100% CANON</span>
                 </div>
               </div>
             </div>
@@ -230,16 +233,16 @@ export default function ArtistPage() {
                     data-active={isActive ? 'true' : 'false'}
                     style={{ 
                       borderRadius: '0px',
-                      backgroundColor: isActive ? '#ffd60a' : '#ffffff',
-                      color: '#000000',
-                      borderColor: '#000000',
+                      backgroundColor: isActive ? '#ffd60a' : (isDark ? '#1e293b' : '#ffffff'),
+                      color: isActive ? '#000000' : (isDark ? '#f8fafc' : '#000000'),
+                      borderColor: isDark ? '#334155' : '#000000',
                     }}
                     aria-label={`Switch to ${tab.label} category`}
                     aria-current={isActive ? 'page' : undefined}
                     className="dock-tab-btn px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs font-mono font-black tracking-wider sm:tracking-widest uppercase transition-all duration-100 cursor-pointer flex items-center gap-1.5 whitespace-nowrap min-h-[42px] border-2 shadow-[2px_2px_0px_#000000] hover:translate-y-[-1px] active:translate-y-[1px]"
                   >
                     {isActive && <span style={{ color: '#000000', fontWeight: 900 }}>★</span>}
-                    <span style={{ color: '#000000', fontWeight: 800 }}>{tab.label}</span>
+                    <span style={{ color: isActive ? '#000000' : (isDark ? '#ffffff' : '#000000'), fontWeight: 800 }}>{tab.label}</span>
                   </button>
                 );
               })}

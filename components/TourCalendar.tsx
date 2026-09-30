@@ -41,7 +41,8 @@ interface TourCalendarProps {
 
 export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: propActiveCategory }) => {
   const { formatPrice } = useCartWishlist();
-  const { activeConfig, activeSubCategory, selectSubCategory } = useDomainTheme();
+  const { activeConfig, activeSubCategory, selectSubCategory, themeMode } = useDomainTheme();
+  const isDark = themeMode === 'dark';
 
   // Filters State
   const [selectedCategory, setSelectedCategory] = useState<string>(() => {
@@ -240,11 +241,11 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
     <section
       id="tours"
       style={{
-        backgroundColor: '#ffffff',
-        color: '#0f172a',
+        backgroundColor: isDark ? '#0A0A0A' : '#ffffff',
+        color: isDark ? '#FFFFFF' : '#0f172a',
         scrollMarginTop: '110px',
       }}
-      className="py-12 md:py-20 w-full border-t border-slate-100"
+      className={`py-12 md:py-20 w-full border-t ${isDark ? 'border-[#27272A]' : 'border-slate-100'}`}
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
 
@@ -254,24 +255,24 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
           {/* Eyebrow & Platform Badges */}
           <div className="flex items-center justify-between gap-4 flex-wrap mb-4">
             <div className="flex items-center gap-2">
-              <span className="w-5 h-0.5 bg-black inline-block rounded-full" />
-              <div className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-500 font-mono">
-                <Ticket className="w-3.5 h-3.5 text-black" />
+              <span className={`w-5 h-0.5 ${isDark ? 'bg-white' : 'bg-black'} inline-block rounded-full`} />
+              <div className={`inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest ${isDark ? 'text-slate-400' : 'text-slate-500'} font-mono`}>
+                <Ticket className={`w-3.5 h-3.5 ${isDark ? 'text-white' : 'text-black'}`} />
                 <span>Global Fandom Events &amp; Official Schedules</span>
               </div>
             </div>
 
             {/* Platform Reference Pills */}
             <div className="flex items-center gap-2 flex-wrap text-[10px] font-mono font-bold uppercase">
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded">
+              <span className={`inline-flex items-center gap-1 px-2.5 py-1 ${isDark ? 'bg-[#18181B] text-emerald-400 border border-emerald-900/60' : 'bg-emerald-50 text-emerald-700 border border-emerald-200'} rounded`}>
                 <Radio className="w-3 h-3 text-emerald-500 animate-pulse" />
                 <span>Weverse Concert &amp; Live</span>
               </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-pink-50 text-pink-700 border border-pink-200 rounded">
+              <span className={`inline-flex items-center gap-1 px-2.5 py-1 ${isDark ? 'bg-[#18181B] text-pink-400 border border-pink-900/60' : 'bg-pink-50 text-pink-700 border border-pink-200'} rounded`}>
                 <Sparkles className="w-3 h-3 text-pink-500" />
                 <span>Withmuu Lucky Draw &amp; Fansign</span>
               </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-purple-50 text-purple-700 border border-purple-200 rounded">
+              <span className={`inline-flex items-center gap-1 px-2.5 py-1 ${isDark ? 'bg-[#18181B] text-purple-400 border border-purple-900/60' : 'bg-purple-50 text-purple-700 border border-purple-200'} rounded`}>
                 <Heart className="w-3 h-3 text-purple-500 fill-purple-500" />
                 <span>Mubeat Voting &amp; Billboard</span>
               </span>
@@ -279,7 +280,7 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
           </div>
 
           {/* Heading Row: Serif Title + Search */}
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-5 border-b border-slate-200">
+          <div className={`flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-5 border-b ${isDark ? 'border-[#27272A]' : 'border-slate-200'}`}>
             <div>
               <h2
                 style={{
@@ -287,33 +288,33 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                   fontSize: 'clamp(28px, 3.2vw, 44px)',
                   lineHeight: 1.15,
                   fontWeight: 800,
-                  color: '#0f172a',
+                  color: isDark ? '#FFFFFF' : '#0f172a',
                   letterSpacing: '-0.02em',
                   margin: 0,
                 }}
               >
-                World Tours, Fansigns <em className="font-normal text-slate-500 italic font-serif">&amp; Fandom Voting</em>
+                World Tours, Fansigns <em className={`font-normal ${isDark ? 'text-slate-400' : 'text-slate-500'} italic font-serif`}>&amp; Fandom Voting</em>
               </h2>
-              <p className="text-[13px] text-slate-500 mt-2 font-light leading-relaxed max-w-2xl">
+              <p className={`text-[13px] ${isDark ? 'text-slate-300' : 'text-slate-500'} mt-2 font-light leading-relaxed max-w-2xl`}>
                 Certified box office stadium tours (Weverse), authentic unreleased photocard lucky draws &amp; 1:1 video calls (Withmuu), and music show chart votes &amp; subway billboards (Mubeat).
               </p>
             </div>
 
             {/* Keyword Search Input */}
             <div className="relative min-w-[260px] max-w-md w-full lg:w-auto">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+              <Search className={`w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 ${isDark ? 'text-slate-400' : 'text-slate-400'}`} />
               <input
                 type="text"
                 value={searchFilter}
                 onChange={(e) => setSearchFilter(e.target.value)}
                 placeholder="Search artist, tour, lucky draw, city..."
-                className="w-full pl-9 pr-8 py-2 text-xs font-medium bg-slate-50 border border-slate-300 rounded focus:outline-none focus:border-black transition-colors"
+                className={`w-full pl-9 pr-8 py-2 text-xs font-medium ${isDark ? 'bg-[#18181B] text-white border border-[#52525B] focus:border-white placeholder:text-slate-500' : 'bg-slate-50 border border-slate-300 focus:border-black'} rounded focus:outline-none transition-colors`}
               />
               {searchFilter && (
                 <button
                   type="button"
                   onClick={() => setSearchFilter('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-black cursor-pointer text-xs"
+                  className={`absolute right-2.5 top-1/2 -translate-y-1/2 ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-400 hover:text-black'} cursor-pointer text-xs`}
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>
@@ -522,17 +523,17 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                 <div
                   key={event.id}
                   style={{
-                    backgroundColor: '#ffffff',
-                    border: '1.5px solid #e2e8f0',
+                    backgroundColor: isDark ? '#121214' : '#ffffff',
+                    border: `1.5px solid ${isDark ? '#3F3F46' : '#e2e8f0'}`,
                     transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     position: 'relative',
                     overflow: 'hidden',
-                    boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
+                    boxShadow: isDark ? 'none' : '0 2px 8px rgba(0,0,0,0.03)',
                   }}
-                  className="hover:border-black hover:shadow-xl group"
+                  className={`hover:border-black dark:hover:border-white ${isDark ? '' : 'hover:shadow-xl'} group`}
                 >
                   {/* ---------- TOP SECTION: Atmosphere Banner & Badges ---------- */}
                   <div>
@@ -701,7 +702,7 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                       style={{
                         position: 'relative',
                         height: '18px',
-                        backgroundColor: '#ffffff',
+                        backgroundColor: isDark ? '#121214' : '#ffffff',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -717,9 +718,9 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                           width: '18px',
                           height: '18px',
                           borderRadius: '50%',
-                          backgroundColor: '#ffffff',
-                          border: '1.5px solid #e2e8f0',
-                          boxShadow: 'inset -2px 0 3px rgba(0,0,0,0.06)',
+                          backgroundColor: isDark ? '#0A0A0A' : '#ffffff',
+                          border: `1.5px solid ${isDark ? '#3F3F46' : '#e2e8f0'}`,
+                          boxShadow: isDark ? 'none' : 'inset -2px 0 3px rgba(0,0,0,0.06)',
                           zIndex: 10,
                         }}
                       />
@@ -732,9 +733,9 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                           width: '18px',
                           height: '18px',
                           borderRadius: '50%',
-                          backgroundColor: '#ffffff',
-                          border: '1.5px solid #e2e8f0',
-                          boxShadow: 'inset 2px 0 3px rgba(0,0,0,0.06)',
+                          backgroundColor: isDark ? '#0A0A0A' : '#ffffff',
+                          border: `1.5px solid ${isDark ? '#3F3F46' : '#e2e8f0'}`,
+                          boxShadow: isDark ? 'none' : 'inset 2px 0 3px rgba(0,0,0,0.06)',
                           zIndex: 10,
                         }}
                       />
@@ -743,7 +744,7 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                         style={{
                           width: '100%',
                           margin: '0 16px',
-                          borderTop: '1.5px dashed #cbd5e1',
+                          borderTop: `1.5px dashed ${isDark ? '#3F3F46' : '#cbd5e1'}`,
                         }}
                       />
                     </div>
@@ -758,8 +759,8 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                         <div
                           style={{
                             width: '54px',
-                            border: '1.5px solid #000000',
-                            backgroundColor: '#ffffff',
+                            border: `1.5px solid ${isDark ? '#52525B' : '#000000'}`,
+                            backgroundColor: isDark ? '#18181B' : '#ffffff',
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -772,7 +773,7 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                           <span
                             style={{
                               width: '100%',
-                              backgroundColor: '#000000',
+                              backgroundColor: isDark ? '#FF3D00' : '#000000',
                               color: '#ffffff',
                               fontSize: '9px',
                               fontFamily: 'monospace',
@@ -790,7 +791,7 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                               fontFamily: 'monospace',
                               lineHeight: 1.1,
                               padding: '4px 0 2px 0',
-                              color: '#0f172a',
+                              color: isDark ? '#FFFFFF' : '#0f172a',
                             }}
                           >
                             {dateParts.day}
@@ -799,7 +800,7 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                             style={{
                               fontSize: '8px',
                               fontFamily: 'monospace',
-                              color: '#64748b',
+                              color: isDark ? '#94A3B8' : '#64748b',
                               paddingBottom: '2px',
                             }}
                           >
@@ -810,33 +811,33 @@ export const TourCalendar: React.FC<TourCalendarProps> = ({ activeCategory: prop
                         {/* Venue & Location Description */}
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '3px' }}>
-                            <Calendar style={{ width: '12px', height: '12px', color: '#0f172a', flexShrink: 0 }} />
-                            <span style={{ fontSize: '11px', fontWeight: 700, color: '#0f172a', fontFamily: 'monospace' }}>
+                            <Calendar style={{ width: '12px', height: '12px', color: isDark ? '#CBD5E1' : '#0f172a', flexShrink: 0 }} />
+                            <span style={{ fontSize: '11px', fontWeight: 700, color: isDark ? '#FFFFFF' : '#0f172a', fontFamily: 'monospace' }}>
                               {event.date}
                             </span>
                           </div>
 
                           <div style={{ display: 'flex', alignItems: 'flex-start', gap: '5px', marginBottom: '2px' }}>
-                            <MapPin style={{ width: '12px', height: '12px', color: '#0f172a', flexShrink: 0, marginTop: '2px' }} />
-                            <span style={{ fontSize: '12px', fontWeight: 800, color: '#0f172a', lineHeight: 1.3 }} className="truncate block">
+                            <MapPin style={{ width: '12px', height: '12px', color: isDark ? '#CBD5E1' : '#0f172a', flexShrink: 0, marginTop: '2px' }} />
+                            <span style={{ fontSize: '12px', fontWeight: 800, color: isDark ? '#FFFFFF' : '#0f172a', lineHeight: 1.3 }} className="truncate block">
                               {event.venue}
                             </span>
                           </div>
 
-                          <div style={{ fontSize: '11px', color: '#64748b', paddingLeft: '17px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <div style={{ fontSize: '11px', color: isDark ? '#CBD5E1' : '#64748b', paddingLeft: '17px', display: 'flex', alignItems: 'center', gap: '6px' }}>
                             <span>{event.city}, {event.country}</span>
                             <a
                               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.mapQuery)}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{
-                                color: '#94a3b8',
+                                color: isDark ? '#94A3B8' : '#94a3b8',
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 textDecoration: 'none',
                               }}
                               title="Open Google Maps"
-                              className="hover:text-black transition-colors"
+                              className={`hover:text-black dark:hover:text-white transition-colors`}
                             >
                               <ArrowUpRight style={{ width: '11px', height: '11px' }} />
                             </a>

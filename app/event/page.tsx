@@ -18,6 +18,7 @@ import { useCartWishlist } from '../../context/CartWishlistContext';
 import { EventHeroBanner } from '../../components/EventHeroBanner';
 import { LocationAwareEventExplorer } from '../../components/LocationAwareEventExplorer';
 import { useActiveFandom } from '../../utils/fandomTheme';
+import { useDomainTheme } from '../../context/DomainContext';
 import { 
   Ticket, 
   MapPin, 
@@ -41,6 +42,8 @@ import {
 } from 'lucide-react';
 
 export default function EventPage() {
+  const { themeMode } = useDomainTheme();
+  const isDark = themeMode === 'dark';
   const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isAdminOpen, setIsAdminOpen] = useState(false);
@@ -94,10 +97,10 @@ export default function EventPage() {
         {/* Dynamic Fandom Guidelines & Ecosystem FAQ */}
         <section 
           style={{ 
-            backgroundColor: isCinema ? '#09090b' : isManga ? '#fdfbf7' : isGaming ? '#050505' : '#f8fafc', 
-            borderTop: isCinema ? '1px solid #d4af37' : isManga ? '2px solid #2d2d2d' : '1px solid #e2e8f0', 
+            backgroundColor: isDark ? '#090d16' : (isCinema ? '#09090b' : isManga ? '#fdfbf7' : isGaming ? '#050505' : '#f8fafc'), 
+            borderTop: isDark ? '1px solid #3F3F46' : (isCinema ? '1px solid #d4af37' : isManga ? '2px solid #2d2d2d' : '1px solid #e2e8f0'), 
             padding: '64px 24px',
-            color: isCinema || isGaming ? '#ffffff' : '#0f172a'
+            color: isDark ? '#ffffff' : (isCinema || isGaming ? '#ffffff' : '#0f172a')
           }}
         >
           <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
@@ -109,7 +112,7 @@ export default function EventPage() {
                   fontWeight: 800, 
                   textTransform: 'uppercase', 
                   letterSpacing: '0.2em', 
-                  color: isCinema ? '#d4af37' : isAnime ? '#84cc16' : isCosplay ? '#D02020' : '#94a3b8' 
+                  color: isCinema ? '#d4af37' : isAnime ? '#84cc16' : isCosplay ? '#D02020' : isDark ? '#38bdf8' : '#94a3b8' 
                 }}
               >
                 {category.toUpperCase()} ECOSYSTEM PROTOCOLS
@@ -119,7 +122,7 @@ export default function EventPage() {
                   fontFamily: isManga ? "'Kalam', cursive" : isCinema ? "'Playfair Display', Georgia, serif" : "'Space Grotesk', sans-serif", 
                   fontSize: '30px', 
                   fontWeight: 800, 
-                  color: isCinema || isGaming ? '#ffffff' : '#0f172a', 
+                  color: isDark ? '#ffffff' : (isCinema || isGaming ? '#ffffff' : '#0f172a'), 
                   margin: '8px 0 0 0' 
                 }}
               >
@@ -132,7 +135,7 @@ export default function EventPage() {
                  isTv ? 'Television Binge & Red Carpet World Premiere Protocols' :
                  'Official Event Verification & Participation Guide'}
               </h2>
-              <p className={`text-xs mt-2 max-w-xl mx-auto ${isCinema || isGaming ? 'text-neutral-400' : 'text-slate-500'}`}>
+              <p className={`text-xs mt-2 max-w-xl mx-auto ${isDark ? 'text-slate-300' : (isCinema || isGaming ? 'text-neutral-400' : 'text-slate-500')}`}>
                 Comprehensive step-by-step instructions on verified ticketing, autograph lotteries, anti-scalp wristbands, and VIP stage passes.
               </p>
             </div>
@@ -141,9 +144,9 @@ export default function EventPage() {
               {/* Protocol 1 */}
               <div 
                 style={{ 
-                  backgroundColor: isCinema ? '#121215' : isGaming ? '#121212' : '#ffffff', 
+                  backgroundColor: isDark ? '#121215' : (isCinema ? '#121215' : isGaming ? '#121212' : '#ffffff'), 
                   padding: '24px', 
-                  border: isCinema ? '1px solid #d4af37' : isManga ? '2px solid #2d2d2d' : isCosplay ? '2px solid #D02020' : '1.5px solid #000000', 
+                  border: isDark ? '1.5px solid #3F3F46' : (isCinema ? '1px solid #d4af37' : isManga ? '2px solid #2d2d2d' : isCosplay ? '2px solid #D02020' : '1.5px solid #000000'), 
                   borderRadius: isManga ? '6px' : '0px' 
                 }}
               >
@@ -155,26 +158,26 @@ export default function EventPage() {
                   <span 
                     className="text-[10px] font-mono font-bold px-2 py-0.5"
                     style={{ 
-                      backgroundColor: isCinema ? '#27272a' : isManga ? '#ffe4e6' : isAnime ? '#ecfccb' : '#d1fae5',
-                      color: isCinema ? '#d4af37' : isManga ? '#9f1239' : isAnime ? '#3f6212' : '#065f46'
+                      backgroundColor: isDark ? '#1e293b' : (isCinema ? '#27272a' : isManga ? '#ffe4e6' : isAnime ? '#ecfccb' : '#d1fae5'),
+                      color: isDark ? '#34d399' : (isCinema ? '#d4af37' : isManga ? '#9f1239' : isAnime ? '#3f6212' : '#065f46')
                     }}
                   >
                     {isManga ? 'MANGA GUILD PROTOCOL' : isCinema ? '70MM IMAX PROTOCOL' : isGaming ? 'ARENA LIVE PROTOCOL' : 'WEVERSE PROTOCOL'}
                   </span>
                 </div>
-                <h3 style={{ fontSize: '16px', fontWeight: 800, margin: '0 0 8px 0', color: isCinema || isGaming ? '#ffffff' : '#0f172a' }}>
+                <h3 style={{ fontSize: '16px', fontWeight: 800, margin: '0 0 8px 0', color: isDark ? '#ffffff' : (isCinema || isGaming ? '#ffffff' : '#0f172a') }}>
                   {isManga ? 'Shikishi Lotteries & Mangaka Autographs' :
                    isCinema ? '15/70mm IMAX Analog Soundcheck' :
                    isGaming ? 'Worlds Finals Main Stage Seating' :
                    'Stadium Tours & 4K Weverse Live'}
                 </h3>
-                <p style={{ fontSize: '12px', color: isCinema || isGaming ? '#a1a1aa' : '#64748b', lineHeight: 1.6, margin: '0 0 12px 0' }}>
+                <p style={{ fontSize: '12px', color: isDark ? '#cbd5e1' : (isCinema || isGaming ? '#a1a1aa' : '#64748b'), lineHeight: 1.6, margin: '0 0 12px 0' }}>
                   {isManga ? 'First-edition manga purchasers receive authentic holographic lottery tokens for live sketch stage signings with celebrated Weekly Shonen Jump mangaka.' :
                    isCinema ? 'Screenings feature genuine 70mm photochemical film stock with uncompressed director reference mix and authentic physical film strip specimens.' :
                    isGaming ? 'Encrypted RFID wristbands guarantee instantaneous venue access, exclusive digital battle pass unlocks, and symphonic orchestra prime acoustics.' :
                    'Official tickets include encrypted barcodes with anti-scalping identity binding. Verified Fanclub Members gain priority presale soundcheck access.'}
                 </p>
-                <ul className={`text-[11px] space-y-1 pl-4 list-disc font-medium ${isCinema || isGaming ? 'text-neutral-300' : 'text-slate-700'}`}>
+                <ul className={`text-[11px] space-y-1 pl-4 list-disc font-medium ${isDark ? 'text-neutral-300' : (isCinema || isGaming ? 'text-neutral-300' : 'text-slate-700')}`}>
                   <li>Certified anti-scalping digital identity verification</li>
                   <li>Fast-track VIP express floor check-in gate</li>
                   <li>Exclusive commemorative collector pass inclusions</li>
@@ -184,9 +187,9 @@ export default function EventPage() {
               {/* Protocol 2 */}
               <div 
                 style={{ 
-                  backgroundColor: isCinema ? '#121215' : isGaming ? '#121212' : '#ffffff', 
+                  backgroundColor: isDark ? '#121215' : (isCinema ? '#121215' : isGaming ? '#121212' : '#ffffff'), 
                   padding: '24px', 
-                  border: isCinema ? '1px solid #d4af37' : isManga ? '2px solid #2d2d2d' : isCosplay ? '2px solid #D02020' : '1.5px solid #000000', 
+                  border: isDark ? '1.5px solid #3F3F46' : (isCinema ? '1px solid #d4af37' : isManga ? '2px solid #2d2d2d' : isCosplay ? '2px solid #D02020' : '1.5px solid #000000'), 
                   borderRadius: isManga ? '6px' : '0px' 
                 }}
               >
@@ -195,20 +198,20 @@ export default function EventPage() {
                   <span 
                     className="text-[10px] font-mono font-bold px-2 py-0.5"
                     style={{ 
-                      backgroundColor: isCinema ? '#27272a' : '#fce7f3',
-                      color: isCinema ? '#d4af37' : '#9d174d'
+                      backgroundColor: isDark ? '#1e293b' : (isCinema ? '#27272a' : '#fce7f3'),
+                      color: isDark ? '#f472b6' : (isCinema ? '#d4af37' : '#9d174d')
                     }}
                   >
                     EXPO BENEFITS &amp; PERKS
                   </span>
                 </div>
-                <h3 style={{ fontSize: '16px', fontWeight: 800, margin: '0 0 8px 0', color: isCinema || isGaming ? '#ffffff' : '#0f172a' }}>
+                <h3 style={{ fontSize: '16px', fontWeight: 800, margin: '0 0 8px 0', color: isDark ? '#ffffff' : (isCinema || isGaming ? '#ffffff' : '#0f172a') }}>
                   Limited Event Merch &amp; First Press Drops
                 </h3>
-                <p style={{ fontSize: '12px', color: isCinema || isGaming ? '#a1a1aa' : '#64748b', lineHeight: 1.6, margin: '0 0 12px 0' }}>
+                <p style={{ fontSize: '12px', color: isDark ? '#cbd5e1' : (isCinema || isGaming ? '#a1a1aa' : '#64748b'), lineHeight: 1.6, margin: '0 0 12px 0' }}>
                   Ticket holders unlock dedicated pre-order allocations for event-exclusive merchandise, foil artboards, and limited edition boxsets unavailable through retail channels.
                 </p>
-                <ul className={`text-[11px] space-y-1 pl-4 list-disc font-medium ${isCinema || isGaming ? 'text-neutral-300' : 'text-slate-700'}`}>
+                <ul className={`text-[11px] space-y-1 pl-4 list-disc font-medium ${isDark ? 'text-neutral-300' : (isCinema || isGaming ? 'text-neutral-300' : 'text-slate-700')}`}>
                   <li>Direct venue pickup without queue delays</li>
                   <li>Collector authenticity certificates included</li>
                   <li>Exclusive foil variant covers and badges</li>
@@ -218,31 +221,31 @@ export default function EventPage() {
               {/* Protocol 3 */}
               <div 
                 style={{ 
-                  backgroundColor: isCinema ? '#121215' : isGaming ? '#121212' : '#ffffff', 
+                  backgroundColor: isDark ? '#121215' : (isCinema ? '#121215' : isGaming ? '#121212' : '#ffffff'), 
                   padding: '24px', 
-                  border: isCinema ? '1px solid #d4af37' : isManga ? '2px solid #2d2d2d' : isCosplay ? '2px solid #D02020' : '1.5px solid #000000', 
+                  border: isDark ? '1.5px solid #3F3F46' : (isCinema ? '1px solid #d4af37' : isManga ? '2px solid #2d2d2d' : isCosplay ? '2px solid #D02020' : '1.5px solid #000000'), 
                   borderRadius: isManga ? '6px' : '0px' 
                 }}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <Heart style={{ width: '28px', height: '28px', color: isCinema ? '#d4af37' : '#7e22ce', fill: isCinema ? '#d4af37' : '#7e22ce' }} />
+                  <Heart style={{ width: '28px', height: '28px', color: isCinema ? '#d4af37' : '#c084fc', fill: isCinema ? '#d4af37' : '#c084fc' }} />
                   <span 
                     className="text-[10px] font-mono font-bold px-2 py-0.5"
                     style={{ 
-                      backgroundColor: isCinema ? '#27272a' : '#f3e8ff',
-                      color: isCinema ? '#d4af37' : '#6b21a8'
+                      backgroundColor: isDark ? '#1e293b' : (isCinema ? '#27272a' : '#f3e8ff'),
+                      color: isDark ? '#c084fc' : (isCinema ? '#d4af37' : '#6b21a8')
                     }}
                   >
                     COMMUNITY SUPPORT &amp; VOTING
                   </span>
                 </div>
-                <h3 style={{ fontSize: '16px', fontWeight: 800, margin: '0 0 8px 0', color: isCinema || isGaming ? '#ffffff' : '#0f172a' }}>
+                <h3 style={{ fontSize: '16px', fontWeight: 800, margin: '0 0 8px 0', color: isDark ? '#ffffff' : (isCinema || isGaming ? '#ffffff' : '#0f172a') }}>
                   Fan Cheers &amp; Billboard Campaigns
                 </h3>
-                <p style={{ fontSize: '12px', color: isCinema || isGaming ? '#a1a1aa' : '#64748b', lineHeight: 1.6, margin: '0 0 12px 0' }}>
+                <p style={{ fontSize: '12px', color: isDark ? '#cbd5e1' : (isCinema || isGaming ? '#a1a1aa' : '#64748b'), lineHeight: 1.6, margin: '0 0 12px 0' }}>
                   Pool votes and support points to unlock stadium LED banners, Times Square electronic billboards, and celebrate milestones across global fandom communities.
                 </p>
-                <ul className={`text-[11px] space-y-1 pl-4 list-disc font-medium ${isCinema || isGaming ? 'text-neutral-300' : 'text-slate-700'}`}>
+                <ul className={`text-[11px] space-y-1 pl-4 list-disc font-medium ${isDark ? 'text-neutral-300' : (isCinema || isGaming ? 'text-neutral-300' : 'text-slate-700')}`}>
                   <li>Real-time community voting impact</li>
                   <li>International LED screen broadcasting</li>
                   <li>Fandom leaderboards with donor credits</li>
