@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..900;1,300..900&family=Inter:wght@300..900&family=Bangers&display=swap');
 @import './domain-themes.css';
 @import './fandom-styles.css';
 
@@ -1167,73 +1167,154 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
               box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-[data-theme="dark"], body.dark {
-  --bg-body: #090d16;
-  --bg-card: #0f172a;
-  --bg-elevated: #1e293b;
-  --bg-subtle: #1e293b;
-  --bg-glass: rgba(15, 23, 42, 0.96);
+html.dark,
+[data-theme="dark"],
+body.dark {
+  /* =========================================================================
+     BOLD TYPOGRAPHY DESIGN SYSTEM - DARK MODE TOKENS
+     ========================================================================= */
+  --background: #0A0A0A !important;
+  --foreground: #FAFAFA !important;
+  --muted: #1A1A1A !important;
+  --muted-foreground: #737373 !important;
+  --accent: #FF3D00 !important;
+  --accent-foreground: #0A0A0A !important;
+  --border: #262626 !important;
+  --input: #1A1A1A !important;
+  --card: #0F0F0F !important;
+  --card-foreground: #FAFAFA !important;
+  --ring: #FF3D00 !important;
 
-  --border-color: #2a364f;
-  --border-light: #1e293b;
+  --bg-body: #0A0A0A !important;
+  --bg-card: #0F0F0F !important;
+  --bg-elevated: #1A1A1A !important;
+  --bg-subtle: #141414 !important;
+  --bg-glass: rgba(10, 10, 10, 0.98) !important;
 
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-light: #64748b;
-  --color-primary: #ffffff;
-  --color-primary-hover: #e2e8f0;
+  --border-color: #262626 !important;
+  --border-light: #1F1F1F !important;
+
+  --text-primary: #FAFAFA !important;
+  --text-secondary: #D4D4D4 !important;
+  --text-muted: #737373 !important;
+  --text-light: #525252 !important;
+
+  --color-primary: #FF3D00 !important;
+  --color-primary-hover: #E03600 !important;
+  --color-secondary: #FAFAFA !important;
+  --color-accent: #FF3D00 !important;
+
+  /* Bold Typography System: STRICT 0px BORDER RADIUS EVERYWHERE */
+  --radius-xs: 0px !important;
+  --radius-sm: 0px !important;
+  --radius: 0px !important;
+  --radius-lg: 0px !important;
+  --radius-xl: 0px !important;
+  --radius-full: 0px !important;
+
+  /* Zero Shadows - Pure Flat Discipline */
+  --shadow-sm: none !important;
+  --shadow-md: none !important;
+  --shadow-lg: none !important;
+  --shadow-xl: none !important;
+  --shadow-2xl: none !important;
+  --shadow-y2k: none !important;
+  --shadow-y2k-sm: none !important;
+  --shadow-y2k-lg: none !important;
+  --shadow-y2k-pink: none !important;
+  --shadow-y2k-cyan: none !important;
+  --shadow-y2k-yellow: none !important;
+}
+
+/* Subtle fractal noise grain texture at 1.5% opacity overlaying the entire dark page */
+html.dark::before,
+[data-theme="dark"]::before,
+body.dark::before {
+  content: "" !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  pointer-events: none !important;
+  z-index: 99999 !important;
+  opacity: 0.015 !important;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
 }
 
 /* Global Backgrounds & Main Wrapper in Dark Mode */
-[data-theme="dark"] body {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+html.dark body,
+[data-theme="dark"] body,
+body.dark {
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
+  font-family: var(--font-body), "Inter", system-ui, sans-serif !important;
 }
 
+html.dark main,
+html.dark section,
+html.dark article,
+html.dark footer,
+html.dark .bg-body,
+html.dark .min-h-screen,
 [data-theme="dark"] main,
 [data-theme="dark"] section,
 [data-theme="dark"] article,
 [data-theme="dark"] footer,
 [data-theme="dark"] .bg-body,
-[data-theme="dark"] .min-h-screen {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+[data-theme="dark"] .min-h-screen,
+body.dark main,
+body.dark section,
+body.dark article,
+body.dark footer {
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 
 /* Header Navbar in Dark Mode */
+html.dark header,
+html.dark header > div,
 [data-theme="dark"] header,
-[data-theme="dark"] header > div {
-  background-color: #0f172a !important;
-  border-color: #1e293b !important;
+[data-theme="dark"] header > div,
+body.dark header {
+  background-color: #0A0A0A !important;
+  border-color: #262626 !important;
 }
 
+html.dark header nav a,
+html.dark header a,
 [data-theme="dark"] header nav a,
 [data-theme="dark"] header a {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
+html.dark header input[type="text"],
 [data-theme="dark"] header input[type="text"] {
-  color: #ffffff !important;
-  border-bottom-color: #ffffff !important;
+  color: #FAFAFA !important;
+  background-color: #1A1A1A !important;
+  border-color: #262626 !important;
 }
 
+html.dark header input[type="text"]::placeholder,
 [data-theme="dark"] header input[type="text"]::placeholder {
-  color: #94a3b8 !important;
+  color: #737373 !important;
 }
 
+html.dark header button,
 [data-theme="dark"] header button {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
 /* Invert dark logo to crisp bright white in dark mode */
+html.dark header img[alt="Fan Hub Plus"],
 [data-theme="dark"] header img[alt="Fan Hub Plus"] {
   filter: brightness(0) invert(1) !important;
 }
 
 /* Hero Section Gradient in Dark Mode */
+html.dark section[style*="linear-gradient"],
 [data-theme="dark"] section[style*="linear-gradient"] {
-  background: linear-gradient(135deg, #0f172a 0%, #090d16 100%) !important;
+  background: linear-gradient(135deg, #0F0F0F 0%, #0A0A0A 100%) !important;
 }
 
 /* ALL HARDCODED LIGHT BACKGROUND OVERRIDES FOR DARK MODE */
@@ -1268,8 +1349,8 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .bg-stone-50,
 [data-theme="dark"] [class*="bg-stone-50"],
 .dark [class*="bg-stone-50"] {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 
 /* 2. CARDS, PANELS, MODALS, DRAWERS & ELEVATED SURFACES */
@@ -1341,8 +1422,9 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .bg-\[\#f8f9fa\],
 [data-theme="dark"] [class*="bg-[#f8f9fa]"],
 .dark [class*="bg-[#f8f9fa]"] {
-  background-color: #131b2e !important;
-  color: #f8fafc !important;
+  background-color: #0F0F0F !important;
+  color: #FAFAFA !important;
+  border-color: #262626 !important;
 }
 
 /* 3. NESTED SPECIFICATION BOXES, QUOTE CALLOUTS, INNER TAGS & PASTEL TINTS */
@@ -1594,9 +1676,9 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark [style*="background-color:#e2e8f0"],
 [data-theme="dark"] [style*="background-color: rgb(226, 232, 240)"],
 .dark [style*="background-color: rgb(226, 232, 240)"] {
-  background-color: #1e293b !important;
-  color: #f8fafc !important;
-  border-color: #334155 !important;
+  background-color: #1A1A1A !important;
+  color: #FAFAFA !important;
+  border-color: #262626 !important;
 }
 
 /* 4. HEADINGS & TYPOGRAPHY */
@@ -1616,7 +1698,11 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .font-heading,
 [data-theme="dark"] .font-display,
 .dark .font-display {
-  color: #ffffff !important;
+  color: #FAFAFA !important;
+  font-family: "Inter Tight", "Inter", system-ui, -apple-system, sans-serif !important;
+  letter-spacing: -0.04em !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
 }
 
 /* 5. PRIMARY DARK TEXT CLASSES & STYLES -> CRISP WHITE */
@@ -1688,10 +1774,10 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark [style*="color: rgb(24, 24, 27)"],
 [data-theme="dark"] [style*="color: #374151"],
 .dark [style*="color: #374151"] {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
-/* 6. SECONDARY TEXT -> SOFT SILVER / SLATE 300 */
+/* 6. SECONDARY TEXT -> SOFT SILVER / NEUTRAL 300 */
 [data-theme="dark"] .text-slate-700,
 .dark .text-slate-700,
 [data-theme="dark"] .text-slate-600,
@@ -1728,10 +1814,10 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark [style*="color:#525252"],
 [data-theme="dark"] [style*="color: rgb(82, 82, 82)"],
 .dark [style*="color: rgb(82, 82, 82)"] {
-  color: #cbd5e1 !important;
+  color: #D4D4D4 !important;
 }
 
-/* 7. TERTIARY / MUTED TEXT -> READABLE SLATE 400 */
+/* 7. TERTIARY / MUTED TEXT -> MUTED FOREGROUND #737373 */
 [data-theme="dark"] .text-slate-500,
 .dark .text-slate-500,
 [data-theme="dark"] .text-slate-400,
@@ -1764,7 +1850,7 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark [style*="color: #737373"],
 [data-theme="dark"] [style*="color: #a3a3a3"],
 .dark [style*="color: #a3a3a3"] {
-  color: #94a3b8 !important;
+  color: #737373 !important;
 }
 
 /* 7B. SATURATED ACCENT TEXT COLORS -> VIBRANT LEGIBLE TONES */
@@ -2045,7 +2131,7 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
   color: #ffffff !important;
 }
 
-/* 10. INVERTED BLACK BUTTONS IN DARK MODE -> CRISP DARK TEXT */
+/* 10. PRIMARY & ACCENT BUTTONS IN DARK MODE -> VERMILLION ACCENT WITH SHARP CORNERS */
 [data-theme="dark"] button.bg-black,
 .dark button.bg-black,
 [data-theme="dark"] a.bg-black,
@@ -2066,8 +2152,15 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark button[style*="background-color: rgb(0, 0, 0)"],
 [data-theme="dark"] a[style*="background-color: rgb(0, 0, 0)"],
 .dark a[style*="background-color: rgb(0, 0, 0)"] {
-  background-color: #ffffff !important;
-  color: #090d16 !important;
+  background-color: #FF3D00 !important;
+  color: #0A0A0A !important;
+  border: 1px solid #FF3D00 !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 700 !important;
+  transition: all 150ms cubic-bezier(0.25, 0, 0, 1) !important;
 }
 
 [data-theme="dark"] button.bg-black *,
@@ -2090,10 +2183,18 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark button[style*="background-color: rgb(0, 0, 0)"] *,
 [data-theme="dark"] a[style*="background-color: rgb(0, 0, 0)"] *,
 .dark a[style*="background-color: rgb(0, 0, 0)"] * {
-  color: #090d16 !important;
+  color: #0A0A0A !important;
 }
 
-/* White outline buttons in dark mode adapt to dark elevated surface */
+[data-theme="dark"] button.bg-black:hover,
+.dark button.bg-black:hover,
+[data-theme="dark"] a.bg-black:hover,
+.dark a.bg-black:hover {
+  background-color: #E03600 !important;
+  border-color: #E03600 !important;
+}
+
+/* Secondary / Outline buttons in dark mode: Border 1px solid #FAFAFA, text #FAFAFA, hover invert */
 [data-theme="dark"] button.bg-white,
 .dark button.bg-white,
 [data-theme="dark"] a.bg-white,
@@ -2106,9 +2207,14 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark button[style*="background-color: rgb(255, 255, 255)"],
 [data-theme="dark"] a[style*="background-color: rgb(255, 255, 255)"],
 .dark a[style*="background-color: rgb(255, 255, 255)"] {
-  background-color: #1e293b !important;
-  color: #f8fafc !important;
-  border-color: #334155 !important;
+  background-color: transparent !important;
+  color: #FAFAFA !important;
+  border: 1px solid #FAFAFA !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  transition: all 150ms cubic-bezier(0.25, 0, 0, 1) !important;
 }
 
 [data-theme="dark"] button.bg-white *,
@@ -2123,7 +2229,22 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark button[style*="background-color: rgb(255, 255, 255)"] *,
 [data-theme="dark"] a[style*="background-color: rgb(255, 255, 255)"] *,
 .dark a[style*="background-color: rgb(255, 255, 255)"] * {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
+}
+
+[data-theme="dark"] button.bg-white:hover,
+.dark button.bg-white:hover,
+[data-theme="dark"] a.bg-white:hover,
+.dark a.bg-white:hover {
+  background-color: #FAFAFA !important;
+  color: #0A0A0A !important;
+}
+
+[data-theme="dark"] button.bg-white:hover *,
+.dark button.bg-white:hover *,
+[data-theme="dark"] a.bg-white:hover *,
+.dark a.bg-white:hover * {
+  color: #0A0A0A !important;
 }
 
 /* 11. BORDERS & SHADOW ADAPTATIONS IN DARK MODE */
@@ -2181,86 +2302,86 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark [style*="border-top: 1px solid #f1f5f9"],
 [data-theme="dark"] [style*="border-bottom: 1px solid #e2e8f0"],
 .dark [style*="border-bottom: 1px solid #e2e8f0"] {
-  border-color: #2a364f !important;
+  border-color: #262626 !important;
 }
 
 /* 12. TOUR CALENDAR SPECIAL STYLING IN DARK MODE */
 [data-theme="dark"] #tours,
 .dark #tours {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] #tours .border-slate-100,
 .dark #tours .border-slate-100,
 [data-theme="dark"] #tours .border-slate-200,
 .dark #tours .border-slate-200 {
-  border-color: #1e293b !important;
+  border-color: #262626 !important;
 }
 [data-theme="dark"] #tours div[style*="width: 54px"],
 .dark #tours div[style*="width: 54px"],
 [data-theme="dark"] #tours div[style*="width:54px"],
 .dark #tours div[style*="width:54px"] {
-  background-color: #1e293b !important;
-  border-color: #334155 !important;
+  background-color: #1A1A1A !important;
+  border-color: #262626 !important;
 }
 [data-theme="dark"] #tours div[style*="width: 54px"] span,
 .dark #tours div[style*="width: 54px"] span,
 [data-theme="dark"] #tours div[style*="width:54px"] span,
 .dark #tours div[style*="width:54px"] span {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] #tours div[style*="width: 54px"] span:first-child,
 .dark #tours div[style*="width: 54px"] span:first-child,
 [data-theme="dark"] #tours div[style*="width:54px"] span:first-child,
 .dark #tours div[style*="width:54px"] span:first-child {
-  background-color: #ff2e93 !important;
-  color: #ffffff !important;
+  background-color: #FF3D00 !important;
+  color: #0A0A0A !important;
 }
 [data-theme="dark"] #tours div[style*="border-radius: 50%"],
 .dark #tours div[style*="border-radius: 50%"],
 [data-theme="dark"] #tours div[style*="borderRadius: '50%'"],
 .dark #tours div[style*="borderRadius: '50%'"] {
-  background-color: #090d16 !important;
-  border-color: #2a364f !important;
+  background-color: #0A0A0A !important;
+  border-color: #262626 !important;
 }
 [data-theme="dark"] #tours div[style*="border-top: 1.5px dashed"],
 .dark #tours div[style*="border-top: 1.5px dashed"],
 [data-theme="dark"] #tours div[style*="borderTop: '1.5px dashed"],
 .dark #tours div[style*="borderTop: '1.5px dashed"] {
-  border-color: #334155 !important;
+  border-color: #262626 !important;
 }
 
 /* 13. LEAFLET POPUP IN DARK MODE */
 [data-theme="dark"] .custom-leaflet-popup .leaflet-popup-content-wrapper,
 .dark .custom-leaflet-popup .leaflet-popup-content-wrapper {
-  background: #0f172a !important;
-  color: #f8fafc !important;
-  border-color: #334155 !important;
-  box-shadow: 4px 4px 0px #000000 !important;
+  background: #0F0F0F !important;
+  color: #FAFAFA !important;
+  border-color: #262626 !important;
+  box-shadow: none !important;
 }
 [data-theme="dark"] .custom-leaflet-popup .leaflet-popup-content *,
 .dark .custom-leaflet-popup .leaflet-popup-content * {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .custom-leaflet-popup .leaflet-popup-content [style*="color: #ff2e93"],
 .dark .custom-leaflet-popup .leaflet-popup-content [style*="color: #ff2e93"] {
-  color: #ff2e93 !important;
+  color: #FF3D00 !important;
 }
 [data-theme="dark"] .custom-leaflet-popup .leaflet-popup-content [style*="color: #059669"],
 .dark .custom-leaflet-popup .leaflet-popup-content [style*="color: #059669"] {
-  color: #10b981 !important;
+  color: #FF3D00 !important;
 }
 [data-theme="dark"] .custom-leaflet-popup .leaflet-popup-close-button,
 .dark .custom-leaflet-popup .leaflet-popup-close-button {
-  background: #1e293b !important;
-  color: #ffffff !important;
-  border-color: #334155 !important;
+  background: #1A1A1A !important;
+  color: #FAFAFA !important;
+  border-color: #262626 !important;
 }
 [data-theme="dark"] .leaflet-control-zoom a,
 .dark .leaflet-control-zoom a {
-  background: #0f172a !important;
-  color: #ffffff !important;
-  border-color: #334155 !important;
+  background: #0F0F0F !important;
+  color: #FAFAFA !important;
+  border-color: #262626 !important;
 }
 
 /* 14. FORM CONTROLS & INPUTS IN DARK MODE */
@@ -2270,16 +2391,28 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark select,
 [data-theme="dark"] textarea,
 .dark textarea {
-  background-color: #0f172a !important;
-  color: #ffffff !important;
-  border-color: #334155 !important;
+  background-color: #1A1A1A !important;
+  color: #FAFAFA !important;
+  border: 1px solid #262626 !important;
+  border-radius: 0px !important;
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+[data-theme="dark"] input:focus,
+.dark input:focus,
+[data-theme="dark"] select:focus,
+.dark select:focus,
+[data-theme="dark"] textarea:focus,
+.dark textarea:focus {
+  border-color: #FF3D00 !important;
+  outline: none !important;
 }
 
 [data-theme="dark"] input::placeholder,
 .dark input::placeholder,
 [data-theme="dark"] textarea::placeholder,
 .dark textarea::placeholder {
-  color: #94a3b8 !important;
+  color: #737373 !important;
 }
 
 /* 15. DYNAMIC HEADER IN DARK MODE - OVERRIDES ALL FANDOM LIGHT HEADER RULES */
@@ -2301,9 +2434,9 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .fandom-header-manga,
 [data-theme="dark"] .fandom-header-tv,
 .dark .fandom-header-tv {
-  background-color: #090d16 !important;
-  background: #090d16 !important;
-  border-bottom-color: #2a364f !important;
+  background-color: #0A0A0A !important;
+  background: #0A0A0A !important;
+  border-bottom: 1px solid #262626 !important;
   box-shadow: none !important;
 }
 
@@ -2330,48 +2463,61 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark [data-fandom-theme] .header-subnav,
 [data-theme="dark"] [data-fandom-theme] .desktop-subnav,
 .dark [data-fandom-theme] .desktop-subnav {
-  background-color: #0f172a !important;
-  background: #0f172a !important;
-  border-top-color: #2a364f !important;
-  border-bottom-color: #2a364f !important;
+  background-color: #0A0A0A !important;
+  background: #0A0A0A !important;
+  border-top: 1px solid #262626 !important;
+  border-bottom: 1px solid #262626 !important;
 }
 
 [data-theme="dark"] .header-nav-link,
 .dark .header-nav-link,
 [data-theme="dark"] [data-fandom-theme] .header-nav-link,
 .dark [data-fandom-theme] .header-nav-link {
-  color: #f8fafc !important;
+  color: #737373 !important;
+  font-family: "Inter Tight", "Inter", sans-serif !important;
+  transition: color 150ms ease !important;
 }
 
 [data-theme="dark"] .header-nav-link:hover,
 .dark .header-nav-link:hover,
 [data-theme="dark"] [data-fandom-theme] .header-nav-link:hover,
 .dark [data-fandom-theme] .header-nav-link:hover {
-  color: #38bdf8 !important;
+  color: #FF3D00 !important;
 }
 
 [data-theme="dark"] .header-action-btn,
 .dark .header-action-btn,
 [data-theme="dark"] [data-fandom-theme] .header-action-btn,
 .dark [data-fandom-theme] .header-action-btn {
-  background-color: #1e293b !important;
-  color: #f8fafc !important;
-  border-color: #334155 !important;
+  background-color: #1A1A1A !important;
+  color: #FAFAFA !important;
+  border: 1px solid #262626 !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  transition: all 150ms cubic-bezier(0.25, 0, 0, 1) !important;
+}
+
+[data-theme="dark"] .header-action-btn:hover,
+.dark .header-action-btn:hover,
+[data-theme="dark"] [data-fandom-theme] .header-action-btn:hover,
+.dark [data-fandom-theme] .header-action-btn:hover {
+  background-color: #FAFAFA !important;
+  color: #0A0A0A !important;
 }
 
 [data-theme="dark"] .header-action-btn *,
 .dark .header-action-btn *,
 [data-theme="dark"] [data-fandom-theme] .header-action-btn *,
 .dark [data-fandom-theme] .header-action-btn * {
-  color: #f8fafc !important;
+  color: inherit !important;
 }
 
 [data-theme="dark"] .header-search-bar,
 .dark .header-search-bar,
 [data-theme="dark"] [data-fandom-theme] .header-search-bar,
 .dark [data-fandom-theme] .header-search-bar {
-  background-color: #0f172a !important;
-  border-color: #334155 !important;
+  background-color: #1A1A1A !important;
+  border: 1px solid #262626 !important;
   box-shadow: none !important;
 }
 
@@ -2379,14 +2525,14 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .header-search-bar *,
 [data-theme="dark"] [data-fandom-theme] .header-search-bar *,
 .dark [data-fandom-theme] .header-search-bar * {
-  border-color: #334155 !important;
+  border-color: #262626 !important;
 }
 
 [data-theme="dark"] .header-search-input,
 .dark .header-search-input,
 [data-theme="dark"] [data-fandom-theme] .header-search-input,
 .dark [data-fandom-theme] .header-search-input {
-  color: #ffffff !important;
+  color: #FAFAFA !important;
   background-color: transparent !important;
 }
 
@@ -2394,14 +2540,14 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .header-search-input::placeholder,
 [data-theme="dark"] [data-fandom-theme] .header-search-input::placeholder,
 .dark [data-fandom-theme] .header-search-input::placeholder {
-  color: #94a3b8 !important;
+  color: #737373 !important;
 }
 
 [data-theme="dark"] .header-search-icon,
 .dark .header-search-icon,
 [data-theme="dark"] [data-fandom-theme] .header-search-icon,
 .dark [data-fandom-theme] .header-search-icon {
-  color: #38bdf8 !important;
+  color: #FF3D00 !important;
 }
 
 /* 16. FANDOM THEME BODY VIEWS IN DARK MODE */
@@ -2421,8 +2567,8 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .fandom-theme-cosplay,
 [data-theme="dark"][data-fandom-theme="cosplay"],
 .dark[data-fandom-theme="cosplay"] {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 
 [data-theme="dark"] .fandom-theme-cinema main,
@@ -2433,8 +2579,8 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .fandom-theme-manga main,
 [data-theme="dark"] .fandom-theme-cosplay main,
 .dark .fandom-theme-cosplay main {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 
 [data-theme="dark"] .fandom-theme-cinema .bg-white,
@@ -2445,9 +2591,9 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .fandom-theme-manga .bg-white,
 [data-theme="dark"] .fandom-theme-cosplay .bg-white,
 .dark .fandom-theme-cosplay .bg-white {
-  background-color: #131b2e !important;
-  color: #f8fafc !important;
-  border-color: #2a364f !important;
+  background-color: #0F0F0F !important;
+  color: #FAFAFA !important;
+  border-color: #262626 !important;
 }
 
 [data-theme="dark"] .fandom-theme-cinema .text-slate-900,
@@ -2458,7 +2604,7 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .fandom-theme-tv .text-slate-900,
 [data-theme="dark"] .fandom-theme-tv .text-slate-800,
 .dark .fandom-theme-tv .text-slate-800 {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
 [data-theme="dark"] .fandom-theme-cinema .text-slate-600,
@@ -2469,7 +2615,7 @@ body, header, footer, main, nav, section, article, div, button, input, select, t
 .dark .fandom-theme-tv .text-slate-600,
 [data-theme="dark"] .fandom-theme-tv .text-slate-500,
 .dark .fandom-theme-tv .text-slate-500 {
-  color: #cbd5e1 !important;
+  color: #D4D4D4 !important;
 }
 
 @media (min-width: 768px) {
@@ -2878,9 +3024,9 @@ article:hover,
 /* 17.1 DEDICATED FANDOM CATEGORY DOCK */
 [data-theme="dark"] .fandom-category-dock,
 .dark .fandom-category-dock {
-  background-color: #090d16 !important;
-  background: #090d16 !important;
-  border-bottom-color: #2a364f !important;
+  background-color: #0A0A0A !important;
+  background: #0A0A0A !important;
+  border-bottom-color: #262626 !important;
 }
 
 /* Inactive Fandom Dock Buttons in Dark Mode */
@@ -2888,154 +3034,94 @@ article:hover,
 .dark .fandom-category-dock .fandom-tab-inactive,
 [data-theme="dark"] .fandom-tab-inactive,
 .dark .fandom-tab-inactive {
-  background-color: #1e293b !important;
-  color: #f8fafc !important;
-  border-color: #334155 !important;
-  box-shadow: 2px 2px 0px #000000 !important;
+  background-color: transparent !important;
+  color: #FAFAFA !important;
+  border: 1px solid #262626 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  transition: all 150ms cubic-bezier(0.25, 0, 0, 1) !important;
 }
 
 [data-theme="dark"] .fandom-category-dock .fandom-tab-inactive *,
 .dark .fandom-category-dock .fandom-tab-inactive *,
 [data-theme="dark"] .fandom-tab-inactive *,
 .dark .fandom-tab-inactive * {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
 [data-theme="dark"] .fandom-category-dock .fandom-tab-inactive:hover,
 .dark .fandom-category-dock .fandom-tab-inactive:hover,
 [data-theme="dark"] .fandom-tab-inactive:hover,
 .dark .fandom-tab-inactive:hover {
-  background-color: #2a364f !important;
-  color: #ffffff !important;
+  background-color: #FAFAFA !important;
+  color: #0A0A0A !important;
 }
 
 [data-theme="dark"] .fandom-category-dock .fandom-tab-inactive:hover *,
 .dark .fandom-category-dock .fandom-tab-inactive:hover *,
 [data-theme="dark"] .fandom-tab-inactive:hover *,
 .dark .fandom-tab-inactive:hover * {
-  color: #ffffff !important;
+  color: #0A0A0A !important;
 }
 
-/* 17.2 ACTIVE FANDOM TABS IN DARK MODE */
-/* All Fandoms Active */
+/* 17.2 ACTIVE FANDOM TABS IN DARK MODE - BOLD VERMILLION ACCENT */
 [data-theme="dark"] .fandom-tab-active-all,
-.dark .fandom-tab-active-all {
-  background-color: #ffd60a !important;
-  color: #000000 !important;
-  border-color: #ffd60a !important;
-}
-[data-theme="dark"] .fandom-tab-active-all *,
-.dark .fandom-tab-active-all * {
-  color: #000000 !important;
-}
-
-/* Gaming Arena Active */
+.dark .fandom-tab-active-all,
 [data-theme="dark"] .fandom-tab-active-gaming,
-.dark .fandom-tab-active-gaming {
-  background-color: #00f0ff !important;
-  color: #000000 !important;
-  border-color: #00f0ff !important;
-}
-[data-theme="dark"] .fandom-tab-active-gaming *,
-.dark .fandom-tab-active-gaming * {
-  color: #000000 !important;
-}
-
-/* Manga Active - Red Seal Accent with Crisp White Text */
+.dark .fandom-tab-active-gaming,
 [data-theme="dark"] .fandom-tab-active-manga,
-.dark .fandom-tab-active-manga {
-  background-color: #ff4d4d !important;
-  color: #ffffff !important;
-  border-color: #ff4d4d !important;
-}
-[data-theme="dark"] .fandom-tab-active-manga *,
-.dark .fandom-tab-active-manga * {
-  color: #ffffff !important;
-}
-
-/* K-Pop Active */
+.dark .fandom-tab-active-manga,
 [data-theme="dark"] .fandom-tab-active-kpop,
-.dark .fandom-tab-active-kpop {
-  background-color: #ff2e93 !important;
-  color: #ffffff !important;
-  border-color: #ff2e93 !important;
-}
-[data-theme="dark"] .fandom-tab-active-kpop *,
-.dark .fandom-tab-active-kpop * {
-  color: #ffffff !important;
-}
-
-/* Anime Active */
+.dark .fandom-tab-active-kpop,
 [data-theme="dark"] .fandom-tab-active-anime,
-.dark .fandom-tab-active-anime {
-  background-color: #a3e635 !important;
-  color: #000000 !important;
-  border-color: #a3e635 !important;
-}
-[data-theme="dark"] .fandom-tab-active-anime *,
-.dark .fandom-tab-active-anime * {
-  color: #000000 !important;
-}
-
-/* Cosplay Active */
+.dark .fandom-tab-active-anime,
 [data-theme="dark"] .fandom-tab-active-cosplay,
-.dark .fandom-tab-active-cosplay {
-  background-color: #D02020 !important;
-  color: #ffffff !important;
-  border-color: #D02020 !important;
-}
-[data-theme="dark"] .fandom-tab-active-cosplay *,
-.dark .fandom-tab-active-cosplay * {
-  color: #ffffff !important;
-}
-
-/* Comics Active */
+.dark .fandom-tab-active-cosplay,
 [data-theme="dark"] .fandom-tab-active-comics,
-.dark .fandom-tab-active-comics {
-  background-color: #38bdf8 !important;
-  color: #000000 !important;
-  border-color: #38bdf8 !important;
-}
-[data-theme="dark"] .fandom-tab-active-comics *,
-.dark .fandom-tab-active-comics * {
-  color: #000000 !important;
-}
-
-/* Cinema Active */
+.dark .fandom-tab-active-comics,
 [data-theme="dark"] .fandom-tab-active-movies,
-.dark .fandom-tab-active-movies {
-  background-color: #FF3000 !important;
-  color: #ffffff !important;
-  border-color: #FF3000 !important;
-}
-[data-theme="dark"] .fandom-tab-active-movies *,
-.dark .fandom-tab-active-movies * {
-  color: #ffffff !important;
-}
-
-/* TV Shows Active */
+.dark .fandom-tab-active-movies,
 [data-theme="dark"] .fandom-tab-active-tv,
 .dark .fandom-tab-active-tv {
-  background-color: #ff2e93 !important;
-  color: #ffffff !important;
-  border-color: #ff2e93 !important;
+  background-color: #FF3D00 !important;
+  color: #0A0A0A !important;
+  border: 1px solid #FF3D00 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  font-weight: 700 !important;
 }
+
+[data-theme="dark"] .fandom-tab-active-all *,
+.dark .fandom-tab-active-all *,
+[data-theme="dark"] .fandom-tab-active-gaming *,
+.dark .fandom-tab-active-gaming *,
+[data-theme="dark"] .fandom-tab-active-manga *,
+.dark .fandom-tab-active-manga *,
+[data-theme="dark"] .fandom-tab-active-kpop *,
+.dark .fandom-tab-active-kpop *,
+[data-theme="dark"] .fandom-tab-active-anime *,
+.dark .fandom-tab-active-anime *,
+[data-theme="dark"] .fandom-tab-active-cosplay *,
+.dark .fandom-tab-active-cosplay *,
+[data-theme="dark"] .fandom-tab-active-comics *,
+.dark .fandom-tab-active-comics *,
+[data-theme="dark"] .fandom-tab-active-movies *,
+.dark .fandom-tab-active-movies *,
 [data-theme="dark"] .fandom-tab-active-tv *,
 .dark .fandom-tab-active-tv * {
-  color: #ffffff !important;
+  color: #0A0A0A !important;
 }
 
 /* 17.3 UNIVERSAL FANDOM THEME IN DARK MODE */
-/* Prevent any fandom light background from turning surfaces white */
 [data-theme="dark"] [class*="fandom-theme-"] .bg-white,
 .dark [class*="fandom-theme-"] .bg-white,
 [data-theme="dark"][data-fandom-theme] .bg-white,
 .dark[data-fandom-theme] .bg-white,
 [data-theme="dark"] [data-fandom-theme] .bg-white,
 .dark [data-fandom-theme] .bg-white {
-  background-color: #131b2e !important;
-  color: #f8fafc !important;
-  border-color: #2a364f !important;
+  background-color: #0F0F0F !important;
+  color: #FAFAFA !important;
+  border-color: #262626 !important;
 }
 
 [data-theme="dark"] [class*="fandom-theme-"] .bg-white *,
@@ -3044,10 +3130,10 @@ article:hover,
 .dark[data-fandom-theme] .bg-white *,
 [data-theme="dark"] [data-fandom-theme] .bg-white *,
 .dark [data-fandom-theme] .bg-white * {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
-/* White buttons in any fandom theme become dark elevated buttons */
+/* White buttons in any fandom theme become outline buttons */
 [data-theme="dark"] [class*="fandom-theme-"] button.bg-white,
 .dark [class*="fandom-theme-"] button.bg-white,
 [data-theme="dark"] [data-fandom-theme] button.bg-white,
@@ -3056,9 +3142,12 @@ article:hover,
 .dark [class*="fandom-theme-"] button[class*="bg-white"],
 [data-theme="dark"] [data-fandom-theme] button[class*="bg-white"],
 .dark [data-fandom-theme] button[class*="bg-white"] {
-  background-color: #1e293b !important;
-  color: #f8fafc !important;
-  border-color: #334155 !important;
+  background-color: transparent !important;
+  color: #FAFAFA !important;
+  border: 1px solid #FAFAFA !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  transition: all 150ms cubic-bezier(0.25, 0, 0, 1) !important;
 }
 
 [data-theme="dark"] [class*="fandom-theme-"] button.bg-white *,
@@ -3069,10 +3158,33 @@ article:hover,
 .dark [class*="fandom-theme-"] button[class*="bg-white"] *,
 [data-theme="dark"] [data-fandom-theme] button[class*="bg-white"] *,
 .dark [data-fandom-theme] button[class*="bg-white"] * {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
-/* Inverted black buttons in any fandom theme become crisp white buttons */
+[data-theme="dark"] [class*="fandom-theme-"] button.bg-white:hover,
+.dark [class*="fandom-theme-"] button.bg-white:hover,
+[data-theme="dark"] [data-fandom-theme] button.bg-white:hover,
+.dark [data-fandom-theme] button.bg-white:hover,
+[data-theme="dark"] [class*="fandom-theme-"] button[class*="bg-white"]:hover,
+.dark [class*="fandom-theme-"] button[class*="bg-white"]:hover,
+[data-theme="dark"] [data-fandom-theme] button[class*="bg-white"]:hover,
+.dark [data-fandom-theme] button[class*="bg-white"]:hover {
+  background-color: #FAFAFA !important;
+  color: #0A0A0A !important;
+}
+
+[data-theme="dark"] [class*="fandom-theme-"] button.bg-white:hover *,
+.dark [class*="fandom-theme-"] button.bg-white:hover *,
+[data-theme="dark"] [data-fandom-theme] button.bg-white:hover *,
+.dark [data-fandom-theme] button.bg-white:hover *,
+[data-theme="dark"] [class*="fandom-theme-"] button[class*="bg-white"]:hover *,
+.dark [class*="fandom-theme-"] button[class*="bg-white"]:hover *,
+[data-theme="dark"] [data-fandom-theme] button[class*="bg-white"]:hover *,
+.dark [data-fandom-theme] button[class*="bg-white"]:hover * {
+  color: #0A0A0A !important;
+}
+
+/* Black / Accent buttons in any fandom theme become Vermillion Accent buttons */
 [data-theme="dark"] [class*="fandom-theme-"] button.bg-black,
 .dark [class*="fandom-theme-"] button.bg-black,
 [data-theme="dark"] [data-fandom-theme] button.bg-black,
@@ -3085,9 +3197,13 @@ article:hover,
 .dark [class*="fandom-theme-"] button[class*="bg-[#000000]"],
 [data-theme="dark"] [data-fandom-theme] button[class*="bg-[#000000]"],
 .dark [data-fandom-theme] button[class*="bg-[#000000]"] {
-  background-color: #ffffff !important;
-  color: #090d16 !important;
-  border-color: #ffffff !important;
+  background-color: #FF3D00 !important;
+  color: #0A0A0A !important;
+  border: 1px solid #FF3D00 !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  font-weight: 700 !important;
+  transition: all 150ms cubic-bezier(0.25, 0, 0, 1) !important;
 }
 
 [data-theme="dark"] [class*="fandom-theme-"] button.bg-black *,
@@ -3102,7 +3218,15 @@ article:hover,
 .dark [class*="fandom-theme-"] button[class*="bg-[#000000]"] *,
 [data-theme="dark"] [data-fandom-theme] button[class*="bg-[#000000]"] *,
 .dark [data-fandom-theme] button[class*="bg-[#000000]"] * {
-  color: #090d16 !important;
+  color: #0A0A0A !important;
+}
+
+[data-theme="dark"] [class*="fandom-theme-"] button.bg-black:hover,
+.dark [class*="fandom-theme-"] button.bg-black:hover,
+[data-theme="dark"] [data-fandom-theme] button.bg-black:hover,
+.dark [data-fandom-theme] button.bg-black:hover {
+  background-color: #E03600 !important;
+  border-color: #E03600 !important;
 }
 
 /* Comics Theme in Dark Mode */
@@ -3110,20 +3234,20 @@ article:hover,
 .dark .fandom-theme-comics,
 [data-theme="dark"][data-fandom-theme="comics"],
 .dark[data-fandom-theme="comics"] {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-theme-comics main,
 .dark .fandom-theme-comics main {
-  background-color: #090d16 !important;
+  background-color: #0A0A0A !important;
   background-image: none !important;
 }
 [data-theme="dark"] .fandom-theme-comics .bg-slate-50,
 .dark .fandom-theme-comics .bg-slate-50,
 [data-theme="dark"] .fandom-theme-comics .bg-body,
 .dark .fandom-theme-comics .bg-body {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 
 /* Manga Theme in Dark Mode */
@@ -3131,19 +3255,19 @@ article:hover,
 .dark .fandom-theme-manga,
 [data-theme="dark"][data-fandom-theme="manga"],
 .dark[data-fandom-theme="manga"] {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-theme-manga main,
 .dark .fandom-theme-manga main {
-  background-color: #090d16 !important;
+  background-color: #0A0A0A !important;
 }
 [data-theme="dark"] .fandom-theme-manga .bg-slate-50,
 .dark .fandom-theme-manga .bg-slate-50,
 [data-theme="dark"] .fandom-theme-manga .bg-body,
 .dark .fandom-theme-manga .bg-body {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-theme-manga p,
 .dark .fandom-theme-manga p,
@@ -3173,7 +3297,7 @@ article:hover,
 .dark [data-fandom-theme="manga"] .text-slate-800,
 [data-theme="dark"] [data-fandom-theme="manga"] .text-slate-950,
 .dark [data-fandom-theme="manga"] .text-slate-950 {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-theme-manga h1,
 .dark .fandom-theme-manga h1,
@@ -3191,7 +3315,9 @@ article:hover,
 .dark [data-fandom-theme="manga"] h3,
 [data-theme="dark"] [data-fandom-theme="manga"] h4,
 .dark [data-fandom-theme="manga"] h4 {
-  color: #ffffff !important;
+  color: #FAFAFA !important;
+  font-family: "Inter Tight", "Inter", sans-serif !important;
+  letter-spacing: -0.04em !important;
 }
 [data-theme="dark"] .fandom-theme-manga .text-slate-600,
 .dark .fandom-theme-manga .text-slate-600,
@@ -3201,7 +3327,7 @@ article:hover,
 .dark [data-fandom-theme="manga"] .text-slate-600,
 [data-theme="dark"] [data-fandom-theme="manga"] .text-slate-500,
 .dark [data-fandom-theme="manga"] .text-slate-500 {
-  color: #cbd5e1 !important;
+  color: #D4D4D4 !important;
 }
 
 /* Anime Theme in Dark Mode */
@@ -3209,12 +3335,12 @@ article:hover,
 .dark .fandom-theme-anime,
 [data-theme="dark"][data-fandom-theme="anime"],
 .dark[data-fandom-theme="anime"] {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-theme-anime main,
 .dark .fandom-theme-anime main {
-  background-color: #090d16 !important;
+  background-color: #0A0A0A !important;
 }
 [data-theme="dark"] .fandom-theme-anime .bg-slate-50,
 .dark .fandom-theme-anime .bg-slate-50,
@@ -3222,8 +3348,8 @@ article:hover,
 .dark .fandom-theme-anime .bg-body,
 [data-theme="dark"] .fandom-theme-anime .bg-neutral-50,
 .dark .fandom-theme-anime .bg-neutral-50 {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 
 /* Gaming Theme in Dark Mode */
@@ -3231,19 +3357,19 @@ article:hover,
 .dark .fandom-theme-gaming,
 [data-theme="dark"][data-fandom-theme="gaming"],
 .dark[data-fandom-theme="gaming"] {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-theme-gaming main,
 .dark .fandom-theme-gaming main {
-  background-color: #090d16 !important;
+  background-color: #0A0A0A !important;
 }
 [data-theme="dark"] .fandom-theme-gaming .bg-slate-50,
 .dark .fandom-theme-gaming .bg-slate-50,
 [data-theme="dark"] .fandom-theme-gaming .bg-body,
 .dark .fandom-theme-gaming .bg-body {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 
 /* K-Pop Theme in Dark Mode */
@@ -3251,19 +3377,19 @@ article:hover,
 .dark .fandom-theme-kpop,
 [data-theme="dark"][data-fandom-theme="kpop"],
 .dark[data-fandom-theme="kpop"] {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-theme-kpop main,
 .dark .fandom-theme-kpop main {
-  background-color: #090d16 !important;
+  background-color: #0A0A0A !important;
 }
 [data-theme="dark"] .fandom-theme-kpop .bg-slate-50,
 .dark .fandom-theme-kpop .bg-slate-50,
 [data-theme="dark"] .fandom-theme-kpop .bg-body,
 .dark .fandom-theme-kpop .bg-body {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-card-kpop,
 .dark .fandom-card-kpop,
@@ -3275,9 +3401,9 @@ article:hover,
 .dark .kpop-inclusions-card,
 [data-theme="dark"] .pixel-note-box,
 .dark .pixel-note-box {
-  background-color: #131b2e !important;
-  color: #f8fafc !important;
-  border-color: #2a364f !important;
+  background-color: #0F0F0F !important;
+  color: #FAFAFA !important;
+  border-color: #262626 !important;
 }
 [data-theme="dark"] .fandom-card-kpop *,
 .dark .fandom-card-kpop *,
@@ -3289,11 +3415,11 @@ article:hover,
 .dark .kpop-inclusions-card *,
 [data-theme="dark"] .pixel-note-box *,
 .dark .pixel-note-box * {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .kpop-arcade-heading,
 .dark .kpop-arcade-heading {
-  color: #ffffff !important;
+  color: #FAFAFA !important;
 }
 
 /* TV Shows Theme in Dark Mode */
@@ -3301,19 +3427,19 @@ article:hover,
 .dark .fandom-theme-tv,
 [data-theme="dark"][data-fandom-theme="tv"],
 .dark[data-fandom-theme="tv"] {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-theme-tv main,
 .dark .fandom-theme-tv main {
-  background-color: #090d16 !important;
+  background-color: #0A0A0A !important;
 }
 [data-theme="dark"] .fandom-theme-tv .bg-slate-50,
 .dark .fandom-theme-tv .bg-slate-50,
 [data-theme="dark"] .fandom-theme-tv .bg-body,
 .dark .fandom-theme-tv .bg-body {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 
 /* Cinema Theme in Dark Mode */
@@ -3321,19 +3447,19 @@ article:hover,
 .dark .fandom-theme-cinema,
 [data-theme="dark"][data-fandom-theme="cinema"],
 .dark[data-fandom-theme="cinema"] {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 [data-theme="dark"] .fandom-theme-cinema main,
 .dark .fandom-theme-cinema main {
-  background-color: #090d16 !important;
+  background-color: #0A0A0A !important;
 }
 [data-theme="dark"] .fandom-theme-cinema .bg-slate-50,
 .dark .fandom-theme-cinema .bg-slate-50,
 [data-theme="dark"] .fandom-theme-cinema .bg-body,
 .dark .fandom-theme-cinema .bg-body {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
 }
 
 /* =========================================================================

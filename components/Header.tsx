@@ -143,6 +143,30 @@ export const Header: React.FC<HeaderProps> = ({
   const isTvShows = effectiveTheme === 'tv' || pathname?.startsWith('/tv');
 
   const loginTheme = React.useMemo(() => {
+    if (isDark) {
+      return {
+        fontFamily: "'Inter Tight', 'Inter', sans-serif",
+        modalBg: '#0F0F0F',
+        textColor: '#FAFAFA',
+        subtitleColor: '#737373',
+        border: '1px solid #262626',
+        shadow: 'none',
+        borderRadius: '0px',
+        headerTitle: 'FAN HUB PLUS // MEMBER LOGIN',
+        headerSubtitle: 'Exclusive Member Gate & Collection Access',
+        primaryBtnBg: '#FF3D00',
+        primaryBtnColor: '#0A0A0A',
+        primaryBtnBorder: '1px solid #FF3D00',
+        primaryBtnShadow: 'none',
+        primaryBtnRadius: '0px',
+        inputBorder: '1px solid #262626',
+        inputRadius: '0px',
+        inputBg: '#1A1A1A',
+        inputColor: '#FAFAFA',
+        accentColor: '#FF3D00',
+        tapeDecor: false,
+      };
+    }
     if (isManga) {
       return {
         fontFamily: "'Kalam', cursive, sans-serif",
@@ -309,38 +333,27 @@ export const Header: React.FC<HeaderProps> = ({
       accentColor: '#ff2e93',
       tapeDecor: false,
     };
-  }, [isManga, isAnime, isComics, isGaming, isCinema, isTvShows]);
+  }, [isManga, isAnime, isComics, isGaming, isCinema, isTvShows, isDark]);
 
   const subnavTheme = React.useMemo(() => {
     if (isDark) {
-      const accentColors: Record<string, string> = {
-        anime: '#a3e635',
-        gaming: '#00ff66',
-        cosplay: '#38bdf8',
-        comics: '#ffd60a',
-        cinema: '#d4af37',
-        tv: '#a78bfa',
-        manga: '#ff4d4d',
-        kpop: '#ff2e93',
-      };
-      const activeAccent = accentColors[effectiveTheme] || '#38bdf8';
       return {
-        barBg: '#090d16',
-        barBorder: 'border-t border-[#2a364f] border-b border-[#2a364f]',
-        btnBg: activeAccent,
-        btnColor: '#000000',
-        btnBorder: `2px solid ${activeAccent}`,
+        barBg: '#0A0A0A',
+        barBorder: 'border-t border-[#262626] border-b border-[#262626]',
+        btnBg: '#FF3D00',
+        btnColor: '#0A0A0A',
+        btnBorder: '1px solid #FF3D00',
         btnRadius: '0px',
         btnShadow: 'none',
-        btnFont: "'Outfit', sans-serif",
-        btnLabel: `★ ${effectiveTheme.toUpperCase()} MD`,
-        tabFont: "'Outfit', sans-serif",
-        tabColor: '#cbd5e1',
-        tabActiveColor: '#ffffff',
-        tabActiveBorder: `3px solid ${activeAccent}`,
+        btnFont: "'Inter Tight', 'Inter', sans-serif",
+        btnLabel: `★ ${effectiveTheme.toUpperCase()}`,
+        tabFont: "'Inter Tight', 'Inter', sans-serif",
+        tabColor: '#737373',
+        tabActiveColor: '#FAFAFA',
+        tabActiveBorder: '2px solid #FF3D00',
         tabLetterSpacing: '0.1em',
-        tabFontWeight: 700,
-        tabActiveWeight: 900,
+        tabFontWeight: 600,
+        tabActiveWeight: 800,
         fandomQuery: effectiveTheme,
       };
     }
@@ -652,17 +665,17 @@ export const Header: React.FC<HeaderProps> = ({
       data-theme={themeMode}
     >
       {/* Y2K System Status Ribbon */}
-      <div className={`w-full ${isGaming ? 'bg-white text-black' : 'bg-black text-white'} px-4 sm:px-8 py-1 font-mono text-[10px] font-bold tracking-widest uppercase flex items-center justify-between border-b border-black select-none`}>
+      <div className={`w-full ${isDark ? 'bg-[#0A0A0A] text-[#737373] border-b border-[#262626]' : isGaming ? 'bg-white text-black border-b border-black' : 'bg-black text-white border-b border-black'} px-4 sm:px-8 py-1 font-mono text-[10px] font-bold tracking-widest uppercase flex items-center justify-between select-none`}>
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-1.5">
-            <span className={`w-1.5 h-1.5 ${isGaming ? 'bg-black' : 'bg-white'} animate-pulse`} />
-            <span>PORTAL // READY</span>
+            <span className={`w-1.5 h-1.5 ${isDark ? 'bg-[#FF3D00]' : isGaming ? 'bg-black' : 'bg-white'} animate-pulse`} />
+            <span className={isDark ? 'text-[#FAFAFA]' : ''}>PORTAL // READY</span>
           </span>
-          <span className={`hidden md:inline ${isGaming ? 'text-neutral-600' : 'text-neutral-400'}`}>SYS.VER: 2026.1.0</span>
+          <span className={`hidden md:inline ${isDark ? 'text-[#737373]' : isGaming ? 'text-neutral-600' : 'text-neutral-400'}`}>SYS.VER: 2026.1.0</span>
         </div>
         <div className="flex items-center gap-4">
-          <span className={`hidden sm:inline ${isGaming ? 'text-neutral-600' : 'text-neutral-400'}`}>HANTEO &amp; CIRCLE CERTIFIED</span>
-          <span>TIME // 2026 UTC</span>
+          <span className={`hidden sm:inline ${isDark ? 'text-[#737373]' : isGaming ? 'text-neutral-600' : 'text-neutral-400'}`}>HANTEO &amp; CIRCLE CERTIFIED</span>
+          <span className={isDark ? 'text-[#FAFAFA]' : ''}>TIME // 2026 UTC</span>
         </div>
       </div>
 
@@ -672,7 +685,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center gap-2.5 sm:gap-4 md:gap-5 shrink-0">
           <button
             onClick={() => setIsMenuDrawerOpen(true)}
-            className={`mobile-menu-btn header-action-btn px-3 py-1.5 min-h-[44px] min-w-[44px] ${isGaming ? 'bg-black text-white hover:bg-white hover:text-black shadow-none' : isCinema ? 'bg-[#FF3000] text-white hover:bg-black shadow-none' : isCosplay ? 'bg-[#D02020] text-white hover:bg-[#b01818] shadow-[3px_3px_0px_#121212]' : isAnime ? 'bg-[#a3e635] text-black hover:bg-[#84cc16] shadow-[2px_2px_0px_#000000]' : isComics ? 'bg-[#ef4444] text-white hover:bg-[#dc2626] shadow-[3px_3px_0px_#000000]' : 'bg-[#d91470] text-white hover:bg-[#be185d] shadow-[2px_2px_0px_#000000]'} items-center justify-center cursor-pointer shrink-0 border-2 border-black font-mono text-xs font-black uppercase tracking-widest transition-transform active:scale-95`}
+            className={`mobile-menu-btn header-action-btn px-3 py-1.5 min-h-[44px] min-w-[44px] ${isDark ? 'bg-[#1A1A1A] text-[#FAFAFA] hover:bg-[#FAFAFA] hover:text-[#0A0A0A] border-[#262626] shadow-none' : isGaming ? 'bg-black text-white hover:bg-white hover:text-black shadow-none border-black' : isCinema ? 'bg-[#FF3000] text-white hover:bg-black shadow-none border-black' : isCosplay ? 'bg-[#D02020] text-white hover:bg-[#b01818] shadow-[3px_3px_0px_#121212] border-black' : isAnime ? 'bg-[#a3e635] text-black hover:bg-[#84cc16] shadow-[2px_2px_0px_#000000] border-black' : isComics ? 'bg-[#ef4444] text-white hover:bg-[#dc2626] shadow-[3px_3px_0px_#000000] border-black' : 'bg-[#d91470] text-white hover:bg-[#be185d] shadow-[2px_2px_0px_#000000] border-black'} items-center justify-center cursor-pointer shrink-0 border-2 font-mono text-xs font-black uppercase tracking-widest transition-transform active:scale-95`}
             style={{ borderRadius: '0px' }}
             title="Menu"
             aria-label="Toggle navigation menu"
@@ -702,8 +715,8 @@ export const Header: React.FC<HeaderProps> = ({
               width: '100%',
               display: 'flex',
               alignItems: 'center',
-              border: isDark ? '2px solid #334155' : '2px solid #000000',
-              backgroundColor: isDark ? '#0f172a' : '#ffffff',
+              border: isDark ? '1px solid #262626' : '2px solid #000000',
+              backgroundColor: isDark ? '#1A1A1A' : '#ffffff',
               boxShadow: isDark ? 'none' : isGaming || isCinema ? 'none' : isCosplay ? '4px 4px 0px #121212' : isAnime ? '4px 4px 0px #84cc16' : isComics ? '4px 4px 0px #000000' : '3px 3px 0px #000000',
               padding: '6px 12px',
               borderRadius: '0px',
@@ -712,10 +725,10 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Search prefix */}
             <span
               style={{
-                fontFamily: isCosplay ? "var(--font-outfit), 'Outfit', sans-serif" : "var(--font-jetbrains), var(--font-mono), 'JetBrains Mono', monospace",
+                fontFamily: isDark ? "'Inter Tight', 'Inter', monospace" : isCosplay ? "var(--font-outfit), 'Outfit', sans-serif" : "var(--font-jetbrains), var(--font-mono), 'JetBrains Mono', monospace",
                 fontSize: '11px',
                 fontWeight: 900,
-                color: isGaming ? (isDark ? '#00ff66' : '#000000') : isCinema ? '#FF3000' : isCosplay ? '#D02020' : isAnime ? (isDark ? '#a3e635' : '#65a30d') : isComics ? '#ef4444' : '#d91470',
+                color: isDark ? '#FF3D00' : isGaming ? '#000000' : isCinema ? '#FF3000' : isCosplay ? '#D02020' : isAnime ? '#65a30d' : isComics ? '#ef4444' : '#d91470',
                 marginRight: '8px',
                 userSelect: 'none',
               }}
@@ -740,14 +753,14 @@ export const Header: React.FC<HeaderProps> = ({
               style={{
                 flex: 1,
                 width: '100%',
-                fontFamily: "var(--font-jetbrains), var(--font-mono), 'JetBrains Mono', monospace",
+                fontFamily: isDark ? "'Inter Tight', 'Inter', sans-serif" : "var(--font-jetbrains), var(--font-mono), 'JetBrains Mono', monospace",
                 fontSize: '12px',
                 fontWeight: 700,
-                letterSpacing: '0.04em',
+                letterSpacing: isDark ? '-0.02em' : '0.04em',
                 border: 'none',
                 outline: 'none',
                 backgroundColor: 'transparent',
-                color: isDark ? '#f8fafc' : '#000000',
+                color: isDark ? '#FAFAFA' : '#000000',
                 padding: '0px',
                 textTransform: 'uppercase',
               }}
@@ -757,12 +770,12 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 type="button"
                 onClick={() => setSearchQuery('')}
-                className="header-clear-btn hover:text-[#ff2e93] font-mono text-xs font-bold"
+                className="header-clear-btn hover:text-[#FF3D00] font-mono text-xs font-bold"
                 style={{
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer',
-                  color: isDark ? '#94a3b8' : '#000000',
+                  color: isDark ? '#737373' : '#000000',
                   padding: '2px 6px',
                 }}
                 title="Clear"
@@ -778,7 +791,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Mobile Search Button */}
           <button
             onClick={() => setIsSearchModalOpen(true)}
-            className={`mobile-search-btn header-action-btn px-2.5 py-1.5 min-h-[44px] min-w-[44px] items-center justify-center ${isDark ? 'text-white border-[#334155] bg-[#1e293b] hover:bg-[#334155]' : 'text-black border-black bg-white hover:bg-neutral-100 hover:text-black'} border-2 cursor-pointer transition-colors duration-100 font-bold ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
+            className={`mobile-search-btn header-action-btn px-2.5 py-1.5 min-h-[44px] min-w-[44px] items-center justify-center ${isDark ? 'text-[#FAFAFA] border-[#262626] bg-[#1A1A1A] hover:bg-[#FAFAFA] hover:text-[#0A0A0A]' : 'text-black border-black bg-white hover:bg-neutral-100 hover:text-black'} border-2 cursor-pointer transition-colors duration-100 font-bold ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
             style={{ borderRadius: '0px' }}
             title="Search"
             aria-label="Open search dialog"
@@ -790,7 +803,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Shopping Cart Button */}
           <button
             onClick={() => setIsCartOpen(true)}
-            className={`header-action-btn px-3 py-1.5 min-h-[44px] sm:min-h-[36px] flex items-center justify-center border-2 border-black cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 ${isGaming ? 'bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'text-black bg-[#ffd60a] hover:bg-[#fde047] shadow-[2px_2px_0px_#000000]'}`}
+            className={`header-action-btn px-3 py-1.5 min-h-[44px] sm:min-h-[36px] flex items-center justify-center border-2 ${isDark ? 'border-[#FF3D00] bg-[#FF3D00] text-[#0A0A0A] hover:bg-[#E03600] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'border-black text-black bg-[#ffd60a] hover:bg-[#fde047] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9`}
             style={{ borderRadius: '0px' }}
             title="Cart"
             aria-label={`BAG (${cartCount}) - Shopping Cart`}
@@ -802,7 +815,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Wishlist Button */}
           <button
             onClick={() => setIsWishlistOpen(true)}
-            className={`header-action-btn hidden sm:flex px-3 py-1.5 min-h-[44px] sm:min-h-[36px] items-center justify-center border-2 border-black cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 ${isGaming ? 'bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'text-black bg-[#00f0ff] hover:bg-[#38bdf8] shadow-[2px_2px_0px_#000000]'}`}
+            className={`header-action-btn hidden sm:flex px-3 py-1.5 min-h-[44px] sm:min-h-[36px] items-center justify-center border-2 ${isDark ? 'border-[#FAFAFA] bg-transparent text-[#FAFAFA] hover:bg-[#FAFAFA] hover:text-[#0A0A0A] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'border-black text-black bg-[#00f0ff] hover:bg-[#38bdf8] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9`}
             style={{ borderRadius: '0px' }}
             title="Wishlist"
             aria-label={`SAVED (${wishlistCount}) - Saved Wishlist`}
@@ -817,7 +830,7 @@ export const Header: React.FC<HeaderProps> = ({
             title="Language: English"
             aria-label="Toggle language between English and Vietnamese"
             type="button"
-            className={`header-lang-btn hidden sm:flex notranslate ${isDark ? 'bg-[#1e293b] text-white border-[#334155] hover:bg-[#334155]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} items-center px-2.5 py-1 text-xs font-mono font-bold border-2 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] cursor-pointer transition-colors duration-100 ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
+            className={`header-lang-btn hidden sm:flex notranslate ${isDark ? 'bg-[#1A1A1A] text-[#FAFAFA] border-[#262626] hover:bg-[#FAFAFA] hover:text-[#0A0A0A]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} items-center px-2.5 py-1 text-xs font-mono font-bold border-2 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] cursor-pointer transition-colors duration-100 ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
             style={{ borderRadius: '0px' }}
           >
             <span>[EN]</span>
@@ -829,7 +842,7 @@ export const Header: React.FC<HeaderProps> = ({
             title={themeMode === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             aria-label={themeMode === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             type="button"
-            className={`header-action-btn hidden sm:flex notranslate ${isDark ? 'bg-[#1e293b] text-white border-[#334155] hover:bg-[#334155]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} px-2.5 py-1 items-center justify-center border-2 font-bold uppercase cursor-pointer transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-[11px] ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
+            className={`header-action-btn hidden sm:flex notranslate ${isDark ? 'bg-[#1A1A1A] text-[#FAFAFA] border-[#262626] hover:bg-[#FAFAFA] hover:text-[#0A0A0A]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} px-2.5 py-1 items-center justify-center border-2 font-bold uppercase cursor-pointer transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-[11px] ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
             style={{ borderRadius: '0px' }}
           >
             {themeMode === 'dark' ? '[LIGHT]' : '[DARK]'}
@@ -838,7 +851,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Ticket Wallet Quick Access Button */}
           <button
             onClick={() => setIsTicketWalletOpen(true)}
-            className={`header-action-btn flex items-center justify-center px-2.5 sm:px-3 py-1.5 border-2 border-black cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs ${isGaming ? 'bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'bg-[#FF3000] text-white hover:bg-[#e02b00] shadow-none' : 'text-black bg-[#10b981] hover:bg-[#34d399] shadow-[2px_2px_0px_#000000]'}`}
+            className={`header-action-btn flex items-center justify-center px-2.5 sm:px-3 py-1.5 border-2 ${isDark ? 'border-[#FF3D00] bg-[#FF3D00] text-[#0A0A0A] hover:bg-[#E03600] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-[#FF3000] text-white hover:bg-[#e02b00] shadow-none' : 'border-black text-black bg-[#10b981] hover:bg-[#34d399] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs`}
             style={{ borderRadius: '0px' }}
             title="Open Ticket Wallet & Blockchain Verification"
             aria-label="Ticket Wallet"
@@ -852,7 +865,7 @@ export const Header: React.FC<HeaderProps> = ({
           {isLoggedIn ? (
             <button
               onClick={() => setIsAuthModalOpen(true)}
-              className={`header-action-btn flex items-center justify-center px-3 py-1.5 border-2 border-black cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs ${isGaming ? 'bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'text-black bg-[#c084fc] hover:bg-[#d8b4fe] shadow-[2px_2px_0px_#000000]'}`}
+              className={`header-action-btn flex items-center justify-center px-3 py-1.5 border-2 ${isDark ? 'border-[#262626] bg-[#1A1A1A] text-[#FAFAFA] hover:bg-[#FAFAFA] hover:text-[#0A0A0A] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'border-black text-black bg-[#c084fc] hover:bg-[#d8b4fe] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs`}
               style={{ borderRadius: '0px' }}
               title={`${user.name} - Profile`}
               aria-label={`User Account Profile for ${user.name}`}
@@ -864,7 +877,7 @@ export const Header: React.FC<HeaderProps> = ({
           ) : (
             <button
               onClick={() => setIsAuthModalOpen(true)}
-              className={`header-action-btn flex items-center justify-center px-3 py-1.5 border-2 border-black cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs ${isGaming ? 'bg-black text-white hover:bg-white hover:text-black shadow-none' : isCinema ? 'bg-[#FF3000] text-white hover:bg-black shadow-none' : 'text-black bg-[#ffd60a] hover:bg-[#ffe066] shadow-[2px_2px_0px_#000000]'}`}
+              className={`header-action-btn flex items-center justify-center px-3 py-1.5 border-2 ${isDark ? 'border-[#FF3D00] bg-[#FF3D00] text-[#0A0A0A] hover:bg-[#E03600] shadow-none' : isGaming ? 'border-black bg-black text-white hover:bg-white hover:text-black shadow-none' : isCinema ? 'border-black bg-[#FF3000] text-white hover:bg-black shadow-none' : 'border-black text-black bg-[#ffd60a] hover:bg-[#ffe066] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs`}
               style={{ borderRadius: '0px' }}
               title="Sign In / Sign Up"
               aria-label="LOGIN - Sign In or Register"
@@ -931,8 +944,8 @@ export const Header: React.FC<HeaderProps> = ({
                     marginTop: '2px',
                     width: '340px',
                     maxWidth: '92vw',
-                    backgroundColor: isDark ? '#0f172a' : '#ffffff',
-                    border: isDark ? '2px solid #334155' : '2px solid #000000',
+                    backgroundColor: isDark ? '#0F0F0F' : '#ffffff',
+                    border: isDark ? '1px solid #262626' : '2px solid #000000',
                     borderRadius: '0px',
                     padding: '14px',
                     boxShadow: 'none',
@@ -942,15 +955,15 @@ export const Header: React.FC<HeaderProps> = ({
                   className="animate-in fade-in-0 duration-100"
                 >
                   {/* Header Title */}
-                  <div className={`flex items-center justify-between pb-2.5 mb-2 border-b ${isDark ? 'border-[#334155]' : 'border-slate-100'}`}>
+                  <div className={`flex items-center justify-between pb-2.5 mb-2 border-b ${isDark ? 'border-[#262626]' : 'border-slate-100'}`}>
                     <div className="flex items-center gap-2">
                       <div
                         style={{ borderRadius: '0px' }}
-                        className={`w-5 h-5 ${isDark ? 'bg-white text-black' : 'bg-black text-white'} flex items-center justify-center`}
+                        className={`w-5 h-5 ${isDark ? 'bg-[#FF3D00] text-[#0A0A0A]' : 'bg-black text-white'} flex items-center justify-center`}
                       >
                         <Sparkles className="w-3 h-3" />
                       </div>
-                      <span className={`font-mono text-[11px] font-bold uppercase tracking-widest ${isDark ? 'text-[#f8fafc]' : 'text-black'}`}>
+                      <span className={`font-mono text-[11px] font-bold uppercase tracking-widest ${isDark ? 'text-[#FAFAFA]' : 'text-black'}`}>
                         CATEGORIES &amp; FUNCTIONS
                       </span>
                     </div>
@@ -958,7 +971,7 @@ export const Header: React.FC<HeaderProps> = ({
                       type="button"
                       onClick={() => setIsAllMdDropdownOpen(false)}
                       style={{ borderRadius: '0px' }}
-                      className={`w-6 h-6 border ${isDark ? 'border-[#334155] hover:bg-[#1e293b] text-white bg-[#0f172a]' : 'border-black hover:bg-neutral-100 text-black bg-white'} flex items-center justify-center cursor-pointer transition-colors duration-100`}
+                      className={`w-6 h-6 border ${isDark ? 'border-[#262626] hover:bg-[#FAFAFA] hover:text-[#0A0A0A] text-[#FAFAFA] bg-[#1A1A1A]' : 'border-black hover:bg-neutral-100 text-black bg-white'} flex items-center justify-center cursor-pointer transition-colors duration-100`}
                       title="Close"
                     >
                       <X className="w-3.5 h-3.5" />
@@ -977,17 +990,17 @@ export const Header: React.FC<HeaderProps> = ({
                             item.action();
                           }}
                           style={{ borderRadius: '0px' }}
-                          className={`group w-full flex items-center justify-between px-3 py-2 border border-transparent ${isDark ? 'hover:border-[#334155] hover:bg-[#1e293b] text-white' : 'hover:border-black hover:bg-neutral-100 text-black'} text-left bg-transparent cursor-pointer transition-colors duration-100`}
+                          className={`group w-full flex items-center justify-between px-3 py-2 border border-transparent ${isDark ? 'hover:border-[#262626] hover:bg-[#1A1A1A] text-[#FAFAFA]' : 'hover:border-black hover:bg-neutral-100 text-black'} text-left bg-transparent cursor-pointer transition-colors duration-100`}
                           type="button"
                         >
                           <div className="flex items-center gap-3">
                             <div
                               style={{ borderRadius: '0px' }}
-                              className={`w-6 h-6 border ${isDark ? 'border-[#334155] bg-[#1e293b] text-white' : 'border-black bg-white text-black'} flex items-center justify-center shrink-0`}
+                              className={`w-6 h-6 border ${isDark ? 'border-[#262626] bg-[#1A1A1A] text-[#FAFAFA]' : 'border-black bg-white text-black'} flex items-center justify-center shrink-0`}
                             >
                               <ItemIcon className="w-3.5 h-3.5" />
                             </div>
-                            <span className={`font-mono text-[12px] font-bold ${isDark ? 'text-[#f8fafc]' : 'text-black'} tracking-tight`}>
+                            <span className={`font-mono text-[12px] font-bold ${isDark ? 'text-[#FAFAFA]' : 'text-black'} tracking-tight`}>
                               {item.label}
                             </span>
                           </div>
@@ -998,8 +1011,8 @@ export const Header: React.FC<HeaderProps> = ({
                   </div>
 
                   {/* Quick Sections shortcut */}
-                  <div className={`pt-3 mt-3 border-t ${isDark ? 'border-[#334155]' : 'border-black'}`}>
-                    <span className={`font-mono text-[10px] font-bold uppercase tracking-widest ${isDark ? 'text-neutral-400' : 'text-neutral-500'} block mb-2 px-1`}>
+                  <div className={`pt-3 mt-3 border-t ${isDark ? 'border-[#262626]' : 'border-black'}`}>
+                    <span className={`font-mono text-[10px] font-bold uppercase tracking-widest ${isDark ? 'text-[#737373]' : 'text-neutral-500'} block mb-2 px-1`}>
                       QUICK SHORTCUTS
                     </span>
                     <div className="grid grid-cols-2 gap-2">
@@ -1010,15 +1023,15 @@ export const Header: React.FC<HeaderProps> = ({
                           scrollToSection('albums');
                         }}
                         style={{ borderRadius: '0px' }}
-                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1e293b] hover:bg-[#2a364f] border-[#334155] text-white' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
+                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1A1A1A] hover:bg-[#262626] border-[#262626] text-[#FAFAFA]' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
                       >
                         <div
                           style={{ borderRadius: '0px' }}
-                          className={`w-5 h-5 border ${isDark ? 'border-[#334155] bg-white text-black' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
+                          className={`w-5 h-5 border ${isDark ? 'border-[#262626] bg-[#0A0A0A] text-[#FAFAFA]' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
                         >
                           <Disc className="w-3 h-3" />
                         </div>
-                        <span className={`truncate ${isDark ? 'text-white' : 'text-black'}`}>Album Drops</span>
+                        <span className={`truncate ${isDark ? 'text-[#FAFAFA]' : 'text-black'}`}>Album Drops</span>
                       </button>
 
                       <button
@@ -1028,15 +1041,15 @@ export const Header: React.FC<HeaderProps> = ({
                           scrollToSection('artists');
                         }}
                         style={{ borderRadius: '0px' }}
-                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1e293b] hover:bg-[#2a364f] border-[#334155] text-white' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
+                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1A1A1A] hover:bg-[#262626] border-[#262626] text-[#FAFAFA]' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
                       >
                         <div
                           style={{ borderRadius: '0px' }}
-                          className={`w-5 h-5 border ${isDark ? 'border-[#334155] bg-white text-black' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
+                          className={`w-5 h-5 border ${isDark ? 'border-[#262626] bg-[#0A0A0A] text-[#FAFAFA]' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
                         >
                           <Users className="w-3 h-3" />
                         </div>
-                        <span className={`truncate ${isDark ? 'text-white' : 'text-black'}`}>Idol Profiles</span>
+                        <span className={`truncate ${isDark ? 'text-[#FAFAFA]' : 'text-black'}`}>Idol Profiles</span>
                       </button>
 
                       <button
@@ -1046,15 +1059,15 @@ export const Header: React.FC<HeaderProps> = ({
                           scrollToSection('tours');
                         }}
                         style={{ borderRadius: '0px' }}
-                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1e293b] hover:bg-[#2a364f] border-[#334155] text-white' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
+                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1A1A1A] hover:bg-[#262626] border-[#262626] text-[#FAFAFA]' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
                       >
                         <div
                           style={{ borderRadius: '0px' }}
-                          className={`w-5 h-5 border ${isDark ? 'border-[#334155] bg-white text-black' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
+                          className={`w-5 h-5 border ${isDark ? 'border-[#262626] bg-[#0A0A0A] text-[#FAFAFA]' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
                         >
                           <Calendar className="w-3 h-3" />
                         </div>
-                        <span className={`truncate ${isDark ? 'text-white' : 'text-black'}`}>World Tour</span>
+                        <span className={`truncate ${isDark ? 'text-[#FAFAFA]' : 'text-black'}`}>World Tour</span>
                       </button>
 
                       <button
@@ -1064,15 +1077,15 @@ export const Header: React.FC<HeaderProps> = ({
                           scrollToSection('community');
                         }}
                         style={{ borderRadius: '0px' }}
-                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1e293b] hover:bg-[#2a364f] border-[#334155] text-white' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
+                        className={`group flex items-center gap-2 p-2 ${isDark ? 'bg-[#1A1A1A] hover:bg-[#262626] border-[#262626] text-[#FAFAFA]' : 'bg-white hover:bg-neutral-100 border-black text-black'} border text-xs font-mono font-bold cursor-pointer transition-colors duration-100`}
                       >
                         <div
                           style={{ borderRadius: '0px' }}
-                          className={`w-5 h-5 border ${isDark ? 'border-[#334155] bg-white text-black' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
+                          className={`w-5 h-5 border ${isDark ? 'border-[#262626] bg-[#0A0A0A] text-[#FAFAFA]' : 'border-black bg-black text-white'} flex items-center justify-center shrink-0`}
                         >
                           <MessageSquare className="w-3 h-3" />
                         </div>
-                        <span className={`truncate ${isDark ? 'text-white' : 'text-black'}`}>Fandom Feed</span>
+                        <span className={`truncate ${isDark ? 'text-[#FAFAFA]' : 'text-black'}`}>Fandom Feed</span>
                       </button>
                     </div>
                   </div>

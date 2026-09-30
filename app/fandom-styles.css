@@ -3175,9 +3175,9 @@ header[data-theme="dark"],
 [data-theme="dark"] .fandom-header-tv,
 .dark .fandom-header-comics,
 [data-theme="dark"] .fandom-header-comics {
-  background-color: #090d16 !important;
-  background: #090d16 !important;
-  border-bottom: 2px solid #2a364f !important;
+  background-color: #0A0A0A !important;
+  background: #0A0A0A !important;
+  border-bottom: 1px solid #262626 !important;
   box-shadow: none !important;
 }
 
@@ -3197,9 +3197,9 @@ html[data-theme="dark"] .header-search-bar,
 [data-theme="dark"] .header-search-bar,
 header.dark-header .header-search-bar,
 header[data-theme="dark"] .header-search-bar {
-  background-color: #0f172a !important;
-  background: #0f172a !important;
-  border-color: #334155 !important;
+  background-color: #1A1A1A !important;
+  background: #1A1A1A !important;
+  border: 1px solid #262626 !important;
   box-shadow: none !important;
 }
 
@@ -3209,14 +3209,14 @@ html[data-theme="dark"] .header-search-input,
 [data-theme="dark"] .header-search-input,
 header.dark-header .header-search-input,
 header[data-theme="dark"] .header-search-input {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
 html.dark .header-search-input::placeholder,
 html[data-theme="dark"] .header-search-input::placeholder,
 .dark .header-search-input::placeholder,
 [data-theme="dark"] .header-search-input::placeholder {
-  color: #94a3b8 !important;
+  color: #737373 !important;
 }
 
 html.dark .header-subnav,
@@ -3229,10 +3229,10 @@ html[data-theme="dark"] .desktop-subnav,
 [data-theme="dark"] .desktop-subnav,
 header.dark-header .header-subnav,
 header.dark-header .desktop-subnav {
-  background-color: #090d16 !important;
-  background: #090d16 !important;
-  border-top-color: #2a364f !important;
-  border-bottom-color: #2a364f !important;
+  background-color: #0A0A0A !important;
+  background: #0A0A0A !important;
+  border-top: 1px solid #262626 !important;
+  border-bottom: 1px solid #262626 !important;
 }
 
 html.dark .header-nav-link,
@@ -3240,7 +3240,8 @@ html[data-theme="dark"] .header-nav-link,
 .dark .header-nav-link,
 [data-theme="dark"] .header-nav-link,
 header.dark-header .header-nav-link {
-  color: #cbd5e1 !important;
+  color: #737373 !important;
+  font-family: "Inter Tight", "Inter", sans-serif !important;
 }
 
 html.dark .header-nav-link:hover,
@@ -3248,7 +3249,7 @@ html[data-theme="dark"] .header-nav-link:hover,
 .dark .header-nav-link:hover,
 [data-theme="dark"] .header-nav-link:hover,
 header.dark-header .header-nav-link:hover {
-  color: #ffffff !important;
+  color: #FF3D00 !important;
 }
 
 html.dark .header-action-btn,
@@ -3256,7 +3257,21 @@ html[data-theme="dark"] .header-action-btn,
 .dark .header-action-btn,
 [data-theme="dark"] .header-action-btn,
 header.dark-header .header-action-btn {
-  border-color: #334155 !important;
+  background-color: #1A1A1A !important;
+  color: #FAFAFA !important;
+  border: 1px solid #262626 !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  transition: all 150ms cubic-bezier(0.25, 0, 0, 1) !important;
+}
+
+html.dark .header-action-btn:hover,
+html[data-theme="dark"] .header-action-btn:hover,
+.dark .header-action-btn:hover,
+[data-theme="dark"] .header-action-btn:hover,
+header.dark-header .header-action-btn:hover {
+  background-color: #FAFAFA !important;
+  color: #0A0A0A !important;
 }
 
 /* Multimedia Dark Mode High Contrast Text & Elements */
@@ -3264,9 +3279,9 @@ html.dark #multimedia,
 html[data-theme="dark"] #multimedia,
 .dark #multimedia,
 [data-theme="dark"] #multimedia {
-  background-color: #090d16 !important;
-  color: #f8fafc !important;
-  border-bottom-color: #2a364f !important;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
+  border-bottom-color: #262626 !important;
 }
 
 html.dark #multimedia h1,
@@ -3293,7 +3308,9 @@ html[data-theme="dark"] #multimedia p,
 [data-theme="dark"] #multimedia h4,
 [data-theme="dark"] #multimedia h5,
 [data-theme="dark"] #multimedia p {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
+  font-family: "Inter Tight", "Inter", sans-serif !important;
+  letter-spacing: -0.04em !important;
 }
 
 html.dark #multimedia .text-black,
@@ -3312,7 +3329,7 @@ html[data-theme="dark"] #multimedia .text-neutral-700,
 [data-theme="dark"] #multimedia .text-neutral-900,
 [data-theme="dark"] #multimedia .text-neutral-800,
 [data-theme="dark"] #multimedia .text-neutral-700 {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
 html.dark #multimedia .text-neutral-500,
@@ -3323,7 +3340,7 @@ html[data-theme="dark"] #multimedia .text-neutral-600,
 .dark #multimedia .text-neutral-600,
 [data-theme="dark"] #multimedia .text-neutral-500,
 [data-theme="dark"] #multimedia .text-neutral-600 {
-  color: #94a3b8 !important;
+  color: #737373 !important;
 }
 
 html.dark #multimedia button.bg-white,
@@ -3334,9 +3351,14 @@ html[data-theme="dark"] #multimedia button[class~="bg-white"],
 .dark #multimedia button[class~="bg-white"],
 [data-theme="dark"] #multimedia button.bg-white,
 [data-theme="dark"] #multimedia button[class~="bg-white"] {
-  background-color: #1e293b !important;
-  color: #f8fafc !important;
-  border-color: #334155 !important;
+  background-color: transparent !important;
+  color: #FAFAFA !important;
+  border: 1px solid #FAFAFA !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  transition: all 150ms cubic-bezier(0.25, 0, 0, 1) !important;
 }
 
 html.dark #multimedia button.bg-white *,
@@ -3347,7 +3369,7 @@ html[data-theme="dark"] #multimedia button[class~="bg-white"] *,
 .dark #multimedia button[class~="bg-white"] *,
 [data-theme="dark"] #multimedia button.bg-white *,
 [data-theme="dark"] #multimedia button[class~="bg-white"] * {
-  color: #f8fafc !important;
+  color: #FAFAFA !important;
 }
 
 html.dark #multimedia button.bg-white:hover,
@@ -3358,8 +3380,8 @@ html[data-theme="dark"] #multimedia button[class~="bg-white"]:hover,
 .dark #multimedia button[class~="bg-white"]:hover,
 [data-theme="dark"] #multimedia button.bg-white:hover,
 [data-theme="dark"] #multimedia button[class~="bg-white"]:hover {
-  background-color: #334155 !important;
-  color: #ffffff !important;
+  background-color: #FAFAFA !important;
+  color: #0A0A0A !important;
 }
 
 
