@@ -339,21 +339,21 @@ export const Header: React.FC<HeaderProps> = ({
     if (isDark) {
       return {
         barBg: '#0A0A0A',
-        barBorder: 'border-t border-[#262626] border-b border-[#262626]',
+        barBorder: 'border-t border-[#3F3F46] border-b border-[#3F3F46]',
         btnBg: '#FF3D00',
-        btnColor: '#0A0A0A',
+        btnColor: '#FFFFFF',
         btnBorder: '1px solid #FF3D00',
         btnRadius: '0px',
         btnShadow: 'none',
         btnFont: "'Inter Tight', 'Inter', sans-serif",
         btnLabel: `★ ${effectiveTheme.toUpperCase()}`,
         tabFont: "'Inter Tight', 'Inter', sans-serif",
-        tabColor: '#737373',
-        tabActiveColor: '#FAFAFA',
+        tabColor: '#CBD5E1',
+        tabActiveColor: '#FFFFFF',
         tabActiveBorder: '2px solid #FF3D00',
         tabLetterSpacing: '0.1em',
-        tabFontWeight: 600,
-        tabActiveWeight: 800,
+        tabFontWeight: 700,
+        tabActiveWeight: 900,
         fandomQuery: effectiveTheme,
       };
     }
@@ -791,7 +791,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Mobile Search Button */}
           <button
             onClick={() => setIsSearchModalOpen(true)}
-            className={`mobile-search-btn header-action-btn px-2.5 py-1.5 min-h-[44px] min-w-[44px] items-center justify-center ${isDark ? 'text-[#FAFAFA] border-[#262626] bg-[#1A1A1A] hover:bg-[#FAFAFA] hover:text-[#0A0A0A]' : 'text-black border-black bg-white hover:bg-neutral-100 hover:text-black'} border-2 cursor-pointer transition-colors duration-100 font-bold ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
+            className={`mobile-search-btn header-action-btn px-2.5 py-1.5 min-h-[44px] min-w-[44px] items-center justify-center ${isDark ? 'text-[#FFFFFF] border-[#52525B] bg-[#222226] hover:bg-[#FFFFFF] hover:text-[#000000]' : 'text-black border-black bg-white hover:bg-neutral-100 hover:text-black'} border-2 cursor-pointer transition-colors duration-100 font-bold ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
             style={{ borderRadius: '0px' }}
             title="Search"
             aria-label="Open search dialog"
@@ -803,7 +803,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Shopping Cart Button */}
           <button
             onClick={() => setIsCartOpen(true)}
-            className={`header-action-btn px-3 py-1.5 min-h-[44px] sm:min-h-[36px] flex items-center justify-center border-2 ${isDark ? 'border-[#FF3D00] bg-[#FF3D00] text-[#0A0A0A] hover:bg-[#E03600] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'border-black text-black bg-[#ffd60a] hover:bg-[#fde047] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9`}
+            className={`header-action-btn px-3 py-1.5 min-h-[44px] sm:min-h-[36px] flex items-center justify-center border-2 ${isDark ? 'border-[#FFD60A] bg-[#FFD60A] text-[#000000] hover:bg-[#FDE047] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'border-black text-black bg-[#ffd60a] hover:bg-[#fde047] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9`}
             style={{ borderRadius: '0px' }}
             title="Cart"
             aria-label={`BAG (${cartCount}) - Shopping Cart`}
@@ -815,7 +815,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Wishlist Button */}
           <button
             onClick={() => setIsWishlistOpen(true)}
-            className={`header-action-btn hidden sm:flex px-3 py-1.5 min-h-[44px] sm:min-h-[36px] items-center justify-center border-2 ${isDark ? 'border-[#FAFAFA] bg-transparent text-[#FAFAFA] hover:bg-[#FAFAFA] hover:text-[#0A0A0A] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'border-black text-black bg-[#00f0ff] hover:bg-[#38bdf8] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9`}
+            className={`header-action-btn hidden sm:flex px-3 py-1.5 min-h-[44px] sm:min-h-[36px] items-center justify-center border-2 ${isDark ? 'border-[#00F0FF] bg-[#00F0FF] text-[#000000] hover:bg-[#38BDF8] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'border-black text-black bg-[#00f0ff] hover:bg-[#38bdf8] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9`}
             style={{ borderRadius: '0px' }}
             title="Wishlist"
             aria-label={`SAVED (${wishlistCount}) - Saved Wishlist`}
@@ -830,7 +830,7 @@ export const Header: React.FC<HeaderProps> = ({
             title="Language: English"
             aria-label="Toggle language between English and Vietnamese"
             type="button"
-            className={`header-lang-btn hidden sm:flex notranslate ${isDark ? 'bg-[#1A1A1A] text-[#FAFAFA] border-[#262626] hover:bg-[#FAFAFA] hover:text-[#0A0A0A]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} items-center px-2.5 py-1 text-xs font-mono font-bold border-2 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] cursor-pointer transition-colors duration-100 ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
+            className={`header-lang-btn hidden sm:flex notranslate ${isDark ? 'bg-[#222226] text-[#FFFFFF] border-[#52525B] hover:bg-[#FFFFFF] hover:text-[#000000]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} items-center px-2.5 py-1 text-xs font-mono font-bold border-2 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] cursor-pointer transition-colors duration-100 ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
             style={{ borderRadius: '0px' }}
           >
             <span>[EN]</span>
@@ -842,7 +842,7 @@ export const Header: React.FC<HeaderProps> = ({
             title={themeMode === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             aria-label={themeMode === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
             type="button"
-            className={`header-action-btn hidden sm:flex notranslate ${isDark ? 'bg-[#1A1A1A] text-[#FAFAFA] border-[#262626] hover:bg-[#FAFAFA] hover:text-[#0A0A0A]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} px-2.5 py-1 items-center justify-center border-2 font-bold uppercase cursor-pointer transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-[11px] ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
+            className={`header-action-btn hidden sm:flex notranslate ${isDark ? 'bg-[#222226] text-[#FFFFFF] border-[#52525B] hover:bg-[#FFFFFF] hover:text-[#000000]' : 'bg-white text-black border-black hover:bg-neutral-100 hover:text-black'} px-2.5 py-1 items-center justify-center border-2 font-bold uppercase cursor-pointer transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-[11px] ${isGaming || isCinema || isDark ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`}
             style={{ borderRadius: '0px' }}
           >
             {themeMode === 'dark' ? '[LIGHT]' : '[DARK]'}
@@ -851,7 +851,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Ticket Wallet Quick Access Button */}
           <button
             onClick={() => setIsTicketWalletOpen(true)}
-            className={`header-action-btn flex items-center justify-center px-2.5 sm:px-3 py-1.5 border-2 ${isDark ? 'border-[#FF3D00] bg-[#FF3D00] text-[#0A0A0A] hover:bg-[#E03600] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-[#FF3000] text-white hover:bg-[#e02b00] shadow-none' : 'border-black text-black bg-[#10b981] hover:bg-[#34d399] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs`}
+            className={`header-action-btn flex items-center justify-center px-2.5 sm:px-3 py-1.5 border-2 ${isDark ? 'border-[#10B981] bg-[#10B981] text-[#000000] hover:bg-[#34D399] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-[#FF3000] text-white hover:bg-[#e02b00] shadow-none' : 'border-black text-black bg-[#10b981] hover:bg-[#34d399] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs`}
             style={{ borderRadius: '0px' }}
             title="Open Ticket Wallet & Blockchain Verification"
             aria-label="Ticket Wallet"
@@ -865,7 +865,7 @@ export const Header: React.FC<HeaderProps> = ({
           {isLoggedIn ? (
             <button
               onClick={() => setIsAuthModalOpen(true)}
-              className={`header-action-btn flex items-center justify-center px-3 py-1.5 border-2 ${isDark ? 'border-[#262626] bg-[#1A1A1A] text-[#FAFAFA] hover:bg-[#FAFAFA] hover:text-[#0A0A0A] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'border-black text-black bg-[#c084fc] hover:bg-[#d8b4fe] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs`}
+              className={`header-action-btn flex items-center justify-center px-3 py-1.5 border-2 ${isDark ? 'border-[#C084FC] bg-[#C084FC] text-[#000000] hover:bg-[#D8B4FE] shadow-none' : isGaming ? 'border-black bg-white hover:bg-neutral-100 hover:text-black text-black shadow-none' : isCinema ? 'border-black bg-white hover:bg-[#FF3000] hover:text-white text-black shadow-none' : 'border-black text-black bg-[#c084fc] hover:bg-[#d8b4fe] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs`}
               style={{ borderRadius: '0px' }}
               title={`${user.name} - Profile`}
               aria-label={`User Account Profile for ${user.name}`}
@@ -877,7 +877,7 @@ export const Header: React.FC<HeaderProps> = ({
           ) : (
             <button
               onClick={() => setIsAuthModalOpen(true)}
-              className={`header-action-btn flex items-center justify-center px-3 py-1.5 border-2 ${isDark ? 'border-[#FF3D00] bg-[#FF3D00] text-[#0A0A0A] hover:bg-[#E03600] shadow-none' : isGaming ? 'border-black bg-black text-white hover:bg-white hover:text-black shadow-none' : isCinema ? 'border-black bg-[#FF3000] text-white hover:bg-black shadow-none' : 'border-black text-black bg-[#ffd60a] hover:bg-[#ffe066] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs`}
+              className={`header-action-btn flex items-center justify-center px-3 py-1.5 border-2 ${isDark ? 'border-[#FF3D00] bg-[#FF3D00] text-[#FFFFFF] hover:bg-[#FF5722] shadow-none' : isGaming ? 'border-black bg-black text-white hover:bg-white hover:text-black shadow-none' : isCinema ? 'border-black bg-[#FF3000] text-white hover:bg-black shadow-none' : 'border-black text-black bg-[#ffd60a] hover:bg-[#ffe066] shadow-[2px_2px_0px_#000000]'} cursor-pointer font-black uppercase transition-colors duration-100 h-8 sm:h-9 min-h-[44px] sm:min-h-[36px] text-xs`}
               style={{ borderRadius: '0px' }}
               title="Sign In / Sign Up"
               aria-label="LOGIN - Sign In or Register"
