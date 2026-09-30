@@ -1392,7 +1392,8 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
    Reduction to Essence: Pure #000000 & #FFFFFF, Playfair Display Serif,
    Source Serif 4, JetBrains Mono, 0px radius, 0px shadows, 4px heavy rules.
 ========================================================================= */
-[data-fandom-theme="gaming"], .fandom-theme-gaming {
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming {
   --background: #FFFFFF;
   --foreground: #000000;
   --muted: #F5F5F5;
@@ -1424,16 +1425,16 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
   border-radius: 0px !important;
 }
 
-/* Remove all glowing dropshadows */
-[data-fandom-theme="gaming"] *:not(.keep-shadow),
-.fandom-theme-gaming *:not(.keep-shadow) {
+/* Remove all glowing dropshadows in light mode */
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] *:not(.keep-shadow),
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming *:not(.keep-shadow) {
   box-shadow: none !important;
   text-shadow: none !important;
 }
 
 /* Primary Pattern: Horizontal Lines (4px) + Noise texture on Main */
-[data-fandom-theme="gaming"] main,
-.fandom-theme-gaming main {
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] main,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming main {
   background-color: #FFFFFF !important;
   background-image: 
     repeating-linear-gradient(
@@ -1448,26 +1449,26 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
 }
 
 /* Heavy 4px section rules */
-[data-fandom-theme="gaming"] section,
-.fandom-theme-gaming section {
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] section,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming section {
   background-color: transparent !important;
   border-bottom: 4px solid #000000 !important;
 }
 
 /* Headings: Playfair Display Serif Hero */
-[data-fandom-theme="gaming"] h1,
-[data-fandom-theme="gaming"] h2,
-[data-fandom-theme="gaming"] h3,
-[data-fandom-theme="gaming"] h4,
-[data-fandom-theme="gaming"] h5,
-[data-fandom-theme="gaming"] h6,
-.fandom-theme-gaming h1,
-.fandom-theme-gaming h2,
-.fandom-theme-gaming h3,
-.fandom-theme-gaming h4,
-.fandom-theme-gaming h5,
-.fandom-theme-gaming h6,
-.fandom-theme-gaming .font-serif {
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] h1,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] h2,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] h3,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] h4,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] h5,
+html:not(.dark):not([data-theme="dark"]) [data-fandom-theme="gaming"] h6,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming h1,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming h2,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming h3,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming h4,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming h5,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming h6,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .font-serif {
   font-family: var(--font-playfair), "Playfair Display", Georgia, serif !important;
   letter-spacing: -0.025em !important;
   color: #000000 !important;
@@ -1481,13 +1482,13 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
   font-family: var(--font-jetbrains), var(--font-mono), monospace !important;
 }
 
-/* Architectural Flat Cards - Giữ nền trắng rõ ràng khi hover, không biến thành màu đen */
-.fandom-theme-gaming .fandom-card,
-.fandom-theme-gaming .kpop-game-card,
-.fandom-theme-gaming .domain-card,
-.fandom-theme-gaming .kpop-styled-card,
-.fandom-theme-gaming article,
-.fandom-theme-gaming #artists .group {
+/* Architectural Flat Cards in light mode */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .fandom-card,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .kpop-game-card,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .domain-card,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .kpop-styled-card,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming article,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming #artists .group {
   background-color: #FFFFFF !important;
   color: #000000 !important;
   border: 2px solid #000000 !important;
@@ -1496,12 +1497,12 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
   transition: all 0.15s ease !important;
 }
 
-.fandom-theme-gaming .fandom-card:hover,
-.fandom-theme-gaming .kpop-game-card:hover,
-.fandom-theme-gaming .domain-card:hover,
-.fandom-theme-gaming .kpop-styled-card:hover,
-.fandom-theme-gaming article:hover,
-.fandom-theme-gaming #artists .group:hover {
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .fandom-card:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .kpop-game-card:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .domain-card:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .kpop-styled-card:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming article:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming #artists .group:hover {
   background-color: #FFFFFF !important;
   color: #000000 !important;
   border-color: #000000 !important;
@@ -1527,14 +1528,14 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
   filter: grayscale(0) !important;
 }
 
-/* Monochrome Buttons: Instant binary on/off */
-.fandom-theme-gaming button.bg-black,
-.fandom-theme-gaming .btn-primary,
-.fandom-theme-gaming .domain-card-btn-primary,
-.fandom-theme-gaming button.bg-\[\#ff2e93\],
-.fandom-theme-gaming button.bg-\[\#9333ea\],
-.fandom-theme-gaming button.bg-\[\#ffd60a\],
-.fandom-theme-gaming button.bg-\[\#00f0ff\] {
+/* Monochrome Buttons in light mode: Instant binary on/off */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-black,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .btn-primary,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .domain-card-btn-primary,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-\[\#ff2e93\],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-\[\#9333ea\],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-\[\#ffd60a\],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-\[\#00f0ff\] {
   background-color: #000000 !important;
   color: #FFFFFF !important;
   border: 2px solid #000000 !important;
@@ -1542,52 +1543,52 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-cosplay button.bg-black {
   transition: all 100ms ease !important;
 }
 
-.fandom-theme-gaming button.bg-black:hover,
-.fandom-theme-gaming .btn-primary:hover,
-.fandom-theme-gaming .domain-card-btn-primary:hover,
-.fandom-theme-gaming button.bg-\[\#ff2e93\]:hover,
-.fandom-theme-gaming button.bg-\[\#9333ea\]:hover,
-.fandom-theme-gaming button.bg-\[\#ffd60a\]:hover,
-.fandom-theme-gaming button.bg-\[\#00f0ff\]:hover {
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-black:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .btn-primary:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .domain-card-btn-primary:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-\[\#ff2e93\]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-\[\#9333ea\]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-\[\#ffd60a\]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-\[\#00f0ff\]:hover {
   background-color: #FFFFFF !important;
   color: #000000 !important;
   border: 2px solid #000000 !important;
 }
 
-/* Purge all colorful background utilities into pure white monochrome tokens with crisp black borders */
-.fandom-theme-gaming [class*="bg-[#ff2e93]"],
-.fandom-theme-gaming [class*="bg-[#ffd60a]"],
-.fandom-theme-gaming [class*="bg-[#00f0ff]"],
-.fandom-theme-gaming [class*="bg-[#9333ea]"],
-.fandom-theme-gaming [class*="bg-[#c084fc]"],
-.fandom-theme-gaming [class*="bg-[#10b981]"],
-.fandom-theme-gaming [class*="bg-[#ccff00]"],
-.fandom-theme-gaming [class*="bg-[#fb923c]"],
-.fandom-theme-gaming [class*="bg-[#f43f5e]"],
-.fandom-theme-gaming [class*="bg-[#38bdf8]"],
-.fandom-theme-gaming [class*="bg-[#a3e635]"],
-.fandom-theme-gaming [class*="bg-emerald-"],
-.fandom-theme-gaming [class*="bg-pink-"],
-.fandom-theme-gaming [class*="bg-purple-"],
-.fandom-theme-gaming [class*="bg-amber-"],
-.fandom-theme-gaming [class*="bg-yellow-"],
-.fandom-theme-gaming [class*="bg-cyan-"] {
+/* Purge all colorful background utilities into pure white in LIGHT mode only */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#ff2e93]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#ffd60a]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#00f0ff]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#9333ea]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#c084fc]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#10b981]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#ccff00]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#fb923c]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#f43f5e]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#38bdf8]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#a3e635]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-emerald-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-pink-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-purple-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-amber-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-yellow-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-cyan-"] {
   background-color: #FFFFFF !important;
   color: #000000 !important;
   border: 1.5px solid #000000 !important;
   box-shadow: none !important;
 }
 
-/* Hover inversion on buttons with colorful backgrounds: Instant binary black */
-.fandom-theme-gaming button[class*="bg-[#ff2e93]"]:hover,
-.fandom-theme-gaming button[class*="bg-[#ffd60a]"]:hover,
-.fandom-theme-gaming button[class*="bg-[#00f0ff]"]:hover,
-.fandom-theme-gaming button[class*="bg-[#9333ea]"]:hover,
-.fandom-theme-gaming button[class*="bg-[#c084fc]"]:hover,
-.fandom-theme-gaming button[class*="bg-[#10b981]"]:hover,
-.fandom-theme-gaming button[class*="bg-[#fb923c]"]:hover,
-.fandom-theme-gaming button[class*="bg-[#f43f5e]"]:hover,
-.fandom-theme-gaming button[class*="bg-[#38bdf8]"]:hover {
+/* Hover inversion on buttons with colorful backgrounds in light mode */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#ff2e93]"]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#ffd60a]"]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#00f0ff]"]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#9333ea]"]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#c084fc]"]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#10b981]"]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#fb923c]"]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#f43f5e]"]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#38bdf8]"]:hover {
   background-color: #000000 !important;
   color: #FFFFFF !important;
   border: 1.5px solid #000000 !important;
@@ -1609,137 +1610,291 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-
   background-color: #000000 !important;
   color: #FFFFFF !important;
 }
-.fandom-theme-gaming .bg-black [class*="text-"],
-.fandom-theme-gaming button.bg-black [class*="text-"],
-.fandom-theme-gaming [class*="bg-[#000000]"] [class*="text-"],
-.fandom-theme-gaming button[class*="bg-[#000000]"] [class*="text-"] {
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-black [class*="text-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button.bg-black [class*="text-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#000000]"] [class*="text-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming button[class*="bg-[#000000]"] [class*="text-"] {
   color: #FFFFFF !important;
 }
 
-/* Handle nesting: If bg-white is inside bg-black, it should be black text */
-.fandom-theme-gaming .bg-black .bg-white,
-.fandom-theme-gaming .bg-black button.bg-white,
-.fandom-theme-gaming .bg-black .bg-white [class*="text-"],
-.fandom-theme-gaming .bg-black button.bg-white [class*="text-"] {
+/* Handle nesting in light mode */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-black .bg-white,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-black button.bg-white,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-black .bg-white [class*="text-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-black button.bg-white [class*="text-"] {
   color: #000000 !important;
 }
 
-/* Handle nesting: If bg-black is inside bg-white, it should be white text */
-.fandom-theme-gaming .bg-white .bg-black,
-.fandom-theme-gaming .bg-white button.bg-black,
-.fandom-theme-gaming .bg-white .bg-black [class*="text-"],
-.fandom-theme-gaming .bg-white button.bg-black [class*="text-"] {
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-white .bg-black,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-white button.bg-black,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-white .bg-black [class*="text-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming .bg-white button.bg-black [class*="text-"] {
   color: #FFFFFF !important;
 }
-
-/* Ensure hover states on inverted elements are correct */
-.fandom-theme-gaming button.bg-white:hover,
-.fandom-theme-gaming button[class*="bg-white"]:hover {
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
-}
-.fandom-theme-gaming button.bg-white:hover [class*="text-"],
-.fandom-theme-gaming button[class*="bg-white"]:hover [class*="text-"] {
-  color: #FFFFFF !important;
-}
-
-
 
 /* Light muted tints become #F5F5F5 in light mode */
-html:not(.dark) .fandom-theme-gaming [class*="bg-[#ecfeff]"],
-html:not(.dark) .fandom-theme-gaming [class*="bg-[#fff9db]"],
-html:not(.dark) .fandom-theme-gaming [class*="hover:bg-[#ecfeff]"]:hover,
-html:not(.dark) .fandom-theme-gaming [class*="hover:bg-[#fff9db]"]:hover {
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#ecfeff]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="bg-[#fff9db]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="hover:bg-[#ecfeff]"]:hover,
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="hover:bg-[#fff9db]"]:hover {
   background-color: #F5F5F5 !important;
   color: #000000 !important;
 }
 
-[data-theme="dark"] .fandom-theme-gaming [class*="bg-[#ecfeff]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="bg-[#fff9db]"],
-.dark .fandom-theme-gaming [class*="bg-[#ecfeff]"],
-.dark .fandom-theme-gaming [class*="bg-[#fff9db]"] {
-  background-color: #1e293b !important;
-  color: #f8fafc !important;
-}
-
 /* Purge all colorful text utilities into pure black in light mode */
-html:not(.dark) .fandom-theme-gaming [class*="text-[#ff2e93]"],
-html:not(.dark) .fandom-theme-gaming [class*="text-[#ffd60a]"],
-html:not(.dark) .fandom-theme-gaming [class*="text-[#00f0ff]"],
-html:not(.dark) .fandom-theme-gaming [class*="text-[#9333ea]"],
-html:not(.dark) .fandom-theme-gaming [class*="text-[#c084fc]"],
-html:not(.dark) .fandom-theme-gaming [class*="text-[#10b981]"],
-html:not(.dark) .fandom-theme-gaming [class*="text-[#fb923c]"],
-html:not(.dark) .fandom-theme-gaming [class*="text-[#f43f5e]"],
-html:not(.dark) .fandom-theme-gaming [class*="text-[#38bdf8]"],
-html:not(.dark) .fandom-theme-gaming [class*="text-emerald-"],
-html:not(.dark) .fandom-theme-gaming [class*="text-pink-"],
-html:not(.dark) .fandom-theme-gaming [class*="text-purple-"],
-html:not(.dark) .fandom-theme-gaming [class*="text-amber-"],
-html:not(.dark) .fandom-theme-gaming [class*="text-yellow-"],
-html:not(.dark) .fandom-theme-gaming [class*="text-cyan-"] {
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-[#ff2e93]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-[#ffd60a]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-[#00f0ff]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-[#9333ea]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-[#c084fc]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-[#10b981]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-[#fb923c]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-[#f43f5e]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-[#38bdf8]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-emerald-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-pink-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-purple-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-amber-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-yellow-"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="text-cyan-"] {
   color: #000000 !important;
 }
 
-/* In dark mode, ensure gaming theme text remains bright & visible */
-[data-theme="dark"] .fandom-theme-gaming [class*="text-[#ff2e93]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-[#ffd60a]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-[#00f0ff]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-[#9333ea]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-[#c084fc]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-[#10b981]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-[#fb923c]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-[#f43f5e]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-[#38bdf8]"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-emerald-"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-pink-"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-purple-"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-amber-"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-yellow-"],
-[data-theme="dark"] .fandom-theme-gaming [class*="text-cyan-"],
-.dark .fandom-theme-gaming [class*="text-[#ff2e93]"],
-.dark .fandom-theme-gaming [class*="text-[#ffd60a]"],
-.dark .fandom-theme-gaming [class*="text-[#00f0ff]"],
-.dark .fandom-theme-gaming [class*="text-[#9333ea]"],
-.dark .fandom-theme-gaming [class*="text-[#c084fc]"],
-.dark .fandom-theme-gaming [class*="text-[#10b981]"],
-.dark .fandom-theme-gaming [class*="text-[#fb923c]"],
-.dark .fandom-theme-gaming [class*="text-[#f43f5e]"],
-.dark .fandom-theme-gaming [class*="text-[#38bdf8]"],
-.dark .fandom-theme-gaming [class*="text-emerald-"],
-.dark .fandom-theme-gaming [class*="text-pink-"],
-.dark .fandom-theme-gaming [class*="text-purple-"],
-.dark .fandom-theme-gaming [class*="text-amber-"],
-.dark .fandom-theme-gaming [class*="text-yellow-"],
-.dark .fandom-theme-gaming [class*="text-cyan-"] {
-  color: #f8fafc !important;
-}
-
-/* Elements inside dark containers or buttons have white text */
-.fandom-theme-gaming .bg-black [class*="text-"],
-.fandom-theme-gaming button.bg-black [class*="text-"],
-.fandom-theme-gaming [class*="bg-[#000000]"] [class*="text-"],
-.fandom-theme-gaming footer [class*="text-"] {
-  color: #FFFFFF !important;
-}
-
-/* Purge colorful borders */
-.fandom-theme-gaming [class*="border-[#ff2e93]"],
-.fandom-theme-gaming [class*="border-[#ffd60a]"],
-.fandom-theme-gaming [class*="border-[#00f0ff]"],
-.fandom-theme-gaming [class*="border-[#9333ea]"],
-.fandom-theme-gaming [class*="border-[#c084fc]"],
-.fandom-theme-gaming [class*="border-[#10b981]"] {
+/* Purge colorful borders in light mode */
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="border-[#ff2e93]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="border-[#ffd60a]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="border-[#00f0ff]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="border-[#9333ea]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="border-[#c084fc]"],
+html:not(.dark):not([data-theme="dark"]) .fandom-theme-gaming [class*="border-[#10b981]"] {
   border-color: #000000 !important;
 }
 
-/* Ticker tape: Inverted Obsidian */
+/* =========================================================================
+   DEDICATED GAMING THEME IN DARK MODE: HIGH CONTRAST & ACCESSIBILITY MASTER
+   ========================================================================= */
+html.dark [data-fandom-theme="gaming"],
+html.dark .fandom-theme-gaming,
+html[data-theme="dark"] [data-fandom-theme="gaming"],
+html[data-theme="dark"] .fandom-theme-gaming,
+.dark .fandom-theme-gaming,
+[data-theme="dark"] .fandom-theme-gaming {
+  --background: #0A0A0A;
+  --foreground: #FAFAFA;
+  --muted: #18181B;
+  --muted-foreground: #A1A1AA;
+  --accent: #FF3D00;
+  --accent-foreground: #FFFFFF;
+  --border: #27272A;
+  --card: #121214;
+  --card-foreground: #FAFAFA;
+  background-color: #0A0A0A !important;
+  color: #FAFAFA !important;
+}
+
+html.dark .fandom-theme-gaming main,
+html[data-theme="dark"] .fandom-theme-gaming main,
+.dark .fandom-theme-gaming main,
+[data-theme="dark"] .fandom-theme-gaming main {
+  background-color: #0A0A0A !important;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.02) 1px,
+      rgba(255, 255, 255, 0.02) 2px
+    ) !important;
+}
+
+html.dark .fandom-theme-gaming section,
+html[data-theme="dark"] .fandom-theme-gaming section,
+.dark .fandom-theme-gaming section,
+[data-theme="dark"] .fandom-theme-gaming section {
+  background-color: transparent !important;
+  border-bottom: 4px solid #27272A !important;
+}
+
+/* Headings in Gaming Dark Mode */
+html.dark .fandom-theme-gaming h1,
+html.dark .fandom-theme-gaming h2,
+html.dark .fandom-theme-gaming h3,
+html.dark .fandom-theme-gaming h4,
+html.dark .fandom-theme-gaming h5,
+html.dark .fandom-theme-gaming h6,
+[data-theme="dark"] .fandom-theme-gaming h1,
+[data-theme="dark"] .fandom-theme-gaming h2,
+[data-theme="dark"] .fandom-theme-gaming h3,
+[data-theme="dark"] .fandom-theme-gaming h4,
+[data-theme="dark"] .fandom-theme-gaming h5,
+[data-theme="dark"] .fandom-theme-gaming h6 {
+  color: #FFFFFF !important;
+}
+
+/* Gaming Cards & Containers in Dark Mode */
+html.dark .fandom-theme-gaming .fandom-card,
+html.dark .fandom-theme-gaming .kpop-game-card,
+html.dark .fandom-theme-gaming .domain-card,
+html.dark .fandom-theme-gaming .kpop-styled-card,
+html.dark .fandom-theme-gaming article,
+html.dark .fandom-theme-gaming #artists .group,
+[data-theme="dark"] .fandom-theme-gaming .fandom-card,
+[data-theme="dark"] .fandom-theme-gaming .kpop-game-card,
+[data-theme="dark"] .fandom-theme-gaming .domain-card,
+[data-theme="dark"] .fandom-theme-gaming .kpop-styled-card,
+[data-theme="dark"] .fandom-theme-gaming article,
+[data-theme="dark"] .fandom-theme-gaming #artists .group {
+  background-color: #121214 !important;
+  color: #FAFAFA !important;
+  border: 2px solid #27272A !important;
+  box-shadow: none !important;
+}
+
+/* Inactive Fandom Category Dock Tabs in Dark Mode */
+html.dark .fandom-category-dock,
+html[data-theme="dark"] .fandom-category-dock,
+.dark .fandom-category-dock,
+[data-theme="dark"] .fandom-category-dock {
+  background-color: #0A0A0A !important;
+  border-bottom: 2px solid #27272A !important;
+}
+
+html.dark .fandom-tab-inactive,
+html[data-theme="dark"] .fandom-tab-inactive,
+.dark .fandom-tab-inactive,
+[data-theme="dark"] .fandom-tab-inactive,
+html.dark .fandom-category-dock .fandom-tab-inactive,
+html[data-theme="dark"] .fandom-category-dock .fandom-tab-inactive {
+  background-color: #18181B !important;
+  color: #FAFAFA !important;
+  border: 1px solid #3F3F46 !important;
+  box-shadow: none !important;
+}
+
+html.dark .fandom-tab-inactive *,
+html[data-theme="dark"] .fandom-tab-inactive *,
+.dark .fandom-tab-inactive *,
+[data-theme="dark"] .fandom-tab-inactive * {
+  color: #FAFAFA !important;
+}
+
+html.dark .fandom-tab-inactive:hover,
+html[data-theme="dark"] .fandom-tab-inactive:hover,
+.dark .fandom-tab-inactive:hover,
+[data-theme="dark"] .fandom-tab-inactive:hover {
+  background-color: #27272A !important;
+  color: #FFFFFF !important;
+  border-color: #52525B !important;
+}
+
+/* Active Gaming Dock Tab */
+html.dark .fandom-tab-active-gaming,
+html[data-theme="dark"] .fandom-tab-active-gaming,
+.dark .fandom-tab-active-gaming,
+[data-theme="dark"] .fandom-tab-active-gaming {
+  background-color: #FF3D00 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #FF3D00 !important;
+  font-weight: 800 !important;
+}
+
+html.dark .fandom-tab-active-gaming *,
+html[data-theme="dark"] .fandom-tab-active-gaming * {
+  color: #FFFFFF !important;
+}
+
+/* Universal Button Handling in Gaming Dark Mode */
+html.dark .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming),
+html[data-theme="dark"] .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming),
+.dark .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming),
+[data-theme="dark"] .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming) {
+  background-color: #18181B !important;
+  color: #FAFAFA !important;
+  border: 1px solid #3F3F46 !important;
+}
+
+html.dark .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming) *,
+html[data-theme="dark"] .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming) * {
+  color: #FAFAFA !important;
+}
+
+html.dark .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming):hover,
+html[data-theme="dark"] .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming):hover {
+  background-color: #27272A !important;
+  color: #FFFFFF !important;
+  border-color: #52525B !important;
+}
+
+/* Cyan Buttons in Gaming Dark Mode */
+html.dark .fandom-theme-gaming button[class*="bg-[#00f0ff]"],
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#00f0ff]"],
+.dark .fandom-theme-gaming button[class*="bg-[#00f0ff]"],
+[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#00f0ff]"] {
+  background-color: #00F0FF !important;
+  color: #000000 !important;
+  border: 1px solid #00F0FF !important;
+  font-weight: 800 !important;
+}
+html.dark .fandom-theme-gaming button[class*="bg-[#00f0ff]"] *,
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#00f0ff]"] * {
+  color: #000000 !important;
+}
+
+/* Yellow / Lime Buttons in Gaming Dark Mode */
+html.dark .fandom-theme-gaming button[class*="bg-[#ffd60a]"],
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#ffd60a]"],
+html.dark .fandom-theme-gaming button[class*="bg-[#ccff00]"],
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#ccff00]"] {
+  background-color: #FFD60A !important;
+  color: #000000 !important;
+  border: 1px solid #FFD60A !important;
+  font-weight: 800 !important;
+}
+html.dark .fandom-theme-gaming button[class*="bg-[#ffd60a]"] *,
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#ffd60a]"] *,
+html.dark .fandom-theme-gaming button[class*="bg-[#ccff00]"] *,
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#ccff00]"] * {
+  color: #000000 !important;
+}
+
+/* Pink / Vermillion Buttons in Gaming Dark Mode */
+html.dark .fandom-theme-gaming button[class*="bg-[#d91470]"],
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#d91470]"],
+html.dark .fandom-theme-gaming button[class*="bg-[#ff2e93]"],
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#ff2e93]"],
+html.dark .fandom-theme-gaming button[class*="bg-[#FF3D00]"],
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#FF3D00]"] {
+  background-color: #d91470 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #d91470 !important;
+}
+html.dark .fandom-theme-gaming button[class*="bg-[#d91470]"] *,
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#d91470]"] *,
+html.dark .fandom-theme-gaming button[class*="bg-[#ff2e93]"] *,
+html[data-theme="dark"] .fandom-theme-gaming button[class*="bg-[#ff2e93]"] * {
+  color: #FFFFFF !important;
+}
+
+/* Dropdown Menu & Selects in Gaming Dark Mode */
+html.dark .fandom-theme-gaming select,
+html[data-theme="dark"] .fandom-theme-gaming select {
+  background-color: #18181B !important;
+  color: #FAFAFA !important;
+  border: 1px solid #52525B !important;
+}
+html.dark .fandom-theme-gaming select option,
+html[data-theme="dark"] .fandom-theme-gaming select option {
+  background-color: #18181B !important;
+  color: #FAFAFA !important;
+}
+
+/* Ticker tape in Gaming: Inverted Obsidian */
 .fandom-theme-gaming .animate-y2k-ticker,
 .fandom-theme-gaming div:has(> .animate-y2k-ticker) {
   background-color: #000000 !important;
   color: #FFFFFF !important;
-  border-top: 4px solid #000000 !important;
-  border-bottom: 4px solid #000000 !important;
+  border-top: 4px solid #27272A !important;
+  border-bottom: 4px solid #27272A !important;
   box-shadow: none !important;
 }
 

@@ -335,10 +335,10 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
                     type="button"
                     onClick={() => setActiveType(fmt.value)}
                     style={{ borderRadius: '0px' }}
-                    className={`px-3 py-1.5 font-black uppercase tracking-wider cursor-pointer transition-all border-2 border-black ${
+                    className={`px-3 py-1.5 font-black uppercase tracking-wider cursor-pointer transition-all border-2 border-black dark:border-[#3F3F46] ${
                       isActive 
                         ? 'bg-[#00f0ff] text-black shadow-[2px_2px_0px_#000] -translate-y-0.5' 
-                        : 'bg-white text-black shadow-[1px_1px_0px_#000] hover:bg-[#ecfeff]'
+                        : 'bg-white text-black dark:bg-[#18181B] dark:text-[#FAFAFA] shadow-[1px_1px_0px_#000] hover:bg-[#ecfeff] dark:hover:bg-[#27272A]'
                     }`}
                   >
                     {fmt.label}
@@ -353,14 +353,14 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
                 type="button"
                 onClick={() => setArtistDropdownOpen(!artistDropdownOpen)}
                 style={{ borderRadius: '0px' }}
-                className="flex items-center gap-2 px-3 py-2 bg-white text-black border-2 border-black font-black uppercase tracking-wider cursor-pointer hover:bg-[#fff9db] shadow-[2px_2px_0px_#000] transition-colors"
+                className="flex items-center gap-2 px-3 py-2 bg-white text-black dark:bg-[#18181B] dark:text-[#FAFAFA] border-2 border-black dark:border-[#52525B] font-black uppercase tracking-wider cursor-pointer hover:bg-[#fff9db] dark:hover:bg-[#27272A] shadow-[2px_2px_0px_#000] transition-colors"
               >
-                <span>
+                <span className="text-black dark:text-[#FAFAFA]">
                   {activeArtist === 'all' 
                     ? 'ALL ARTISTS' 
                     : availableArtists.find(a => a.id === activeArtist)?.name || 'ARTIST'}
                 </span>
-                <span className="text-[10px]">▼</span>
+                <span className="text-[10px] text-black dark:text-[#FAFAFA]">▼</span>
               </button>
 
               {artistDropdownOpen && (
@@ -368,12 +368,12 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
                   <div className="fixed inset-0 z-40 bg-transparent" onClick={() => setArtistDropdownOpen(false)} />
                   <div 
                     style={{ borderRadius: '0px' }}
-                    className="absolute left-0 top-full mt-1 w-64 bg-white border-2 border-black p-3 z-50 max-h-72 overflow-y-auto space-y-1 font-mono shadow-[4px_4px_0px_#000]"
+                    className="absolute left-0 top-full mt-1 w-64 bg-white dark:bg-[#18181B] border-2 border-black dark:border-[#52525B] p-3 z-50 max-h-72 overflow-y-auto space-y-1 font-mono shadow-[4px_4px_0px_#000]"
                   >
                     <button
                       type="button"
                       onClick={() => { handleArtistChange('all'); setArtistDropdownOpen(false); }}
-                      className="w-full text-left p-1.5 text-xs font-black uppercase hover:bg-[#ffd60a] hover:text-black cursor-pointer transition-colors"
+                      className="w-full text-left p-1.5 text-xs font-black uppercase hover:bg-[#ffd60a] hover:text-black dark:text-[#FAFAFA] dark:hover:text-black cursor-pointer transition-colors"
                     >
                       ALL ARTISTS
                     </button>
@@ -383,7 +383,7 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
                         type="button"
                         onClick={() => { handleArtistChange(artist.id); setArtistDropdownOpen(false); }}
                         className={`w-full text-left p-1.5 text-xs uppercase cursor-pointer transition-colors ${
-                          activeArtist === artist.id ? 'bg-[#d91470] text-white font-black' : 'hover:bg-[#ffd60a] hover:text-black font-bold'
+                          activeArtist === artist.id ? 'bg-[#d91470] text-white font-black' : 'text-black dark:text-[#E2E8F0] hover:bg-[#ffd60a] hover:text-black font-bold'
                         }`}
                       >
                         {artist.name}
@@ -400,7 +400,7 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
               onChange={(e) => setActiveGenre(e.target.value)}
               style={{ borderRadius: '0px' }}
               aria-label="Filter by music genre"
-              className="py-2 px-3 border-2 border-black bg-white text-black font-black uppercase tracking-wider focus:outline-none cursor-pointer shadow-[2px_2px_0px_#000] hover:bg-[#fff9db]"
+              className="py-2 px-3 border-2 border-black dark:border-[#52525B] bg-white text-black dark:bg-[#18181B] dark:text-[#FAFAFA] font-black uppercase tracking-wider focus:outline-none cursor-pointer shadow-[2px_2px_0px_#000] hover:bg-[#fff9db] dark:hover:bg-[#27272A]"
             >
               <option value="all">ALL GENRES</option>
               <option value="pop">POP &amp; DANCE</option>
@@ -417,7 +417,7 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
               onChange={(e) => setActiveReleaseYear(e.target.value)}
               style={{ borderRadius: '0px' }}
               aria-label="Filter by release year"
-              className="py-2 px-3 border-2 border-black bg-white text-black font-black uppercase tracking-wider focus:outline-none cursor-pointer shadow-[2px_2px_0px_#000] hover:bg-[#fff9db]"
+              className="py-2 px-3 border-2 border-black dark:border-[#52525B] bg-white text-black dark:bg-[#18181B] dark:text-[#FAFAFA] font-black uppercase tracking-wider focus:outline-none cursor-pointer shadow-[2px_2px_0px_#000] hover:bg-[#fff9db] dark:hover:bg-[#27272A]"
             >
               <option value="all">YEAR: ALL</option>
               <option value="2024">2024 (LATEST)</option>
@@ -432,13 +432,13 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
               onClick={() => setInStockOnly(!inStockOnly)}
               style={{ borderRadius: '0px' }}
               aria-label="IN STOCK - Filter by in-stock items only"
-              className={`px-3 py-2 border-2 border-black font-black uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all ${
+              className={`px-3 py-2 border-2 border-black dark:border-[#3F3F46] font-black uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all ${
                 inStockOnly 
                   ? 'bg-[#10b981] text-white shadow-[2px_2px_0px_#000]' 
-                  : 'bg-white text-black shadow-[1px_1px_0px_#000] hover:bg-neutral-100'
+                  : 'bg-white text-black dark:bg-[#18181B] dark:text-[#FAFAFA] shadow-[1px_1px_0px_#000] hover:bg-neutral-100 dark:hover:bg-[#27272A]'
               }`}
             >
-              <span className={`w-2 h-2 ${inStockOnly ? 'bg-white' : 'bg-black'}`} />
+              <span className={`w-2 h-2 ${inStockOnly ? 'bg-white' : 'bg-black dark:bg-white'}`} />
               <span>IN STOCK</span>
             </button>
           </div>
@@ -447,10 +447,10 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
           <div className="flex items-center justify-between gap-4 flex-wrap w-full font-mono text-xs pt-1">
             {/* Layout Mode Switcher */}
             <div className="flex items-center gap-2">
-              <span className="font-black text-[11px] text-neutral-600 uppercase tracking-wider">
+              <span className="font-black text-[11px] text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">
                 LAYOUT VIEW:
               </span>
-              <div className="flex items-center border-2 border-black p-0.5 bg-white gap-0.5 shadow-[2px_2px_0px_#000]">
+              <div className="flex items-center border-2 border-black dark:border-[#3F3F46] p-0.5 bg-white dark:bg-[#18181B] gap-0.5 shadow-[2px_2px_0px_#000]">
                 {(['bento', 'masonry', 'grid'] as const).map((mode) => (
                   <button
                     key={mode}
@@ -458,7 +458,7 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
                     onClick={() => setAlbumLayoutMode(mode)}
                     style={{ borderRadius: '0px' }}
                     className={`px-3 py-1 font-black uppercase tracking-wider cursor-pointer transition-colors ${
-                      albumLayoutMode === mode ? 'bg-[#ffd60a] text-black' : 'bg-white text-black hover:bg-neutral-100'
+                      albumLayoutMode === mode ? 'bg-[#ffd60a] text-black font-extrabold' : 'bg-white text-black dark:bg-[#18181B] dark:text-[#FAFAFA] hover:bg-neutral-100 dark:hover:bg-[#27272A]'
                     }`}
                   >
                     <span>{mode.toUpperCase()}</span>
@@ -469,7 +469,7 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
 
             {/* Sort Dropdown */}
             <div className="flex items-center gap-2">
-              <span className="font-black text-[11px] text-neutral-600 uppercase tracking-wider">
+              <span className="font-black text-[11px] text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">
                 SORT BY:
               </span>
               <div ref={sortDropdownRef} className="relative">
@@ -477,10 +477,10 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
                   type="button"
                   onClick={() => setSortDropdownOpen(!sortDropdownOpen)}
                   style={{ borderRadius: '0px' }}
-                  className="flex items-center gap-2 px-3 py-1.5 bg-white text-black border-2 border-black font-black uppercase tracking-wider cursor-pointer hover:bg-[#fff9db] shadow-[2px_2px_0px_#000] transition-colors"
+                  className="flex items-center gap-2 px-3 py-1.5 bg-white text-black dark:bg-[#18181B] dark:text-[#FAFAFA] border-2 border-black dark:border-[#52525B] font-black uppercase tracking-wider cursor-pointer hover:bg-[#fff9db] dark:hover:bg-[#27272A] shadow-[2px_2px_0px_#000] transition-colors"
                 >
-                  <span>{sortLabels[activeSort]}</span>
-                  <span className="text-[10px]">▼</span>
+                  <span className="text-black dark:text-[#FAFAFA]">{sortLabels[activeSort]}</span>
+                  <span className="text-[10px] text-black dark:text-[#FAFAFA]">▼</span>
                 </button>
 
                 {sortDropdownOpen && (
@@ -488,7 +488,7 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
                     <div className="fixed inset-0 z-40 bg-transparent" onClick={() => setSortDropdownOpen(false)} />
                     <div 
                       style={{ borderRadius: '0px' }}
-                      className="absolute right-0 top-full mt-1 w-52 bg-white border-2 border-black p-2 z-50 space-y-1 font-mono text-xs shadow-[4px_4px_0px_#000]"
+                      className="absolute right-0 top-full mt-1 w-52 bg-white dark:bg-[#18181B] border-2 border-black dark:border-[#52525B] p-2 z-50 space-y-1 font-mono text-xs shadow-[4px_4px_0px_#000]"
                     >
                       {Object.entries(sortLabels).map(([key, label]) => (
                         <button
@@ -496,7 +496,7 @@ export const AlbumGrid: React.FC<AlbumGridProps> = ({
                           type="button"
                           onClick={() => { setActiveSort(key as any); setSortDropdownOpen(false); }}
                           className={`w-full text-left p-2 uppercase cursor-pointer transition-colors ${
-                            activeSort === key ? 'bg-[#d91470] text-white font-black' : 'hover:bg-[#ffd60a] hover:text-black font-bold'
+                            activeSort === key ? 'bg-[#d91470] text-white font-black' : 'text-black dark:text-[#E2E8F0] hover:bg-[#ffd60a] hover:text-black font-bold'
                           }`}
                         >
                           {label}

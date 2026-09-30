@@ -381,28 +381,28 @@ export const LocationAwareEventExplorer: React.FC<LocationAwareEventExplorerProp
       accentText: 'text-[#ff2e93]',
       eyebrowBox: 'bg-[#ffd60a] text-black border-2 border-black font-mono shadow-[2px_2px_0px_#000000]',
       eyebrowDot: 'bg-[#ff2e93]',
-      switcherBox: 'bg-white border-2 border-black shadow-[3px_3px_0px_#000000]',
-      btnActive: 'bg-black text-white border-2 border-black shadow-[2px_2px_0px_#ff2e93] font-bold',
-      btnInactive: 'text-black hover:bg-[#fff0f6] font-bold',
-      gpsBar: 'bg-white border-3 border-black shadow-[4px_4px_0px_#000000]',
+      switcherBox: 'bg-white dark:bg-[#121214] border-2 border-black dark:border-[#3F3F46] shadow-[3px_3px_0px_#000000] dark:shadow-none',
+      btnActive: 'bg-black text-white dark:bg-[#00f0ff] dark:text-black border-2 border-black dark:border-[#00f0ff] shadow-[2px_2px_0px_#ff2e93] dark:shadow-none font-bold',
+      btnInactive: 'text-black dark:text-[#E2E8F0] hover:bg-[#fff0f6] dark:hover:bg-[#27272A] font-bold',
+      gpsBar: 'bg-white dark:bg-[#121214] border-3 border-black dark:border-[#3F3F46] shadow-[4px_4px_0px_#000000] dark:shadow-none',
       gpsBtn: 'bg-[#ff2e93] hover:bg-[#e0207e] text-white border-2 border-black shadow-[3px_3px_0px_#000000] font-bold',
-      coordBadge: 'bg-[#fffdf0] border-2 border-black text-black font-mono font-bold',
-      cityActive: 'bg-[#ffd60a] text-black border-2 border-black shadow-[2px_2px_0px_#000000] font-bold',
-      cityInactive: 'bg-white text-black border border-black hover:bg-[#fff0f6]',
-      filterBox: 'bg-white border-2 border-black shadow-[2px_2px_0px_#000000]',
-      radiusActive: 'bg-[#ff2e93] text-white border-2 border-black shadow-[2px_2px_0px_#000000] font-bold',
-      radiusInactive: 'bg-white border-2 border-black text-black hover:bg-[#fff0f6] font-bold',
-      searchBox: 'bg-white border-2 border-black text-black placeholder-slate-400 shadow-[2px_2px_0px_#000000]',
-      cardBg: 'bg-white border-3 border-black shadow-[6px_6px_0px_#000000]',
-      cardSubtleBorder: 'border-black/30',
-      cardTitleColor: 'text-black',
-      primaryBtn: 'bg-[#ffd60a] hover:bg-[#eab308] text-black border-2 border-black shadow-[3px_3px_0px_#000000] font-bold',
-      secondaryBtn: 'bg-white border-2 border-black text-black hover:bg-[#fff0f6] shadow-[2px_2px_0px_#000000]',
-      badgeDistance: 'bg-[#ffd60a] text-black border-2 border-black shadow-[2px_2px_0px_#000000]',
-      perkChip: 'bg-[#fff0f6] text-black border border-black font-bold',
-      listItemActive: 'bg-[#ffd60a] border-2 border-black text-black shadow-[3px_3px_0px_#000000]',
-      listItemInactive: 'bg-white border-2 border-black hover:bg-[#fff0f6] text-black shadow-[1px_1px_0px_#000000]',
-      modalBg: 'bg-[#fffdf0] border-4 border-black shadow-[10px_10px_0px_#000000] text-black',
+      coordBadge: 'bg-[#fffdf0] dark:bg-[#18181B] border-2 border-black dark:border-[#3F3F46] text-black dark:text-[#E2E8F0] font-mono font-bold',
+      cityActive: 'bg-[#ffd60a] text-black border-2 border-black shadow-[2px_2px_0px_#000000] dark:shadow-none font-bold',
+      cityInactive: 'bg-white text-black dark:bg-[#18181B] dark:text-[#CBD5E1] border border-black dark:border-[#3F3F46] hover:bg-[#fff0f6] dark:hover:bg-[#27272A]',
+      filterBox: 'bg-white dark:bg-[#121214] border-2 border-black dark:border-[#3F3F46] shadow-[2px_2px_0px_#000000] dark:shadow-none',
+      radiusActive: 'bg-[#ff2e93] text-white border-2 border-black shadow-[2px_2px_0px_#000000] dark:shadow-none font-bold',
+      radiusInactive: 'bg-white dark:bg-[#18181B] border-2 border-black dark:border-[#3F3F46] text-black dark:text-[#CBD5E1] hover:bg-[#fff0f6] dark:hover:bg-[#27272A] font-bold',
+      searchBox: 'bg-white dark:bg-[#18181B] border-2 border-black dark:border-[#3F3F46] text-black dark:text-[#FAFAFA] placeholder-slate-400 dark:placeholder-neutral-500 shadow-[2px_2px_0px_#000000] dark:shadow-none',
+      cardBg: 'bg-white dark:bg-[#121214] border-3 border-black dark:border-[#3F3F46] shadow-[6px_6px_0px_#000000] dark:shadow-none',
+      cardSubtleBorder: 'border-black/30 dark:border-white/10',
+      cardTitleColor: 'text-black dark:text-white',
+      primaryBtn: 'bg-[#ffd60a] hover:bg-[#eab308] text-black border-2 border-black shadow-[3px_3px_0px_#000000] dark:shadow-none font-bold',
+      secondaryBtn: 'bg-white dark:bg-[#18181B] border-2 border-black dark:border-[#52525B] text-black dark:text-[#FAFAFA] hover:bg-[#fff0f6] dark:hover:bg-[#27272A] shadow-[2px_2px_0px_#000000] dark:shadow-none',
+      badgeDistance: 'bg-[#ffd60a] text-black border-2 border-black shadow-[2px_2px_0px_#000000] dark:shadow-none',
+      perkChip: 'bg-[#fff0f6] dark:bg-[#18181B] text-black dark:text-[#E2E8F0] border border-black dark:border-[#3F3F46] font-bold',
+      listItemActive: 'bg-[#ffd60a] border-2 border-black text-black shadow-[3px_3px_0px_#000000] dark:shadow-none',
+      listItemInactive: 'bg-white dark:bg-[#18181B] border-2 border-black dark:border-[#3F3F46] hover:bg-[#fff0f6] dark:hover:bg-[#27272A] text-black dark:text-[#FAFAFA] shadow-[1px_1px_0px_#000000] dark:shadow-none',
+      modalBg: 'bg-[#fffdf0] dark:bg-[#121214] border-4 border-black dark:border-[#3F3F46] shadow-[10px_10px_0px_#000000] dark:shadow-none text-black dark:text-white',
     };
   }, [isGaming, isCinema, isManga, isAnime, isTv, isCosplay, isComics]);
 
@@ -826,7 +826,7 @@ export const LocationAwareEventExplorer: React.FC<LocationAwareEventExplorerProp
                   className={`px-2 py-0.5 text-[11px] font-bold transition-all cursor-pointer rounded-none border ${
                     selectedIdol === idol.id
                       ? 'bg-[#ff2e93] text-white border-black shadow-[1px_1px_0px_#000]'
-                      : 'bg-white/80 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border-neutral-300 hover:border-black'
+                      : 'bg-white/80 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border-neutral-300 dark:border-neutral-700 hover:border-black dark:hover:border-neutral-500'
                   }`}
                 >
                   {idol.label}
@@ -851,7 +851,7 @@ export const LocationAwareEventExplorer: React.FC<LocationAwareEventExplorerProp
                   className={`px-2 py-0.5 text-[11px] font-bold transition-all cursor-pointer rounded-none border ${
                     selectedTimeRange === t.id
                       ? 'bg-[#ffd60a] text-black border-black shadow-[1px_1px_0px_#000]'
-                      : 'bg-white/80 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border-neutral-300 hover:border-black'
+                      : 'bg-white/80 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border-neutral-300 dark:border-neutral-700 hover:border-black dark:hover:border-neutral-500'
                   }`}
                 >
                   {t.label}

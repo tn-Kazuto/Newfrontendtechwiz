@@ -203,14 +203,18 @@ export const FanCommunityFeed: React.FC = () => {
                     onClick={() => setActiveTab(tab.id)}
                     type="button"
                     style={{ borderRadius: '0px' }}
-                    className={`px-4 py-2.5 font-black uppercase tracking-wider cursor-pointer transition-all border-2 border-black ${
+                    className={`px-4 py-2.5 font-black uppercase tracking-wider cursor-pointer transition-all border-2 border-black dark:border-[#3F3F46] ${
                       isActive 
                         ? `${tab.color} ${tab.textColor || 'text-black'} shadow-[4px_4px_0px_#000000] -translate-y-0.5` 
-                        : 'bg-white text-black shadow-[2px_2px_0px_#000000] hover:bg-[#fff9db] hover:shadow-[3px_3px_0px_#000000]'
+                        : 'bg-white text-black dark:bg-[#18181B] dark:text-[#FAFAFA] shadow-[2px_2px_0px_#000000] hover:bg-[#fff9db] dark:hover:bg-[#27272A]'
                     }`}
                   >
                     <span>{tab.label}</span>
-                    <span className="ml-2 bg-black text-white px-1.5 py-0.5 text-[10px] font-mono">
+                    <span className={`ml-2 px-1.5 py-0.5 text-[10px] font-mono font-bold ${
+                      isActive 
+                        ? 'bg-black/25 text-current' 
+                        : 'bg-neutral-200 text-black dark:bg-neutral-800 dark:text-neutral-200'
+                    }`}>
                       {tab.count}
                     </span>
                   </button>

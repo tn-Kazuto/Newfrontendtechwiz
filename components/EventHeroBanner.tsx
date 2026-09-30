@@ -469,7 +469,7 @@ export const EventHeroBanner: React.FC<EventHeroBannerProps> = ({
               <button
                 type="button"
                 onClick={() => handleScrollToTarget(currentSlide.targetAnchor || 'albums')}
-                className={`px-10 sm:px-14 py-3.5 sm:py-4 min-w-[240px] sm:min-w-[280px] justify-center ${isGaming ? 'bg-white text-black hover:bg-black hover:text-white border-2 border-black shadow-none' : isCinema ? 'bg-white text-black hover:bg-[#F2F2F2] border-2 border-black shadow-none' : isAnime ? 'bg-white text-black hover:bg-[#ecfccb] border-2 border-black shadow-[4px_4px_0px_#000000]' : isComics ? 'bg-[#fef08a] text-black hover:bg-white border-2 border-black shadow-[4px_4px_0px_#000000]' : 'bg-[#00f0ff] text-black hover:bg-[#38bdf8] border-2 border-black shadow-[4px_4px_0px_#000000]'} text-xs sm:text-sm font-black uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all duration-100 select-none whitespace-nowrap active:translate-x-[2px] active:translate-y-[2px] hover:translate-y-[-2px]`}
+                className={`px-10 sm:px-14 py-3.5 sm:py-4 min-w-[240px] sm:min-w-[280px] justify-center ${isGaming ? 'bg-white text-black dark:bg-[#18181B] dark:text-[#FAFAFA] hover:bg-black hover:text-white dark:hover:bg-[#27272A] border-2 border-black dark:border-[#52525B] shadow-none' : isCinema ? 'bg-white text-black hover:bg-[#F2F2F2] border-2 border-black shadow-none' : isAnime ? 'bg-white text-black hover:bg-[#ecfccb] border-2 border-black shadow-[4px_4px_0px_#000000]' : isComics ? 'bg-[#fef08a] text-black hover:bg-white border-2 border-black shadow-[4px_4px_0px_#000000]' : 'bg-[#00f0ff] text-black hover:bg-[#38bdf8] border-2 border-black shadow-[4px_4px_0px_#000000]'} text-xs sm:text-sm font-black uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all duration-100 select-none whitespace-nowrap active:translate-x-[2px] active:translate-y-[2px] hover:translate-y-[-2px]`}
                 style={{ borderRadius: isAnime || isComics ? '12px' : '0px', fontFamily: isAnime || isComics ? "'Patrick Hand', cursive, sans-serif" : undefined, fontSize: isAnime || isComics ? '16px' : undefined }}
               >
                 <span>{currentSlide.secondaryCtaText}</span>
@@ -485,7 +485,7 @@ export const EventHeroBanner: React.FC<EventHeroBannerProps> = ({
             e.stopPropagation();
             handlePrev();
           }}
-          className={`absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 min-w-[48px] min-h-[48px] ${isGaming ? 'bg-white hover:bg-black text-black hover:text-white border-2 border-black shadow-none' : isCinema ? 'bg-white hover:bg-[#FF3000] text-black hover:text-white border-2 border-black shadow-none' : isAnime ? 'bg-[#a3e635] hover:bg-[#84cc16] text-black border-2 border-black shadow-[3px_3px_0px_#000]' : isComics ? 'bg-[#ef4444] hover:bg-[#fef08a] text-white hover:text-black border-2 border-black shadow-[3px_3px_0px_#000]' : 'bg-[#ffd60a] hover:bg-white text-black border-2 border-black shadow-[3px_3px_0px_#000]'} flex items-center justify-center transition-all duration-100 cursor-pointer active:translate-x-[2px] active:translate-y-[2px]`}
+          className={`absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 min-w-[48px] min-h-[48px] ${isGaming ? 'bg-white hover:bg-black text-black hover:text-white dark:bg-[#18181B] dark:text-[#FAFAFA] dark:hover:bg-[#27272A] border-2 border-black dark:border-[#52525B] shadow-none' : isCinema ? 'bg-white hover:bg-[#FF3000] text-black hover:text-white border-2 border-black shadow-none' : isAnime ? 'bg-[#a3e635] hover:bg-[#84cc16] text-black border-2 border-black shadow-[3px_3px_0px_#000]' : isComics ? 'bg-[#ef4444] hover:bg-[#fef08a] text-white hover:text-black border-2 border-black shadow-[3px_3px_0px_#000]' : 'bg-[#ffd60a] hover:bg-white text-black border-2 border-black shadow-[3px_3px_0px_#000]'} flex items-center justify-center transition-all duration-100 cursor-pointer active:translate-x-[2px] active:translate-y-[2px]`}
           style={{ borderRadius: isAnime || isComics ? '12px' : '0px' }}
           aria-label="Previous Slide"
           title="Previous Slide"
@@ -499,7 +499,7 @@ export const EventHeroBanner: React.FC<EventHeroBannerProps> = ({
             e.stopPropagation();
             handleNext();
           }}
-          className={`absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 min-w-[48px] min-h-[48px] ${isGaming ? 'bg-white hover:bg-black text-black hover:text-white border-2 border-black shadow-none' : isCinema ? 'bg-white hover:bg-[#FF3000] text-black hover:text-white border-2 border-black shadow-none' : isAnime ? 'bg-[#a3e635] hover:bg-[#84cc16] text-black border-2 border-black shadow-[3px_3px_0px_#000]' : isComics ? 'bg-[#ef4444] hover:bg-[#fef08a] text-white hover:text-black border-2 border-black shadow-[3px_3px_0px_#000]' : 'bg-[#ffd60a] hover:bg-white text-black border-2 border-black shadow-[3px_3px_0px_#000]'} flex items-center justify-center transition-all duration-100 cursor-pointer active:translate-x-[2px] active:translate-y-[2px]`}
+          className={`absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 min-w-[48px] min-h-[48px] ${isGaming ? 'bg-white hover:bg-black text-black hover:text-white dark:bg-[#18181B] dark:text-[#FAFAFA] dark:hover:bg-[#27272A] border-2 border-black dark:border-[#52525B] shadow-none' : isCinema ? 'bg-white hover:bg-[#FF3000] text-black hover:text-white border-2 border-black shadow-none' : isAnime ? 'bg-[#a3e635] hover:bg-[#84cc16] text-black border-2 border-black shadow-[3px_3px_0px_#000]' : isComics ? 'bg-[#ef4444] hover:bg-[#fef08a] text-white hover:text-black border-2 border-black shadow-[3px_3px_0px_#000]' : 'bg-[#ffd60a] hover:bg-white text-black border-2 border-black shadow-[3px_3px_0px_#000]'} flex items-center justify-center transition-all duration-100 cursor-pointer active:translate-x-[2px] active:translate-y-[2px]`}
           style={{ borderRadius: isAnime || isComics ? '12px' : '0px' }}
           aria-label="Next Slide"
           title="Next Slide"
@@ -559,7 +559,7 @@ export const EventHeroBanner: React.FC<EventHeroBannerProps> = ({
       {/* =========================================================================
           2. DEDICATED FANDOM CATEGORY DOCK
       ========================================================================= */}
-      <div className={`fandom-category-dock w-full ${isGaming ? 'bg-white' : isCinema ? 'bg-[#F2F2F2]' : isAnime ? 'bg-[#f7fee7]' : 'bg-[#fdfbf7]'} dark:bg-[#090d16] border-b-4 border-black dark:border-[#2a364f] py-4 px-4 sm:px-8 transition-colors duration-300`}>
+      <div className={`fandom-category-dock w-full ${isGaming ? 'bg-white dark:bg-[#0A0A0A]' : isCinema ? 'bg-[#F2F2F2]' : isAnime ? 'bg-[#f7fee7]' : 'bg-[#fdfbf7]'} dark:bg-[#0A0A0A] border-b-4 border-black dark:border-[#27272A] py-4 px-4 sm:px-8 transition-colors duration-300`}>
         <div className="max-w-[1440px] mx-auto flex items-center justify-center overflow-x-auto scrollbar-none">
           <div className="flex items-center gap-2 flex-wrap justify-center">
             {FANDOM_TABS.map((tab) => {
@@ -567,7 +567,7 @@ export const EventHeroBanner: React.FC<EventHeroBannerProps> = ({
 
               // Color per tab when active
               let activeBgClass = 'fandom-tab-active-all bg-[#ffd60a] text-black border-black dark:bg-[#ffd60a] dark:text-black dark:border-[#ffd60a]';
-              if (tab.id === 'Gaming') activeBgClass = 'fandom-tab-active-gaming bg-black text-white border-black dark:bg-[#00f0ff] dark:text-black dark:border-[#00f0ff]';
+              if (tab.id === 'Gaming') activeBgClass = 'fandom-tab-active-gaming bg-black text-white border-black dark:bg-[#FF3D00] dark:text-white dark:border-[#FF3D00]';
               else if (tab.id === 'K-Pop') activeBgClass = 'fandom-tab-active-kpop bg-[#d91470] text-white border-black dark:bg-[#d91470] dark:text-white dark:border-[#d91470]';
               else if (tab.id === 'Manga') activeBgClass = 'fandom-tab-active-manga bg-[#fff9c4] text-[#2d2d2d] border-[#2d2d2d] dark:bg-[#ff4d4d] dark:text-white dark:border-[#ff4d4d]';
               else if (tab.id === 'Cosplay') activeBgClass = 'fandom-tab-active-cosplay bg-[#D02020] text-white border-black dark:bg-[#D02020] dark:text-white dark:border-[#D02020] shadow-[4px_4px_0px_#121212] dark:shadow-none';
@@ -585,7 +585,7 @@ export const EventHeroBanner: React.FC<EventHeroBannerProps> = ({
                   aria-label={`Switch to ${tab.label} fandom category`}
                   className={`fandom-dock-btn px-4 sm:px-5 py-2.5 text-xs font-mono font-black tracking-widest uppercase transition-all duration-100 cursor-pointer flex items-center gap-2 whitespace-nowrap border-2 min-h-[44px] ${isActive
                     ? `${activeBgClass} ${isGaming || isCinema ? 'shadow-none' : 'shadow-[3px_3px_0px_#000000]'}`
-                    : `fandom-tab-inactive bg-white text-black border-black hover:bg-neutral-100 dark:bg-[#1e293b] dark:text-[#f8fafc] dark:border-[#334155] dark:hover:bg-[#2a364f] dark:hover:text-white ${isGaming || isCinema ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`
+                    : `fandom-tab-inactive bg-white text-black border-black hover:bg-neutral-100 dark:bg-[#18181B] dark:text-[#FAFAFA] dark:border-[#3F3F46] dark:hover:bg-[#27272A] dark:hover:text-white ${isGaming || isCinema ? 'shadow-none' : 'shadow-[2px_2px_0px_#000000]'}`
                     }`}
                 >
                   {isActive && <span>★</span>}

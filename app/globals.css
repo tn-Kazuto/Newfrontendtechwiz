@@ -3,6 +3,7 @@
 @import './fandom-styles.css';
 
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
 @source "../components";
 @source "../app";
 
@@ -3456,6 +3457,30 @@ article:hover,
 .dark .fandom-theme-gaming .bg-body {
   background-color: #0A0A0A !important;
   color: #FAFAFA !important;
+}
+
+/* Gaming Inactive & Outline Buttons in Dark Mode */
+[data-theme="dark"] .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming),
+.dark .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming),
+[data-theme="dark"][data-fandom-theme="gaming"] button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming),
+.dark[data-fandom-theme="gaming"] button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming) {
+  background-color: #18181B !important;
+  color: #FAFAFA !important;
+  border: 1px solid #3F3F46 !important;
+}
+
+[data-theme="dark"] .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming) *,
+.dark .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming) *,
+[data-theme="dark"][data-fandom-theme="gaming"] button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming) *,
+.dark[data-fandom-theme="gaming"] button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming) * {
+  color: #FAFAFA !important;
+}
+
+[data-theme="dark"] .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming):hover,
+.dark .fandom-theme-gaming button:not(.bg-\[\#FF3D00\]):not(.bg-\[\#00f0ff\]):not(.bg-\[\#ffd60a\]):not(.bg-\[\#10b981\]):not(.bg-\[\#d91470\]):not(.fandom-tab-active-gaming):hover {
+  background-color: #27272A !important;
+  color: #FFFFFF !important;
+  border-color: #52525B !important;
 }
 
 /* K-Pop Theme in Dark Mode */
