@@ -14,7 +14,6 @@ const UpcomingReleasesAndArticles = dynamic(() => import('../components/Upcoming
 const MultimediaTeaserSection = dynamic(() => import('../components/MultimediaTeaserSection').then(m => m.MultimediaTeaserSection));
 const WorldTourShowcase = dynamic(() => import('../components/WorldTourShowcase').then(m => m.WorldTourShowcase));
 const FanCommunityFeed = dynamic(() => import('../components/FanCommunityFeed').then(m => m.FanCommunityFeed));
-const SitemapSection = dynamic(() => import('../components/SitemapSection').then(m => m.SitemapSection));
 const Footer = dynamic(() => import('../components/Footer').then(m => m.Footer));
 
 // Dynamically load alternative fandom views (only when active)
@@ -221,14 +220,6 @@ export default function Home({ initialCategory = 'all' }: { initialCategory?: Fa
         )}
       </main>
 
-      {/* SRS 1.9 Mandatory Deliverable: Fan Hub Plus Sitemap & Directory */}
-      <div className="section-lazy-layout">
-        <SitemapSection
-          onOpenAdmin={() => setIsAdminOpen(true)}
-          onOpenFeedback={() => setIsFeedbackOpen(true)}
-          onOpenWishlist={() => setIsWishlistOpen(true)}
-        />
-      </div>
 
       {/* Interactive Modals and Drawers - Loaded on demand */}
       {selectedAlbum && (
