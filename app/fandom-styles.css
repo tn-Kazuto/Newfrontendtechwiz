@@ -2447,8 +2447,8 @@ html:not(.dark):not([data-theme="dark"]) .fandom-theme-tv .text-slate-500 {
 }
 [data-fandom-theme="gaming"] .header-action-btn:hover,
 [data-fandom-theme="gaming"] .header-lang-btn:hover {
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
+  background-color: #F5F5F5 !important;
+  color: #000000 !important;
 }
 [data-fandom-theme="gaming"] .header-badge {
   background-color: #000000 !important;
